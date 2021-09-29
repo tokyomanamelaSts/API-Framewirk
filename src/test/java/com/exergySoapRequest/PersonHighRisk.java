@@ -6,27 +6,18 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.net.URISyntaxException;
-
 import org.apache.commons.io.IOUtils;
-import org.testng.Assert;
-import org.testng.annotations.Test;
-
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.markuputils.CodeLanguage;
 import com.aventstack.extentreports.markuputils.MarkupHelper;
 
 import Utilities.ApiHelper;
-import Utilities.ExtentManager;
 import io.restassured.RestAssured;
-import io.restassured.path.xml.XmlPath;
 import io.restassured.response.Response;
-import org.w3c.dom.*;
-import org.xml.sax.InputSource;
 import org.xml.sax.SAXException;
-
 import javax.xml.parsers.*;
-import java.io.*;
+
 
 /**
  * @author jaffar
@@ -42,16 +33,10 @@ public class PersonHighRisk{
 		String username = "mipusr";
 		String password = "69hTryVKjMa4";
 
+		
+		
 		FileInputStream fileInputStream = new FileInputStream(new File(".\\SoapRequest\\PersonHighRisk.xml"));
-		//   		StringBuilder builder = new StringBuilder();
-		//   	    int ch;
-		//   	    while((ch = fileInputStream.read()) != -1){
-		//   	    builder.append((char)ch);
-		//   	    }
 		RestAssured.baseURI = "https://uatsvc.hollard.co.za/PartyVerificationService";
-
-	 // System.out.print(IOUtils.toString(fileInputStream, "UTF-8")+"this is the body");
-
 		Response response =
 		given()
 				.auth().preemptive().basic(username, password)
@@ -62,46 +47,45 @@ public class PersonHighRisk{
 				.header("Host", "uatsvc.hollard.co.za").and().body(IOUtils.toString(fileInputStream, "UTF-8"))
 		           
 		.when()
-				.post("/PartyVerificationService.svc")
+		.post("/PartyVerificationService.svc")
+		.then().statusCode(200).and().extract().response();
 		
-		.then().statusCode(200).and().log().all().extract().response();
-		
-		
-		DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
-		DocumentBuilder builder = factory.newDocumentBuilder();
-		Document document = builder.parse(new InputSource(new StringReader(response.asString())));
-		document.getDocumentElement().normalize();
+		test.info(MarkupHelper.createCodeBlock(response.asString(),CodeLanguage.XML));
 		
 		
-		Element rootElement = document.getDocumentElement();
-		//System.out.println(rootElement.getNodeName());
+		// validations
 		
-	System.out.println(response.asString());
-		 //System.out.print(IOUtils.toString(fileInputStream, "UTF-8")+"this is the body");
-		try {
-			int statusCode = response.getStatusCode();
-			Assert.assertEquals(statusCode, 200);
-
-			
-			  XmlPath jsXpath = new XmlPath(response.asString()); 
-			  String partyType =jsXpath.getString("q1:PartyType"); 
-			 // System.out.println("q1:PartyType is: " +partyType);
-			 
-
-
-			test.pass("passed");
-			//test.info(MarkupHelper.createCodeBlock(body,CodeLanguage.XML));
-			test.info(MarkupHelper.createCodeBlock(response.asString(),CodeLanguage.XML));
-			
-
-		}catch(AssertionError e) {
-			test.fail("failed");
-			//test.info(MarkupHelper.createCodeBlock(body,CodeLanguage.XML));
-			test.info(MarkupHelper.createCodeBlock(response.asString(),CodeLanguage.XML));
-			
-
-		}
-
+		String IdentityType = ApiHelper.getvaluefromxml(response.asString(), "q1:IdentityType");
+		ApiHelper.AssertEquals("IdentityType", "NationalIdentityNumber",IdentityType, test);
+		
+		String fullname = ApiHelper.getvaluefromxml(response.asString(), "q1:FullName");
+		ApiHelper.AssertEquals("fullname", "John Sanctions Doe",fullname, test);
+		
+		String AddressType = ApiHelper.getvaluefromxml(response.asString(), "q1:AddressType");
+		ApiHelper.AssertEquals("AddressType", "None",AddressType, test);
+		
+		String AddressLine1 = ApiHelper.getvaluefromxml(response.asString(), "q1:AddressLine1");
+		ApiHelper.AssertEquals("AddressLine1", "116 Metropolitan Street",AddressLine1, test);
+		
+		String AddressLine2 = ApiHelper.getvaluefromxml(response.asString(), "q1:AddressLine2");
+		ApiHelper.AssertEquals("AddressLine2", "Beacon Valley",AddressLine2, test);
+		
+		String AddressLine3 = ApiHelper.getvaluefromxml(response.asString(), "q1:AddressLine3");
+		ApiHelper.AssertEquals("AddressLine3", "Mitchells Plain",AddressLine3, test);
+		
+		String IsMatch = ApiHelper.getvaluefromxml(response.asString(), "IsMatch");
+		ApiHelper.AssertEquals("IsMatch", "False",IsMatch, test);
+		
+		
+		String RiskRating = ApiHelper.getvaluefromxml(response.asString(), "RiskRating");
+		ApiHelper.AssertEquals("RiskRating", "Low",RiskRating, test);
+		
+		String SourceReference = ApiHelper.getvaluefromxml(response.asString(), "SourceReference");
+		ApiHelper.AssertEquals("SourceReference", "7409075013082",SourceReference, test);
+		
+		String Q2fullname = ApiHelper.getvaluefromxml(response.asString(), "q2:FullName");
+		ApiHelper.AssertEquals("Q2fullname", "MICHIEL DANIEL VORSTER",Q2fullname, test);
+		
 	}
 
 }

@@ -1,17 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="10" total="11" passed="1">
+<testng-results skipped="0" failed="0" ignored="5" total="11" passed="6">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="15184" started-at="2021-09-29T13:37:53 CAT" finished-at="2021-09-29T13:38:08 CAT">
+  <suite name="Default suite" duration-ms="16092" started-at="2021-09-30T01:41:32 CAT" finished-at="2021-09-30T01:41:48 CAT">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="15184" started-at="2021-09-29T13:37:53 CAT" finished-at="2021-09-29T13:38:08 CAT">
+    <test name="Default test" duration-ms="16092" started-at="2021-09-30T01:41:32 CAT" finished-at="2021-09-30T01:41:48 CAT">
       <class name="runner.ApiTests">
-        <test-method status="PASS" signature="f4()[pri:4, instance:runner.ApiTests@45c7e403]" name="f4" duration-ms="14992" started-at="2021-09-29T13:37:53 CAT" finished-at="2021-09-29T13:38:08 CAT">
+        <test-method status="PASS" signature="f4()[pri:4, instance:runner.ApiTests@45c7e403]" name="f4" duration-ms="3672" started-at="2021-09-30T01:41:32 CAT" finished-at="2021-09-30T01:41:36 CAT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- f4 -->
-        <test-method status="PASS" signature="EndTests()[pri:0, instance:runner.ApiTests@45c7e403]" name="EndTests" is-config="true" duration-ms="158" started-at="2021-09-29T13:38:08 CAT" finished-at="2021-09-29T13:38:08 CAT">
+        <test-method status="PASS" signature="f5()[pri:5, instance:runner.ApiTests@45c7e403]" name="f5" duration-ms="1950" started-at="2021-09-30T01:41:36 CAT" finished-at="2021-09-30T01:41:37 CAT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- f5 -->
+        <test-method status="PASS" signature="f6()[pri:6, instance:runner.ApiTests@45c7e403]" name="f6" duration-ms="5684" started-at="2021-09-30T01:41:37 CAT" finished-at="2021-09-30T01:41:43 CAT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- f6 -->
+        <test-method status="PASS" signature="f7()[pri:7, instance:runner.ApiTests@45c7e403]" name="f7" duration-ms="1456" started-at="2021-09-30T01:41:43 CAT" finished-at="2021-09-30T01:41:45 CAT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- f7 -->
+        <test-method status="PASS" signature="f8()[pri:8, instance:runner.ApiTests@45c7e403]" name="f8" duration-ms="1547" started-at="2021-09-30T01:41:45 CAT" finished-at="2021-09-30T01:41:46 CAT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- f8 -->
+        <test-method status="PASS" signature="f10()[pri:10, instance:runner.ApiTests@45c7e403]" name="f10" duration-ms="1551" started-at="2021-09-30T01:41:46 CAT" finished-at="2021-09-30T01:41:48 CAT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- f10 -->
+        <test-method status="PASS" signature="EndTests()[pri:0, instance:runner.ApiTests@45c7e403]" name="EndTests" is-config="true" duration-ms="183" started-at="2021-09-30T01:41:48 CAT" finished-at="2021-09-30T01:41:48 CAT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- EndTests -->

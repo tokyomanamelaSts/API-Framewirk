@@ -49,23 +49,25 @@ public class ApiTests {
 		PersonHighRisk.validatePersonHighRisk(extent);
 	}
 
-	@Test(priority = 5,enabled=false)
-	public void f5() throws URISyntaxException, IOException {
+	@Test(priority = 5,enabled=true)
+	public void f5() throws URISyntaxException, IOException, SAXException, ParserConfigurationException {
+		
 		PersonPassportNumber.validatePersonPassPortNumber(extent);
+		
 	}
 
-	@Test(priority = 6,enabled=false)
-	public void f6() throws URISyntaxException, IOException {
+	@Test(priority = 6,enabled=true)
+	public void f6() throws URISyntaxException, IOException, SAXException, ParserConfigurationException {
 		PersonPassportNumberValid.validatePassPortValid(extent);
 	}
 
-	@Test(priority = 7,enabled=false)
-	public void f7() throws URISyntaxException, IOException {
+	@Test(priority = 7,enabled=true)
+	public void f7() throws URISyntaxException, IOException, SAXException, ParserConfigurationException {
 		PersonTest.validatePersonTest(extent);
 	}
 
-	@Test(priority = 8,enabled=false)
-	public void f8() throws URISyntaxException, IOException {
+	@Test(priority = 8,enabled=true)
+	public void f8() throws URISyntaxException, IOException, SAXException, ParserConfigurationException {
 		PersonVeryHigh.validatePersonVeryHigh(extent);
 	}
 
@@ -74,8 +76,8 @@ public class ApiTests {
 		ScreenAndVerifyPartyOrganisation.validateOrganisation(extent);
 	}
 
-	@Test(priority = 10,enabled=false)
-	public void f10() throws URISyntaxException, IOException {
+	@Test(priority = 10,enabled=true)
+	public void f10() throws URISyntaxException, IOException, SAXException, ParserConfigurationException {
 		ScreenAndVerifyPartyPerson.validatStatusCode(extent);
 	}
 

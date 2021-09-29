@@ -6,11 +6,6 @@
       <class name="runner.ApiTests">
         <methods>
           <include name="EndTests"/>
-          <include name="f7"/>
-          <include name="f6"/>
-          <include name="f8"/>
-          <include name="f5"/>
-          <include name="f4"/>
           <include name="f10"/>
         </methods>
       </class> <!-- runner.ApiTests -->

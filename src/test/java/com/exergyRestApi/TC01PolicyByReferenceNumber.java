@@ -19,8 +19,6 @@ import io.restassured.response.Response;
 
 
 public class TC01PolicyByReferenceNumber {
-	
-	
 
     
 	public static void test0001(ExtentReports extent) throws URISyntaxException {
@@ -31,7 +29,7 @@ public class TC01PolicyByReferenceNumber {
 		/*
 		 * Given Accept the response in JSON format When I Perform the Get Request for
 		 * GetPolicyByReferenceNumber Then Status Code 200 OK should be Expected
-		 * And Response Header ContentType:application/json should be Expected,
+		 * And Response Header ContentType:application/json should be Expected
 		 *
 		 */
 

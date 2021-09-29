@@ -48,31 +48,9 @@ public class ScreenAndVerifyPartyOrganisation {
 				.post("/PartyVerificationService.svc")
 		.then()         .and().log().all().extract().response();
 
-		int statusCode = response.getStatusCode();
 		
 
-		
-try {
-			
-			Assert.assertEquals(statusCode, 200);
-
-			XmlPath jsXpath = new XmlPath(response.asString());
-			String partyType = jsXpath.getString("q1:PartyType");
-			System.out.println("q1:PartyType is: " + partyType);
-			test.pass("passed");
-			//test.info(MarkupHelper.createCodeBlock(body,CodeLanguage.XML));
-			test.info(MarkupHelper.createCodeBlock(response.asString(),CodeLanguage.XML));
-			
-
-		}catch(AssertionError e) {
-			test.fail("failed");
-			//test.info(MarkupHelper.createCodeBlock(body,CodeLanguage.XML));
-			test.info(MarkupHelper.createCodeBlock(response.asString(),CodeLanguage.XML));
-			
-
-		}
-
-
+		//response.prettyPrint();
 
 }
 

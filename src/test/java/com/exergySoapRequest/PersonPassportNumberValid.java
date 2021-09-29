@@ -6,15 +6,19 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.net.URISyntaxException;
 
+import javax.xml.parsers.ParserConfigurationException;
+
 import org.apache.commons.io.IOUtils;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+import org.xml.sax.SAXException;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.markuputils.CodeLanguage;
 import com.aventstack.extentreports.markuputils.MarkupHelper;
 
+import Utilities.ApiHelper;
 import Utilities.ExtentManager;
 import io.restassured.RestAssured;
 import io.restassured.path.xml.XmlPath;
@@ -22,7 +26,7 @@ import io.restassured.response.Response;
 
 public class PersonPassportNumberValid {
 
-	   	public static void validatePassPortValid(ExtentReports extent) throws URISyntaxException, IOException {
+	   	public static void validatePassPortValid(ExtentReports extent) throws URISyntaxException, IOException, SAXException, ParserConfigurationException {
 
 		 ExtentTest test;
 		 test=extent.createTest("PersonPassportNumberValid");
@@ -45,33 +49,29 @@ public class PersonPassportNumberValid {
 	   				.header("Host", "uatsvc.hollard.co.za").and().body(IOUtils.toString(fileInputStream, "UTF-8"))
 	   		.when()
 	   				.post("/PartyVerificationService.svc")
-	   		.then()         .statusCode(200).and().log().all().extract().response();
-
-	   		int statusCode = response.getStatusCode();
-	   		System.out.println("Status Code is...."+ statusCode);
-
-	   		XmlPath jsXpath = new XmlPath(response.asString());
-	   		String partyType = jsXpath.getString("q1:PartyType");
-	   		System.out.println("q1:PartyType is: " + partyType);
-	   		try {
-				
-				Assert.assertEquals(statusCode, 200);
-
-				test.pass("passed");
-				//test.info(MarkupHelper.createCodeBlock(body,CodeLanguage.XML));
-				test.info(MarkupHelper.createCodeBlock(response.asString(),CodeLanguage.XML));
-				
-
-			}catch(AssertionError e) {
-				test.fail("failed");
-				//test.info(MarkupHelper.createCodeBlock(body,CodeLanguage.XML));
-				test.info(MarkupHelper.createCodeBlock(response.asString(),CodeLanguage.XML));
-				
-
-			}
-
-	   }
+	   		.then()         .statusCode(200).and().extract().response();
 
 
-
+			test.info(MarkupHelper.createCodeBlock(response.asString(),CodeLanguage.XML));
+			
+			// validations
+			
+			String fullname = ApiHelper.getvaluefromxml(response.asString(), "q1:FullName");
+			ApiHelper.AssertEquals("fullname", "Michiel Vorster",fullname, test);
+			
+			String AddressType = ApiHelper.getvaluefromxml(response.asString(), "q1:AddressType");
+			ApiHelper.AssertEquals("AddressType", "None",AddressType, test);
+			
+			String AddressLine1 = ApiHelper.getvaluefromxml(response.asString(), "q1:AddressLine1");
+			ApiHelper.AssertEquals("AddressLine1", "116 Metropolitan Street",AddressLine1, test);
+			
+			String AddressLine2 = ApiHelper.getvaluefromxml(response.asString(), "q1:AddressLine2");
+			ApiHelper.AssertEquals("AddressLine2", "Beacon Valley",AddressLine2, test);
+			
+			String AddressLine3 = ApiHelper.getvaluefromxml(response.asString(), "q1:AddressLine3");
+			ApiHelper.AssertEquals("AddressLine3", "Mitchells Plain",AddressLine3, test);
+			
+			String RiskRating = ApiHelper.getvaluefromxml(response.asString(), "RiskRating");
+			ApiHelper.AssertEquals("RiskRating", "Medium",RiskRating, test);
+}
 }
