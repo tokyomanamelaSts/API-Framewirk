@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:par="http://hollard.co.za/PartyVerificationService/" xmlns:par1="http://hollard.co.za/Schema/Types/Party">
+	<soapenv:Header />
+	<soapenv:Body>
+		<par:ScreenAndVerifyParty xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+			<par:ScreenAndVerifyOperationType>ScreenAndVerify</par:ScreenAndVerifyOperationType>
+			<par:PartyList>
+				<par1:Party i:type="par1:Person">
+					<par1:GivenName>Teunias</par1:GivenName>
+					<par1:Surname>Ruiters</par1:Surname>
+					<par1:IdentityNumber>
+						<par1:IdentityType>NationalIdentityNumber</par1:IdentityType>
+						<par1:IdentityNumber>5204165730089</par1:IdentityNumber>
+						<par1:IssueCountry>RSA</par1:IssueCountry>
+					</par1:IdentityNumber>
+					<par1:HomePhysicalAddress>
+						<par1:AddressLine1>116 Metropolitan Street</par1:AddressLine1>
+						<par1:AddressLine2>Beacon Valley</par1:AddressLine2>
+						<par1:AddressLine3>Mitchells Plain</par1:AddressLine3>
+					</par1:HomePhysicalAddress>
+				</par1:Party>
+			</par:PartyList>
+			<par:Channel>Broker</par:Channel>
+			<par:Product>FullyUnderwrittenLife</par:Product>
+			<par:AnnualPremium>10000</par:AnnualPremium>
+			<par:ExternalReference>a690bc08-26e8-92a2-7314-7aa22078b748</par:ExternalReference>
+			<par:MaxCacheAge>0</par:MaxCacheAge>
+		</par:ScreenAndVerifyParty>
+	</soapenv:Body>
+</soapenv:Envelope>
