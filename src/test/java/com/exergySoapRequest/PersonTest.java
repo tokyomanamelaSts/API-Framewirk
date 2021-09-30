@@ -34,6 +34,9 @@ public class PersonTest {
 			String username = "mipusr";
 			String password = "69hTryVKjMa4";
 
+			System.out.println("Starting test validatePersonTest.......\n========================================");
+			
+			
 			FileInputStream fileInputStream = new FileInputStream(new File(".\\SoapRequest\\PersonTest.xml"));
 
 			RestAssured.baseURI = "https://uatsvc.hollard.co.za/PartyVerificationService";

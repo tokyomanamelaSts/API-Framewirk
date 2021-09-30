@@ -29,6 +29,9 @@ public class PersonPassportNumber {
 		test=extent.createTest("validatePersonPassPortNumber");
 		String username = "mipusr";
 		String password = "69hTryVKjMa4";
+		
+		System.out.println("Starting test validatePersonPassPortNumber.......\n========================================");
+		
 
 		FileInputStream fileInputStream = new FileInputStream(new File(".\\SoapRequest\\PersonPassportNumber.xml"));
 		RestAssured.baseURI = "https://uatsvc.hollard.co.za/PartyVerificationService";
@@ -49,6 +52,8 @@ public class PersonPassportNumber {
 		
 
 		test.info(MarkupHelper.createCodeBlock(response.asString(),CodeLanguage.XML));
+		
+		
 		
 		// validations
 		

@@ -33,6 +33,7 @@ public class PersonHighRisk{
 		String username = "mipusr";
 		String password = "69hTryVKjMa4";
 
+		System.out.println("Starting test validatePersonHighRisk.......\n========================================");
 		
 		
 		FileInputStream fileInputStream = new FileInputStream(new File(".\\SoapRequest\\PersonHighRisk.xml"));
@@ -51,7 +52,6 @@ public class PersonHighRisk{
 		.then().statusCode(200).and().extract().response();
 		
 		test.info(MarkupHelper.createCodeBlock(response.asString(),CodeLanguage.XML));
-		
 		
 		// validations
 		

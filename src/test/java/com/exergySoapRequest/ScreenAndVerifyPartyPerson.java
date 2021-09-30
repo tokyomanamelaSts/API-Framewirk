@@ -34,6 +34,9 @@ public class ScreenAndVerifyPartyPerson {
 		test=extent.createTest("ScreenAndVerifyPartyPerson");
 		String username = "mipusr";
 		String password = "69hTryVKjMa4";
+		
+		System.out.println("Starting test ScreenAndVerifyPartyPerson.......\n========================================");
+		
 
 		FileInputStream fileInputStream = new FileInputStream(new File(".\\SoapRequest\\PartyVerificationPerson.xml"));
 

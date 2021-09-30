@@ -33,6 +33,9 @@ public class PersonVeryHigh {
 		String username = "mipusr";
 		String password = "69hTryVKjMa4";
 
+		System.out.println("Starting test validatePersonVeryHigh.......\n========================================");
+		
+		
 		FileInputStream fileInputStream = new FileInputStream(new File(".\\SoapRequest\\PersonVeryHigh.xml"));
 
 		RestAssured.baseURI = "https://uatsvc.hollard.co.za/PartyVerificationService";
