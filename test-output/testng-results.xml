@@ -2,36 +2,36 @@
 <testng-results skipped="0" failed="0" ignored="5" total="11" passed="6">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="16092" started-at="2021-09-30T01:41:32 CAT" finished-at="2021-09-30T01:41:48 CAT">
+  <suite name="Default suite" duration-ms="33683" started-at="2021-09-30T02:34:49 CAT" finished-at="2021-09-30T02:35:23 CAT">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="16092" started-at="2021-09-30T01:41:32 CAT" finished-at="2021-09-30T01:41:48 CAT">
+    <test name="Default test" duration-ms="33683" started-at="2021-09-30T02:34:49 CAT" finished-at="2021-09-30T02:35:23 CAT">
       <class name="runner.ApiTests">
-        <test-method status="PASS" signature="f4()[pri:4, instance:runner.ApiTests@45c7e403]" name="f4" duration-ms="3672" started-at="2021-09-30T01:41:32 CAT" finished-at="2021-09-30T01:41:36 CAT">
+        <test-method status="PASS" signature="f4()[pri:4, instance:runner.ApiTests@45c7e403]" name="f4" duration-ms="15299" started-at="2021-09-30T02:34:49 CAT" finished-at="2021-09-30T02:35:05 CAT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- f4 -->
-        <test-method status="PASS" signature="f5()[pri:5, instance:runner.ApiTests@45c7e403]" name="f5" duration-ms="1950" started-at="2021-09-30T01:41:36 CAT" finished-at="2021-09-30T01:41:37 CAT">
+        <test-method status="PASS" signature="f5()[pri:5, instance:runner.ApiTests@45c7e403]" name="f5" duration-ms="3162" started-at="2021-09-30T02:35:05 CAT" finished-at="2021-09-30T02:35:08 CAT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- f5 -->
-        <test-method status="PASS" signature="f6()[pri:6, instance:runner.ApiTests@45c7e403]" name="f6" duration-ms="5684" started-at="2021-09-30T01:41:37 CAT" finished-at="2021-09-30T01:41:43 CAT">
+        <test-method status="PASS" signature="f6()[pri:6, instance:runner.ApiTests@45c7e403]" name="f6" duration-ms="6877" started-at="2021-09-30T02:35:08 CAT" finished-at="2021-09-30T02:35:15 CAT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- f6 -->
-        <test-method status="PASS" signature="f7()[pri:7, instance:runner.ApiTests@45c7e403]" name="f7" duration-ms="1456" started-at="2021-09-30T01:41:43 CAT" finished-at="2021-09-30T01:41:45 CAT">
+        <test-method status="PASS" signature="f7()[pri:7, instance:runner.ApiTests@45c7e403]" name="f7" duration-ms="3188" started-at="2021-09-30T02:35:15 CAT" finished-at="2021-09-30T02:35:18 CAT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- f7 -->
-        <test-method status="PASS" signature="f8()[pri:8, instance:runner.ApiTests@45c7e403]" name="f8" duration-ms="1547" started-at="2021-09-30T01:41:45 CAT" finished-at="2021-09-30T01:41:46 CAT">
+        <test-method status="PASS" signature="f8()[pri:8, instance:runner.ApiTests@45c7e403]" name="f8" duration-ms="2218" started-at="2021-09-30T02:35:18 CAT" finished-at="2021-09-30T02:35:20 CAT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- f8 -->
-        <test-method status="PASS" signature="f10()[pri:10, instance:runner.ApiTests@45c7e403]" name="f10" duration-ms="1551" started-at="2021-09-30T01:41:46 CAT" finished-at="2021-09-30T01:41:48 CAT">
+        <test-method status="PASS" signature="f10()[pri:10, instance:runner.ApiTests@45c7e403]" name="f10" duration-ms="2659" started-at="2021-09-30T02:35:20 CAT" finished-at="2021-09-30T02:35:23 CAT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- f10 -->
-        <test-method status="PASS" signature="EndTests()[pri:0, instance:runner.ApiTests@45c7e403]" name="EndTests" is-config="true" duration-ms="183" started-at="2021-09-30T01:41:48 CAT" finished-at="2021-09-30T01:41:48 CAT">
+        <test-method status="PASS" signature="EndTests()[pri:0, instance:runner.ApiTests@45c7e403]" name="EndTests" is-config="true" duration-ms="213" started-at="2021-09-30T02:35:23 CAT" finished-at="2021-09-30T02:35:23 CAT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- EndTests -->

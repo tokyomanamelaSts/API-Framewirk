@@ -13,7 +13,7 @@ public class CollectionPayLoad {
 				+ "\"channelType\": \"TillPoint\",\r\n" + "\"channelLocation\": \"\",\r\n"
 				+ "\"channelReference\": \"\"\r\n" + "},\r\n" + "\"source\": {\r\n" + "\"sourceName\": \"Pay@\",\r\n"
 				+ "\"sourceReference\": \"\"\r\n" + "},\r\n" + "\"status\": \"None\",\r\n" + "\"message\": \"\"\r\n"
-				+ "}";
+				+ "}"; 
 
 }
 
