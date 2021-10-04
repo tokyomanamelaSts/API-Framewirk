@@ -56,7 +56,6 @@ public class PersonPassportNumber {
 		
 		
 		// validations
-		
 		String fullname = ApiHelper.getvaluefromxml(response.asString(), "q1:FullName");
 		ApiHelper.AssertEquals("fullname", "Michiel Vorster",fullname, test);
 		

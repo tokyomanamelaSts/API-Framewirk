@@ -23,7 +23,7 @@ public class TC01PolicyByReferenceNumber {
     
 	public static void test0001(ExtentReports extent) throws URISyntaxException {
 		ExtentTest test;
-    	test=extent.createTest("PolicyByReferenceNumber");
+    	test= extent.createTest("PolicyByReferenceNumber");
 		RestAssured.baseURI = "https://apim-hl-life-test-za.azure-api.net";
 
 		/*

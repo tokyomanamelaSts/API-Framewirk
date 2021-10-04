@@ -84,7 +84,5 @@ public class ScreenAndVerifyPartyPerson {
 		String Q2fullname = ApiHelper.getvaluefromxml(response.asString(), "q2:FullName");
 		ApiHelper.AssertEquals("Q2fullname", "VUSI JOSEPH MNYANDU",Q2fullname, test);
 		
-
-
 }
 }
