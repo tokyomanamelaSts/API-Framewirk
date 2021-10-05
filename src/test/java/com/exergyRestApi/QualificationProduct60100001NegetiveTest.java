@@ -1,6 +1,7 @@
 package com.exergyRestApi;
 
-import com.applicationPayloads.CreateApplicationPayloads;
+
+import com.applicationPayloads.QualificationPayloads;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import Utilities.ApiHelper;
@@ -10,16 +11,17 @@ import java.net.URISyntaxException;
 import javax.xml.parsers.ParserConfigurationException;
 import org.xml.sax.SAXException;
 
-public class CreateAplication6 extends CreateApplicationPayloads {
 
-public static void  CreateApplication(ExtentReports extent) throws URISyntaxException, SAXException, IOException, ParserConfigurationException {
+public class QualificationProduct60100001NegetiveTest extends QualificationPayloads {
+
+public static void  qualificationProduct60100001NegetiveTest(ExtentReports extent) throws URISyntaxException, SAXException, IOException, ParserConfigurationException {
 	
 	
 	
 	ExtentTest test;
 	test=extent.createTest("PolicyByReferenceNumber");
 	Response response;
-	response =  ApiHelper.sendRestPostRequest(CreateApplicationPayLoad, "Application");
+	response =  ApiHelper.sendRestPostRequest(QualificationProduct60100000NegPayload, "/Qualification");
 	response.prettyPrint();
 	
 }

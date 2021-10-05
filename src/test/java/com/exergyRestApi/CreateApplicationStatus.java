@@ -10,16 +10,16 @@ import java.net.URISyntaxException;
 import javax.xml.parsers.ParserConfigurationException;
 import org.xml.sax.SAXException;
 
-public class CreateAplication3 extends CreateApplicationPayloads {
+public class CreateApplicationStatus extends CreateApplicationPayloads {
 
-public static void  CreateApplication(ExtentReports extent) throws URISyntaxException, SAXException, IOException, ParserConfigurationException {
+public static void  createApplicationStatus(ExtentReports extent) throws URISyntaxException, SAXException, IOException, ParserConfigurationException {
 	
 	
 	
 	ExtentTest test;
 	test=extent.createTest("PolicyByReferenceNumber");
 	Response response;
-	response =  ApiHelper.sendRestPostRequest(CreateApplicationPayLoad, "Application");
+	response =  ApiHelper.sendRestPatchRequest(CreateApplicationStatusPayLoad, "/Application/1598/Status/");
 	response.prettyPrint();
 	
 }

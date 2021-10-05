@@ -15,6 +15,8 @@ public class CollectionPayLoad {
 				+ "\"sourceReference\": \"\"\r\n" + "},\r\n" + "\"status\": \"None\",\r\n" + "\"message\": \"\"\r\n"
 				+ "}"; 
 
+		
 }
+	
 
 }
