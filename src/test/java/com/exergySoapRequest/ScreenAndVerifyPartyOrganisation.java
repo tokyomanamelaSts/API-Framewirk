@@ -33,6 +33,7 @@ public class ScreenAndVerifyPartyOrganisation {
 		FileInputStream fileInputStream = new FileInputStream(new File(".\\SoapRequest\\PartyVerificationOrganisation.xml"));
 
 		RestAssured.baseURI = "https://uatsvc.hollard.co.za/PartyVerificationService";
+		
 
 		// System.out.print(IOUtils.toString(fileInputStream, "UTF-8"));
 
@@ -50,7 +51,7 @@ public class ScreenAndVerifyPartyOrganisation {
 
 		
 
-		//response.prettyPrint();
+		response.prettyPrint();
 
 }
 

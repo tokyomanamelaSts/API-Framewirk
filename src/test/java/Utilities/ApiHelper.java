@@ -5,6 +5,7 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.net.URI;
 
 import org.testng.Assert;
 import org.testng.asserts.SoftAssert;
@@ -13,9 +14,14 @@ import org.xml.sax.InputSource;
 import org.xml.sax.SAXException;
 
 import com.aventstack.extentreports.ExtentTest;
-import com.exergySoapRequest.PersonHighRisk;
+import io.restassured.RestAssured;
+import io.restassured.http.ContentType;
+import io.restassured.response.Response;
 
 import javax.xml.parsers.*;
+
+import static io.restassured.RestAssured.given;
+
 import java.io.*;
 
 public class ApiHelper {
@@ -33,6 +39,87 @@ public class ApiHelper {
 	      return sb.toString();
 	   }
 	
+public static Response  sendRestPostRequest(String body  , String endpoint) throws SAXException, IOException, ParserConfigurationException {
+	
+	
+
+	RestAssured.baseURI = "https://apim-hl-life-test-za.azure-api.net/Application/sit";
+
+	Response response = 
+	given()
+		.header("x-subscription-id", "Life-Integration-Team")
+	    .header("Ocp-Apim-Subscription-Key", "d05d946b0e9b480ea9c2d751549bd5ef").contentType("application/json")
+	    .body( body)
+	.when()
+	   .post(endpoint)	
+	.then()
+			.contentType(ContentType.JSON)
+			.extract()
+			.response();
+	return response;	
+	}
+		
+public static Response  sendRestGetRequest(String endpoint) throws SAXException, IOException, ParserConfigurationException {
+	
+	
+
+	RestAssured.baseURI = "https://apim-hl-life-test-za.azure-api.net/Application/sit";
+
+	Response response = 
+			given()
+					.header("x-subscription-id","Life-Integration-Team")
+					.header("Ocp-Apim-Subscription-Key","d05d946b0e9b480ea9c2d751549bd5ef")
+					.accept(ContentType.JSON)
+			.when().get(endpoint)
+					
+			.then()
+					.statusCode(200)
+					.contentType(ContentType.JSON)
+					.extract()
+					.response();
+	return response;	
+	}
+
+public static Response  sendRestPutRequest(String body, String  endpoint) throws SAXException, IOException, ParserConfigurationException {
+	
+	
+		RestAssured.baseURI = "https://apim-hl-life-test-za.azure-api.net/Application/sit";
+	
+	Response response = 
+			given()
+				.header("x-subscription-id", "Life-Integration-Team")
+			    .header("Ocp-Apim-Subscription-Key", "fc5e1ef728f44652a03e16c9525f2d49").contentType("application/json")
+			    .body(body)
+			.when()
+			   .put(endpoint)	
+			.then()
+			
+				//.statusCode(200)
+				.contentType(ContentType.JSON)
+				.extract()
+				.response();
+			return response;	
+	}
+public static Response  sendRestPatchRequest(String body, String endpoint) throws SAXException, IOException, ParserConfigurationException {
+	
+	
+	RestAssured.baseURI = "https://apim-hl-life-test-za.azure-api.net/Application/sit";
+
+Response response = 
+		given()
+			.header("x-subscription-id", "Life-Integration-Team")
+		    .header("Ocp-Apim-Subscription-Key", "fc5e1ef728f44652a03e16c9525f2d49").contentType("application/json")
+		    .body(body)
+		.when()
+		   .patch(endpoint)	
+		.then()
+		
+			.statusCode(200)
+			.extract()
+			.response();
+		return response;	
+}
+	
  public static String getvaluefromxml(String res, String tagName) throws SAXException, IOException, ParserConfigurationException {
 	  
 	  	String value = "";
@@ -40,7 +127,6 @@ public class ApiHelper {
 		DocumentBuilder builder = factory.newDocumentBuilder();
 		Document document = builder.parse(new InputSource(new StringReader(res)));
 		document.getDocumentElement().normalize();
-		
 		
 		Element rootElement = document.getDocumentElement();
 	    NodeList nList = document.getElementsByTagName("s:Envelope");
