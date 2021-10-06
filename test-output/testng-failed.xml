@@ -5,7 +5,7 @@
     <classes>
       <class name="runner.ApiTests">
         <methods>
-          <include name="createApplicationBeneficiaries"/>
+          <include name="UploadDocument"/>
           <include name="EndTests"/>
         </methods>
       </class> <!-- runner.ApiTests -->

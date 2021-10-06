@@ -25,6 +25,17 @@ import static io.restassured.RestAssured.given;
 import java.io.*;
 
 public class ApiHelper {
+	
+	public static String applicationSitUrl = "https://apim-hl-life-test-za.azure-api.net/Application/sit";
+	public static String applicationSubId = "Life-Integration-Team";
+	public static String applicationSubKey = "d05d946b0e9b480ea9c2d751549bd5ef";
+	
+	
+	public static String policySitUrl = "https://apim-hl-life-test-za.azure-api.net/Policy/sit";
+	public static String policySubId = "Automation-Test-Team";
+	public static String policySubKey = "fc5e1ef728f44652a03e16c9525f2d49";
+	
+	
 	public String converFileToString(InputStream inputStream) throws IOException {
 	      //Creating an InputStream object
 	      //creating an InputStreamReader object
@@ -39,82 +50,73 @@ public class ApiHelper {
 	      return sb.toString();
 	   }
 	
-public static Response  sendRestPostRequest(String body  , String endpoint) throws SAXException, IOException, ParserConfigurationException {
+public static Response  sendRestPostRequest(String baseUrl, String subKey, String subId, String body  , String endpoint) throws SAXException, IOException, ParserConfigurationException {
 	
+	RestAssured.baseURI =baseUrl ;
 	
-
-	RestAssured.baseURI = "https://apim-hl-life-test-za.azure-api.net/Application/sit";
-
 	Response response = 
 	given()
-		.header("x-subscription-id", "Life-Integration-Team")
-	    .header("Ocp-Apim-Subscription-Key", "d05d946b0e9b480ea9c2d751549bd5ef").contentType("application/json")
+		.header("x-subscription-id", subId)
+	    .header("Ocp-Apim-Subscription-Key", subKey).contentType("application/json")
 	    .body( body)
 	.when()
 	   .post(endpoint)	
 	.then()
-			.contentType(ContentType.JSON)
+			
 			.extract()
 			.response();
 	return response;	
 	}
 		
-public static Response  sendRestGetRequest(String endpoint) throws SAXException, IOException, ParserConfigurationException {
+public static Response  sendRestGetRequest(String baseUrl, String subKey, String subId, String endpoint) throws SAXException, IOException, ParserConfigurationException {
 	
 	
 
-	RestAssured.baseURI = "https://apim-hl-life-test-za.azure-api.net/Application/sit";
+	RestAssured.baseURI =baseUrl;
 
 	Response response = 
 			given()
-					.header("x-subscription-id","Life-Integration-Team")
-					.header("Ocp-Apim-Subscription-Key","d05d946b0e9b480ea9c2d751549bd5ef")
+					.header("x-subscription-id",subId)
+					.header("Ocp-Apim-Subscription-Key",subKey)
 					.accept(ContentType.JSON)
 			.when().get(endpoint)
 					
 			.then()
-					.statusCode(200)
-					.contentType(ContentType.JSON)
 					.extract()
 					.response();
 	return response;	
 	}
 
-public static Response  sendRestPutRequest(String body, String  endpoint) throws SAXException, IOException, ParserConfigurationException {
+public static Response  sendRestPutRequest(String baseUrl,  String subKey, String subId,String body, String  endpoint) throws SAXException, IOException, ParserConfigurationException {
 	
 	
-		RestAssured.baseURI = "https://apim-hl-life-test-za.azure-api.net/Application/sit";
+		RestAssured.baseURI = baseUrl;
 	
 	Response response = 
 			given()
-				.header("x-subscription-id", "Life-Integration-Team")
-			    .header("Ocp-Apim-Subscription-Key", "fc5e1ef728f44652a03e16c9525f2d49").contentType("application/json")
+				.header("x-subscription-id", subId)
+			    .header("Ocp-Apim-Subscription-Key",subKey ).contentType("application/json")
 			    .body(body)
 			.when()
 			   .put(endpoint)	
 			.then()
-			
-				//.statusCode(200)
-				.contentType(ContentType.JSON)
 				.extract()
 				.response();
 			return response;	
 	}
-public static Response  sendRestPatchRequest(String body, String endpoint) throws SAXException, IOException, ParserConfigurationException {
+public static Response  sendRestPatchRequest(String baseUrl, String subKey, String subId, String body, String endpoint) throws SAXException, IOException, ParserConfigurationException {
 	
 	
-	RestAssured.baseURI = "https://apim-hl-life-test-za.azure-api.net/Application/sit";
+	RestAssured.baseURI = baseUrl;
 
 Response response = 
 		given()
-			.header("x-subscription-id", "Life-Integration-Team")
-		    .header("Ocp-Apim-Subscription-Key", "fc5e1ef728f44652a03e16c9525f2d49").contentType("application/json")
+			.header("x-subscription-id", subId)
+		    .header("Ocp-Apim-Subscription-Key", subKey).contentType("application/json")
 		    .body(body)
 		.when()
 		   .patch(endpoint)	
 		.then()
-		
-			.statusCode(200)
 			.extract()
 			.response();
 		return response;	
@@ -149,18 +151,12 @@ Response response =
 		 
 		 test.pass("validation for "+tagname+" has passed");
 		 System.out.println("validation for "+tagname+" has passed");
-		 Assert.assertTrue(true);
-		 
-		 
 	 }
 	 
 	 else 
 	 {
 		 test.fail("validation for "+tagname+" has failled. expected "+expected+"  but got "+Actual );
 		 System.out.println("validation for "+tagname+" has failed. expected "+expected+"  but got "+Actual);
-		 //fail script
-		 Assert.assertTrue(false);
-		 
 	 }
 	 
  }

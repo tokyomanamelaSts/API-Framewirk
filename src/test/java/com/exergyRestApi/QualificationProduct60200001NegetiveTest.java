@@ -4,6 +4,9 @@ import com.applicationPayloads.CreateApplicationPayloads;
 import com.applicationPayloads.QualificationPayloads;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.markuputils.CodeLanguage;
+import com.aventstack.extentreports.markuputils.MarkupHelper;
+
 import Utilities.ApiHelper;
 import io.restassured.response.Response;
 import java.io.IOException;
@@ -19,10 +22,12 @@ public static void  qualificationProduct60200001NegetiveTest(ExtentReports exten
 	
 	
 	ExtentTest test;
-	test=extent.createTest("PolicyByReferenceNumber");
+	test=extent.createTest("Qualification Product 60200001 Negetive Test");
 	Response response;
-	response =  ApiHelper.sendRestPostRequest(QualificationProduct60200000NegPayload, "/Qualification");
-	response.prettyPrint();
+	response =  ApiHelper.sendRestPostRequest(ApiHelper.applicationSitUrl,ApiHelper.applicationSubKey, ApiHelper.applicationSubId,QualificationProduct60200000NegPayload, "/Qualification");
+	ApiHelper.AssertEquals("Status code" ,"200", String.valueOf(response.statusCode()) , test);
+	test.info( MarkupHelper.createCodeBlock(response.asString(),CodeLanguage.JSON));
+	
 	
 }
 
