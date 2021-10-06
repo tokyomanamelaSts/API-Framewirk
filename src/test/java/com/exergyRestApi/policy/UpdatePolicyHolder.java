@@ -1,11 +1,11 @@
-package com.exergyRestApi;
+package com.exergyRestApi.policy;
 
-
-import com.applicationPayloads.QualificationPayloads;
+import com.applicationPayloads.CreateApplicationPayloads;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.markuputils.CodeLanguage;
 import com.aventstack.extentreports.markuputils.MarkupHelper;
+import com.policyPayloads.policyPayloads;
 
 import Utilities.ApiHelper;
 import io.restassured.response.Response;
@@ -15,21 +15,23 @@ import javax.xml.parsers.ParserConfigurationException;
 import org.xml.sax.SAXException;
 
 
-public class QualificationProduct60100000 extends QualificationPayloads {
+public class UpdatePolicyHolder extends policyPayloads {
 
-public static void  qualificationProduct60100000(ExtentReports extent) throws URISyntaxException, SAXException, IOException, ParserConfigurationException {
+public static void  updatePolicyHolder(ExtentReports extent) throws URISyntaxException, SAXException, IOException, ParserConfigurationException {
 	
 	
 	
 	ExtentTest test;
-	test=extent.createTest("Qualification Product 60100000");
+	test=extent.createTest("NIF Policy Holde rUpdate");
 	Response response;
-	response =  ApiHelper.sendRestPostRequest(ApiHelper.applicationSitUrl,ApiHelper.applicationSubKey, ApiHelper.applicationSubId,QualificationProduct60100000Payload, "/Qualification");
+	response =  ApiHelper.sendRestPutRequest(ApiHelper.policySitUrl,ApiHelper.policySubKey, ApiHelper.policySubId,UpdatePolicyHolderPayloads, "/Policy/50015319/PolicyHolder");
+	response.prettyPrint();
 	ApiHelper.AssertEquals("Status code" ,"200", String.valueOf(response.statusCode()) , test);
 	test.info( MarkupHelper.createCodeBlock(response.asString(),CodeLanguage.JSON));
 	
 	
 }
+
 
 
 	

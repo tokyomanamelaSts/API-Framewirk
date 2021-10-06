@@ -3,6 +3,9 @@ package com.exergyRestApi;
 import com.applicationPayloads.CreateApplicationPayloads;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.markuputils.CodeLanguage;
+import com.aventstack.extentreports.markuputils.MarkupHelper;
+
 import Utilities.ApiHelper;
 import io.restassured.response.Response;
 import java.io.IOException;
@@ -18,10 +21,13 @@ public static void  CreateApplication(ExtentReports extent) throws URISyntaxExce
 	
 	
 	ExtentTest test;
-	test=extent.createTest("PolicyByReferenceNumber");
+	test=extent.createTest("Create Application");
 	Response response;
-	response =  ApiHelper.sendRestPostRequest(CreateApplicationPayLoad, "Application");
-	response.prettyPrint();
+	response =  ApiHelper.sendRestPostRequest(ApiHelper.applicationSitUrl,ApiHelper.applicationSubKey, ApiHelper.applicationSubId, CreateApplicationPayLoad, "Application");
+	
+	ApiHelper.AssertEquals("Status code" ,"200", String.valueOf(response.statusCode()) , test);
+	test.info( MarkupHelper.createCodeBlock(response.asString(),CodeLanguage.JSON));
+	
 	
 }
 

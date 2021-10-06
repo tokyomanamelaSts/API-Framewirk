@@ -1,7 +1,6 @@
 package com.exergyRestApi;
 
-
-import com.applicationPayloads.QualificationPayloads;
+import com.applicationPayloads.CreateApplicationPayloads;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.markuputils.CodeLanguage;
@@ -15,22 +14,21 @@ import javax.xml.parsers.ParserConfigurationException;
 import org.xml.sax.SAXException;
 
 
-public class QualificationProduct60100000 extends QualificationPayloads {
+public class CreateApplicationPremiumCollection extends CreateApplicationPayloads {
 
-public static void  qualificationProduct60100000(ExtentReports extent) throws URISyntaxException, SAXException, IOException, ParserConfigurationException {
+public static void  createApplicationPremiumCollection(ExtentReports extent) throws URISyntaxException, SAXException, IOException, ParserConfigurationException {
 	
 	
 	
 	ExtentTest test;
-	test=extent.createTest("Qualification Product 60100000");
+	test=extent.createTest("create Application Premium Collection");
 	Response response;
-	response =  ApiHelper.sendRestPostRequest(ApiHelper.applicationSitUrl,ApiHelper.applicationSubKey, ApiHelper.applicationSubId,QualificationProduct60100000Payload, "/Qualification");
+	response =  ApiHelper.sendRestPutRequest(ApiHelper.applicationSitUrl,ApiHelper.applicationSubKey, ApiHelper.applicationSubId,CreateApplicationPremiumCollection, "/Application/1598/PremiumCollection");
+	response.prettyPrint();
 	ApiHelper.AssertEquals("Status code" ,"200", String.valueOf(response.statusCode()) , test);
 	test.info( MarkupHelper.createCodeBlock(response.asString(),CodeLanguage.JSON));
 	
 	
 }
 
-
-	
 }

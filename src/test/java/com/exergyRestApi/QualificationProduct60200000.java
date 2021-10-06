@@ -4,6 +4,9 @@ import com.applicationPayloads.CreateApplicationPayloads;
 import com.applicationPayloads.QualificationPayloads;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.markuputils.CodeLanguage;
+import com.aventstack.extentreports.markuputils.MarkupHelper;
+
 import Utilities.ApiHelper;
 import io.restassured.response.Response;
 import java.io.IOException;
@@ -19,10 +22,12 @@ public static void  qualificationProduct60200000(ExtentReports extent) throws UR
 	
 	
 	ExtentTest test;
-	test=extent.createTest("PolicyByReferenceNumber");
+	test=extent.createTest("Qualification Produc t60200000");
 	Response response;
-	response =  ApiHelper.sendRestPostRequest(QualificationProduct60200000Payload, "/Qualification");
-	response.prettyPrint();
+	response =  ApiHelper.sendRestPostRequest(ApiHelper.applicationSitUrl,ApiHelper.applicationSubKey, ApiHelper.applicationSubId,QualificationProduct60200000Payload, "/Qualification");
+	ApiHelper.AssertEquals("Status code" ,"200", String.valueOf(response.statusCode()) , test);
+	test.info( MarkupHelper.createCodeBlock(response.asString(),CodeLanguage.JSON));
+	
 	
 }
 

@@ -50,46 +50,46 @@ public class ApiTests {
 	public void f3() throws URISyntaxException {
 		TC04CancelCollection.tc0004(extent);
 	}
-	@Test(priority = 4,enabled=false)
+	@Test(priority = 4,enabled=true)
 	public void f4() throws URISyntaxException, IOException, SAXException, ParserConfigurationException {
 		PersonHighRisk.validatePersonHighRisk(extent);
 	}
 
-	@Test(priority = 5,enabled=false)
+	@Test(priority = 5,enabled=true)
 	public void f5() throws URISyntaxException, IOException, SAXException, ParserConfigurationException {
 		
 		PersonPassportNumber.validatePersonPassPortNumber(extent);
 		
 	}
 
-	@Test(priority = 6,enabled=false)
+	@Test(priority = 6,enabled=true)
 	public void f6() throws URISyntaxException, IOException, SAXException, ParserConfigurationException {
 		PersonPassportNumberValid.validatePassPortValid(extent);
 	}
 
-	@Test(priority = 7,enabled=false)
+	@Test(priority = 7,enabled=true)
 	public void f7() throws URISyntaxException, IOException, SAXException, ParserConfigurationException {
 		PersonTest.validatePersonTest(extent);
 	}
 
-	@Test(priority = 8,enabled=false)
+	@Test(priority = 8,enabled=true)
 	public void f8() throws URISyntaxException, IOException, SAXException, ParserConfigurationException {
 		PersonVeryHigh.validatePersonVeryHigh(extent);
 	}
 
-	@Test(priority = 9,enabled=false)
+	@Test(priority = 9,enabled=true)
 	public void f9() throws URISyntaxException, IOException {
 		ScreenAndVerifyPartyOrganisation.validateOrganisation(extent);
 	}
 	
 	
 
-	@Test(priority = 10,enabled=false)
+	@Test(priority = 10,enabled=true)
 	public void f10() throws URISyntaxException, IOException, SAXException, ParserConfigurationException {
 		ScreenAndVerifyPartyPerson.validatStatusCode(extent);
 	}
 	
-	@Test(priority = 11,enabled=false)
+	@Test(priority = 11,enabled=true)
 	public void CreateApplication() throws URISyntaxException, IOException, SAXException, ParserConfigurationException {
 		CreateAplication.CreateApplication(extent);
 	}
@@ -123,14 +123,14 @@ public class ApiTests {
 		
 	}
 	
-	@Test(priority =17,enabled=true)
+	@Test(priority =18,enabled=true)
     public void QualificationProduct1960() throws URISyntaxException, IOException, SAXException, ParserConfigurationException {
  		
 	QualificationProduct1960.qualificationProduct1960(extent);
 		
 	}
 		
-    @Test(priority =17,enabled=true)
+    @Test(priority =19,enabled=true)
     public void QualificationProduct60100000() throws URISyntaxException, IOException, SAXException, ParserConfigurationException {
  		
 	     
@@ -138,20 +138,121 @@ public class ApiTests {
 	} 
     
 	
-    @Test(priority =17,enabled=true)
+    @Test(priority =20,enabled=true)
     public void QualificationProduct60100001NegetiveTest() throws URISyntaxException, IOException, SAXException, ParserConfigurationException {
  		
 	     
     	com.exergyRestApi.QualificationProduct60100001NegetiveTest.qualificationProduct60100001NegetiveTest(extent);
 	}
     
-    @Test(priority =17,enabled=true)
+    @Test(priority =21,enabled=true)
     public void Rates() throws URISyntaxException, IOException, SAXException, ParserConfigurationException {
  		
 	     
 		com.exergyRestApi.Rates.rates(extent);
 	}
+    
+    @Test(priority =22,enabled=true)
+    public void CreateApplicationPolicyHolder() throws URISyntaxException, IOException, SAXException, ParserConfigurationException {
+ 		
+    	com.exergyRestApi.CreateApplicationPolicyHolder.createApplicationPolicyHolder(extent);
+	     
+	}
+    
+    @Test(priority =23,enabled=true)
+    public void CreateApplicationPremiumCollection() throws URISyntaxException, IOException, SAXException, ParserConfigurationException {
+ 		
+		com.exergyRestApi.CreateApplicationPremiumCollection.createApplicationPremiumCollection(extent);
+	     
+	}
+    @Test(priority =23,enabled=true)
+    public void CreateApplicationAcceptance() throws URISyntaxException, IOException, SAXException, ParserConfigurationException {
+ 		
+    	com.exergyRestApi.CreateApplicationAcceptance.createApplicationAcceptance(extent);
+	     
+	}  
+    
+    @Test(priority =24,enabled=true)
+    public void PolicybyPolicyReference() throws URISyntaxException, IOException, SAXException, ParserConfigurationException {
+ 		
+		com.exergyRestApi.policy.PolicybyPolicyReference.policybyPolicyReference(extent);
+	     
+	}
+    
+    @Test(priority =25,enabled=true)
+    public void PolicyListbyPolicyNumber() throws URISyntaxException, IOException, SAXException, ParserConfigurationException {
+ 		
+    	com.exergyRestApi.policy.PolicyListbyPolicyNumber.policyListbyPolicyNumber(extent);
+	     
+	}  
+    
+    
+    @Test(priority =26,enabled=true)
+    public void PolicybyIdentityNumber() throws URISyntaxException, IOException, SAXException, ParserConfigurationException {
+ 		
+    	com.exergyRestApi.policy.PolicybyIdentityNumber.policybyIdentityNumber(extent);
+	     
+	}      
 	
+    
+    @Test(priority =27,enabled=true)
+    public void DocumentsbyPolicyReference() throws URISyntaxException, IOException, SAXException, ParserConfigurationException {
+ 		
+    	com.exergyRestApi.policy.DocumentsbyPolicyReference.documentsbyPolicyReference(extent);
+	     
+	}     
+    
+    
+    @Test(priority =28,enabled=true)
+    public void UpdateBankAccountAndDebitDay() throws URISyntaxException, IOException, SAXException, ParserConfigurationException {
+ 		
+    	com.exergyRestApi.policy.UpdateBankAccountAndDebitDay.updateBankAccountAndDebitDay(extent);
+	     
+	}     
+    
+    
+    @Test(priority =29,enabled=true)
+    public void TESTPolicyHolderUpdate() throws URISyntaxException, IOException, SAXException, ParserConfigurationException {
+ 		
+    	com.exergyRestApi.policy.TESTPolicyHolderUpdate.tESTPolicyHolderUpdate(extent);
+	     
+	}       
+    
+    
+ 
+    
+    
+    @Test(priority =31,enabled=true)
+    public void NIFPolicyHolderUpdate() throws URISyntaxException, IOException, SAXException, ParserConfigurationException {
+ 		
+		com.exergyRestApi.policy.NIFPolicyHolderUpdate.nIFPolicyHolderUpdate(extent);   
+	}     
+    
+    
+    
+    @Test(priority =31,enabled=true)
+    public void UpdatePolicyHolder() throws URISyntaxException, IOException, SAXException, ParserConfigurationException {
+ 		
+    	com.exergyRestApi.policy.UpdatePolicyHolder.updatePolicyHolder(extent); 
+	}  
+    
+    
+    @Test(priority =30,enabled=true)
+    public void ChangeBeneficiaries() throws URISyntaxException, IOException, SAXException, ParserConfigurationException {
+ 		
+    	com.exergyRestApi.policy.ChangeBeneficiaries.changeBeneficiaries(extent);
+	     
+	}   
+    
+    
+    @Test(priority =30,enabled=true)
+    public void UploadDocument() throws URISyntaxException, IOException, SAXException, ParserConfigurationException {
+ 		
+		com.exergyRestApi.policy.UploadDocument.uploadDocument(extent);
+	     
+	} 
+    
+    
 	@AfterTest
 	public void EndTests() {
 		extent.flush();
