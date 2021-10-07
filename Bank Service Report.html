@@ -5,7 +5,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<title>Api</title>
+<title>BankService Report</title>
 <link rel="apple-touch-icon" href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png">
 <link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png">
 <link href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@c43b89d03a7c43dae8bb8f0f078bad1997af6b3b/spark/css/spark-style.css" rel="stylesheet" />
@@ -32,10 +32,10 @@
 </ul>
 <ul class="nav-right">
 <li class="m-r-10">
-<a href="#"><span class="badge badge-primary">Automation</span></a>
+<a href="#"><span class="badge badge-primary">tokyomanamela</span></a>
 </li>
 <li class="m-r-10">
-<a href="#"><span class="badge badge-primary">Oct 7, 2021 07:05:22 am</span></a>
+<a href="#"><span class="badge badge-primary">Oct 7, 2021 07:25:04 am</span></a>
 </li>
 </ul>
 </div>
@@ -79,9 +79,9 @@
           tag=""
           device="">
           <div class="test-detail">
-            <p class="name">Query Bank</p>
+            <p class="name">Query Bank By Code</p>
             <p class="text-sm">
-              <span>07:05:22 am</span> / <span>00:00:05:077</span>
+              <span>07:25:05 am</span> / <span>00:00:05:238</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -89,10 +89,10 @@
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-pass">Query Bank</h5>
-<span class='badge badge-success'>10.07.2021 07:05:22</span>
-<span class='badge badge-danger'>10.07.2021 07:05:27</span>
-<span class='badge badge-default'>00:00:05:077</span>
+<h5 class="test-status text-pass">Query Bank By Code</h5>
+<span class='badge badge-success'>10.07.2021 07:25:05</span>
+<span class='badge badge-danger'>10.07.2021 07:25:10</span>
+<span class='badge badge-default'>00:00:05:238</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
 </div>
 </div>
@@ -102,105 +102,24 @@
   <tbody>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>07:05:27</td>
+        <td>07:25:10</td>
         <td>
           validation for Status code has passed
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>07:05:27</td>
+        <td>07:25:10</td>
         <td>
            <div class='json-tree' id='code-block-json-0'></div>
  <script>
   function jsonTreeCreate0() { 
    document.getElementById('code-block-json-0').innerHTML = JSONTree.create({
-    "queryBankResponse": {
-        "BankList": [
+    "queryBranchByBankCodeResponse": {
+        "BranchList": [
             {
-                "bankCode": "210016",
-                "bankName": "ABSA",
-                "universalBranchCode": "632005"
-            },
-            {
-                "bankCode": "210007",
-                "bankName": "African Bank",
-                "universalBranchCode": "430000"
-            },
-            {
-                "bankCode": "210052",
-                "bankName": "Albaraka Bank",
-                "universalBranchCode": "800000"
-            },
-            {
-                "bankCode": "210006",
-                "bankName": "Bank of Athens",
-                "universalBranchCode": "410506"
-            },
-            {
-                "bankCode": "210064",
-                "bankName": "Bank Zero Mutual Bank",
-                "universalBranchCode": "888000"
-            },
-            {
-                "bankCode": "210044",
-                "bankName": "Bidvest Bank",
-                "universalBranchCode": "462005"
-            },
-            {
-                "bankCode": "210010",
-                "bankName": "Capitec Bank",
-                "universalBranchCode": "470010"
-            },
-            {
-                "bankCode": "210063",
-                "bankName": "Discovery Bank Ltd",
-                "universalBranchCode": "679000"
-            },
-            {
-                "bankCode": "210055",
-                "bankName": "Finbond Mutual Bank",
-                "universalBranchCode": "589000"
-            },
-            {
-                "bankCode": "210003",
-                "bankName": "FNB",
-                "universalBranchCode": "254005"
-            },
-            {
-                "bankCode": "210039",
-                "bankName": "Investec",
-                "universalBranchCode": "580105"
-            },
-            {
-                "bankCode": "210002",
-                "bankName": "Nedbank",
-                "universalBranchCode": "198765"
-            },
-            {
-                "bankCode": "210013",
-                "bankName": "SA Post Bank",
-                "universalBranchCode": "460005"
-            },
-            {
-                "bankCode": "210001",
-                "bankName": "Standard Bank",
-                "universalBranchCode": "051001"
-            },
-            {
-                "bankCode": "210042",
-                "bankName": "Standard Chartered Bank Sa",
-                "universalBranchCode": "730020"
-            },
-            {
-                "bankCode": "210061",
-                "bankName": "Tyme Bank Limited",
-                "universalBranchCode": "678910"
-            },
-            {
-                "bankCode": "210019",
-                "bankName": "UBank Limited",
-                "universalBranchCode": "431010"
+                "branchCode": "462005",
+                "branchName": "BIDVEST BANK                  "
             }
         ]
     }
@@ -230,13 +149,13 @@
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Started</p>
-<h3>Oct 7, 2021 07:05:22 am</h3>
+<h3>Oct 7, 2021 07:25:04 am</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Ended</p>
-<h3>Oct 7, 2021 07:05:27 am</h3>
+<h3>Oct 7, 2021 07:25:10 am</h3>
 </div></div>
 </div>
 <div class="col-md-3">
@@ -306,7 +225,7 @@
 </div></div>
 <script>
 var timeline = {
-"Query Bank":5.077
+"Query Bank By Code":5.238
 };
 </script>
 <div class="row">

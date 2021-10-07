@@ -24,7 +24,12 @@ import static io.restassured.RestAssured.given;
 
 import java.io.*;
 
-public class ApiHelper {
+public class ApiHelper { 
+	
+	public static String bakingSitUrl = "https://hollardpoc.azure-api.net/uat/bank";
+    public static String bakingSubId = "melhollard";
+    public static String bakingSubKey = "8b0c22b05b8c45c2b3d57edafbd78018";
+	
 	
 	public static String applicationSitUrl = "https://apim-hl-life-test-za.azure-api.net/Application/sit";
 	public static String applicationSubId = "Life-Integration-Team";
