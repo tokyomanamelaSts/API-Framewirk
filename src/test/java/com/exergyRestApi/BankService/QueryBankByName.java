@@ -28,7 +28,6 @@ public class QueryBankByName extends BankServicePayloads{
 		test.info( MarkupHelper.createCodeBlock(response.asString(),CodeLanguage.JSON));
 		
 	}
-	
 
 	
 }

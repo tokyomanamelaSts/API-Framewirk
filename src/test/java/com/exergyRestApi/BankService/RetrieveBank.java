@@ -13,22 +13,19 @@ import com.aventstack.extentreports.markuputils.MarkupHelper;
 import Utilities.ApiHelper;
 import io.restassured.response.Response;
 
-public class QueryBranchByName extends BankServicePayloads{
+public class RetrieveBank extends BankServicePayloads{
 
-	public static void  queryBranchByName(ExtentReports extent) throws URISyntaxException, SAXException, IOException, ParserConfigurationException {
+	public static void  retrieveBank(ExtentReports extent) throws URISyntaxException, SAXException, IOException, ParserConfigurationException {
 		
 		
 		
 		ExtentTest test;
-		test=extent.createTest("Query Branch By Name");
+		test=extent.createTest("Retrieve Bank");
 		Response response;
-		response =  ApiHelper.sendRestPostRequest(ApiHelper.bakingSitUrl,ApiHelper.bakingSubKey, ApiHelper.bakingSubId,QueryBranchByNamePayload, "/QueryBranchByName");
+		response =  ApiHelper.sendRestPostRequest(ApiHelper.bakingSitUrl,ApiHelper.bakingSubKey, ApiHelper.bakingSubId,RetrieveBankPayload, "/RetrieveBank");
 		response.prettyPrint();
 		ApiHelper.AssertEquals("Status code" ,"200", String.valueOf(response.statusCode()) , test);
 		test.info( MarkupHelper.createCodeBlock(response.asString(),CodeLanguage.JSON));
-		
-		//validations to be done
-		test.fail("the reponse returns empty array");
 		
 	}
 

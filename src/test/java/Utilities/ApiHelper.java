@@ -26,6 +26,10 @@ import java.io.*;
 
 public class ApiHelper { 
 	
+	
+	
+	
+	
 	public static String bakingSitUrl = "https://hollardpoc.azure-api.net/uat/bank";
     public static String bakingSubId = "melhollard";
     public static String bakingSubKey = "8b0c22b05b8c45c2b3d57edafbd78018";
@@ -39,6 +43,11 @@ public class ApiHelper {
 	public static String policySitUrl = "https://apim-hl-life-test-za.azure-api.net/Policy/sit";
 	public static String policySubId = "Automation-Test-Team";
 	public static String policySubKey = "fc5e1ef728f44652a03e16c9525f2d49";
+	
+	
+	public static SoftAssert softAssertion;
+	
+	
 	
 	
 	public String converFileToString(InputStream inputStream) throws IOException {
@@ -150,18 +159,29 @@ Response response =
  
  public static void AssertEquals(String tagname ,String expected, String Actual, ExtentTest test) throws SAXException, IOException, ParserConfigurationException {
 	
-	
+	 softAssertion = new SoftAssert();
 	 
 	 if(expected.trim().toLowerCase().equals(Actual.trim().toLowerCase())) {
 		 
+		
+		 
 		 test.pass("validation for "+tagname+" has passed");
 		 System.out.println("validation for "+tagname+" has passed");
+		 softAssertion.assertTrue(true);
+			
+		 softAssertion.assertAll();
+		 
 	 }
 	 
 	 else 
 	 {
 		 test.fail("validation for "+tagname+" has failled. expected "+expected+"  but got "+Actual );
 		 System.out.println("validation for "+tagname+" has failed. expected "+expected+"  but got "+Actual);
+		 
+		 softAssertion.assertTrue(false);
+			
+		 softAssertion.assertAll();
+		
 	 }
 	 
  }
