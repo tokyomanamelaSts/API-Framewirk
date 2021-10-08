@@ -3,20 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="runner.bankServiceRunner">
+      <class name="runner.ApiTests">
         <methods>
-          <include name="VerifyBankAccount"/>
-          <include name="QueryBranchByBankCode"/>
-          <include name="UpdateAuthenticatedCollection"/>
-          <include name="QueryAuthenticatedCollection"/>
-          <include name="CancelAuthenticatedCollection"/>
-          <include name="RetrieveVerification"/>
-          <include name="CreateAuthenticatedCollection"/>
-          <include name="RetrieveAuthenticatedCollection"/>
-          <include name="ValidateBankAccount"/>
+          <include name="createApplicationBeneficiaries"/>
           <include name="EndTests"/>
         </methods>
-      </class> <!-- runner.bankServiceRunner -->
+      </class> <!-- runner.ApiTests -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

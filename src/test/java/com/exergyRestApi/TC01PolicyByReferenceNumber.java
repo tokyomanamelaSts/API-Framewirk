@@ -46,7 +46,7 @@ public class TC01PolicyByReferenceNumber {
 				.contentType(ContentType.JSON)
 				.extract()
 				.response();
-try {
+try { 
 		String jsonBody = response.getBody().asString();
 
 		System.out.println("Response Body :" + jsonBody);

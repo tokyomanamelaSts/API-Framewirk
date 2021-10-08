@@ -16,7 +16,11 @@ import Utilities.ExtentManager;
 
 public class bankServiceRunner {
 
-	ExtentReports extent=new ExtentManager().BankService();
+	String reportname = "Hollard Bank Service.html";
+	String pageTile = "Hollard Bank Service";
+	String TesterName = System.getProperty("user.name");
+	
+	ExtentReports extent=new ExtentManager().extentTest(reportname, pageTile, TesterName);
 
     @Test(priority =1,enabled=true)
     public void CreateAuthenticatedCollection() throws URISyntaxException, IOException, SAXException, ParserConfigurationException {
@@ -62,7 +66,7 @@ public class bankServiceRunner {
     	com.exergyRestApi.BankService.QueryBranchByName.queryBranchByName(extent);
 	     
 	}
-    
+     
     
     
     @Test(priority =7,enabled=true)
