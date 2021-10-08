@@ -1,21 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="13" total="14" passed="1" failed="0" skipped="0">
+<testng-results skipped="0" failed="0" ignored="13" total="14" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2021-10-08T08:49:38 SAST" name="Default suite" finished-at="2021-10-08T08:49:44 SAST" duration-ms="6342">
+  <suite name="Default suite" duration-ms="9145" started-at="2021-10-08T13:15:26 SAST" finished-at="2021-10-08T13:15:35 SAST">
     <groups>
     </groups>
-    <test started-at="2021-10-08T08:49:38 SAST" name="Default test" finished-at="2021-10-08T08:49:44 SAST" duration-ms="6342">
-      <class name="runner.ApplicationRunner">
-        <test-method signature="createApplicationBeneficiaries()[pri:13, instance:runner.ApplicationRunner@5c80cf32]" started-at="2021-10-08T08:49:38 SAST" name="createApplicationBeneficiaries" finished-at="2021-10-08T08:49:44 SAST" duration-ms="5935" status="PASS">
+    <test name="Default test" duration-ms="9145" started-at="2021-10-08T13:15:26 SAST" finished-at="2021-10-08T13:15:35 SAST">
+      <class name="runner.PolicyRunner">
+        <test-method status="PASS" signature="PolicybyPolicyReference()[pri:24, instance:runner.PolicyRunner@185a6e9]" name="PolicybyPolicyReference" duration-ms="9092" started-at="2021-10-08T13:15:26 SAST" finished-at="2021-10-08T13:15:35 SAST">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- createApplicationBeneficiaries -->
-        <test-method is-config="true" signature="EndTests()[pri:0, instance:runner.ApplicationRunner@5c80cf32]" started-at="2021-10-08T08:49:44 SAST" name="EndTests" finished-at="2021-10-08T08:49:44 SAST" duration-ms="337" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- EndTests -->
-      </class> <!-- runner.ApplicationRunner -->
+        </test-method> <!-- PolicybyPolicyReference -->
+      </class> <!-- runner.PolicyRunner -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

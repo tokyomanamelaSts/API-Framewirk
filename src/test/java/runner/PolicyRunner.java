@@ -40,7 +40,7 @@ public class PolicyRunner {
 		TC04CancelCollection.tc0004(extent);
 	}
 
-    @Test(priority =24,enabled=false)
+    @Test(priority =24,enabled=true)
     public void PolicybyPolicyReference() throws URISyntaxException, IOException, SAXException, ParserConfigurationException {
  		
 		com.exergyRestApi.policy.PolicybyPolicyReference.policybyPolicyReference(extent);

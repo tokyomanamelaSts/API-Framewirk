@@ -24,22 +24,22 @@
   <body>
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
-      <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
+      <button class="button" id="button">Switch Retro Theme</button> <!-- button -->
       <br/>
       <span class="top-banner-font-1">1 suite</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
         <span>All suites</span>
-        <a href="#" title="Collapse/expand all the suites" class="collapse-all-link">
-          <img src="collapseall.gif" class="collapse-all-icon">
+        <a href="#" class="collapse-all-link" title="Collapse/expand all the suites">
+          <img class="collapse-all-icon" src="collapseall.gif">
           </img> <!-- collapse-all-icon -->
         </a> <!-- collapse-all-link -->
       </div> <!-- navigator-suite-header -->
       <div class="suite">
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
-            <a href="#" panel-name="suite-Default_suite" class="navigator-link">
+            <a href="#" class="navigator-link" panel-name="suite-Default_suite">
               <span class="suite-name border-passed">Default suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
@@ -50,37 +50,37 @@
             <div class="suite-section-content">
               <ul>
                 <li>
-                  <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
+                  <a href="#" class="navigator-link " panel-name="test-xml-Default_suite">
                     <span>testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" panel-name="testlist-Default_suite" class="navigator-link ">
+                  <a href="#" class="navigator-link " panel-name="testlist-Default_suite">
                     <span class="test-stats">1 test</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" panel-name="group-Default_suite" class="navigator-link ">
+                  <a href="#" class="navigator-link " panel-name="group-Default_suite">
                     <span>0 groups</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" panel-name="times-Default_suite" class="navigator-link ">
+                  <a href="#" class="navigator-link " panel-name="times-Default_suite">
                     <span>Times</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" panel-name="reporter-Default_suite" class="navigator-link ">
+                  <a href="#" class="navigator-link " panel-name="reporter-Default_suite">
                     <span>Reporter output</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" panel-name="ignored-methods-Default_suite" class="navigator-link ">
+                  <a href="#" class="navigator-link " panel-name="ignored-methods-Default_suite">
                     <span>Ignored methods</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" panel-name="chronological-Default_suite" class="navigator-link ">
+                  <a href="#" class="navigator-link " panel-name="chronological-Default_suite">
                     <span>Chronological view</span>
                   </a> <!-- navigator-link  -->
                 </li>
@@ -103,8 +103,8 @@
                     </span>
                     <div class="method-list-content passed suite-Default_suite">
                       <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="runner.ApplicationRunner" class="method navigator-link" hash-for-method="createApplicationBeneficiaries">createApplicationBeneficiaries</a> <!-- method navigator-link -->
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="runner.PolicyRunner" hash-for-method="PolicybyPolicyReference">PolicybyPolicyReference</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Default_suite -->
@@ -122,14 +122,14 @@
           <div class="suite-Default_suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">runner.ApplicationRunner</span>
+              <span class="class-name">runner.PolicyRunner</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="createApplicationBeneficiaries">
-                  </a> <!-- createApplicationBeneficiaries -->
-                  <span class="method-name">createApplicationBeneficiaries</span>
+                  <a name="PolicybyPolicyReference">
+                  </a> <!-- PolicybyPolicyReference -->
+                  <span class="method-name">PolicybyPolicyReference</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -137,20 +137,20 @@
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">/private/var/folders/10/nx41rvp50wq94v07drs_5f7w0000gn/T/testng-eclipse-1464761954/testng-customsuite.xml</span>
+            <span class="header-content">/private/var/folders/_2/m1y0fhjd33jg4xcvqnhbdpkr0000gn/T/testng-eclipse-1342865695/testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
-&lt;suite name=&quot;Default suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
-  &lt;test thread-count=&quot;5&quot; name=&quot;Default test&quot; verbose=&quot;2&quot;&gt;
+&lt;suite guice-stage=&quot;DEVELOPMENT&quot; name=&quot;Default suite&quot;&gt;
+  &lt;test thread-count=&quot;5&quot; verbose=&quot;2&quot; name=&quot;Default test&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;runner.ApplicationRunner&quot;&gt;
+      &lt;class name=&quot;runner.PolicyRunner&quot;&gt;
         &lt;methods&gt;
-          &lt;include name=&quot;createApplicationBeneficiaries&quot;/&gt;
+          &lt;include name=&quot;PolicybyPolicyReference&quot;/&gt;
         &lt;/methods&gt;
-      &lt;/class&gt; &lt;!-- runner.ApplicationRunner --&gt;
+      &lt;/class&gt; &lt;!-- runner.PolicyRunner --&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Default test --&gt;
 &lt;/suite&gt; &lt;!-- Default suite --&gt;
@@ -192,14 +192,14 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'createApplicationBeneficiaries')
-data.setCell(0, 2, 'runner.ApplicationRunner')
-data.setCell(0, 3, 5935);
+data.setCell(0, 1, 'PolicybyPolicyReference')
+data.setCell(0, 2, 'runner.PolicyRunner')
+data.setCell(0, 3, 9092);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 5 seconds</span>
+              <span class="suite-total-time">Total running time: 9 seconds</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -218,33 +218,33 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="ignored-class-div">
-              <span class="ignored-class-name">runner.ApplicationRunner</span>
+              <span class="ignored-class-name">runner.PolicyRunner</span>
               <div class="ignored-methods-div">
-                <span class="ignored-method-name">CreateApplication</span>
+                <span class="ignored-method-name">f0</span>
                 <br/>
-                <span class="ignored-method-name">createApplicationBenefits</span>
+                <span class="ignored-method-name">f2</span>
                 <br/>
-                <span class="ignored-method-name">CreateApplicationAcceptance</span>
+                <span class="ignored-method-name">f1</span>
                 <br/>
-                <span class="ignored-method-name">QualificationProduct1960</span>
+                <span class="ignored-method-name">f3</span>
                 <br/>
-                <span class="ignored-method-name">QualificationProduct60100001NegetiveTest</span>
+                <span class="ignored-method-name">UploadDocument</span>
                 <br/>
-                <span class="ignored-method-name">CreateApplicationPremiumCollection</span>
+                <span class="ignored-method-name">PolicyListbyPolicyNumber</span>
                 <br/>
-                <span class="ignored-method-name">createApplicationStatus</span>
+                <span class="ignored-method-name">DocumentsbyPolicyReference</span>
                 <br/>
-                <span class="ignored-method-name">Rates</span>
+                <span class="ignored-method-name">NIFPolicyHolderUpdate</span>
                 <br/>
-                <span class="ignored-method-name">QualificationProduct60100000</span>
+                <span class="ignored-method-name">UpdatePolicyHolder</span>
                 <br/>
-                <span class="ignored-method-name">QualificationProduct60200000</span>
+                <span class="ignored-method-name">ChangeBeneficiaries</span>
                 <br/>
-                <span class="ignored-method-name">QualificationProduct60200001NegetiveTest</span>
+                <span class="ignored-method-name">PolicybyIdentityNumber</span>
                 <br/>
-                <span class="ignored-method-name">getApplication</span>
+                <span class="ignored-method-name">UpdateBankAccountAndDebitDay</span>
                 <br/>
-                <span class="ignored-method-name">CreateApplicationPolicyHolder</span>
+                <span class="ignored-method-name">TESTPolicyHolderUpdate</span>
                 <br/>
               </div> <!-- ignored-methods-div -->
             </div> <!-- ignored-class-div -->
@@ -256,15 +256,11 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">runner.ApplicationRunner</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">runner.PolicyRunner</div> <!-- chronological-class-name -->
               <div class="test-method">
-                <span class="method-name">createApplicationBeneficiaries</span>
+                <span class="method-name">PolicybyPolicyReference</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- test-method -->
-              <div class="configuration-test after">
-                <span class="method-name">EndTests</span>
-                <span class="method-start">5976 ms</span>
-              </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->
