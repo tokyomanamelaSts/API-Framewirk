@@ -50,7 +50,7 @@ public static void tc0004(ExtentReports extent) {
 		*
 		* ***************************************************
 		*/
-
+		
 		JsonPath jsonPathEvaluator = response.jsonPath();
 		String collectionReference = jsonPathEvaluator.get("collectionReference");
 	

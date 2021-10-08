@@ -6,7 +6,11 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.URI;
+import java.util.Iterator;
 
+import org.assertj.core.internal.bytebuddy.utility.JavaDispatcher.Instance;
+import org.json.JSONArray;
+import org.json.JSONObject;
 import org.testng.Assert;
 import org.testng.asserts.SoftAssert;
 import org.w3c.dom.*;
@@ -63,6 +67,66 @@ public class ApiHelper {
 	      }
 	      return sb.toString();
 	   }
+public static String getJsonField(JSONObject Json, String key) {
+		
+		String returnedKey = "";
+		
+		boolean exists = Json.has(key);
+		Iterator<?> keys;
+		String nextkeys;
+		
+		
+		if(!exists) {
+			
+			keys = Json.keys();
+			while(keys.hasNext()){
+				
+				nextkeys = (String)keys.next();
+				System.out.println(nextkeys+"========================================");
+				
+				try {
+					
+					if(Json.get(nextkeys) instanceof JSONObject) {
+						System.out.println(nextkeys+" is an obj ");
+						if(exists == false) {
+							
+							getJsonField(Json.getJSONObject(nextkeys), key);
+							
+						}
+						
+						
+					}else if(Json.get(nextkeys) instanceof JSONArray) {
+						System.out.println(nextkeys+" is an array ");
+						JSONArray jsonArray = Json.getJSONArray(nextkeys);
+						for (int i = 0 ; i< jsonArray.length(); i++) {
+							
+							String jsonArrayString = jsonArray.get(i).toString();
+							JSONObject innerJson = new JSONObject(jsonArrayString);
+							if(exists== false) {
+								
+								getJsonField(innerJson, key);
+								
+								
+							}
+							
+						}
+					}
+					
+				} catch (Exception e) {
+					// TODO: handle exception
+				}
+			}
+			
+			
+		}else {
+			
+			returnedKey = Json.get(key).toString();
+		}
+		
+		
+		return returnedKey;
+		
+	}
 	
 public static Response  sendRestPostRequest(String baseUrl, String subKey, String subId, String body  , String endpoint) throws SAXException, IOException, ParserConfigurationException {
 	

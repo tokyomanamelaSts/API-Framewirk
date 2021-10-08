@@ -104,7 +104,7 @@
                     <div class="method-list-content passed suite-Default_suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="runner.bankServiceRunner" class="method navigator-link" hash-for-method="QueryBranchByBankCode">QueryBranchByBankCode</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="runner.ApplicationRunner" class="method navigator-link" hash-for-method="createApplicationBeneficiaries">createApplicationBeneficiaries</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Default_suite -->
@@ -122,14 +122,14 @@
           <div class="suite-Default_suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">runner.bankServiceRunner</span>
+              <span class="class-name">runner.ApplicationRunner</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="QueryBranchByBankCode">
-                  </a> <!-- QueryBranchByBankCode -->
-                  <span class="method-name">QueryBranchByBankCode</span>
+                  <a name="createApplicationBeneficiaries">
+                  </a> <!-- createApplicationBeneficiaries -->
+                  <span class="method-name">createApplicationBeneficiaries</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -137,7 +137,7 @@
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">/private/var/folders/10/nx41rvp50wq94v07drs_5f7w0000gn/T/testng-eclipse-1003289463/testng-customsuite.xml</span>
+            <span class="header-content">/private/var/folders/10/nx41rvp50wq94v07drs_5f7w0000gn/T/testng-eclipse-1464761954/testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -146,11 +146,11 @@
 &lt;suite name=&quot;Default suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Default test&quot; verbose=&quot;2&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;runner.bankServiceRunner&quot;&gt;
+      &lt;class name=&quot;runner.ApplicationRunner&quot;&gt;
         &lt;methods&gt;
-          &lt;include name=&quot;QueryBranchByBankCode&quot;/&gt;
+          &lt;include name=&quot;createApplicationBeneficiaries&quot;/&gt;
         &lt;/methods&gt;
-      &lt;/class&gt; &lt;!-- runner.bankServiceRunner --&gt;
+      &lt;/class&gt; &lt;!-- runner.ApplicationRunner --&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Default test --&gt;
 &lt;/suite&gt; &lt;!-- Default suite --&gt;
@@ -192,9 +192,9 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'QueryBranchByBankCode')
-data.setCell(0, 2, 'runner.bankServiceRunner')
-data.setCell(0, 3, 5855);
+data.setCell(0, 1, 'createApplicationBeneficiaries')
+data.setCell(0, 2, 'runner.ApplicationRunner')
+data.setCell(0, 3, 5935);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
@@ -214,39 +214,37 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">14 ignored methods</span>
+            <span class="header-content">13 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="ignored-class-div">
-              <span class="ignored-class-name">runner.bankServiceRunner</span>
+              <span class="ignored-class-name">runner.ApplicationRunner</span>
               <div class="ignored-methods-div">
-                <span class="ignored-method-name">RetrieveBranch</span>
+                <span class="ignored-method-name">CreateApplication</span>
                 <br/>
-                <span class="ignored-method-name">QueryBranchByName</span>
+                <span class="ignored-method-name">createApplicationBenefits</span>
                 <br/>
-                <span class="ignored-method-name">QueryAuthenticatedCollection</span>
+                <span class="ignored-method-name">CreateApplicationAcceptance</span>
                 <br/>
-                <span class="ignored-method-name">CancelAuthenticatedCollection</span>
+                <span class="ignored-method-name">QualificationProduct1960</span>
                 <br/>
-                <span class="ignored-method-name">QueryBankByName</span>
+                <span class="ignored-method-name">QualificationProduct60100001NegetiveTest</span>
                 <br/>
-                <span class="ignored-method-name">QueryBank</span>
+                <span class="ignored-method-name">CreateApplicationPremiumCollection</span>
                 <br/>
-                <span class="ignored-method-name">CreateAuthenticatedCollection</span>
+                <span class="ignored-method-name">createApplicationStatus</span>
                 <br/>
-                <span class="ignored-method-name">ValidateBankAccount</span>
+                <span class="ignored-method-name">Rates</span>
                 <br/>
-                <span class="ignored-method-name">RetrieveAuthenticatedCollection</span>
+                <span class="ignored-method-name">QualificationProduct60100000</span>
                 <br/>
-                <span class="ignored-method-name">VerifyBankAccount</span>
+                <span class="ignored-method-name">QualificationProduct60200000</span>
                 <br/>
-                <span class="ignored-method-name">ValidateCreditCard</span>
+                <span class="ignored-method-name">QualificationProduct60200001NegetiveTest</span>
                 <br/>
-                <span class="ignored-method-name">UpdateAuthenticatedCollection</span>
+                <span class="ignored-method-name">getApplication</span>
                 <br/>
-                <span class="ignored-method-name">RetrieveVerification</span>
-                <br/>
-                <span class="ignored-method-name">RetrieveBank</span>
+                <span class="ignored-method-name">CreateApplicationPolicyHolder</span>
                 <br/>
               </div> <!-- ignored-methods-div -->
             </div> <!-- ignored-class-div -->
@@ -258,14 +256,14 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">runner.bankServiceRunner</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">runner.ApplicationRunner</div> <!-- chronological-class-name -->
               <div class="test-method">
-                <span class="method-name">QueryBranchByBankCode</span>
+                <span class="method-name">createApplicationBeneficiaries</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-test after">
                 <span class="method-name">EndTests</span>
-                <span class="method-start">5874 ms</span>
+                <span class="method-start">5976 ms</span>
               </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

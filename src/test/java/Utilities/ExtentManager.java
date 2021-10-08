@@ -9,12 +9,12 @@ public class ExtentManager {
 	
 
 	
-	public ExtentReports extentTest() {
+	public ExtentReports extentTest(String reportname, String pageTile, String TesterName) {
 		ExtentReports extent=new ExtentReports();
-		ExtentSparkReporter spark=new ExtentSparkReporter("index.html");
+		ExtentSparkReporter spark=new ExtentSparkReporter(reportname);
 		spark.config().setTheme(Theme.STANDARD);	
-		spark.config().setDocumentTitle("Api");	
-		spark.config().setReportName("Automation");
+		spark.config().setDocumentTitle(pageTile);	
+		spark.config().setReportName(TesterName);
 		extent.attachReporter(spark);
 		
 		return extent;
@@ -22,17 +22,4 @@ public class ExtentManager {
 		
 	}
 	
-	public ExtentReports BankService() {
-		ExtentReports extent=new ExtentReports();
-		ExtentSparkReporter spark=new ExtentSparkReporter("Bank Service Report.html");
-		spark.config().setTheme(Theme.STANDARD);	
-		spark.config().setDocumentTitle("BankService Report");	
-		spark.config().setReportName(System.getProperty("user.name"));
-		extent.attachReporter(spark);
-		
-		return extent;
-		
-		
-	}
-
 }
