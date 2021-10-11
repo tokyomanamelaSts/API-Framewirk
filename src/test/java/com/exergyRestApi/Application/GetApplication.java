@@ -1,4 +1,4 @@
-package com.exergyRestApi.policy;
+package com.exergyRestApi.Application;
 
 import com.applicationPayloads.CreateApplicationPayloads;
 import com.aventstack.extentreports.ExtentReports;
@@ -13,21 +13,18 @@ import java.net.URISyntaxException;
 import javax.xml.parsers.ParserConfigurationException;
 import org.xml.sax.SAXException;
 
+public class GetApplication extends CreateApplicationPayloads {
 
-public class PolicybyPolicyReference extends CreateApplicationPayloads {
-
-public static void  policybyPolicyReference(ExtentReports extent) throws URISyntaxException, SAXException, IOException, ParserConfigurationException {
+public static void  getApplication(ExtentReports extent) throws URISyntaxException, SAXException, IOException, ParserConfigurationException {
 	
 	
 	
 	ExtentTest test;
-	test=extent.createTest("Policy by Policy Reference");
+	test=extent.createTest("Get Application");
 	Response response;
-	response =  ApiHelper.sendRestGetRequest(ApiHelper.policySitUrl,ApiHelper.policySubKey, ApiHelper.policySubId,"/Policy/13402150?referenceType=Policy&lineOfBusinessSystem=Mip");
-	response.prettyPrint();
+	response =  ApiHelper.sendRestGetRequest(ApiHelper.applicationSitUrl,ApiHelper.applicationSubKey, ApiHelper.applicationSubId,"/Application/1598");
 	ApiHelper.AssertEquals("Status code" ,"200", String.valueOf(response.statusCode()) , test);
 	test.info( MarkupHelper.createCodeBlock(response.asString(),CodeLanguage.JSON));
-	
 	
 }
 

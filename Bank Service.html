@@ -5,7 +5,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<title>Api</title>
+<title>Hollard Bank Service</title>
 <link rel="apple-touch-icon" href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png">
 <link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png">
 <link href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@c43b89d03a7c43dae8bb8f0f078bad1997af6b3b/spark/css/spark-style.css" rel="stylesheet" />
@@ -32,10 +32,10 @@
 </ul>
 <ul class="nav-right">
 <li class="m-r-10">
-<a href="#"><span class="badge badge-primary">Automation</span></a>
+<a href="#"><span class="badge badge-primary">tokyomanamela</span></a>
 </li>
 <li class="m-r-10">
-<a href="#"><span class="badge badge-primary">Oct 8, 2021 07:53:18 am</span></a>
+<a href="#"><span class="badge badge-primary">Oct 8, 2021 04:27:59 pm</span></a>
 </li>
 </ul>
 </div>
@@ -79,9 +79,9 @@
           tag=""
           device="">
           <div class="test-detail">
-            <p class="name">CancelCollection</p>
+            <p class="name">Validate Credit Card</p>
             <p class="text-sm">
-              <span>07:53:18 am</span> / <span>00:00:14:143</span>
+              <span>16:28:00 pm</span> / <span>00:00:04:317</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -89,10 +89,10 @@
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-pass">CancelCollection</h5>
-<span class='badge badge-success'>10.08.2021 07:53:18</span>
-<span class='badge badge-danger'>10.08.2021 07:53:32</span>
-<span class='badge badge-default'>00:00:14:143</span>
+<h5 class="test-status text-pass">Validate Credit Card</h5>
+<span class='badge badge-success'>10.08.2021 16:28:00</span>
+<span class='badge badge-danger'>10.08.2021 16:28:04</span>
+<span class='badge badge-default'>00:00:04:317</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
 </div>
 </div>
@@ -102,19 +102,26 @@
   <tbody>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>07:53:32</td>
+        <td>16:28:04</td>
         <td>
-          passed
+          validation for Status code has passed
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>07:53:32</td>
+        <td>16:28:04</td>
         <td>
            <div class='json-tree' id='code-block-json-0'></div>
  <script>
   function jsonTreeCreate0() { 
-   document.getElementById('code-block-json-0').innerHTML = JSONTree.create({"policyNumber":"13887792","policyReference":"1171113887792","collectionReference":"27e369a6-ccef-4bcc-9996-1f7cb3e7fe44","amount":180.0,"tenderType":"Cash","channel":{"collectionVendorReference":null,"tillNumber":"","serialNumber":"","transactionIdentity":"","messageIdentity":"","networkTransactionIdentity":"","vendor":"PayAt","channelType":"TillPoint","channelLocation":"","channelLocationName":null,"channelReference":""},"source":{"sourceName":"Pay@","sourceReference":""},"status":"Cancelled","message":""}); 
+   document.getElementById('code-block-json-0').innerHTML = JSONTree.create({
+    "validateCreditCardResponse": {
+        "validateCreditCardResult": {
+            "message": "ValidCreditCard",
+            "isValid": true
+        }
+    }
+}); 
   }
   jsonTreeCreate0();
  </script>
@@ -140,13 +147,13 @@
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Started</p>
-<h3>Oct 8, 2021 07:53:18 am</h3>
+<h3>Oct 8, 2021 04:27:59 pm</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Ended</p>
-<h3>Oct 8, 2021 07:53:32 am</h3>
+<h3>Oct 8, 2021 04:28:04 pm</h3>
 </div></div>
 </div>
 <div class="col-md-3">
@@ -216,7 +223,7 @@
 </div></div>
 <script>
 var timeline = {
-"CancelCollection":14.143
+"Validate Credit Card":4.317
 };
 </script>
 <div class="row">

@@ -32,8 +32,8 @@ public class PersonPassportNumber {
 		
 		System.out.println("Starting test validatePersonPassPortNumber.......\n========================================");
 		
-
-		FileInputStream fileInputStream = new FileInputStream(new File(".\\SoapRequest\\PersonPassportNumber.xml"));
+		
+		FileInputStream fileInputStream = new FileInputStream(new File(System.getProperty("user.dir")+"/SoapRequest/PersonPassportNumber.xml"));
 		RestAssured.baseURI = "https://uatsvc.hollard.co.za/PartyVerificationService";
 
 		Response response =

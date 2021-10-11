@@ -30,11 +30,11 @@ public class ScreenAndVerifyPartyOrganisation {
 		String username = "mipusr";
 		String password = "69hTryVKjMa4";
 
-		FileInputStream fileInputStream = new FileInputStream(new File(".\\SoapRequest\\PartyVerificationOrganisation.xml"));
+	
+		FileInputStream fileInputStream = new FileInputStream(new File(System.getProperty("user.dir")+"/SoapRequest/PartyVerificationOrganisation.xml"));
 
 		RestAssured.baseURI = "https://uatsvc.hollard.co.za/PartyVerificationService";
 		
-
 		// System.out.print(IOUtils.toString(fileInputStream, "UTF-8"));
 
 		Response response =

@@ -3,12 +3,25 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="runner.ApiTests">
+      <class name="runner.ApplicationRunner">
         <methods>
-          <include name="createApplicationBeneficiaries"/>
           <include name="EndTests"/>
+          <include name="CreateApplication"/>
+          <include name="createApplicationBenefits"/>
+          <include name="createApplicationBeneficiaries"/>
+          <include name="CreateApplicationAcceptance"/>
+          <include name="QualificationProduct1960"/>
+          <include name="QualificationProduct60100001NegetiveTest"/>
+          <include name="CreateApplicationPremiumCollection"/>
+          <include name="createApplicationStatus"/>
+          <include name="Rates"/>
+          <include name="QualificationProduct60100000"/>
+          <include name="QualificationProduct60200000"/>
+          <include name="QualificationProduct60200001NegetiveTest"/>
+          <include name="CreateApplicationPolicyHolder"/>
+          <include name="getApplication"/>
         </methods>
-      </class> <!-- runner.ApiTests -->
+      </class> <!-- runner.ApplicationRunner -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

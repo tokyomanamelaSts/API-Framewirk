@@ -1,4 +1,4 @@
-package com.exergyRestApi;
+package com.exergyRestApi.Application;
 
 import com.applicationPayloads.CreateApplicationPayloads;
 import com.aventstack.extentreports.ExtentReports;
@@ -13,19 +13,22 @@ import java.net.URISyntaxException;
 import javax.xml.parsers.ParserConfigurationException;
 import org.xml.sax.SAXException;
 
-public class CreateApplicationBenefits extends CreateApplicationPayloads {
+public class CreateApplicationStatus extends CreateApplicationPayloads {
 
-public static void  createApplicationBenefits(ExtentReports extent) throws URISyntaxException, SAXException, IOException, ParserConfigurationException {
+public static void  createApplicationStatus(ExtentReports extent) throws URISyntaxException, SAXException, IOException, ParserConfigurationException {
+	
 	
 	
 	ExtentTest test;
-	test=extent.createTest("create Application Benefits");
+	test=extent.createTest("create Application Status");
 	Response response;
-	response =  ApiHelper.sendRestPutRequest(ApiHelper.applicationSitUrl,ApiHelper.applicationSubKey, ApiHelper.applicationSubId,CreateApplicationBenefitsPayLoad,"/Application/1598/Benefits/");
+	response =  ApiHelper.sendRestPatchRequest(ApiHelper.applicationSitUrl,ApiHelper.applicationSubKey, ApiHelper.applicationSubId,CreateApplicationStatusPayLoad, "/Application/1598/Status/");
 	ApiHelper.AssertEquals("Status code" ,"200", String.valueOf(response.statusCode()) , test);
 	test.info( MarkupHelper.createCodeBlock(response.asString(),CodeLanguage.JSON));
 	
 	
 }
+
+
 	
 }
