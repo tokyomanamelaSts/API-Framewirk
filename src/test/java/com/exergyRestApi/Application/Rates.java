@@ -1,4 +1,4 @@
-package com.exergyRestApi;
+package com.exergyRestApi.Application;
 
 
 import com.applicationPayloads.RatesPayloads;

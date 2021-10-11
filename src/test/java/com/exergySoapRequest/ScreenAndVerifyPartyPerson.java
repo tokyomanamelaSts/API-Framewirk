@@ -37,9 +37,7 @@ public class ScreenAndVerifyPartyPerson {
 		
 		System.out.println("Starting test ScreenAndVerifyPartyPerson.......\n========================================");
 		
-
-		FileInputStream fileInputStream = new FileInputStream(new File(".\\SoapRequest\\PartyVerificationPerson.xml"));
-
+		FileInputStream fileInputStream = new FileInputStream(new File(System.getProperty("user.dir")+"/SoapRequest/PartyVerificationPerson.xml"));
 		RestAssured.baseURI = "https://uatsvc.hollard.co.za/PartyVerificationService";
 
 		// System.out.print(IOUtils.toString(fileInputStream, "UTF-8"));

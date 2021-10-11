@@ -11,6 +11,7 @@ public class BankServicePayloads {
 			+ "    }\n"
 			+ "} ";
 	
+	
 	public static final String CreateAuthenticatedCollectionPayload =
 			"{\n"
 			+ "    \"createAuthenticatedCollection\": {\n"

@@ -251,5 +251,57 @@ Response response =
  }
  
  
+ 
+ public static Integer getValueFromKey(JSONObject json, String key) {
+     boolean exists = json.has(key);
+     Iterator<?> keys;
+     String nextKeys;
+     Integer foundKey = 0;
+
+     if(!exists) {
+         keys = json.keys();
+         while (keys.hasNext()) {
+             // Store next Key in nextKeys
+             nextKeys = (String)keys.next();
+             
+             try {
+                 // Check if the given Key is a JSON Object
+                 if(json.get(nextKeys) instanceof JSONObject) {
+                     // If Key does not exist
+                     if(!exists) {
+                         // Recursive function call
+                         foundKey = getValueFromKey(json.getJSONObject(nextKeys), key);
+                     }
+                 } else if (json.get(nextKeys) instanceof JSONArray) {
+                     JSONArray jsonArray = json.getJSONArray(nextKeys);
+                     for(int i = 0; i < jsonArray.length(); i++) {
+                         String jsonArrayString = jsonArray.get(i).toString();
+                         JSONObject innerJsonObject = new JSONObject(jsonArrayString);
+                         
+                         // Recursive function call
+                         if(!exists) {
+                             foundKey = getValueFromKey(innerJsonObject.getJSONObject(nextKeys), key);
+                         }
+                     }
+                 }
+             } catch (Exception e) {
+                 System.out.println(e);
+             }
+         }
+     } else {
+         // If key exists, print value
+         foundKey = parseObject(json, key);
+         System.out.println("From loop: " + foundKey);
+     }
+//   System.out.println("Found Key = " + foundKey);
+     return foundKey;
+ }
+ 
+ private static Integer parseObject(JSONObject json, String key) {
+     System.out.println("From parseObject = " + json.get(key));
+     return json.getInt(key);
+ }
+ 
+ 
 
 }

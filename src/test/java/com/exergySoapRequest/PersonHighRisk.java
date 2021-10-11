@@ -36,7 +36,7 @@ public class PersonHighRisk{
 		System.out.println("Starting test validatePersonHighRisk.......\n========================================");
 		
 		
-		FileInputStream fileInputStream = new FileInputStream(new File(".\\SoapRequest\\PersonHighRisk.xml"));
+		FileInputStream fileInputStream = new FileInputStream(new File(System.getProperty("user.dir")+"/SoapRequest/PersonHighRisk.xml"));
 		RestAssured.baseURI = "https://uatsvc.hollard.co.za/PartyVerificationService";
 		Response response =
 		given()

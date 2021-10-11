@@ -1,4 +1,4 @@
-package com.exergyRestApi;
+package com.exergyRestApi.Application;
 
 import static io.restassured.RestAssured.given;
 import java.net.URI;

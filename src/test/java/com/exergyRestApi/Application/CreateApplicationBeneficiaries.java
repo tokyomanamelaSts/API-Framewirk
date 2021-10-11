@@ -1,4 +1,4 @@
-package com.exergyRestApi;
+package com.exergyRestApi.Application;
 
 import com.applicationPayloads.CreateApplicationPayloads;
 import com.aventstack.extentreports.ExtentReports;
@@ -29,8 +29,6 @@ public static void  createApplicationBeneficiaries(ExtentReports extent) throws 
 	
 	
 	JSONObject innerJson = new JSONObject(response.getBody().asString());
-	System.out.println("++++++++++++++++++++++++"+ApiHelper.getJsonField(innerJson, "benefitPremiums"));
-	
 	String applicationRef = innerJson.get("applicationReference").toString();
 	ApiHelper.AssertEquals("application Reference" ,"1598", applicationRef, test);
 	

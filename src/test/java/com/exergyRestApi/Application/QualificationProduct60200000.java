@@ -1,6 +1,7 @@
-package com.exergyRestApi;
+package com.exergyRestApi.Application;
 
 import com.applicationPayloads.CreateApplicationPayloads;
+import com.applicationPayloads.QualificationPayloads;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.markuputils.CodeLanguage;
@@ -13,18 +14,20 @@ import java.net.URISyntaxException;
 import javax.xml.parsers.ParserConfigurationException;
 import org.xml.sax.SAXException;
 
-public class GetApplication extends CreateApplicationPayloads {
 
-public static void  getApplication(ExtentReports extent) throws URISyntaxException, SAXException, IOException, ParserConfigurationException {
+public class QualificationProduct60200000 extends QualificationPayloads {
+
+public static void  qualificationProduct60200000(ExtentReports extent) throws URISyntaxException, SAXException, IOException, ParserConfigurationException {
 	
 	
 	
 	ExtentTest test;
-	test=extent.createTest("Get Application");
+	test=extent.createTest("Qualification Produc t60200000");
 	Response response;
-	response =  ApiHelper.sendRestGetRequest(ApiHelper.applicationSitUrl,ApiHelper.applicationSubKey, ApiHelper.applicationSubId,"/Application/1598");
+	response =  ApiHelper.sendRestPostRequest(ApiHelper.applicationSitUrl,ApiHelper.applicationSubKey, ApiHelper.applicationSubId,QualificationProduct60200000Payload, "/Qualification");
 	ApiHelper.AssertEquals("Status code" ,"200", String.valueOf(response.statusCode()) , test);
 	test.info( MarkupHelper.createCodeBlock(response.asString(),CodeLanguage.JSON));
+	
 	
 }
 

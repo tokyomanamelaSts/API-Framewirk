@@ -16,7 +16,7 @@ import Utilities.ExtentManager;
 
 public class bankServiceRunner {
 
-	String reportname = "Hollard Bank Service.html";
+	String reportname = "Bank Service.html";
 	String pageTile = "Hollard Bank Service";
 	String TesterName = System.getProperty("user.name");
 	

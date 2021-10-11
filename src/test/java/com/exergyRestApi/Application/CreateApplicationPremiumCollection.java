@@ -1,4 +1,4 @@
-package com.exergyRestApi;
+package com.exergyRestApi.Application;
 
 import com.applicationPayloads.CreateApplicationPayloads;
 import com.aventstack.extentreports.ExtentReports;

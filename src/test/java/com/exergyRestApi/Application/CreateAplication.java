@@ -1,4 +1,4 @@
-package com.exergyRestApi;
+package com.exergyRestApi.Application;
 
 import com.applicationPayloads.CreateApplicationPayloads;
 import com.aventstack.extentreports.ExtentReports;
@@ -11,6 +11,8 @@ import io.restassured.response.Response;
 import java.io.IOException;
 import java.net.URISyntaxException;
 import javax.xml.parsers.ParserConfigurationException;
+
+import org.json.JSONObject;
 import org.xml.sax.SAXException;
 
 
@@ -24,6 +26,8 @@ public static void  CreateApplication(ExtentReports extent) throws URISyntaxExce
 	test=extent.createTest("Create Application");
 	Response response;
 	response =  ApiHelper.sendRestPostRequest(ApiHelper.applicationSitUrl,ApiHelper.applicationSubKey, ApiHelper.applicationSubId, CreateApplicationPayLoad, "Application");
+	
+	
 	
 	ApiHelper.AssertEquals("Status code" ,"200", String.valueOf(response.statusCode()) , test);
 	test.info( MarkupHelper.createCodeBlock(response.asString(),CodeLanguage.JSON));

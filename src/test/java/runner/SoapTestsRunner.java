@@ -5,6 +5,7 @@ import java.net.URISyntaxException;
 
 import javax.xml.parsers.ParserConfigurationException;
 
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.Test;
 import org.xml.sax.SAXException;
 
@@ -29,7 +30,7 @@ public class SoapTestsRunner {
 	
 	@Test(priority = 1,enabled=true)
 	public void validatePersonHighRisk() throws URISyntaxException, IOException, SAXException, ParserConfigurationException {
-		PersonHighRisk.validatePersonHighRisk(extent);
+	PersonHighRisk.validatePersonHighRisk(extent);
 	}
 
 	@Test(priority = 2,enabled=true)
@@ -65,6 +66,12 @@ public class SoapTestsRunner {
 	public void ScreenAndVerifyPartyPerson() throws URISyntaxException, IOException, SAXException, ParserConfigurationException {
 		ScreenAndVerifyPartyPerson.validatStatusCode(extent);
 	}
+	 
+		@AfterTest
+		public void EndTests() {
+			extent.flush();
+
+		}
 	
 	
 }
