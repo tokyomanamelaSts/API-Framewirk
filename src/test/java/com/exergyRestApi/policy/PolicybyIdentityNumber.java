@@ -31,7 +31,7 @@ public static void  policybyIdentityNumber(ExtentReports extent) throws URISynta
 	test.info( MarkupHelper.createCodeBlock(response.asString(),CodeLanguage.JSON));
 	
 	//Validations
-	
+	/*
 	JSONObject innerJson = new JSONObject(response.getBody().asString());
 	System.out.println("++++++++++++++++++++++++"+ApiHelper.getJsonField(innerJson, "benefitPremiums"));
 	
@@ -50,7 +50,7 @@ public static void  policybyIdentityNumber(ExtentReports extent) throws URISynta
 	String LOBSystem = innerJson.get("lineOfBusinessSystem").toString();
 	ApiHelper.AssertEquals("lineOfBusinessSystem" ,"Mip",LOBSystem, test);
 	
-	
+	*/
 	
 	
 }

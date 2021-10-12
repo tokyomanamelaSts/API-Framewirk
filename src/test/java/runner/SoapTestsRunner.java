@@ -18,6 +18,7 @@ import com.exergySoapRequest.PersonVeryHigh;
 import com.exergySoapRequest.ScreenAndVerifyPartyOrganisation;
 import com.exergySoapRequest.ScreenAndVerifyPartyPerson;
 
+import Utilities.ApiHelper;
 import Utilities.ExtentManager;
 
 public class SoapTestsRunner {
@@ -31,33 +32,39 @@ public class SoapTestsRunner {
 	@Test(priority = 1,enabled=true)
 	public void validatePersonHighRisk() throws URISyntaxException, IOException, SAXException, ParserConfigurationException {
 	PersonHighRisk.validatePersonHighRisk(extent);
+	ApiHelper.softAssertion.assertAll();
 	}
 
 	@Test(priority = 2,enabled=true)
 	public void validatePersonPassPortNumber() throws URISyntaxException, IOException, SAXException, ParserConfigurationException {
 		
 		PersonPassportNumber.validatePersonPassPortNumber(extent);
+		ApiHelper.softAssertion.assertAll();
 		
 	}
 
 	@Test(priority = 6,enabled=true)
 	public void validatePassPortValid() throws URISyntaxException, IOException, SAXException, ParserConfigurationException {
 		PersonPassportNumberValid.validatePassPortValid(extent);
+		ApiHelper.softAssertion.assertAll();
 	}
 
 	@Test(priority = 7,enabled=true)
 	public void validatePersonTest() throws URISyntaxException, IOException, SAXException, ParserConfigurationException {
 		PersonTest.validatePersonTest(extent);
+		ApiHelper.softAssertion.assertAll();
 	}
 
 	@Test(priority = 8,enabled=true)
 	public void validatePersonVeryHigh() throws URISyntaxException, IOException, SAXException, ParserConfigurationException {
 		PersonVeryHigh.validatePersonVeryHigh(extent);
+		ApiHelper.softAssertion.assertAll();
 	}
 
 	@Test(priority = 9,enabled=true)
 	public void validateOrganisation() throws URISyntaxException, IOException {
 		ScreenAndVerifyPartyOrganisation.validateOrganisation(extent);
+		ApiHelper.softAssertion.assertAll();
 	}
 	
 	
@@ -65,6 +72,7 @@ public class SoapTestsRunner {
 	@Test(priority = 10,enabled=true)
 	public void ScreenAndVerifyPartyPerson() throws URISyntaxException, IOException, SAXException, ParserConfigurationException {
 		ScreenAndVerifyPartyPerson.validatStatusCode(extent);
+		ApiHelper.softAssertion.assertAll();
 	}
 	 
 		@AfterTest

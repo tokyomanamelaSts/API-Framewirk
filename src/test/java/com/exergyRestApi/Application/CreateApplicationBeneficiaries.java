@@ -38,8 +38,8 @@ public static void  createApplicationBeneficiaries(ExtentReports extent) throws 
 	String benefitPremiums = innerJson.getJSONObject("premiumAmount").getString("benefitPremiums");
 	ApiHelper.AssertEquals("benefit Premiums" ,"256", benefitPremiums, test);
 	
-	String bankAccount = innerJson.getJSONObject("premiumCollection").getJSONObject("bankAccount").getString("accountNumber");
-	ApiHelper.AssertEquals("Account Number" ,"123123123", bankAccount, test);
+	//String bankAccount = innerJson.getJSONObject("premiumCollection").getJSONObject("bankAccount").getString("accountNumber");
+	//ApiHelper.AssertEquals("Account Number" ,"123123123", bankAccount, test);
 	
 	
 	test.info( MarkupHelper.createCodeBlock(response.asString(),CodeLanguage.JSON));

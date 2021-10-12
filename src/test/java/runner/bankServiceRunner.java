@@ -26,6 +26,7 @@ public class bankServiceRunner {
     public void CreateAuthenticatedCollection() throws URISyntaxException, IOException, SAXException, ParserConfigurationException {
  		
     	com.exergyRestApi.BankService.CreateAuthenticatedCollection.createAuthenticatedCollection(extent);
+    	ApiHelper.softAssertion.assertAll();
 	     
 	} 
     
@@ -33,6 +34,7 @@ public class bankServiceRunner {
     public void QueryAuthenticatedCollection() throws URISyntaxException, IOException, SAXException, ParserConfigurationException {
  		
     	com.exergyRestApi.BankService.QueryAuthenticatedCollection.queryAuthenticatedCollection(extent);
+    	ApiHelper.softAssertion.assertAll();
 	     
 	}   
     
@@ -41,6 +43,7 @@ public class bankServiceRunner {
     public void QueryBank() throws URISyntaxException, IOException, SAXException, ParserConfigurationException {
  		
     	com.exergyRestApi.BankService.QueryBank.queryBank(extent);
+    	ApiHelper.softAssertion.assertAll();
 	     
 	} 
     
@@ -49,6 +52,7 @@ public class bankServiceRunner {
     public void QueryBankByName() throws URISyntaxException, IOException, SAXException, ParserConfigurationException {
  		
     	com.exergyRestApi.BankService.QueryBankByName.queryBankByName(extent);
+    	ApiHelper.softAssertion.assertAll();
 	     
 	} 
     
@@ -57,6 +61,7 @@ public class bankServiceRunner {
     public void QueryBranchByBankCode() throws URISyntaxException, IOException, SAXException, ParserConfigurationException {
  		
     	com.exergyRestApi.BankService.QueryBranchByBankCode.queryBranchByBankCode(extent);
+    	ApiHelper.softAssertion.assertAll();
 	     
 	} 
     
@@ -64,6 +69,7 @@ public class bankServiceRunner {
     public void QueryBranchByName() throws URISyntaxException, IOException, SAXException, ParserConfigurationException {
  		
     	com.exergyRestApi.BankService.QueryBranchByName.queryBranchByName(extent);
+    	ApiHelper.softAssertion.assertAll();
 	     
 	}
      
@@ -73,18 +79,21 @@ public class bankServiceRunner {
     public void RetrieveAuthenticatedCollection() throws URISyntaxException, IOException, SAXException, ParserConfigurationException {
  		
     	com.exergyRestApi.BankService.RetrieveAuthenticatedCollection.retrieveAuthenticatedCollection(extent); 
+    	ApiHelper.softAssertion.assertAll();
 	} 
     
     @Test(priority =8,enabled=true)
     public void RetrieveBank() throws URISyntaxException, IOException, SAXException, ParserConfigurationException {
  		
     	com.exergyRestApi.BankService.RetrieveBank.retrieveBank(extent);
+    	ApiHelper.softAssertion.assertAll();
 	} 
     
     @Test(priority =9,enabled=true)
     public void RetrieveBranch() throws URISyntaxException, IOException, SAXException, ParserConfigurationException {
  		
     	com.exergyRestApi.BankService.RetrieveBranch.retrieveBranch(extent);
+    	ApiHelper.softAssertion.assertAll();
 	}      
     
     
@@ -92,6 +101,7 @@ public class bankServiceRunner {
     public void RetrieveVerification() throws URISyntaxException, IOException, SAXException, ParserConfigurationException {
  		
     	com.exergyRestApi.BankService.RetrieveVerification.retrieveVerification(extent);
+    	ApiHelper.softAssertion.assertAll();
 	} 
     
     
@@ -99,6 +109,7 @@ public class bankServiceRunner {
     public void UpdateAuthenticatedCollection() throws URISyntaxException, IOException, SAXException, ParserConfigurationException {
  		
     	com.exergyRestApi.BankService.UpdateAuthenticatedCollection.updateAuthenticatedCollection(extent);
+    	ApiHelper.softAssertion.assertAll();
     	
 	}   
     
@@ -107,6 +118,7 @@ public class bankServiceRunner {
     public void ValidateBankAccount() throws URISyntaxException, IOException, SAXException, ParserConfigurationException {
  		
     	com.exergyRestApi.BankService.ValidateBankAccount.validateBankAccount(extent);
+    	ApiHelper.softAssertion.assertAll();
     	
 	}    
     
@@ -114,6 +126,7 @@ public class bankServiceRunner {
     public void ValidateCreditCard() throws URISyntaxException, IOException, SAXException, ParserConfigurationException {
  		
     	com.exergyRestApi.BankService.ValidateCreditCard.validateCreditCard(extent);
+    	ApiHelper.softAssertion.assertAll();
     	
 	}  
     
@@ -123,6 +136,7 @@ public class bankServiceRunner {
  		
     	
     	com.exergyRestApi.BankService.VerifyBankAccount.verifyBankAccount(extent);
+    	ApiHelper.softAssertion.assertAll();
     	
 	}  
     
@@ -130,6 +144,7 @@ public class bankServiceRunner {
     public void CancelAuthenticatedCollection() throws URISyntaxException, IOException, SAXException, ParserConfigurationException {
  		
 		com.exergyRestApi.BankService.CancelAuthenticatedCollection.cancelAuthenticatedCollection(extent);
+		ApiHelper.softAssertion.assertAll();
 	     
 	} 
     

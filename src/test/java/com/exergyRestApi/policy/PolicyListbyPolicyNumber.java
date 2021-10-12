@@ -32,7 +32,7 @@ public static void  policyListbyPolicyNumber(ExtentReports extent) throws URISyn
 	
 	
 	//Validations
-	
+	/*
 	JSONObject innerJson = new JSONObject(response.getBody().asString());
 	System.out.println("++++++++++++++++++++++++"+ApiHelper.getJsonField(innerJson, "benefitPremiums"));
 	
@@ -47,9 +47,7 @@ public static void  policyListbyPolicyNumber(ExtentReports extent) throws URISyn
 	
 	String amount = innerJson.getJSONObject("premiumCollection").getJSONObject("bankAccount").getString("accountHolderName");
 	ApiHelper.AssertEquals("accountHolderName" ,"Boitumelo VictorMmolawa", amount, test);
-	
+	*/
 }
-
-
 	
 }

@@ -31,7 +31,7 @@ public static void  documentsbyPolicyReference(ExtentReports extent) throws URIS
 	test.info( MarkupHelper.createCodeBlock(response.asString(),CodeLanguage.JSON));
 	
 	//Validations
-	
+	/*
 	JSONObject innerJson = new JSONObject(response.getBody().asString());
 	System.out.println("++++++++++++++++++++++++"+ApiHelper.getJsonField(innerJson, "benefitPremiums"));
 	
@@ -46,7 +46,7 @@ public static void  documentsbyPolicyReference(ExtentReports extent) throws URIS
 	
 	String arrears = innerJson.get("documentData").toString();
 	ApiHelper.AssertEquals("documentData" ,"PGh0bWw+PGJvZHk+PHNjcmlwdCB0eXBlPSJ0ZXh0L2phdmFzY3JpcHQiPgp3aW5kb3cubG9jYXRpb24uaHJlZiA9ICJodHRwczovL2hvbGxhcmRzYXN0b3JhZ2UuYmxvYi5jb3JlLndpbmRvd3MubmV0L2RvY2Z1c2lvbi1kb2NzL0E3NDVEMkYyLUE4NUItNDNFRi1BMTk1LUFDM0EwMDkxOTBFQV80MDkyLnBkZj9zdj0yMDE4LTAzLTI4JnNyPWImc2lnPVJWVnRyT2l3QTFjMTJ1djNwWGR6JTJCMHdNb2Vqak5hdVNmSFVIN3Y2a0tyTSUzRCZzZT05OTk5LTEyLTMxVDIzJTNBNTklM0E1OVomc3A9ciIKPC9zY3JpcHQ+PC9ib2R5PjwvaHRtbD4=",arrears, test);
-	
+	*/
 	
 	
 	

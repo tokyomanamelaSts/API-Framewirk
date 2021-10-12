@@ -39,12 +39,12 @@ public class ApiHelper {
     public static String bakingSubKey = "8b0c22b05b8c45c2b3d57edafbd78018";
 	
 	
-	public static String applicationSitUrl = "https://apim-hl-life-test-za.azure-api.net/Application/sit";
+	public static String applicationSitUrl = "https://apim-hl-life-test-za.azure-api.net/Application/uat";
 	public static String applicationSubId = "Life-Integration-Team";
 	public static String applicationSubKey = "d05d946b0e9b480ea9c2d751549bd5ef";
 	
 	
-	public static String policySitUrl = "https://apim-hl-life-test-za.azure-api.net/Policy/sit";
+	public static String policySitUrl = "https://apim-hl-life-test-za.azure-api.net/Policy/uat";
 	public static String policySubId = "Automation-Test-Team";
 	public static String policySubKey = "fc5e1ef728f44652a03e16c9525f2d49";
 	
@@ -233,7 +233,7 @@ Response response =
 		 System.out.println("validation for "+tagname+" has passed");
 		 softAssertion.assertTrue(true);
 			
-		 softAssertion.assertAll();
+		
 		 
 	 }
 	 
@@ -244,7 +244,7 @@ Response response =
 		 
 		 softAssertion.assertTrue(false);
 			
-		 softAssertion.assertAll();
+		 
 		
 	 }
 	 

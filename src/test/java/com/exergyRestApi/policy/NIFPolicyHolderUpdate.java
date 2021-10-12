@@ -1,6 +1,6 @@
 package com.exergyRestApi.policy;
 
-import com.applicationPayloads.CreateApplicationPayloads;
+
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.markuputils.CodeLanguage;
@@ -24,7 +24,7 @@ public static void  nIFPolicyHolderUpdate(ExtentReports extent) throws URISyntax
 	ExtentTest test;
 	test=extent.createTest("NIF Policy Holde rUpdate");
 	Response response;
-	response =  ApiHelper.sendRestPutRequest(ApiHelper.policySitUrl,ApiHelper.policySubKey, ApiHelper.policySubId,NIFPolicyHolderUpdatepayload, "/Policy/50015319/PolicyHolder");
+	response =  ApiHelper.sendRestPutRequest(ApiHelper.policySitUrl,ApiHelper.policySubKey, ApiHelper.policySubId,NIFPolicyHolderUpdatepayload, "/Policy/50000541/PolicyHolder");
 	response.prettyPrint();
 	ApiHelper.AssertEquals("Status code" ,"200", String.valueOf(response.statusCode()) , test);
 	test.info( MarkupHelper.createCodeBlock(response.asString(),CodeLanguage.JSON));
