@@ -33,6 +33,25 @@ public static void  CreateApplication(ExtentReports extent) throws URISyntaxExce
 	test.info( MarkupHelper.createCodeBlock(response.asString(),CodeLanguage.JSON));
 	
 	
+	//Validations
+	
+	JSONObject innerJson = new JSONObject(response.getBody().asString());
+	
+	String applicationRef = innerJson.getJSONObject("application").getString("applicationReference");
+	ApiHelper.AssertEquals("application Reference" ,"101936", applicationRef, test);
+	
+	String sourceReference = innerJson.getJSONObject("application").getString("sourceReference");
+	ApiHelper.AssertEquals("source Reference" ,"T0005100", sourceReference, test);
+	
+	String campaigncode = innerJson.getJSONObject("application").getString("campaignCode");
+	ApiHelper.AssertEquals("campaignCode" ,"60200000", campaigncode, test);
+	
+	String product = innerJson.getJSONObject("product").getString("productName");
+	ApiHelper.AssertEquals("productName" ,"Tyme Bank Funeral (Boxer)", product, test);
+	
+	
+	test.info( MarkupHelper.createCodeBlock(response.asString(),CodeLanguage.JSON));
+	
 }
 
 

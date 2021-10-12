@@ -30,6 +30,8 @@ public static void  createApplicationPolicyHolder(ExtentReports extent) throws U
 	test.info( MarkupHelper.createCodeBlock(response.asString(),CodeLanguage.JSON));
 	
 	
+	response.prettyPrint();
+	
 }
 
 
