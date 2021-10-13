@@ -28,7 +28,7 @@ public static void  policybyPolicyReference(ExtentReports extent) throws URISynt
 	response =  ApiHelper.sendRestGetRequest(ApiHelper.policySitUrl,ApiHelper.policySubKey, ApiHelper.policySubId,"/Policy/13402150?referenceType=Policy&lineOfBusinessSystem=Mip");
 	response.prettyPrint();
 	ApiHelper.AssertEquals("Status code" ,"200", String.valueOf(response.statusCode()) , test);
-	test.info( MarkupHelper.createCodeBlock(response.asString(),CodeLanguage.JSON));
+	
 	
 	
 	//Validations
@@ -48,6 +48,8 @@ public static void  policybyPolicyReference(ExtentReports extent) throws URISynt
 	String amount = innerJson.getJSONObject("premiumAmount").getString("benefitPremiums");
 	ApiHelper.AssertEquals("benefitPremiums" ,"876.44", amount, test);
 	
+	
+	test.info( MarkupHelper.createCodeBlock(response.asString(),CodeLanguage.JSON));
 }
 
 

@@ -1,13 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" ignored="13" total="14" passed="0">
+<testng-results skipped="0" failed="1" ignored="4" total="14" passed="9">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="9659" started-at="2021-10-13T13:03:07 SAST" finished-at="2021-10-13T13:03:16 SAST">
+  <suite name="Default suite" duration-ms="263827" started-at="2021-10-13T15:05:17 SAST" finished-at="2021-10-13T15:09:41 SAST">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="9659" started-at="2021-10-13T13:03:07 SAST" finished-at="2021-10-13T13:03:16 SAST">
-      <class name="runner.ApplicationRunner">
-        <test-method status="FAIL" signature="CreateApplicationPolicyHolder()[pri:3, instance:runner.ApplicationRunner@710f4dc7]" name="CreateApplicationPolicyHolder" duration-ms="9333" started-at="2021-10-13T13:03:07 SAST" finished-at="2021-10-13T13:03:16 SAST">
+    <test name="Default test" duration-ms="263827" started-at="2021-10-13T15:05:17 SAST" finished-at="2021-10-13T15:09:41 SAST">
+      <class name="runner.PolicyRunner">
+        <test-method status="PASS" signature="PolicybyPolicyReference()[pri:24, instance:runner.PolicyRunner@279fedbd]" name="PolicybyPolicyReference" duration-ms="10136" started-at="2021-10-13T15:05:17 SAST" finished-at="2021-10-13T15:05:27 SAST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- PolicybyPolicyReference -->
+        <test-method status="PASS" signature="PolicyListbyPolicyNumber()[pri:25, instance:runner.PolicyRunner@279fedbd]" name="PolicyListbyPolicyNumber" duration-ms="23728" started-at="2021-10-13T15:05:27 SAST" finished-at="2021-10-13T15:05:51 SAST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- PolicyListbyPolicyNumber -->
+        <test-method status="PASS" signature="PolicybyIdentityNumber()[pri:26, instance:runner.PolicyRunner@279fedbd]" name="PolicybyIdentityNumber" duration-ms="60807" started-at="2021-10-13T15:05:51 SAST" finished-at="2021-10-13T15:06:52 SAST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- PolicybyIdentityNumber -->
+        <test-method status="PASS" signature="DocumentsbyPolicyReference()[pri:27, instance:runner.PolicyRunner@279fedbd]" name="DocumentsbyPolicyReference" duration-ms="73674" started-at="2021-10-13T15:06:52 SAST" finished-at="2021-10-13T15:08:06 SAST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- DocumentsbyPolicyReference -->
+        <test-method status="PASS" signature="UpdateBankAccountAndDebitDay()[pri:28, instance:runner.PolicyRunner@279fedbd]" name="UpdateBankAccountAndDebitDay" duration-ms="20496" started-at="2021-10-13T15:08:06 SAST" finished-at="2021-10-13T15:08:26 SAST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- UpdateBankAccountAndDebitDay -->
+        <test-method status="PASS" signature="TESTPolicyHolderUpdate()[pri:29, instance:runner.PolicyRunner@279fedbd]" name="TESTPolicyHolderUpdate" duration-ms="10813" started-at="2021-10-13T15:08:26 SAST" finished-at="2021-10-13T15:08:37 SAST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TESTPolicyHolderUpdate -->
+        <test-method status="PASS" signature="ChangeBeneficiaries()[pri:30, instance:runner.PolicyRunner@279fedbd]" name="ChangeBeneficiaries" duration-ms="26308" started-at="2021-10-13T15:08:37 SAST" finished-at="2021-10-13T15:09:03 SAST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ChangeBeneficiaries -->
+        <test-method status="PASS" signature="UploadDocument()[pri:30, instance:runner.PolicyRunner@279fedbd]" name="UploadDocument" duration-ms="23008" started-at="2021-10-13T15:09:03 SAST" finished-at="2021-10-13T15:09:26 SAST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- UploadDocument -->
+        <test-method status="FAIL" signature="NIFPolicyHolderUpdate()[pri:31, instance:runner.PolicyRunner@279fedbd]" name="NIFPolicyHolderUpdate" duration-ms="3129" started-at="2021-10-13T15:09:26 SAST" finished-at="2021-10-13T15:09:29 SAST">
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[The following asserts failed:
@@ -18,7 +50,7 @@ expected [true] but found [false]]]>
 expected [true] but found [false]
 at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:47)
 at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:31)
-at runner.ApplicationRunner.CreateApplicationPolicyHolder(ApplicationRunner.java:57)
+at runner.PolicyRunner.NIFPolicyHolderUpdate(PolicyRunner.java:104)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -52,12 +84,16 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- CreateApplicationPolicyHolder -->
-        <test-method status="PASS" signature="EndTests()[pri:0, instance:runner.ApplicationRunner@710f4dc7]" name="EndTests" is-config="true" duration-ms="280" started-at="2021-10-13T13:03:16 SAST" finished-at="2021-10-13T13:03:16 SAST">
+        </test-method> <!-- NIFPolicyHolderUpdate -->
+        <test-method status="PASS" signature="UpdatePolicyHolder()[pri:31, instance:runner.PolicyRunner@279fedbd]" name="UpdatePolicyHolder" duration-ms="11248" started-at="2021-10-13T15:09:29 SAST" finished-at="2021-10-13T15:09:41 SAST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- UpdatePolicyHolder -->
+        <test-method status="PASS" signature="EndTests()[pri:0, instance:runner.PolicyRunner@279fedbd]" name="EndTests" is-config="true" duration-ms="324" started-at="2021-10-13T15:09:41 SAST" finished-at="2021-10-13T15:09:41 SAST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- EndTests -->
-      </class> <!-- runner.ApplicationRunner -->
+      </class> <!-- runner.PolicyRunner -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
