@@ -12,6 +12,8 @@ import io.restassured.response.Response;
 import java.io.IOException;
 import java.net.URISyntaxException;
 import javax.xml.parsers.ParserConfigurationException;
+
+import org.json.JSONObject;
 import org.xml.sax.SAXException;
 
 
@@ -29,6 +31,24 @@ public static void  qualificationProduct60200000(ExtentReports extent) throws UR
 	test.info( MarkupHelper.createCodeBlock(response.asString(),CodeLanguage.JSON));
 	
 	
+	//Validations
+	
+	JSONObject innerJson = new JSONObject(response.getBody().asString());
+	
+	String ProductCode = innerJson.get("productCode").toString();
+	ApiHelper.AssertEquals("productCode" ,"60200000", ProductCode, test);
+	
+	String QualificationReference = innerJson.get("qualificationReference").toString();
+	ApiHelper.AssertEquals("qualificationReference" ,"CJR7EPLIP", QualificationReference, test);
+	
+	String results = innerJson.get("qualificationResult").toString();
+	ApiHelper.AssertEquals("qualificationResult" ,"true", results, test);
+	
+	
+	test.info( MarkupHelper.createCodeBlock(response.asString(),CodeLanguage.JSON));
+	
+
+	response.prettyPrint();
 }
 
 

@@ -28,7 +28,7 @@ public static void  createApplicationAcceptance(ExtentReports extent) throws URI
 	ApiHelper.AssertEquals("Status code" ,"200", String.valueOf(response.statusCode()) , test);
 	test.info( MarkupHelper.createCodeBlock(response.asString(),CodeLanguage.JSON));
 	
-	
+	response.prettyPrint();
 }
 
 

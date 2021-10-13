@@ -12,6 +12,8 @@ import io.restassured.response.Response;
 import java.io.IOException;
 import java.net.URISyntaxException;
 import javax.xml.parsers.ParserConfigurationException;
+
+import org.json.JSONObject;
 import org.xml.sax.SAXException;
 
 
@@ -26,6 +28,30 @@ public static void  qualificationProduct60200001NegetiveTest(ExtentReports exten
 	Response response;
 	response =  ApiHelper.sendRestPostRequest(ApiHelper.applicationSitUrl,ApiHelper.applicationSubKey, ApiHelper.applicationSubId,QualificationProduct60200000NegPayload, "/Qualification");
 	ApiHelper.AssertEquals("Status code" ,"200", String.valueOf(response.statusCode()) , test);
+	test.info( MarkupHelper.createCodeBlock(response.asString(),CodeLanguage.JSON));
+	
+	
+	response.prettyPrint();
+	
+    //Validations
+	
+    JSONObject innerJson = new JSONObject(response.getBody().asString());
+	
+	String productCode = innerJson.get("productCode").toString();
+	ApiHelper.AssertEquals("productCode" ,"60200000", productCode, test);
+		
+    //String sourceReference = innerJson.get("qualificationReference").toString();
+	//ApiHelper.AssertEquals("qualificationReference" ,"L632JG1QA", sourceReference, test);
+		
+	String reason = innerJson.get("rejectionReason").toString();
+	ApiHelper.AssertEquals("rejectionReason" ,"The applicant already has a policy for this product and is not allowed to take additional policies", reason, test);
+		
+	
+	String results = innerJson.get("qualificationResult").toString();
+	ApiHelper.AssertEquals("qualificationResult" ,"false", results, test);
+		
+	
+	
 	test.info( MarkupHelper.createCodeBlock(response.asString(),CodeLanguage.JSON));
 	
 	

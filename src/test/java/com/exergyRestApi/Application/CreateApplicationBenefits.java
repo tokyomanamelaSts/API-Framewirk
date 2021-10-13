@@ -11,6 +11,8 @@ import io.restassured.response.Response;
 import java.io.IOException;
 import java.net.URISyntaxException;
 import javax.xml.parsers.ParserConfigurationException;
+
+import org.json.JSONObject;
 import org.xml.sax.SAXException;
 
 public class CreateApplicationBenefits extends CreateApplicationPayloads {
@@ -25,6 +27,25 @@ public static void  createApplicationBenefits(ExtentReports extent) throws URISy
 	ApiHelper.AssertEquals("Status code" ,"200", String.valueOf(response.statusCode()) , test);
 	test.info( MarkupHelper.createCodeBlock(response.asString(),CodeLanguage.JSON));
 	
+	
+	//Validations
+	
+    JSONObject innerJson = new JSONObject(response.getBody().asString());
+		
+	String applicationRef = innerJson.get("applicationReference").toString();
+	ApiHelper.AssertEquals("applicationReference" ,"1598", applicationRef, test);
+		
+    String sourceReference = innerJson.get("sourceReference").toString();
+	ApiHelper.AssertEquals("sourceReference" ,"Tyme01", sourceReference, test);
+		
+	String premiumAmount = innerJson.getJSONObject("premiumAmount").getString("benefitPremiums");
+	ApiHelper.AssertEquals("benefitPremiums" ,"256", premiumAmount, test);
+		
+	String productCode = innerJson.get("productCode").toString();
+	ApiHelper.AssertEquals("productCode" ,"60100000", productCode, test);
+	
+	
+	test.info( MarkupHelper.createCodeBlock(response.asString(),CodeLanguage.JSON));
 	
 }
 	

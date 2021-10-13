@@ -29,6 +29,8 @@ public static void  createApplicationPremiumCollection(ExtentReports extent) thr
 	test.info( MarkupHelper.createCodeBlock(response.asString(),CodeLanguage.JSON));
 	
 	
+	response.prettyPrint();
+	
 }
 
 }

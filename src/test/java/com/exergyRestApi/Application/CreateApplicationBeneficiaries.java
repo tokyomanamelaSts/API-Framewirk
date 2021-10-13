@@ -28,12 +28,15 @@ public static void  createApplicationBeneficiaries(ExtentReports extent) throws 
 	ApiHelper.AssertEquals("Status code" ,"200", String.valueOf(response.statusCode()) , test);
 	
 	
+	//Validations
+	
+	
 	JSONObject innerJson = new JSONObject(response.getBody().asString());
 	String applicationRef = innerJson.get("applicationReference").toString();
 	ApiHelper.AssertEquals("application Reference" ,"1598", applicationRef, test);
 	
 	String sourceReference = innerJson.get("sourceReference").toString();
-	ApiHelper.AssertEquals("source Reference" ,"T01", sourceReference, test);
+	ApiHelper.AssertEquals("source Reference" ,"Tyme01", sourceReference, test);
 	
 	String benefitPremiums = innerJson.getJSONObject("premiumAmount").getString("benefitPremiums");
 	ApiHelper.AssertEquals("benefit Premiums" ,"256", benefitPremiums, test);
@@ -48,7 +51,7 @@ public static void  createApplicationBeneficiaries(ExtentReports extent) throws 
 	
 	//String pageName = innerJson.getJSONObject("applicationReference").getString("deviceSerialNumber");
 	
-
+    
 
 }
 }

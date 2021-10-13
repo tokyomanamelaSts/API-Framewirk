@@ -27,6 +27,8 @@ public static void  createApplicationStatus(ExtentReports extent) throws URISynt
 	test.info( MarkupHelper.createCodeBlock(response.asString(),CodeLanguage.JSON));
 	
 	
+	response.prettyPrint();
+	
 }
 
 
