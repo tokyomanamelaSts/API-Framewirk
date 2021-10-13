@@ -30,6 +30,12 @@ public static void  nIFPolicyHolderUpdate(ExtentReports extent) throws URISyntax
 	test.info( MarkupHelper.createCodeBlock(response.asString(),CodeLanguage.JSON));
 	
 	
+	test.info( "Find payload(Request) below");
+    test.info( MarkupHelper.createCodeBlock(NIFPolicyHolderUpdatepayload,CodeLanguage.JSON));
+    test.info( "Find response below");
+    test.info( MarkupHelper.createCodeBlock(response.asString(),CodeLanguage.JSON));
+
+	
 }
 
 

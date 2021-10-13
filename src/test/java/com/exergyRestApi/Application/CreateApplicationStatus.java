@@ -24,10 +24,15 @@ public static void  createApplicationStatus(ExtentReports extent) throws URISynt
 	Response response;
 	response =  ApiHelper.sendRestPatchRequest(ApiHelper.applicationSitUrl,ApiHelper.applicationSubKey, ApiHelper.applicationSubId,CreateApplicationStatusPayLoad, "/Application/1598/Status/");
 	ApiHelper.AssertEquals("Status code" ,"200", String.valueOf(response.statusCode()) , test);
-	test.info( MarkupHelper.createCodeBlock(response.asString(),CodeLanguage.JSON));
 	
 	
-	response.prettyPrint();
+	
+	test.info( "Find payload(Request) below");
+    test.info( MarkupHelper.createCodeBlock(CreateApplicationStatusPayLoad,CodeLanguage.JSON));
+    test.info( "Find response below");
+    test.info( MarkupHelper.createCodeBlock(response.asString(),CodeLanguage.JSON));
+
+    
 	
 }
 

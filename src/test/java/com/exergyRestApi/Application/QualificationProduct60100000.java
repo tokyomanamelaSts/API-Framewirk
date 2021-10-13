@@ -28,7 +28,7 @@ public static void  qualificationProduct60100000(ExtentReports extent) throws UR
 	Response response;
 	response =  ApiHelper.sendRestPostRequest(ApiHelper.applicationSitUrl,ApiHelper.applicationSubKey, ApiHelper.applicationSubId,QualificationProduct60100000Payload, "/Qualification");
 	ApiHelper.AssertEquals("Status code" ,"200", String.valueOf(response.statusCode()) , test);
-	test.info( MarkupHelper.createCodeBlock(response.asString(),CodeLanguage.JSON));
+	
 	
 	
 	
@@ -45,10 +45,12 @@ public static void  qualificationProduct60100000(ExtentReports extent) throws UR
 	String results = innerJson.get("qualificationResult").toString();
 	ApiHelper.AssertEquals("qualificationResult" ,"true", results, test);
 		
-	
-	
-	test.info( MarkupHelper.createCodeBlock(response.asString(),CodeLanguage.JSON));
-	
+	test.info( "Find payload(Request) below");
+    test.info( MarkupHelper.createCodeBlock(QualificationProduct60100000Payload,CodeLanguage.JSON));
+    test.info( "Find response below");
+    test.info( MarkupHelper.createCodeBlock(response.asString(),CodeLanguage.JSON));
+
+    
 }
 
 

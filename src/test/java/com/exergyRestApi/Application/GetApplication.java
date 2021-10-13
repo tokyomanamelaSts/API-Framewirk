@@ -26,7 +26,7 @@ public static void  getApplication(ExtentReports extent) throws URISyntaxExcepti
 	Response response;
 	response =  ApiHelper.sendRestGetRequest(ApiHelper.applicationSitUrl,ApiHelper.applicationSubKey, ApiHelper.applicationSubId,"/Application/1598");
 	ApiHelper.AssertEquals("Status code" ,"200", String.valueOf(response.statusCode()) , test);
-	test.info( MarkupHelper.createCodeBlock(response.asString(),CodeLanguage.JSON));
+	
 	
 	
 	//Validations
@@ -44,6 +44,7 @@ public static void  getApplication(ExtentReports extent) throws URISyntaxExcepti
 		
 		String premium = innerJson.getJSONObject("premiumAmount").getString("total");
 		ApiHelper.AssertEquals("total" ,"256", premium, test);
+		
 		
 		
 		test.info( MarkupHelper.createCodeBlock(response.asString(),CodeLanguage.JSON));

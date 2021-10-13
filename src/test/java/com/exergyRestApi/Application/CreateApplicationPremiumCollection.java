@@ -26,10 +26,13 @@ public static void  createApplicationPremiumCollection(ExtentReports extent) thr
 	response =  ApiHelper.sendRestPutRequest(ApiHelper.applicationSitUrl,ApiHelper.applicationSubKey, ApiHelper.applicationSubId,CreateApplicationPremiumCollection, "/Application/1598/PremiumCollection");
 	response.prettyPrint();
 	ApiHelper.AssertEquals("Status code" ,"200", String.valueOf(response.statusCode()) , test);
-	test.info( MarkupHelper.createCodeBlock(response.asString(),CodeLanguage.JSON));
 	
 	
-	response.prettyPrint();
+	test.info( "Find payload(Request) below");
+    test.info( MarkupHelper.createCodeBlock(CreateApplicationPremiumCollection,CodeLanguage.JSON));
+    test.info( "Find response below");
+    test.info( MarkupHelper.createCodeBlock(response.asString(),CodeLanguage.JSON));
+
 	
 }
 

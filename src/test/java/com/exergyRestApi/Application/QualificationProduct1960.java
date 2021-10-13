@@ -26,9 +26,16 @@ public static void  qualificationProduct1960(ExtentReports extent) throws URISyn
 	Response response;
 	response =  ApiHelper.sendRestPostRequest(ApiHelper.applicationSitUrl,QualificationProduct1960Payload,ApiHelper.applicationSubKey, ApiHelper.applicationSubId, "/Qualification");
 	ApiHelper.AssertEquals("Status code" ,"200", String.valueOf(response.statusCode()) , test);
-	test.info( MarkupHelper.createCodeBlock(response.asString(),CodeLanguage.JSON));
 	
-	response.prettyPrint();
+	
+	
+	test.info( "Find payload(Request) below");
+    test.info( MarkupHelper.createCodeBlock(QualificationProduct1960Payload,CodeLanguage.JSON));
+    test.info( "Find response below");
+    test.info( MarkupHelper.createCodeBlock(response.asString(),CodeLanguage.JSON));
+
+    test.info( MarkupHelper.createCodeBlock(response.asString(),CodeLanguage.JSON));
+	
 }
 
 

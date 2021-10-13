@@ -30,6 +30,12 @@ public static void  tESTPolicyHolderUpdate(ExtentReports extent) throws URISynta
 	test.info( MarkupHelper.createCodeBlock(response.asString(),CodeLanguage.JSON));
 	
 	
+	test.info( "Find payload(Request) below");
+    test.info( MarkupHelper.createCodeBlock(TESTPolicyHolderUpdate,CodeLanguage.JSON));
+    test.info( "Find response below");
+    test.info( MarkupHelper.createCodeBlock(response.asString(),CodeLanguage.JSON));
+
+	
 }
 
 

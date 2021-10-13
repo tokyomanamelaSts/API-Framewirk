@@ -25,7 +25,7 @@ public static void  createApplicationBenefits(ExtentReports extent) throws URISy
 	Response response;
 	response =  ApiHelper.sendRestPutRequest(ApiHelper.applicationSitUrl,ApiHelper.applicationSubKey, ApiHelper.applicationSubId,CreateApplicationBenefitsPayLoad,"/Application/1598/Benefits/");
 	ApiHelper.AssertEquals("Status code" ,"200", String.valueOf(response.statusCode()) , test);
-	test.info( MarkupHelper.createCodeBlock(response.asString(),CodeLanguage.JSON));
+	
 	
 	
 	//Validations
@@ -45,7 +45,11 @@ public static void  createApplicationBenefits(ExtentReports extent) throws URISy
 	ApiHelper.AssertEquals("productCode" ,"60100000", productCode, test);
 	
 	
-	test.info( MarkupHelper.createCodeBlock(response.asString(),CodeLanguage.JSON));
+	test.info( "Find payload(Request) below");
+    test.info( MarkupHelper.createCodeBlock(CreateApplicationBenefitsPayLoad,CodeLanguage.JSON));
+    test.info( "Find response below");
+    test.info( MarkupHelper.createCodeBlock(response.asString(),CodeLanguage.JSON));
+
 	
 }
 	

@@ -28,10 +28,8 @@ public static void  qualificationProduct60200001NegetiveTest(ExtentReports exten
 	Response response;
 	response =  ApiHelper.sendRestPostRequest(ApiHelper.applicationSitUrl,ApiHelper.applicationSubKey, ApiHelper.applicationSubId,QualificationProduct60200000NegPayload, "/Qualification");
 	ApiHelper.AssertEquals("Status code" ,"200", String.valueOf(response.statusCode()) , test);
-	test.info( MarkupHelper.createCodeBlock(response.asString(),CodeLanguage.JSON));
 	
 	
-	response.prettyPrint();
 	
     //Validations
 	
@@ -52,8 +50,11 @@ public static void  qualificationProduct60200001NegetiveTest(ExtentReports exten
 		
 	
 	
-	test.info( MarkupHelper.createCodeBlock(response.asString(),CodeLanguage.JSON));
-	
+	test.info( "Find payload(Request) below");
+    test.info( MarkupHelper.createCodeBlock(QualificationProduct60200000Payload,CodeLanguage.JSON));
+    test.info( "Find response below");
+    test.info( MarkupHelper.createCodeBlock(response.asString(),CodeLanguage.JSON));
+
 	
 }
 

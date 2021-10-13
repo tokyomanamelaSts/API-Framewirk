@@ -27,8 +27,14 @@ public static void  changeBeneficiaries(ExtentReports extent) throws URISyntaxEx
 	response =  ApiHelper.sendRestPutRequest(ApiHelper.policySitUrl,ApiHelper.policySubKey, ApiHelper.policySubId,ChangeBeneficiariesPayload, "/Policy/50002008/Beneficiary?policyHolderIdentityNumber=8912111014088");
 	response.prettyPrint();
 	ApiHelper.AssertEquals("Status code" ,"200", String.valueOf(response.statusCode()) , test);
-	test.info( MarkupHelper.createCodeBlock(response.asString(),CodeLanguage.JSON));
 	
+	
+	
+	test.info( "Find payload(Request) below");
+    test.info( MarkupHelper.createCodeBlock(ChangeBeneficiariesPayload,CodeLanguage.JSON));
+    test.info( "Find response below");
+    test.info( MarkupHelper.createCodeBlock(response.asString(),CodeLanguage.JSON));
+
 	
 }
 
