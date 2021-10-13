@@ -27,8 +27,15 @@ public static void  nIFPolicyHolderUpdate(ExtentReports extent) throws URISyntax
 	response =  ApiHelper.sendRestPutRequest(ApiHelper.policySitUrl,ApiHelper.policySubKey, ApiHelper.policySubId,NIFPolicyHolderUpdatepayload, "/Policy/50000541/PolicyHolder");
 	response.prettyPrint();
 	ApiHelper.AssertEquals("Status code" ,"200", String.valueOf(response.statusCode()) , test);
-	test.info( MarkupHelper.createCodeBlock(response.asString(),CodeLanguage.JSON));
 	
+	
+	//Additions
+	
+	test.info( "Find payload(Request) below");
+    test.info( MarkupHelper.createCodeBlock(NIFPolicyHolderUpdatepayload,CodeLanguage.JSON));
+    test.info( "Find response below");
+    test.info( MarkupHelper.createCodeBlock(response.asString(),CodeLanguage.JSON));
+
 	
 }
 

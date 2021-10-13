@@ -26,9 +26,17 @@ public static void  createApplicationAcceptance(ExtentReports extent) throws URI
 	response =  ApiHelper.sendRestPostRequest(ApiHelper.applicationSitUrl,ApiHelper.applicationSubKey, ApiHelper.applicationSubId,CreateApplicationPayLoad, "/Application/1598/Acceptance?OTP=4171");
 	
 	ApiHelper.AssertEquals("Status code" ,"200", String.valueOf(response.statusCode()) , test);
-	test.info( MarkupHelper.createCodeBlock(response.asString(),CodeLanguage.JSON));
+	
 	
 	response.prettyPrint();
+	
+	test.info( "Find payload(Request) below");
+    test.info( MarkupHelper.createCodeBlock(CreateApplicationPayLoad,CodeLanguage.JSON));
+    test.info( "Find response below");
+    test.info( MarkupHelper.createCodeBlock(response.asString(),CodeLanguage.JSON));
+
+    
+	
 }
 
 

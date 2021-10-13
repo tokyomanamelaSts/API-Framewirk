@@ -27,8 +27,14 @@ public static void  updateBankAccountAndDebitDay(ExtentReports extent) throws UR
 	response =  ApiHelper.sendRestPutRequest(ApiHelper.policySitUrl,ApiHelper.policySubKey, ApiHelper.policySubId, UpdateBankAccountAndDebitDayPatload, "/Policy/50015319/BankAccountAndDebitDay");
 	response.prettyPrint();
 	ApiHelper.AssertEquals("Status code" ,"200", String.valueOf(response.statusCode()) , test);
-	test.info( MarkupHelper.createCodeBlock(response.asString(),CodeLanguage.JSON));
 	
+	
+	
+	test.info( "Find payload(Request) below");
+    test.info( MarkupHelper.createCodeBlock(UpdateBankAccountAndDebitDayPatload,CodeLanguage.JSON));
+    test.info( "Find response below");
+    test.info( MarkupHelper.createCodeBlock(response.asString(),CodeLanguage.JSON));
+
 	
 }
 

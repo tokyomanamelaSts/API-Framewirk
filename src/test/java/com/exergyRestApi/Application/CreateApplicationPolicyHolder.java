@@ -27,10 +27,14 @@ public static void  createApplicationPolicyHolder(ExtentReports extent) throws U
 	
 	
 	ApiHelper.AssertEquals("Status code" ,"200", String.valueOf(response.statusCode()) , test);
-	test.info( MarkupHelper.createCodeBlock(response.asString(),CodeLanguage.JSON));
 	
 	
-	response.prettyPrint();
+	test.info( "Find payload(Request) below");
+    test.info( MarkupHelper.createCodeBlock(CreateApplicationPolicyHolderPayload,CodeLanguage.JSON));
+    test.info( "Find response below");
+    test.info( MarkupHelper.createCodeBlock(response.asString(),CodeLanguage.JSON));
+
+	
 	
 }
 

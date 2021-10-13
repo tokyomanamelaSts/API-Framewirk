@@ -30,7 +30,7 @@ public static void  CreateApplication(ExtentReports extent) throws URISyntaxExce
 	
 	
 	ApiHelper.AssertEquals("Status code" ,"200", String.valueOf(response.statusCode()) , test);
-	test.info( MarkupHelper.createCodeBlock(response.asString(),CodeLanguage.JSON));
+	
 	
 	
 	//Validations
@@ -50,7 +50,15 @@ public static void  CreateApplication(ExtentReports extent) throws URISyntaxExce
 	ApiHelper.AssertEquals("productName" ,"Tyme Bank Funeral (Boxer)", product, test);
 	
 	
-	test.info( MarkupHelper.createCodeBlock(response.asString(),CodeLanguage.JSON));
+	
+	//Additions
+	
+	test.info( "Find payload(Request) below");
+    test.info( MarkupHelper.createCodeBlock(CreateApplicationPayLoad,CodeLanguage.JSON));
+    test.info( "Find response below");
+    test.info( MarkupHelper.createCodeBlock(response.asString(),CodeLanguage.JSON));
+
+
 	
 }
 

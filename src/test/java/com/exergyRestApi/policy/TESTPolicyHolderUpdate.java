@@ -27,8 +27,14 @@ public static void  tESTPolicyHolderUpdate(ExtentReports extent) throws URISynta
 	response =  ApiHelper.sendRestPutRequest(ApiHelper.policySitUrl,ApiHelper.policySubKey, ApiHelper.policySubId,TESTPolicyHolderUpdate, "/Policy/50015319/PolicyHolder");
 	response.prettyPrint();
 	ApiHelper.AssertEquals("Status code" ,"200", String.valueOf(response.statusCode()) , test);
-	test.info( MarkupHelper.createCodeBlock(response.asString(),CodeLanguage.JSON));
 	
+	
+	
+	test.info( "Find payload(Request) below");
+    test.info( MarkupHelper.createCodeBlock(TESTPolicyHolderUpdate,CodeLanguage.JSON));
+    test.info( "Find response below");
+    test.info( MarkupHelper.createCodeBlock(response.asString(),CodeLanguage.JSON));
+
 	
 }
 

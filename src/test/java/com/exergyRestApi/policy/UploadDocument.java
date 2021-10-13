@@ -27,9 +27,15 @@ public static void  uploadDocument(ExtentReports extent) throws URISyntaxExcepti
 	response =  ApiHelper.sendRestPostRequest(ApiHelper.policySitUrl,ApiHelper.policySubKey, ApiHelper.policySubId,UploadDocument, "/Policy/50000007/Attachment?policyHolderIdentityNumber=8412260245088");
 	response.prettyPrint();
 	ApiHelper.AssertEquals("Status code" ,"200", String.valueOf(response.statusCode()) , test);
-	test.info( MarkupHelper.createCodeBlock(response.asString(),CodeLanguage.JSON));
 	
 	
+	//additions
+	 
+	test.info( "Find payload(Request) below");
+    test.info( MarkupHelper.createCodeBlock(UploadDocument,CodeLanguage.JSON));
+    test.info( "Find response below");
+    test.info( MarkupHelper.createCodeBlock(response.asString(),CodeLanguage.JSON));
+
 }
 
 

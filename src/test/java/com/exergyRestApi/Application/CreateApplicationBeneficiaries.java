@@ -45,7 +45,11 @@ public static void  createApplicationBeneficiaries(ExtentReports extent) throws 
 	//ApiHelper.AssertEquals("Account Number" ,"123123123", bankAccount, test);
 	
 	
-	test.info( MarkupHelper.createCodeBlock(response.asString(),CodeLanguage.JSON));
+	test.info( "Find payload(Request) below");
+    test.info( MarkupHelper.createCodeBlock(CreateApplicationBeneficiariesPayLoad,CodeLanguage.JSON));
+    test.info( "Find response below");
+    test.info( MarkupHelper.createCodeBlock(response.asString(),CodeLanguage.JSON));
+
 	
 	
 	

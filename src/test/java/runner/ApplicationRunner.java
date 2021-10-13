@@ -38,65 +38,98 @@ public class ApplicationRunner {
 	String TesterName = System.getProperty("user.name");
 	ExtentReports extent=new ExtentManager().extentTest(reportname, pageTile, TesterName);
 
-	@Test(priority = 11,enabled=true)
+	@Test(priority = 1,enabled=true)
 	public void CreateApplication() throws URISyntaxException, IOException, SAXException, ParserConfigurationException {
 		CreateAplication.CreateApplication(extent);
 		
 		ApiHelper.softAssertion.assertAll();
 	}
-	@Test(priority =12,enabled=true)
+	@Test(priority =2,enabled=true)
 	public void createApplicationBenefits() throws URISyntaxException, IOException, SAXException, ParserConfigurationException {
 		CreateApplicationBenefits.createApplicationBenefits(extent);
 		ApiHelper.softAssertion.assertAll();
 	}
 	
-	@Test(priority =13,enabled=true)
+	 @Test(priority =3,enabled=true)
+	    public void CreateApplicationPolicyHolder() throws URISyntaxException, IOException, SAXException, ParserConfigurationException {
+	 		
+	    	com.exergyRestApi.Application.CreateApplicationPolicyHolder.createApplicationPolicyHolder(extent);
+	    	ApiHelper.softAssertion.assertAll();
+		     
+		}
+	
+	 @Test(priority = 4,enabled=true)
+	    public void CreateApplicationPremiumCollection() throws URISyntaxException, IOException, SAXException, ParserConfigurationException {
+	 		
+			com.exergyRestApi.Application.CreateApplicationPremiumCollection.createApplicationPremiumCollection(extent);
+			ApiHelper.softAssertion.assertAll();
+		     
+		}
+	 
+	@Test(priority = 4,enabled=true)
 	public void createApplicationBeneficiaries() throws URISyntaxException, IOException, SAXException, ParserConfigurationException {
 		CreateApplicationBeneficiaries.createApplicationBeneficiaries(extent);
 		ApiHelper.softAssertion.assertAll();
 	}
-	@Test(priority =14,enabled=true)
+	
+	
+	@Test(priority = 5,enabled=true)
 	public void createApplicationStatus() throws URISyntaxException, IOException, SAXException, ParserConfigurationException {
 		CreateApplicationStatus.createApplicationStatus(extent);
 		ApiHelper.softAssertion.assertAll();
 	}
 	
-	@Test(priority =15,enabled=true)
+	
+	@Test(priority = 6,enabled=true)
+    public void CreateApplicationAcceptance() throws URISyntaxException, IOException, SAXException, ParserConfigurationException {
+ 		
+    	com.exergyRestApi.Application.CreateApplicationAcceptance.createApplicationAcceptance(extent);
+    	ApiHelper.softAssertion.assertAll();
+	}
+	
+	
+	
+	@Test(priority = 7,enabled=true)
 	public void getApplication() throws URISyntaxException, IOException, SAXException, ParserConfigurationException {
 		GetApplication.getApplication(extent);
 		ApiHelper.softAssertion.assertAll();
 	}
-	@Test(priority =16,enabled=true)
-	public void QualificationProduct60200000() throws URISyntaxException, IOException, SAXException, ParserConfigurationException {
-		com.exergyRestApi.Application.QualificationProduct60200000.qualificationProduct60200000(extent);
-		ApiHelper.softAssertion.assertAll();
-	}
-
-	@Test(priority =17,enabled=true)
-	public void QualificationProduct60200001NegetiveTest() throws URISyntaxException, IOException, SAXException, ParserConfigurationException {
-		
-		com.exergyRestApi.Application.QualificationProduct60200001NegetiveTest.qualificationProduct60200001NegetiveTest(extent);
-		ApiHelper.softAssertion.assertAll();
-	}
 	
-	@Test(priority =18,enabled=true)
+	
+	@Test(priority = 8,enabled=true)
     public void QualificationProduct1960() throws URISyntaxException, IOException, SAXException, ParserConfigurationException {
  		
 	QualificationProduct1960.qualificationProduct1960(extent);
 	ApiHelper.softAssertion.assertAll();
 		
 	}
-		
-    @Test(priority =19,enabled=true)
+	
+	
+	@Test(priority = 9,enabled=true)
+	public void QualificationProduct60200000() throws URISyntaxException, IOException, SAXException, ParserConfigurationException {
+		com.exergyRestApi.Application.QualificationProduct60200000.qualificationProduct60200000(extent);
+		ApiHelper.softAssertion.assertAll();
+	}
+
+	@Test(priority = 10,enabled=true)
     public void QualificationProduct60100000() throws URISyntaxException, IOException, SAXException, ParserConfigurationException {
  		
 	     
     	com.exergyRestApi.Application.QualificationProduct60100000.qualificationProduct60100000(extent);
     	ApiHelper.softAssertion.assertAll();
-	} 
-    
+	}
 	
-    @Test(priority =20,enabled=true)
+	@Test(priority = 11,enabled=true)
+	public void QualificationProduct60200001NegetiveTest() throws URISyntaxException, IOException, SAXException, ParserConfigurationException {
+		
+		com.exergyRestApi.Application.QualificationProduct60200001NegetiveTest.qualificationProduct60200001NegetiveTest(extent);
+		ApiHelper.softAssertion.assertAll();
+	}
+	
+	
+		
+	
+    @Test(priority = 12,enabled=true)
     public void QualificationProduct60100001NegetiveTest() throws URISyntaxException, IOException, SAXException, ParserConfigurationException {
  		
 	     
@@ -104,7 +137,7 @@ public class ApplicationRunner {
     	ApiHelper.softAssertion.assertAll();
     }
     
-    @Test(priority =21,enabled=true)
+    @Test(priority = 13,enabled=true)
     public void Rates() throws URISyntaxException, IOException, SAXException, ParserConfigurationException {
  		
 	     
@@ -112,27 +145,10 @@ public class ApplicationRunner {
 		ApiHelper.softAssertion.assertAll();
 	}
     
-    @Test(priority =22,enabled=true)
-    public void CreateApplicationPolicyHolder() throws URISyntaxException, IOException, SAXException, ParserConfigurationException {
- 		
-    	com.exergyRestApi.Application.CreateApplicationPolicyHolder.createApplicationPolicyHolder(extent);
-    	ApiHelper.softAssertion.assertAll();
-	     
-	}
+   
     
-    @Test(priority =23,enabled=true)
-    public void CreateApplicationPremiumCollection() throws URISyntaxException, IOException, SAXException, ParserConfigurationException {
- 		
-		com.exergyRestApi.Application.CreateApplicationPremiumCollection.createApplicationPremiumCollection(extent);
-		ApiHelper.softAssertion.assertAll();
-	     
-	}
-    @Test(priority =23,enabled=true)
-    public void CreateApplicationAcceptance() throws URISyntaxException, IOException, SAXException, ParserConfigurationException {
- 		
-    	com.exergyRestApi.Application.CreateApplicationAcceptance.createApplicationAcceptance(extent);
-    	ApiHelper.softAssertion.assertAll();
-	}  
+    
+      
     
 	@AfterTest
 	public void EndTests() {

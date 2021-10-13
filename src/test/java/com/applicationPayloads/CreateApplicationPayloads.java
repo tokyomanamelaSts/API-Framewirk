@@ -430,7 +430,7 @@ public class CreateApplicationPayloads {
 			+ "    \"documents\": [\r\n"
 			+ "      {\r\n"
 			+ "        \"documentReference\": \"Test\",\r\n"
-			+ "        \"documentType\": \"Proof of Identity\",\r\n"
+			+ "        \"documentType\": \"ProofOfIdentity\",\r\n"
 			+ "        \"documentData\": \"Test24hskgiu3giugibehbioghv\"\r\n"
 			+ "      }\r\n"
 			+ "    ]\r\n"
