@@ -26,7 +26,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button class="button" id="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite, 1 failed test</span>
+      <span class="top-banner-font-1">1 suite</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -40,7 +40,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-Default_suite">
-              <span class="suite-name border-failed">Default suite</span>
+              <span class="suite-name border-passed">Default suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -93,21 +93,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">10 methods, 1 failed,   9 passed</span>
-                  </li>
-                  <li>
-                    <span class="method-list-title failed">Failed methods</span>
-                    <span class="show-or-hide-methods failed">
-                      <a href="#" panel-name="suite-Default_suite" class="hide-methods failed suite-Default_suite"> (hide)</a> <!-- hide-methods failed suite-Default_suite -->
-                      <a href="#" panel-name="suite-Default_suite" class="show-methods failed suite-Default_suite"> (show)</a> <!-- show-methods failed suite-Default_suite -->
-                    </span>
-                    <div class="method-list-content failed suite-Default_suite">
-                      <span>
-                        <img width="3%" src="failed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="runner.PolicyRunner" hash-for-method="NIFPolicyHolderUpdate">NIFPolicyHolderUpdate</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                    </div> <!-- method-list-content failed suite-Default_suite -->
+                    <span class="method-stats">9 methods,   9 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -173,56 +159,6 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Default_suite" class="panel Default_suite">
-          <div class="suite-Default_suite-class-failed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="failed.png"/>
-              <span class="class-name">runner.PolicyRunner</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="NIFPolicyHolderUpdate">
-                  </a> <!-- NIFPolicyHolderUpdate -->
-                  <span class="method-name">NIFPolicyHolderUpdate</span>
-                  <div class="stack-trace">java.lang.AssertionError: The following asserts failed:
-	expected [true] but found [false]
-	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:47)
-	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:31)
-	at runner.PolicyRunner.NIFPolicyHolderUpdate(PolicyRunner.java:104)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
-	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
-	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.util.ArrayList.forEach(ArrayList.java:1259)
-	at org.testng.TestRunner.privateRun(TestRunner.java:794)
-	at org.testng.TestRunner.run(TestRunner.java:596)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
-	at org.testng.TestNG.runSuites(TestNG.java:1063)
-	at org.testng.TestNG.run(TestNG.java:1031)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Default_suite-class-failed -->
           <div class="suite-Default_suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -297,7 +233,7 @@
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">/private/var/folders/_2/m1y0fhjd33jg4xcvqnhbdpkr0000gn/T/testng-eclipse-123710187/testng-customsuite.xml</span>
+            <span class="header-content">/private/var/folders/_2/m1y0fhjd33jg4xcvqnhbdpkr0000gn/T/testng-eclipse-1888153842/testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -346,47 +282,43 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(10);
+data.addRows(9);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'DocumentsbyPolicyReference')
 data.setCell(0, 2, 'runner.PolicyRunner')
-data.setCell(0, 3, 73674);
+data.setCell(0, 3, 106786);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'PolicybyIdentityNumber')
+data.setCell(1, 1, 'UpdateBankAccountAndDebitDay')
 data.setCell(1, 2, 'runner.PolicyRunner')
-data.setCell(1, 3, 60807);
+data.setCell(1, 3, 32326);
 data.setCell(2, 0, 2)
 data.setCell(2, 1, 'ChangeBeneficiaries')
 data.setCell(2, 2, 'runner.PolicyRunner')
-data.setCell(2, 3, 26308);
+data.setCell(2, 3, 24863);
 data.setCell(3, 0, 3)
 data.setCell(3, 1, 'PolicyListbyPolicyNumber')
 data.setCell(3, 2, 'runner.PolicyRunner')
-data.setCell(3, 3, 23728);
+data.setCell(3, 3, 23094);
 data.setCell(4, 0, 4)
 data.setCell(4, 1, 'UploadDocument')
 data.setCell(4, 2, 'runner.PolicyRunner')
-data.setCell(4, 3, 23008);
+data.setCell(4, 3, 22721);
 data.setCell(5, 0, 5)
-data.setCell(5, 1, 'UpdateBankAccountAndDebitDay')
+data.setCell(5, 1, 'PolicybyIdentityNumber')
 data.setCell(5, 2, 'runner.PolicyRunner')
-data.setCell(5, 3, 20496);
+data.setCell(5, 3, 22147);
 data.setCell(6, 0, 6)
-data.setCell(6, 1, 'UpdatePolicyHolder')
+data.setCell(6, 1, 'PolicybyPolicyReference')
 data.setCell(6, 2, 'runner.PolicyRunner')
-data.setCell(6, 3, 11248);
+data.setCell(6, 3, 10033);
 data.setCell(7, 0, 7)
 data.setCell(7, 1, 'TESTPolicyHolderUpdate')
 data.setCell(7, 2, 'runner.PolicyRunner')
-data.setCell(7, 3, 10813);
+data.setCell(7, 3, 9710);
 data.setCell(8, 0, 8)
-data.setCell(8, 1, 'PolicybyPolicyReference')
+data.setCell(8, 1, 'UpdatePolicyHolder')
 data.setCell(8, 2, 'runner.PolicyRunner')
-data.setCell(8, 3, 10136);
-data.setCell(9, 0, 9)
-data.setCell(9, 1, 'NIFPolicyHolderUpdate')
-data.setCell(9, 2, 'runner.PolicyRunner')
-data.setCell(9, 3, 3129);
+data.setCell(8, 3, 9188);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
@@ -406,7 +338,7 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">4 ignored methods</span>
+            <span class="header-content">5 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="ignored-class-div">
@@ -415,6 +347,8 @@ return data;
                 <span class="ignored-method-name">f0</span>
                 <br/>
                 <span class="ignored-method-name">f2</span>
+                <br/>
+                <span class="ignored-method-name">NIFPolicyHolderUpdate</span>
                 <br/>
                 <span class="ignored-method-name">f1</span>
                 <br/>
@@ -437,45 +371,39 @@ return data;
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">PolicyListbyPolicyNumber</span>
-                <span class="method-start">10152 ms</span>
+                <span class="method-start">10044 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">PolicybyIdentityNumber</span>
-                <span class="method-start">33885 ms</span>
+                <span class="method-start">33148 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">DocumentsbyPolicyReference</span>
-                <span class="method-start">94702 ms</span>
+                <span class="method-start">55305 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">UpdateBankAccountAndDebitDay</span>
-                <span class="method-start">168393 ms</span>
+                <span class="method-start">162111 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">TESTPolicyHolderUpdate</span>
-                <span class="method-start">188897 ms</span>
+                <span class="method-start">194443 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">ChangeBeneficiaries</span>
-                <span class="method-start">199722 ms</span>
+                <span class="method-start">204163 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">UploadDocument</span>
-                <span class="method-start">226043 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">NIFPolicyHolderUpdate</span>
-                <span class="method-start">249054 ms</span>
+                <span class="method-start">229033 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">UpdatePolicyHolder</span>
-                <span class="method-start">252196 ms</span>
+                <span class="method-start">251767 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-test after">
                 <span class="method-name">EndTests</span>
-                <span class="method-start">263468 ms</span>
+                <span class="method-start">260980 ms</span>
               </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

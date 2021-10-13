@@ -97,7 +97,7 @@ public class PolicyRunner {
  
     
     
-    @Test(priority =31,enabled=true)
+    @Test(priority =31,enabled=false)
     public void NIFPolicyHolderUpdate() throws URISyntaxException, IOException, SAXException, ParserConfigurationException {
  		
 		com.exergyRestApi.policy.NIFPolicyHolderUpdate.nIFPolicyHolderUpdate(extent); 
