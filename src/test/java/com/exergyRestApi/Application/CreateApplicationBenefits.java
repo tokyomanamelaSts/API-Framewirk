@@ -21,7 +21,7 @@ public static void  createApplicationBenefits(ExtentReports extent) throws URISy
 	
 	
 	ExtentTest test;
-	test=extent.createTest("create Application Benefits");
+	test=extent.createTest("Create Application Benefits");
 	Response response;
 	response =  ApiHelper.sendRestPutRequest(ApiHelper.applicationSitUrl,ApiHelper.applicationSubKey, ApiHelper.applicationSubId,CreateApplicationBenefitsPayLoad,"/Application/1598/Benefits/");
 	ApiHelper.AssertEquals("Status code" ,"200", String.valueOf(response.statusCode()) , test);

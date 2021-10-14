@@ -45,7 +45,7 @@ public class ApplicationRunner {
 		ApiHelper.softAssertion.assertAll();
 	}
 	@Test(priority =2,enabled=true)
-	public void createApplicationBenefits() throws URISyntaxException, IOException, SAXException, ParserConfigurationException {
+	public void CreateApplicationBenefits() throws URISyntaxException, IOException, SAXException, ParserConfigurationException {
 		CreateApplicationBenefits.createApplicationBenefits(extent);
 		ApiHelper.softAssertion.assertAll();
 	}
@@ -67,14 +67,14 @@ public class ApplicationRunner {
 		}
 	 
 	@Test(priority = 4,enabled=true)
-	public void createApplicationBeneficiaries() throws URISyntaxException, IOException, SAXException, ParserConfigurationException {
+	public void CreateApplicationBeneficiaries() throws URISyntaxException, IOException, SAXException, ParserConfigurationException {
 		CreateApplicationBeneficiaries.createApplicationBeneficiaries(extent);
 		ApiHelper.softAssertion.assertAll();
 	}
 	
 	
 	@Test(priority = 5,enabled=true)
-	public void createApplicationStatus() throws URISyntaxException, IOException, SAXException, ParserConfigurationException {
+	public void CreateApplicationStatus() throws URISyntaxException, IOException, SAXException, ParserConfigurationException {
 		CreateApplicationStatus.createApplicationStatus(extent);
 		ApiHelper.softAssertion.assertAll();
 	}
@@ -90,7 +90,7 @@ public class ApplicationRunner {
 	
 	
 	@Test(priority = 7,enabled=true)
-	public void getApplication() throws URISyntaxException, IOException, SAXException, ParserConfigurationException {
+	public void GetApplication() throws URISyntaxException, IOException, SAXException, ParserConfigurationException {
 		GetApplication.getApplication(extent);
 		ApiHelper.softAssertion.assertAll();
 	}

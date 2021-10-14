@@ -24,7 +24,8 @@ import Utilities.ExtentManager;
 public class SoapTestsRunner {
 	
 	
-	String reportname = "SoapReport.html";
+	String reportname = "Hollard PartyVerification API.html";
+	String pageTile = "Hollard PartyVerification API"; 
 	String TesterName = System.getProperty("user.name");
 	ExtentReports extent=new ExtentManager().extentTest(reportname, reportname, TesterName);
 	
@@ -62,7 +63,7 @@ public class SoapTestsRunner {
 	}
 
 	@Test(priority = 9,enabled=true)
-	public void validateOrganisation() throws URISyntaxException, IOException {
+	public void validateOrganisation() throws URISyntaxException, IOException, SAXException, ParserConfigurationException {
 		ScreenAndVerifyPartyOrganisation.validateOrganisation(extent);
 		ApiHelper.softAssertion.assertAll();
 	}

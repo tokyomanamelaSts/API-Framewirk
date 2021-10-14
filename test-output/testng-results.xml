@@ -1,49 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="5" total="14" passed="9">
+<testng-results skipped="0" failed="0" ignored="4" total="13" passed="9">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="261353" started-at="2021-10-13T15:49:16 SAST" finished-at="2021-10-13T15:53:37 SAST">
+  <suite name="Default suite" duration-ms="187834" started-at="2021-10-14T14:35:53 SAST" finished-at="2021-10-14T14:39:01 SAST">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="261353" started-at="2021-10-13T15:49:16 SAST" finished-at="2021-10-13T15:53:37 SAST">
+    <test name="Default test" duration-ms="187834" started-at="2021-10-14T14:35:53 SAST" finished-at="2021-10-14T14:39:01 SAST">
       <class name="runner.PolicyRunner">
-        <test-method status="PASS" signature="PolicybyPolicyReference()[pri:24, instance:runner.PolicyRunner@279fedbd]" name="PolicybyPolicyReference" duration-ms="10033" started-at="2021-10-13T15:49:16 SAST" finished-at="2021-10-13T15:49:26 SAST">
+        <test-method status="PASS" signature="PolicybyPolicyReference()[pri:24, instance:runner.PolicyRunner@279fedbd]" name="PolicybyPolicyReference" duration-ms="9304" started-at="2021-10-14T14:35:53 SAST" finished-at="2021-10-14T14:36:02 SAST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- PolicybyPolicyReference -->
-        <test-method status="PASS" signature="PolicyListbyPolicyNumber()[pri:25, instance:runner.PolicyRunner@279fedbd]" name="PolicyListbyPolicyNumber" duration-ms="23094" started-at="2021-10-13T15:49:26 SAST" finished-at="2021-10-13T15:49:49 SAST">
+        <test-method status="PASS" signature="PolicyListbyPolicyNumber()[pri:25, instance:runner.PolicyRunner@279fedbd]" name="PolicyListbyPolicyNumber" duration-ms="12369" started-at="2021-10-14T14:36:02 SAST" finished-at="2021-10-14T14:36:15 SAST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- PolicyListbyPolicyNumber -->
-        <test-method status="PASS" signature="PolicybyIdentityNumber()[pri:26, instance:runner.PolicyRunner@279fedbd]" name="PolicybyIdentityNumber" duration-ms="22147" started-at="2021-10-13T15:49:49 SAST" finished-at="2021-10-13T15:50:11 SAST">
+        <test-method status="PASS" signature="PolicybyIdentityNumber()[pri:26, instance:runner.PolicyRunner@279fedbd]" name="PolicybyIdentityNumber" duration-ms="16495" started-at="2021-10-14T14:36:15 SAST" finished-at="2021-10-14T14:36:31 SAST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- PolicybyIdentityNumber -->
-        <test-method status="PASS" signature="DocumentsbyPolicyReference()[pri:27, instance:runner.PolicyRunner@279fedbd]" name="DocumentsbyPolicyReference" duration-ms="106786" started-at="2021-10-13T15:50:11 SAST" finished-at="2021-10-13T15:51:58 SAST">
+        <test-method status="PASS" signature="DocumentsbyPolicyReference()[pri:27, instance:runner.PolicyRunner@279fedbd]" name="DocumentsbyPolicyReference" duration-ms="60682" started-at="2021-10-14T14:36:31 SAST" finished-at="2021-10-14T14:37:32 SAST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- DocumentsbyPolicyReference -->
-        <test-method status="PASS" signature="UpdateBankAccountAndDebitDay()[pri:28, instance:runner.PolicyRunner@279fedbd]" name="UpdateBankAccountAndDebitDay" duration-ms="32326" started-at="2021-10-13T15:51:58 SAST" finished-at="2021-10-13T15:52:30 SAST">
+        <test-method status="PASS" signature="UpdateBankAccountAndDebitDay()[pri:28, instance:runner.PolicyRunner@279fedbd]" name="UpdateBankAccountAndDebitDay" duration-ms="28943" started-at="2021-10-14T14:37:32 SAST" finished-at="2021-10-14T14:38:01 SAST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- UpdateBankAccountAndDebitDay -->
-        <test-method status="PASS" signature="TESTPolicyHolderUpdate()[pri:29, instance:runner.PolicyRunner@279fedbd]" name="TESTPolicyHolderUpdate" duration-ms="9710" started-at="2021-10-13T15:52:30 SAST" finished-at="2021-10-13T15:52:40 SAST">
+        <test-method status="PASS" signature="TESTPolicyHolderUpdate()[pri:29, instance:runner.PolicyRunner@279fedbd]" name="TESTPolicyHolderUpdate" duration-ms="8824" started-at="2021-10-14T14:38:01 SAST" finished-at="2021-10-14T14:38:10 SAST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TESTPolicyHolderUpdate -->
-        <test-method status="PASS" signature="ChangeBeneficiaries()[pri:30, instance:runner.PolicyRunner@279fedbd]" name="ChangeBeneficiaries" duration-ms="24863" started-at="2021-10-13T15:52:40 SAST" finished-at="2021-10-13T15:53:05 SAST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- ChangeBeneficiaries -->
-        <test-method status="PASS" signature="UploadDocument()[pri:30, instance:runner.PolicyRunner@279fedbd]" name="UploadDocument" duration-ms="22721" started-at="2021-10-13T15:53:05 SAST" finished-at="2021-10-13T15:53:27 SAST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- UploadDocument -->
-        <test-method status="PASS" signature="UpdatePolicyHolder()[pri:31, instance:runner.PolicyRunner@279fedbd]" name="UpdatePolicyHolder" duration-ms="9188" started-at="2021-10-13T15:53:27 SAST" finished-at="2021-10-13T15:53:37 SAST">
+        <test-method status="PASS" signature="UpdatePolicyHolder()[pri:30, instance:runner.PolicyRunner@279fedbd]" name="UpdatePolicyHolder" duration-ms="9371" started-at="2021-10-14T14:38:10 SAST" finished-at="2021-10-14T14:38:19 SAST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- UpdatePolicyHolder -->
-        <test-method status="PASS" signature="EndTests()[pri:0, instance:runner.PolicyRunner@279fedbd]" name="EndTests" is-config="true" duration-ms="336" started-at="2021-10-13T15:53:37 SAST" finished-at="2021-10-13T15:53:37 SAST">
+        <test-method status="PASS" signature="ChangeBeneficiaries()[pri:31, instance:runner.PolicyRunner@279fedbd]" name="ChangeBeneficiaries" duration-ms="25093" started-at="2021-10-14T14:38:19 SAST" finished-at="2021-10-14T14:38:44 SAST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ChangeBeneficiaries -->
+        <test-method status="PASS" signature="UploadDocument()[pri:32, instance:runner.PolicyRunner@279fedbd]" name="UploadDocument" duration-ms="16282" started-at="2021-10-14T14:38:44 SAST" finished-at="2021-10-14T14:39:01 SAST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- UploadDocument -->
+        <test-method status="PASS" signature="EndTests()[pri:0, instance:runner.PolicyRunner@279fedbd]" name="EndTests" is-config="true" duration-ms="327" started-at="2021-10-14T14:39:01 SAST" finished-at="2021-10-14T14:39:01 SAST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- EndTests -->

@@ -22,7 +22,7 @@ public static void  createApplicationBeneficiaries(ExtentReports extent) throws 
 	
 	
 	ExtentTest test;
-	test=extent.createTest("create Application Beneficiaries");
+	test=extent.createTest("Create Application Beneficiaries");
 	Response response;
 	response =  ApiHelper.sendRestPutRequest(ApiHelper.applicationSitUrl,ApiHelper.applicationSubKey, ApiHelper.applicationSubId,CreateApplicationBeneficiariesPayLoad, "/Application/1598/Beneficiaries");
 	ApiHelper.AssertEquals("Status code" ,"200", String.valueOf(response.statusCode()) , test);

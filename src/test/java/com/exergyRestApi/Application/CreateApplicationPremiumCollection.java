@@ -21,7 +21,7 @@ public static void  createApplicationPremiumCollection(ExtentReports extent) thr
 	
 	
 	ExtentTest test;
-	test=extent.createTest("create Application Premium Collection");
+	test=extent.createTest("Create Application Premium Collection");
 	Response response;
 	response =  ApiHelper.sendRestPutRequest(ApiHelper.applicationSitUrl,ApiHelper.applicationSubKey, ApiHelper.applicationSubId,CreateApplicationPremiumCollection, "/Application/1598/PremiumCollection");
 	response.prettyPrint();

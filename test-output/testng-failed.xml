@@ -3,12 +3,12 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="runner.PolicyRunner">
+      <class name="runner.SoapTestsRunner">
         <methods>
-          <include name="NIFPolicyHolderUpdate"/>
+          <include name="validateOrganisation"/>
           <include name="EndTests"/>
         </methods>
-      </class> <!-- runner.PolicyRunner -->
+      </class> <!-- runner.SoapTestsRunner -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
