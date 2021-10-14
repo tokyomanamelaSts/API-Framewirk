@@ -22,7 +22,7 @@ public static void  nIFPolicyHolderUpdate(ExtentReports extent) throws URISyntax
 	
 	
 	ExtentTest test;
-	test=extent.createTest("NIF Policy Holde rUpdate");
+	test=extent.createTest("NIF Policy Holder Update");
 	Response response;
 	response =  ApiHelper.sendRestPutRequest(ApiHelper.policySitUrl,ApiHelper.policySubKey, ApiHelper.policySubId,NIFPolicyHolderUpdatepayload, "/Policy/50000541/PolicyHolder");
 	response.prettyPrint();

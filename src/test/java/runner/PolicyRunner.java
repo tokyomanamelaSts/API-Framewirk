@@ -20,8 +20,8 @@ import Utilities.ExtentManager;
 
 public class PolicyRunner {
 	
-	String reportname = "Policy API.html";
-	String pageTile = "Policy API";
+	String reportname = "Hollard Policy API.html";
+	String pageTile = "Hollard Policy API";
 	String TesterName = System.getProperty("user.name");
 	ExtentReports extent=new ExtentManager().extentTest(reportname, reportname, TesterName);
 	
@@ -97,23 +97,23 @@ public class PolicyRunner {
  
     
     
-    @Test(priority =31,enabled=false)
+    /*@Test(priority =31,enabled=false)
     public void NIFPolicyHolderUpdate() throws URISyntaxException, IOException, SAXException, ParserConfigurationException {
  		
 		com.exergyRestApi.policy.NIFPolicyHolderUpdate.nIFPolicyHolderUpdate(extent); 
 		ApiHelper.softAssertion.assertAll();
 	}     
+    */
     
     
-    
-    @Test(priority =31,enabled=true)
+    @Test(priority =30,enabled=true)
     public void UpdatePolicyHolder() throws URISyntaxException, IOException, SAXException, ParserConfigurationException {
  		
     	com.exergyRestApi.policy.UpdatePolicyHolder.updatePolicyHolder(extent); 
     	ApiHelper.softAssertion.assertAll();
 	}  
     
-    @Test(priority =30,enabled=true)
+    @Test(priority =31,enabled=true)
     public void ChangeBeneficiaries() throws URISyntaxException, IOException, SAXException, ParserConfigurationException {
  		
     	com.exergyRestApi.policy.ChangeBeneficiaries.changeBeneficiaries(extent);
@@ -122,7 +122,7 @@ public class PolicyRunner {
 	}   
     
     
-    @Test(priority =30,enabled=true)
+    @Test(priority =32,enabled=true)
     public void UploadDocument() throws URISyntaxException, IOException, SAXException, ParserConfigurationException {
  		
 		com.exergyRestApi.policy.UploadDocument.uploadDocument(extent);

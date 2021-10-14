@@ -6,15 +6,19 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.net.URISyntaxException;
 
+import javax.xml.parsers.ParserConfigurationException;
+
 import org.apache.commons.io.IOUtils;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+import org.xml.sax.SAXException;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.markuputils.CodeLanguage;
 import com.aventstack.extentreports.markuputils.MarkupHelper;
 
+import Utilities.ApiHelper;
 import Utilities.ExtentManager;
 import io.restassured.RestAssured;
 import io.restassured.path.xml.XmlPath;
@@ -23,10 +27,10 @@ import io.restassured.response.Response;
 
 public class ScreenAndVerifyPartyOrganisation {
 
-	public static void validateOrganisation(ExtentReports extent) throws URISyntaxException, IOException {
+	public static void validateOrganisation(ExtentReports extent) throws URISyntaxException, IOException, SAXException, ParserConfigurationException {
 
 		ExtentTest test;
-		test=extent.createTest("validateOrganisation");
+		test=extent.createTest("ValidateOrganisation");
 		String username = "mipusr";
 		String password = "69hTryVKjMa4";
 
@@ -50,8 +54,31 @@ public class ScreenAndVerifyPartyOrganisation {
 		.then()         .and().log().all().extract().response();
 
 		
+		
+		
+		/*Validations
+		
+		String IdentityType = ApiHelper.getvaluefromxml(response.asString(), "q1:IdentityType");
+		ApiHelper.AssertEquals("IdentityType", "NationalIdentityNumber",IdentityType, test);
+		
+		String fullname = ApiHelper.getvaluefromxml(response.asString(), "q1:FullName");
+		ApiHelper.AssertEquals("fullname", "dpip Vorster",fullname, test);
+		
+		String AddressLine1 = ApiHelper.getvaluefromxml(response.asString(), "q1:AddressLine1");
+		ApiHelper.AssertEquals("AddressLine1", "10 Schoongezicht",AddressLine1, test);
+		
+		String AddressLine2 = ApiHelper.getvaluefromxml(response.asString(), "q1:AddressLine2");
+		ApiHelper.AssertEquals("AddressLine2", "Watson Street",AddressLine2, test);
+		
+		String AddressLine3 = ApiHelper.getvaluefromxml(response.asString(), "q1:AddressLine3");
+		ApiHelper.AssertEquals("AddressLine3", "Helderkruin",AddressLine3, test);
+		
+		String IsMatch = ApiHelper.getvaluefromxml(response.asString(), "IsMatch");
+		ApiHelper.AssertEquals("IsMatch", "False",IsMatch, test);
+		
+		*/
 
-		response.prettyPrint();
+
 
 }
 

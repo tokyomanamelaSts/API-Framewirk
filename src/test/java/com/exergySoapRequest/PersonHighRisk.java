@@ -29,7 +29,7 @@ public class PersonHighRisk{
 	public static void validatePersonHighRisk(ExtentReports extent) throws URISyntaxException, IOException, SAXException, ParserConfigurationException {
 
 		ExtentTest test;
-		test=extent.createTest("validatePersonHighRisk");
+		test=extent.createTest("ValidatePersonHighRisk");
 		String username = "mipusr";
 		String password = "69hTryVKjMa4";
 

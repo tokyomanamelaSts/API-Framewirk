@@ -30,7 +30,7 @@ public class PersonTest {
 		public static void validatePersonTest(ExtentReports extent) throws URISyntaxException, IOException, SAXException, ParserConfigurationException {
 
 		 ExtentTest test;
-		 test=extent.createTest("validatePersonTest");
+		 test=extent.createTest("ValidatePersonTest");
 			String username = "mipusr";
 			String password = "69hTryVKjMa4";
 

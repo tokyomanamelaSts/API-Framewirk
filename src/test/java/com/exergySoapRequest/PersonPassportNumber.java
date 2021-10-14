@@ -26,7 +26,7 @@ public class PersonPassportNumber {
 	public static void validatePersonPassPortNumber(ExtentReports extent) throws URISyntaxException, IOException, SAXException, ParserConfigurationException {
 
 		ExtentTest test;
-		test=extent.createTest("validatePersonPassPortNumber");
+		test=extent.createTest("ValidatePersonPassPortNumber");
 		String username = "mipusr";
 		String password = "69hTryVKjMa4";
 		

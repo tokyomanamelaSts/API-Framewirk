@@ -20,7 +20,7 @@ public static void  createApplicationStatus(ExtentReports extent) throws URISynt
 	
 	
 	ExtentTest test;
-	test=extent.createTest("create Application Status");
+	test=extent.createTest("Create Application Status");
 	Response response;
 	response =  ApiHelper.sendRestPatchRequest(ApiHelper.applicationSitUrl,ApiHelper.applicationSubKey, ApiHelper.applicationSubId,CreateApplicationStatusPayLoad, "/Application/1598/Status/");
 	ApiHelper.AssertEquals("Status code" ,"200", String.valueOf(response.statusCode()) , test);
