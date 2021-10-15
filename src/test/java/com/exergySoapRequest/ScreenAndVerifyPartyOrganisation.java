@@ -53,10 +53,10 @@ public class ScreenAndVerifyPartyOrganisation {
 				.post("/PartyVerificationService.svc")
 		.then()         .and().log().all().extract().response();
 
+	
+		test.info(MarkupHelper.createCodeBlock(response.asString(),CodeLanguage.XML));
 		
 		
-		
-		/*Validations
 		
 		String IdentityType = ApiHelper.getvaluefromxml(response.asString(), "q1:IdentityType");
 		ApiHelper.AssertEquals("IdentityType", "NationalIdentityNumber",IdentityType, test);
@@ -76,7 +76,7 @@ public class ScreenAndVerifyPartyOrganisation {
 		String IsMatch = ApiHelper.getvaluefromxml(response.asString(), "IsMatch");
 		ApiHelper.AssertEquals("IsMatch", "False",IsMatch, test);
 		
-		*/
+	
 
 
 

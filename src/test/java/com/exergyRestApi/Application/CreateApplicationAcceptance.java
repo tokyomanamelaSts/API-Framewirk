@@ -23,7 +23,7 @@ public static void  createApplicationAcceptance(ExtentReports extent) throws URI
 	ExtentTest test;
 	test=extent.createTest("Create Application Acceptance");
 	Response response;
-	response =  ApiHelper.sendRestPostRequest(ApiHelper.applicationSitUrl,ApiHelper.applicationSubKey, ApiHelper.applicationSubId,CreateApplicationPayLoad, "/Application/1598/Acceptance?OTP=4171");
+	response =  ApiHelper.sendRestPostRequest(ApiHelper.applicationSitUrl,ApiHelper.applicationSubKey, ApiHelper.applicationSubId,"", "/Application/1598/Acceptance?OTP=4171");
 	
 	ApiHelper.AssertEquals("Status code" ,"200", String.valueOf(response.statusCode()) , test);
 	

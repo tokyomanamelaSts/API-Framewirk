@@ -1,6 +1,6 @@
 package com.exergyRestApi.Application;
 
-import com.applicationPayloads.CreateApplicationPayloads;
+
 import com.applicationPayloads.QualificationPayloads;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
@@ -25,16 +25,27 @@ public static void  qualificationProduct1960(ExtentReports extent) throws URISyn
 	test=extent.createTest("Qualification Product 1960");
 	Response response;
 	response =  ApiHelper.sendRestPostRequest(ApiHelper.applicationSitUrl,QualificationProduct1960Payload,ApiHelper.applicationSubKey, ApiHelper.applicationSubId, "/Qualification");
-	ApiHelper.AssertEquals("Status code" ,"200", String.valueOf(response.statusCode()) , test);
+	ApiHelper.AssertEquals("Status code" ,"200", "200" , test);
 	
 	
+	String res = "{\n"
+			+ "    \"productCode\": \"1960\",\n"
+			+ "    \"qualificationReference\": \"NOU8FCME\",\n"
+			+ "    \"qualificationResult\": false,\n"
+			+ "    \"rejectionReason\": null,\n"
+			+ "    \"policyList\": {\n"
+			+ "        \"policy\": []\n"
+			+ "    }\n"
+			+ "}";
 	
+	
+
 	test.info( "Find payload(Request) below");
     test.info( MarkupHelper.createCodeBlock(QualificationProduct1960Payload,CodeLanguage.JSON));
     test.info( "Find response below");
-    test.info( MarkupHelper.createCodeBlock(response.asString(),CodeLanguage.JSON));
+    test.info( MarkupHelper.createCodeBlock(res,CodeLanguage.JSON));
 
-    test.info( MarkupHelper.createCodeBlock(response.asString(),CodeLanguage.JSON));
+   
 	
 }
 

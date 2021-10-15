@@ -23,7 +23,7 @@ public static void  createApplicationPolicyHolder(ExtentReports extent) throws U
 	ExtentTest test;
 	test=extent.createTest("Create Application Policy holder");
 	Response response;
-	response =  ApiHelper.sendRestPutRequest(ApiHelper.applicationSitUrl,ApiHelper.applicationSubKey, ApiHelper.applicationSubId,CreateApplicationPolicyHolderPayload, "/Application/1598/PolicyHolder");
+	response =  ApiHelper.sendRestPutRequest(ApiHelper.applicationSitUrl,ApiHelper.applicationSubKey, ApiHelper.applicationSubId,CreateApplicationPolicyHolderPayload, "/Application/101936/PolicyHolder");
 	
 	
 	ApiHelper.AssertEquals("Status code" ,"200", String.valueOf(response.statusCode()) , test);

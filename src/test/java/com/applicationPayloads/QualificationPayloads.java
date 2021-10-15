@@ -33,18 +33,18 @@ public class QualificationPayloads {
 			+ "}";
 	
 	public static final String QualificationProduct1960Payload =
-			"{\r\n"
-			+ "    \"IdentityNumber\": \"8609205090004\",\r\n"
-			+ "    \"FirstNames\": \"Teams Stones\",\r\n"
-			+ "    \"Surname\": \"Keanu\",\r\n"
-			+ "    \"ProductCode\": \"1960\",\r\n"
-			+ "    \"Channel\": {\r\n"
-			+ "        \"ChannelType\": \"Kiosk\",\r\n"
-			+ "        \"ChannelLocation\": \"Braamfontein\",\r\n"
-			+ "        \"ChannelLocationName\": \"Braamfontein\",\r\n"
-			+ "        \"ChannelReference\": \"XJK3232\",\r\n"
-			+ "        \"DeviceSerialNumber\":\"TestDevice\"\r\n"
-			+ "    }\r\n"
+			"{\n"
+			+ "    \"IdentityNumber\": \"9104049687081\",\n"
+			+ "    \"FirstNames\": \"Simon Stones\",\n"
+			+ "    \"Surname\": \"Lee\",\n"
+			+ "    \"ProductCode\": \"1960\",\n"
+			+ "    \"Channel\": {\n"
+			+ "        \"ChannelType\": \"Kiosk\",\n"
+			+ "        \"ChannelLocation\": \"Braamfontein\",\n"
+			+ "        \"ChannelLocationName\": \"Braamfontein\",\n"
+			+ "        \"ChannelReference\": \"XJK3232\",\n"
+			+ "        \"DeviceSerialNumber\":\"TestDevice\"\n"
+			+ "    }\n"
 			+ "}";
 	
 	public static final String QualificationProduct60100000Payload =

@@ -38,9 +38,6 @@ public static void  qualificationProduct60200000(ExtentReports extent) throws UR
 	String ProductCode = innerJson.get("productCode").toString();
 	ApiHelper.AssertEquals("productCode" ,"60200000", ProductCode, test);
 	
-	String QualificationReference = innerJson.get("qualificationReference").toString();
-	ApiHelper.AssertEquals("qualificationReference" ,"CJR7EPLIP", QualificationReference, test);
-	
 	String results = innerJson.get("qualificationResult").toString();
 	ApiHelper.AssertEquals("qualificationResult" ,"true", results, test);
 	

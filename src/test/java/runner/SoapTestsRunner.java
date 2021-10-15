@@ -24,7 +24,7 @@ import Utilities.ExtentManager;
 public class SoapTestsRunner {
 	
 	
-	String reportname = "Hollard PartyVerification API.html";
+	String reportname = "Hollard PartyVerification API(SOAP).html";
 	String pageTile = "Hollard PartyVerification API"; 
 	String TesterName = System.getProperty("user.name");
 	ExtentReports extent=new ExtentManager().extentTest(reportname, reportname, TesterName);

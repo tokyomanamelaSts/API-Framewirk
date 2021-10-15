@@ -57,6 +57,7 @@ public class PersonVeryHigh {
 
 		
 		// validations
+		test.info(MarkupHelper.createCodeBlock(response.asString(),CodeLanguage.XML));
 
 		String IdentityType = ApiHelper.getvaluefromxml(response.asString(), "q1:IdentityType");
 		ApiHelper.AssertEquals("IdentityType", "NationalIdentityNumber",IdentityType, test);

@@ -1,10 +1,15 @@
-package com.exergyRestApi.Application;
+package com.exergyRestApi.Collection;
 
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.equalTo;
 
+import java.io.IOException;
+
+import javax.xml.parsers.ParserConfigurationException;
+
 import org.testng.Assert;
 import org.testng.annotations.Test;
+import org.xml.sax.SAXException;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
@@ -12,6 +17,7 @@ import com.aventstack.extentreports.markuputils.CodeLanguage;
 import com.aventstack.extentreports.markuputils.MarkupHelper;
 import com.collectionpayload.CollectionPayLoad;
 
+import Utilities.ApiHelper;
 import Utilities.ExtentManager;
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
@@ -20,7 +26,7 @@ import io.restassured.response.Response;
 
 public class TC02CreateCollectionPost {
 	
-	public static void validateCreateCollections(ExtentReports extent) {
+	public static void validateCreateCollections(ExtentReports extent) throws SAXException, IOException, ParserConfigurationException {
 		ExtentTest test;
 		test=extent.createTest("CreateCollection");
 
@@ -51,42 +57,23 @@ public class TC02CreateCollectionPost {
 	*/
 
 	String jsonBody = response.getBody().asString();
+	JsonPath jsonPathEvaluator = response.jsonPath();
 
-	try {
+	String policyNumber = jsonPathEvaluator.get("policyNumber");
+	ApiHelper.AssertEquals("policyNumber" ,"13887792", policyNumber, test);
+	
+	String policyReferenceNumber = jsonPathEvaluator.get("policyReference");
+	ApiHelper.AssertEquals("policyNumber" ,"1171113887792", policyReferenceNumber, test);
 		
-		System.out.println("Response Body :" + jsonBody);
-
-		JsonPath jsonPathEvaluator = response.jsonPath();
-
-		String policyNumber = jsonPathEvaluator.get("policyNumber");
-
-		System.out.println("The policyNumber is " + policyNumber);
-
-		Assert.assertTrue(policyNumber.equals("13887792"));
-
-		String policyReferenceNumber = jsonPathEvaluator.get("policyReference");
-
-		System.out.println("The policyReferenceNumber is " + policyReferenceNumber);
-
-		Assert.assertTrue(policyReferenceNumber.equals("1171113887792"));
-
-		String tenderType = jsonPathEvaluator.get("tenderType");
-
-		System.out.println("The tenderType is " + tenderType);
-
-		Assert.assertTrue(tenderType.equals("Cash"));
-
-		test.pass("passed");
-		//test.info(MarkupHelper.createCodeBlock(jsonBody,CodeLanguage.JSON));
-		test.info(MarkupHelper.createCodeBlock(response.asString(),CodeLanguage.JSON));
-		
-	}catch(AssertionError e) {
-		test.fail("failed");
-		//test.info(MarkupHelper.createCodeBlock(jsonBody,CodeLanguage.JSON));
-		test.info(MarkupHelper.createCodeBlock(response.asString(),CodeLanguage.JSON));
-		
-	}
-
+	String tenderType = jsonPathEvaluator.get("tenderType");
+	ApiHelper.AssertEquals("tenderType" ,"Cash", tenderType, test);
+	
+	test.info( "Find payload(Request) below");
+    test.info( MarkupHelper.createCodeBlock(CollectionPayLoad.addCollectionPayLoad(),CodeLanguage.JSON));
+   
+	
+    test.info( "Find response below");
+    test.info( MarkupHelper.createCodeBlock(response.asString(),CodeLanguage.JSON));
 
 	
 	 

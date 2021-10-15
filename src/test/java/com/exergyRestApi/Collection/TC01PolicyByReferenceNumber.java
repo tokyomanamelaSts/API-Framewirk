@@ -1,16 +1,23 @@
-package com.exergyRestApi.Application;
+package com.exergyRestApi.Collection;
 
 import static io.restassured.RestAssured.given;
+
+import java.io.IOException;
 import java.net.URI;
 import java.net.URISyntaxException;
+
+import javax.xml.parsers.ParserConfigurationException;
+
 import org.testng.Assert;
 import org.testng.annotations.Test;
+import org.xml.sax.SAXException;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.markuputils.CodeLanguage;
 import com.aventstack.extentreports.markuputils.MarkupHelper;
 
+import Utilities.ApiHelper;
 import Utilities.ExtentManager;
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
@@ -21,7 +28,7 @@ import io.restassured.response.Response;
 public class TC01PolicyByReferenceNumber {
 
     
-	public static void test0001(ExtentReports extent) throws URISyntaxException {
+	public static void test0001(ExtentReports extent) throws URISyntaxException, SAXException, IOException, ParserConfigurationException {
 		ExtentTest test;
     	test= extent.createTest("PolicyByReferenceNumber");
 		RestAssured.baseURI = "https://apim-hl-life-test-za.azure-api.net";
@@ -46,37 +53,23 @@ public class TC01PolicyByReferenceNumber {
 				.contentType(ContentType.JSON)
 				.extract()
 				.response();
-try { 
+
 		String jsonBody = response.getBody().asString();
-
 		System.out.println("Response Body :" + jsonBody);
-
 		JsonPath jsonPathEvaluator = response.jsonPath();
 
 		String policyNumber = jsonPathEvaluator.get("policyNumber");
-
-		System.out.println("The policyNumber is " + policyNumber);
-
-		Assert.assertTrue(policyNumber.equals("13887792"));
-
+		ApiHelper.AssertEquals("policyNumber" ,"13887792", policyNumber, test);
+		
 		String policyReferenceNumber = jsonPathEvaluator.get("policyReference");
-
-		System.out.println("The policyReferenceNumber is " + policyReferenceNumber);
-
-		Assert.assertTrue(policyReferenceNumber.equals("1171113887792"));
+		ApiHelper.AssertEquals("policyReference" ,"1171113887792", policyReferenceNumber, test);
 
 		String idNumber = jsonPathEvaluator.get("identityNumber");
-
-		System.out.println("The identityNumber is " + idNumber);
-
-		Assert.assertTrue(idNumber.equals("8412121272081"));
+		ApiHelper.AssertEquals("identityNumber" ,"8412121272081", idNumber, test);
 		
-		test.pass("passed");
-		test.info(MarkupHelper.createCodeBlock(response.asString(),CodeLanguage.JSON));
-}catch(AssertionError e){
-	test.fail("failed");
-	test.info(MarkupHelper.createCodeBlock(response.asString(),CodeLanguage.JSON));
-}
+		
+	    test.info( "Find response below");
+	    test.info( MarkupHelper.createCodeBlock(response.asString(),CodeLanguage.JSON));
 		
 	}
 }

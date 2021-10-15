@@ -1,4 +1,4 @@
-soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:par="http://hollard.co.za/PartyVerificationService/" xmlns:par1="http://hollard.co.za/Schema/Types/Party">
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:par="http://hollard.co.za/PartyVerificationService/" xmlns:par1="http://hollard.co.za/Schema/Types/Party">
 	<soapenv:Header/>
 	<soapenv:Body>
 		<par:ScreenAndVerifyParty xmlns:i="http://www.w3.org/2001/XMLSchema-instance">

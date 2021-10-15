@@ -16,10 +16,10 @@ import com.exergyRestApi.Application.CreateApplicationBenefits;
 import com.exergyRestApi.Application.CreateApplicationStatus;
 import com.exergyRestApi.Application.GetApplication;
 import com.exergyRestApi.Application.QualificationProduct1960;
-import com.exergyRestApi.Application.TC01PolicyByReferenceNumber;
-import com.exergyRestApi.Application.TC02CreateCollectionPost;
-import com.exergyRestApi.Application.TC03ConfirmCollection;
-import com.exergyRestApi.Application.TC04CancelCollection;
+import com.exergyRestApi.Collection.TC01PolicyByReferenceNumber;
+import com.exergyRestApi.Collection.TC02CreateCollectionPost;
+import com.exergyRestApi.Collection.TC03ConfirmCollection;
+import com.exergyRestApi.Collection.TC04CancelCollection;
 import com.exergySoapRequest.PersonHighRisk;
 import com.exergySoapRequest.PersonPassportNumber;
 import com.exergySoapRequest.PersonPassportNumberValid;
@@ -34,7 +34,7 @@ import Utilities.ExtentManager;
 public class ApplicationRunner {
 	
 	String reportname = "Hollard Application API.html";
-	String pageTile = "Application Report";
+	String pageTile = "Hollard Application API";
 	String TesterName = System.getProperty("user.name");
 	ExtentReports extent=new ExtentManager().extentTest(reportname, pageTile, TesterName);
 

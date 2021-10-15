@@ -2,8 +2,8 @@ package step;
 
 import java.net.URISyntaxException;
 
-import com.exergyRestApi.Application.TC01PolicyByReferenceNumber;
-import com.exergyRestApi.Application.TC02CreateCollectionPost;
+import com.exergyRestApi.Collection.TC01PolicyByReferenceNumber;
+import com.exergyRestApi.Collection.TC02CreateCollectionPost;
 
 //import com.exergyRestApi.TC01PolicyByReferenceNumber;
 //import com.exergyRestApi.TC02CreateCollectionPost;
