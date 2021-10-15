@@ -26,7 +26,7 @@ public class PolicyRunner {
 	ExtentReports extent=new ExtentManager().extentTest(reportname, reportname, TesterName);
 	
 
-    @Test(priority =24,enabled=true)
+    @Test(priority =1,enabled=true)
     public void PolicybyPolicyReference() throws URISyntaxException, IOException, SAXException, ParserConfigurationException {
  		
 		com.exergyRestApi.policy.PolicybyPolicyReference.policybyPolicyReference(extent);
@@ -34,7 +34,7 @@ public class PolicyRunner {
 	     
 	}
     
-    @Test(priority =25,enabled=true)
+    @Test(priority =2,enabled=true)
     public void PolicyListbyPolicyNumber() throws URISyntaxException, IOException, SAXException, ParserConfigurationException {
  		
     	com.exergyRestApi.policy.PolicyListbyPolicyNumber.policyListbyPolicyNumber(extent);
@@ -43,7 +43,7 @@ public class PolicyRunner {
 	}  
     
     
-    @Test(priority =26,enabled=true)
+    @Test(priority =3,enabled=true)
     public void PolicybyIdentityNumber() throws URISyntaxException, IOException, SAXException, ParserConfigurationException {
  		
     	com.exergyRestApi.policy.PolicybyIdentityNumber.policybyIdentityNumber(extent);
@@ -52,7 +52,7 @@ public class PolicyRunner {
 	}      
 	
     
-    @Test(priority =27,enabled=true)
+    @Test(priority =4,enabled=true)
     public void DocumentsbyPolicyReference() throws URISyntaxException, IOException, SAXException, ParserConfigurationException {
  		
     	com.exergyRestApi.policy.DocumentsbyPolicyReference.documentsbyPolicyReference(extent);
@@ -61,7 +61,7 @@ public class PolicyRunner {
 	}     
     
     
-    @Test(priority =28,enabled=true)
+    @Test(priority =5,enabled=true)
     public void UpdateBankAccountAndDebitDay() throws URISyntaxException, IOException, SAXException, ParserConfigurationException {
  		
     	com.exergyRestApi.policy.UpdateBankAccountAndDebitDay.updateBankAccountAndDebitDay(extent);
@@ -70,7 +70,7 @@ public class PolicyRunner {
 	}     
     
     
-    @Test(priority =29,enabled=true)
+    @Test(priority =6,enabled=true)
     public void TESTPolicyHolderUpdate() throws URISyntaxException, IOException, SAXException, ParserConfigurationException {
  		
     	com.exergyRestApi.policy.TESTPolicyHolderUpdate.tESTPolicyHolderUpdate(extent);
@@ -90,14 +90,14 @@ public class PolicyRunner {
     */
     
     
-    @Test(priority =30,enabled=true)
+    @Test(priority =7,enabled=true)
     public void UpdatePolicyHolder() throws URISyntaxException, IOException, SAXException, ParserConfigurationException {
  		
     	com.exergyRestApi.policy.UpdatePolicyHolder.updatePolicyHolder(extent); 
     	ApiHelper.softAssertion.assertAll();
 	}  
     
-    @Test(priority =31,enabled=true)
+    @Test(priority =8,enabled=true)
     public void ChangeBeneficiaries() throws URISyntaxException, IOException, SAXException, ParserConfigurationException {
  		
     	com.exergyRestApi.policy.ChangeBeneficiaries.changeBeneficiaries(extent);
@@ -106,7 +106,7 @@ public class PolicyRunner {
 	}   
     
     
-    @Test(priority =32,enabled=true)
+    @Test(priority =9,enabled=true)
     public void UploadDocument() throws URISyntaxException, IOException, SAXException, ParserConfigurationException {
  		
 		com.exergyRestApi.policy.UploadDocument.uploadDocument(extent);
