@@ -23,7 +23,7 @@ public static void  createApplicationPremiumCollection(ExtentReports extent) thr
 	ExtentTest test;
 	test=extent.createTest("Create Application Premium Collection");
 	Response response;
-	response =  ApiHelper.sendRestPutRequest(ApiHelper.applicationSitUrl,ApiHelper.applicationSubKey, ApiHelper.applicationSubId,CreateApplicationPremiumCollection, "/Application/1598/PremiumCollection");
+	response =  ApiHelper.sendRestPutRequest(ApiHelper.applicationSitUrl,ApiHelper.applicationSubKey, ApiHelper.applicationSubId,CreateApplicationPremiumCollection, "/Application/101929/PremiumCollection");
 	response.prettyPrint();
 	ApiHelper.AssertEquals("Status code" ,"200", String.valueOf(response.statusCode()) , test);
 	

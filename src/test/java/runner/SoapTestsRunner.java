@@ -2,6 +2,7 @@ package runner;
 
 import java.io.IOException;
 import java.net.URISyntaxException;
+import java.text.SimpleDateFormat;
 
 import javax.xml.parsers.ParserConfigurationException;
 
@@ -23,8 +24,8 @@ import Utilities.ExtentManager;
 
 public class SoapTestsRunner {
 	
-	
-	String reportname = "Hollard PartyVerification API(SOAP).html";
+	String timeStamp = new SimpleDateFormat("yyyy.MM.dd").format(new java.util.Date());
+	String reportname = "Hollard PartyVerification API(SOAP) "+timeStamp+".html";
 	String pageTile = "Hollard PartyVerification API"; 
 	String TesterName = System.getProperty("user.name");
 	ExtentReports extent=new ExtentManager().extentTest(reportname, reportname, TesterName);

@@ -470,7 +470,7 @@ public class CreateApplicationPayloads {
 			+ "            \"issueCountry\":\"South Africa\",\n"
 			+ "            \"issueDate\":null,\n"
 			+ "            \"expiryDate\":null,\n"
-			+ "            \"citizenshipCountry\":null\n"
+			+ "            \"citizenshipCountry\":\"Afghanistan\"\n"
 			+ "         }\n"
 			+ "      ],\n"
 			+ "      \"maritalStatus\":\"None\",\n"
@@ -496,14 +496,7 @@ public class CreateApplicationPayloads {
 			+ "\n"
 			+ "   },\n"
 			+ "   \"debitDay\":\"9\"\n"
-			+ "}\n"
-			+ "\n"
-			+ "\n"
-			+ "\n"
-			+ "\n"
-			+ "\n"
-			+ "\n"
-			+ "";
+			+ "}";
 	
 	
 	

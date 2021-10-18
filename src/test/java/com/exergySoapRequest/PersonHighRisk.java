@@ -51,11 +51,15 @@ public class PersonHighRisk{
 		.post("/PartyVerificationService.svc")
 		.then().statusCode(200).and().extract().response();
 		
+		
+		response.prettyPrint();
+		
 		test.info(MarkupHelper.createCodeBlock(response.asString(),CodeLanguage.XML));
 		
 		// validations
 		
 		String IdentityType = ApiHelper.getvaluefromxml(response.asString(), "q1:IdentityType");
+		
 		ApiHelper.AssertEquals("IdentityType", "NationalIdentityNumber",IdentityType, test);
 		
 		String fullname = ApiHelper.getvaluefromxml(response.asString(), "q1:FullName");

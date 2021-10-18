@@ -2,6 +2,7 @@ package runner;
 
 import java.io.IOException;
 import java.net.URISyntaxException;
+import java.text.SimpleDateFormat;
 
 import javax.xml.parsers.ParserConfigurationException;
 
@@ -17,8 +18,8 @@ import Utilities.ApiHelper;
 import Utilities.ExtentManager;
 
 public class CollectionRunner {
-
-	String reportname = "Hollard Collection API.html";
+	String timeStamp = new SimpleDateFormat("yyyy.MM.dd").format(new java.util.Date());
+	String reportname = "Hollard Collection API "+timeStamp+".html";
 	String pageTile = "Hollard Collection API";
 	String TesterName = System.getProperty("user.name");
 	ExtentReports extent=new ExtentManager().extentTest(reportname, pageTile, TesterName);

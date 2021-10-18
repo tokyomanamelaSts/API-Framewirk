@@ -2,6 +2,7 @@ package runner;
 
 import java.io.IOException;
 import java.net.URISyntaxException;
+import java.text.SimpleDateFormat;
 
 import javax.xml.parsers.ParserConfigurationException;
 
@@ -16,6 +17,7 @@ import Utilities.ExtentManager;
 
 public class bankServiceRunner {
 
+	String timeStamp = new SimpleDateFormat("yyyy.MM.dd").format(new java.util.Date());
 	String reportname = "Bank Service.html";
 	String pageTile = "Hollard Bank Service";
 	String TesterName = System.getProperty("user.name");

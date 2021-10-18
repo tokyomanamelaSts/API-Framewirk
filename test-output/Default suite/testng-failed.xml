@@ -3,13 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="runner.ApplicationRunner">
+      <class name="runner.SoapTestsRunner">
         <methods>
+          <include name="validatePersonHighRisk"/>
           <include name="EndTests"/>
-          <include name="CreateApplicationAcceptance"/>
-          <include name="CreateApplicationPremiumCollection"/>
         </methods>
-      </class> <!-- runner.ApplicationRunner -->
+      </class> <!-- runner.SoapTestsRunner -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
