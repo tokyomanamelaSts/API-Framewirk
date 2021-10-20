@@ -1,16 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="runner.PolicyRunner">
+      <class name="runner.API_AllTestsRunner">
         <methods>
-          <include name="UpdateBankAccountAndDebitDay"/>
-          <include name="PolicyListbyPolicyNumber"/>
+          <include name="PolicybyIdentityNumber"/>
+          <include name="CreateApplicationStatus"/>
+          <include name="validatePassPortValid"/>
+          <include name="QualificationProduct60200001NegetiveTest"/>
+          <include name="QualificationProduct60100000"/>
           <include name="DocumentsbyPolicyReference"/>
+          <include name="UploadDocument"/>
+          <include name="ChangeBeneficiaries"/>
+          <include name="validateOrganisation"/>
+          <include name="CreateApplicationPremiumCollection"/>
+          <include name="UpdatePolicyHolder"/>
+          <include name="QualificationProduct60100001NegetiveTest"/>
+          <include name="UpdateBankAccountAndDebitDay"/>
+          <include name="validatePersonVeryHigh"/>
+          <include name="CreateApplicationAcceptance"/>
+          <include name="TESTPolicyHolderUpdate"/>
+          <include name="validatePersonTest"/>
+          <include name="CreateApplicationPolicyHolder"/>
+          <include name="CreateApplicationBeneficiaries"/>
+          <include name="QualificationProduct60200000"/>
+          <include name="validatePersonHighRisk"/>
+          <include name="Rates"/>
+          <include name="GetApplication"/>
+          <include name="ScreenAndVerifyPartyPerson"/>
           <include name="EndTests"/>
+          <include name="validatePersonPassPortNumber"/>
         </methods>
-      </class> <!-- runner.PolicyRunner -->
+      </class> <!-- runner.API_AllTestsRunner -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
