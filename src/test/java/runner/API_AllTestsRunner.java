@@ -190,7 +190,7 @@ public class API_AllTestsRunner {
    
     
 	
-	//Party Verification Soap
+	//Party Verification (Soap)
     
 	
 	
@@ -345,7 +345,7 @@ public class API_AllTestsRunner {
 		Partyextent.flush();
 		Polextent.flush();
 		
-		//
+		
 
 	}
 	
