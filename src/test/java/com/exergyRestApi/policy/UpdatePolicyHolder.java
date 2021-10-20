@@ -25,7 +25,7 @@ public static void  updatePolicyHolder(ExtentReports extent) throws URISyntaxExc
 	test=extent.createTest("Update Policy Holder");
 	Response response;
 	response =  ApiHelper.sendRestPutRequest(ApiHelper.policySitUrl,ApiHelper.policySubKey, ApiHelper.policySubId,UpdatePolicyHolderPayloads, "/Policy/50015319/PolicyHolder");
-	response.prettyPrint();
+
 	ApiHelper.AssertEquals("Status code" ,"200", String.valueOf(response.statusCode()) , test);
 	
 	

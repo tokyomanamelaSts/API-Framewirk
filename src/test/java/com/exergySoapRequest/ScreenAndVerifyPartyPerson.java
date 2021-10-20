@@ -47,9 +47,13 @@ public class ScreenAndVerifyPartyPerson {
 				.header("SOAPAction", "http://hollard.co.za/PartyVerificationService/ScreenAndVerifyParty")
 				.header("Authorization", "Basic bWlwdXNyOjY5aFRyeVZLak1hNA==").header("Accept-Encoding", "gzip,deflate")
 				.header("Host", "uatsvc.hollard.co.za").and().body(IOUtils.toString(fileInputStream, "UTF-8")).when()
-				.post("/PartyVerificationService.svc").then().statusCode(200).and().extract().response();
+				.post("/PartyVerificationService.svc").then().extract().response();
 
 		// validations
+		
+		
+		test.info(MarkupHelper.createCodeBlock(response.asString(),CodeLanguage.XML));
+		ApiHelper.AssertEquals("Status code" ,"200", String.valueOf(response.statusCode()) , test);
 		
 		String IdentityType = ApiHelper.getvaluefromxml(response.asString(), "q1:IdentityType");
 		ApiHelper.AssertEquals("IdentityType", "NationalIdentityNumber",IdentityType, test);

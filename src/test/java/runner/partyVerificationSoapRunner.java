@@ -22,7 +22,7 @@ import com.exergySoapRequest.ScreenAndVerifyPartyPerson;
 import Utilities.ApiHelper;
 import Utilities.ExtentManager;
 
-public class SoapTestsRunner {
+public class partyVerificationSoapRunner {
 	
 	String timeStamp = new SimpleDateFormat("yyyy.MM.dd").format(new java.util.Date());
 	String reportname = "Hollard PartyVerification API(SOAP) "+timeStamp+".html";

@@ -49,7 +49,7 @@ public class PersonHighRisk{
 		           
 		.when()
 		.post("/PartyVerificationService.svc")
-		.then().statusCode(200).and().extract().response();
+		.then().and().extract().response();
 		
 		
 		response.prettyPrint();
@@ -57,6 +57,8 @@ public class PersonHighRisk{
 		test.info(MarkupHelper.createCodeBlock(response.asString(),CodeLanguage.XML));
 		
 		// validations
+		
+		ApiHelper.AssertEquals("Status code" ,"200", String.valueOf(response.statusCode()) , test);
 		
 		String IdentityType = ApiHelper.getvaluefromxml(response.asString(), "q1:IdentityType");
 		

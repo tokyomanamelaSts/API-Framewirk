@@ -51,12 +51,13 @@ public class ScreenAndVerifyPartyOrganisation {
 				.header("Host", "uatsvc.hollard.co.za").and().body(IOUtils.toString(fileInputStream, "UTF-8"))
 		.when()
 				.post("/PartyVerificationService.svc")
-		.then()         .and().log().all().extract().response();
+		.then()  
+				.extract().response();
 
 	
 		test.info(MarkupHelper.createCodeBlock(response.asString(),CodeLanguage.XML));
 		
-		
+		ApiHelper.AssertEquals("Status code" ,"200", String.valueOf(response.statusCode()) , test);
 		
 		String IdentityType = ApiHelper.getvaluefromxml(response.asString(), "q1:IdentityType");
 		ApiHelper.AssertEquals("IdentityType", "NationalIdentityNumber",IdentityType, test);

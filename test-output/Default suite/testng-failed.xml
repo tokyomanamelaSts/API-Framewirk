@@ -3,12 +3,14 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="runner.SoapTestsRunner">
+      <class name="runner.PolicyRunner">
         <methods>
-          <include name="validatePersonHighRisk"/>
+          <include name="UpdateBankAccountAndDebitDay"/>
+          <include name="PolicyListbyPolicyNumber"/>
+          <include name="DocumentsbyPolicyReference"/>
           <include name="EndTests"/>
         </methods>
-      </class> <!-- runner.SoapTestsRunner -->
+      </class> <!-- runner.PolicyRunner -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

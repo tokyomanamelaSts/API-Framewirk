@@ -51,12 +51,15 @@ public class PersonPassportNumberValid {
 	   				.header("Host", "uatsvc.hollard.co.za").and().body(IOUtils.toString(fileInputStream, "UTF-8"))
 	   		.when()
 	   				.post("/PartyVerificationService.svc")
-	   		.then()         .statusCode(200).and().extract().response();
+	   		.then()       
+	   				.extract().response();
 
 
 			test.info(MarkupHelper.createCodeBlock(response.asString(),CodeLanguage.XML));
 			
 			// validations
+			
+			ApiHelper.AssertEquals("Status code" ,"200", String.valueOf(response.statusCode()) , test);
 			
 			String fullname = ApiHelper.getvaluefromxml(response.asString(), "q1:FullName");
 			ApiHelper.AssertEquals("fullname", "Michiel Vorster",fullname, test);

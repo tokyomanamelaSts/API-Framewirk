@@ -1,21 +1,179 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="3" total="4" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="9" passed="6" failed="3" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2021-10-18T15:11:10 SAST" name="Default suite" finished-at="2021-10-18T15:11:58 SAST" duration-ms="48042">
+  <suite started-at="2021-10-20T09:04:11 SAST" name="Default suite" finished-at="2021-10-20T09:11:51 SAST" duration-ms="459983">
     <groups>
     </groups>
-    <test started-at="2021-10-18T15:11:10 SAST" name="Default test" finished-at="2021-10-18T15:11:58 SAST" duration-ms="48042">
-      <class name="runner.CollectionRunner">
-        <test-method signature="TC01PolicyByReferenceNumber()[pri:1, instance:runner.CollectionRunner@312aa7c]" started-at="2021-10-18T15:11:10 SAST" name="TC01PolicyByReferenceNumber" finished-at="2021-10-18T15:11:58 SAST" duration-ms="47699" status="PASS">
+    <test started-at="2021-10-20T09:04:11 SAST" name="Default test" finished-at="2021-10-20T09:11:51 SAST" duration-ms="459983">
+      <class name="runner.PolicyRunner">
+        <test-method signature="PolicybyPolicyReference()[pri:1, instance:runner.PolicyRunner@70cf32e3]" started-at="2021-10-20T09:04:11 SAST" name="PolicybyPolicyReference" finished-at="2021-10-20T09:04:26 SAST" duration-ms="15253" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TC01PolicyByReferenceNumber -->
-        <test-method is-config="true" signature="EndTests()[pri:0, instance:runner.CollectionRunner@312aa7c]" started-at="2021-10-18T15:11:58 SAST" name="EndTests" finished-at="2021-10-18T15:11:58 SAST" duration-ms="310" status="PASS">
+        </test-method> <!-- PolicybyPolicyReference -->
+        <test-method signature="PolicyListbyPolicyNumber()[pri:2, instance:runner.PolicyRunner@70cf32e3]" started-at="2021-10-20T09:04:26 SAST" name="PolicyListbyPolicyNumber" finished-at="2021-10-20T09:05:31 SAST" duration-ms="64759" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[The following asserts failed:
+expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: The following asserts failed:
+expected [true] but found [false]
+at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:47)
+at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:31)
+at runner.PolicyRunner.PolicyListbyPolicyNumber(PolicyRunner.java:42)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- PolicyListbyPolicyNumber -->
+        <test-method signature="PolicybyIdentityNumber()[pri:3, instance:runner.PolicyRunner@70cf32e3]" started-at="2021-10-20T09:05:31 SAST" name="PolicybyIdentityNumber" finished-at="2021-10-20T09:06:33 SAST" duration-ms="61932" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- PolicybyIdentityNumber -->
+        <test-method signature="DocumentsbyPolicyReference()[pri:4, instance:runner.PolicyRunner@70cf32e3]" started-at="2021-10-20T09:06:33 SAST" name="DocumentsbyPolicyReference" finished-at="2021-10-20T09:07:35 SAST" duration-ms="62165" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[The following asserts failed:
+expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: The following asserts failed:
+expected [true] but found [false]
+at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:47)
+at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:31)
+at runner.PolicyRunner.DocumentsbyPolicyReference(PolicyRunner.java:60)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- DocumentsbyPolicyReference -->
+        <test-method signature="UpdateBankAccountAndDebitDay()[pri:5, instance:runner.PolicyRunner@70cf32e3]" started-at="2021-10-20T09:07:35 SAST" name="UpdateBankAccountAndDebitDay" finished-at="2021-10-20T09:08:42 SAST" duration-ms="66664" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[The following asserts failed:
+expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: The following asserts failed:
+expected [true] but found [false]
+at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:47)
+at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:31)
+at runner.PolicyRunner.UpdateBankAccountAndDebitDay(PolicyRunner.java:69)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- UpdateBankAccountAndDebitDay -->
+        <test-method signature="TESTPolicyHolderUpdate()[pri:6, instance:runner.PolicyRunner@70cf32e3]" started-at="2021-10-20T09:08:42 SAST" name="TESTPolicyHolderUpdate" finished-at="2021-10-20T09:09:44 SAST" duration-ms="62055" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TESTPolicyHolderUpdate -->
+        <test-method signature="UpdatePolicyHolder()[pri:7, instance:runner.PolicyRunner@70cf32e3]" started-at="2021-10-20T09:09:44 SAST" name="UpdatePolicyHolder" finished-at="2021-10-20T09:10:09 SAST" duration-ms="25224" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- UpdatePolicyHolder -->
+        <test-method signature="ChangeBeneficiaries()[pri:8, instance:runner.PolicyRunner@70cf32e3]" started-at="2021-10-20T09:10:09 SAST" name="ChangeBeneficiaries" finished-at="2021-10-20T09:11:32 SAST" duration-ms="82814" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ChangeBeneficiaries -->
+        <test-method signature="UploadDocument()[pri:9, instance:runner.PolicyRunner@70cf32e3]" started-at="2021-10-20T09:11:32 SAST" name="UploadDocument" finished-at="2021-10-20T09:11:51 SAST" duration-ms="18579" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- UploadDocument -->
+        <test-method is-config="true" signature="EndTests()[pri:0, instance:runner.PolicyRunner@70cf32e3]" started-at="2021-10-20T09:11:51 SAST" name="EndTests" finished-at="2021-10-20T09:11:51 SAST" duration-ms="402" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- EndTests -->
-      </class> <!-- runner.CollectionRunner -->
+      </class> <!-- runner.PolicyRunner -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

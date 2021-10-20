@@ -47,15 +47,14 @@ public class PersonPassportNumber {
 		.when()
 				.post("/PartyVerificationService.svc")
 		.then()         
-				.statusCode(200).and().extract().response();
+				.extract().response();
 		
 		
 
 		test.info(MarkupHelper.createCodeBlock(response.asString(),CodeLanguage.XML));
 		
+		ApiHelper.AssertEquals("Status code" ,"200", String.valueOf(response.statusCode()) , test);
 		
-		
-		// validations
 		String fullname = ApiHelper.getvaluefromxml(response.asString(), "q1:FullName");
 		ApiHelper.AssertEquals("fullname", "Michiel Vorster",fullname, test);
 		
