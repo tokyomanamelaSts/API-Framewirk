@@ -19,6 +19,13 @@ import com.exergyRestApi.Application.GetApplication;
 import com.exergyRestApi.Application.QualificationProduct1960;
 import com.exergyRestApi.Collection.TC01PolicyByReferenceNumber;
 import com.exergyRestApi.Collection.TC02CreateCollectionPost;
+import com.exergySoapRequest.PersonHighRisk;
+import com.exergySoapRequest.PersonPassportNumber;
+import com.exergySoapRequest.PersonPassportNumberValid;
+import com.exergySoapRequest.PersonTest;
+import com.exergySoapRequest.PersonVeryHigh;
+import com.exergySoapRequest.ScreenAndVerifyPartyOrganisation;
+import com.exergySoapRequest.ScreenAndVerifyPartyPerson;
 
 import Utilities.ApiHelper;
 import Utilities.ExtentManager;
@@ -182,14 +189,163 @@ public class API_AllTestsRunner {
     
    
     
+	
+	//Party Verification Soap
     
+	
+	
+	String PartytimeStamp = new SimpleDateFormat("yyyy.MM.dd").format(new java.util.Date());
+	String Partyreportname = "Hollard PartyVerification API(SOAP) "+timeStamp+".html";
+	String PartypageTile = "Hollard PartyVerification API"; 
+	String PartyTesterName = System.getProperty("user.name");
+	ExtentReports Partyextent=new ExtentManager().extentTest(Partyreportname, Partyreportname, PartyTesterName);
+	
+	
+	@Test(priority = 1,enabled=true)
+	public void validatePersonHighRisk() throws URISyntaxException, IOException, SAXException, ParserConfigurationException {
+	PersonHighRisk.validatePersonHighRisk(extent);
+	ApiHelper.softAssertion.assertAll();
+	}
+
+	@Test(priority = 2,enabled=true)
+	public void validatePersonPassPortNumber() throws URISyntaxException, IOException, SAXException, ParserConfigurationException {
+		
+		PersonPassportNumber.validatePersonPassPortNumber(extent);
+		ApiHelper.softAssertion.assertAll();
+		
+	}
+
+	@Test(priority = 6,enabled=true)
+	public void validatePassPortValid() throws URISyntaxException, IOException, SAXException, ParserConfigurationException {
+		PersonPassportNumberValid.validatePassPortValid(extent);
+		ApiHelper.softAssertion.assertAll();
+	}
+
+	@Test(priority = 7,enabled=true)
+	public void validatePersonTest() throws URISyntaxException, IOException, SAXException, ParserConfigurationException {
+		PersonTest.validatePersonTest(extent);
+		ApiHelper.softAssertion.assertAll();
+	}
+
+	@Test(priority = 8,enabled=true)
+	public void validatePersonVeryHigh() throws URISyntaxException, IOException, SAXException, ParserConfigurationException {
+		PersonVeryHigh.validatePersonVeryHigh(extent);
+		ApiHelper.softAssertion.assertAll();
+	}
+
+	@Test(priority = 9,enabled=true)
+	public void validateOrganisation() throws URISyntaxException, IOException, SAXException, ParserConfigurationException {
+		ScreenAndVerifyPartyOrganisation.validateOrganisation(extent);
+		ApiHelper.softAssertion.assertAll();
+	}
+	
+	
+
+	@Test(priority = 10,enabled=true)
+	public void ScreenAndVerifyPartyPerson() throws URISyntaxException, IOException, SAXException, ParserConfigurationException {
+		ScreenAndVerifyPartyPerson.validatStatusCode(extent);
+		ApiHelper.softAssertion.assertAll();
+	}
       
+    //PolicyAPIs
+	
+	
+	String PoltimeStamp = new SimpleDateFormat("yyyy.MM.dd").format(new java.util.Date());
+	String Polreportname = "Hollard Policy "+timeStamp+".html";
+	String PolpageTile = "Hollard Policy API";
+	String PolTesterName = System.getProperty("user.name");
+	ExtentReports Polextent=new ExtentManager().extentTest(Polreportname, Polreportname, PolTesterName);
+	
+
+    @Test(priority =1,enabled=true)
+    public void PolicybyPolicyReference() throws URISyntaxException, IOException, SAXException, ParserConfigurationException {
+ 		
+		com.exergyRestApi.policy.PolicybyPolicyReference.policybyPolicyReference(extent);
+		ApiHelper.softAssertion.assertAll();
+	     
+	}
     
+    @Test(priority =2,enabled=true)
+    public void PolicyListbyPolicyNumber() throws URISyntaxException, IOException, SAXException, ParserConfigurationException {
+ 		
+    	com.exergyRestApi.policy.PolicyListbyPolicyNumber.policyListbyPolicyNumber(extent);
+    	ApiHelper.softAssertion.assertAll();
+	     
+	}  
+    
+    
+    @Test(priority =3,enabled=true)
+    public void PolicybyIdentityNumber() throws URISyntaxException, IOException, SAXException, ParserConfigurationException {
+ 		
+    	com.exergyRestApi.policy.PolicybyIdentityNumber.policybyIdentityNumber(extent);
+    	ApiHelper.softAssertion.assertAll();
+	     
+	}      
+	
+    
+    @Test(priority =4,enabled=true)
+    public void DocumentsbyPolicyReference() throws URISyntaxException, IOException, SAXException, ParserConfigurationException {
+ 		
+    	com.exergyRestApi.policy.DocumentsbyPolicyReference.documentsbyPolicyReference(extent);
+    	ApiHelper.softAssertion.assertAll();
+	     
+	}     
+    
+    
+    @Test(priority =5,enabled=true)
+    public void UpdateBankAccountAndDebitDay() throws URISyntaxException, IOException, SAXException, ParserConfigurationException {
+ 		
+    	com.exergyRestApi.policy.UpdateBankAccountAndDebitDay.updateBankAccountAndDebitDay(extent);
+    	ApiHelper.softAssertion.assertAll();
+	     
+	}     
+    
+    
+    @Test(priority =6,enabled=true)
+    public void TESTPolicyHolderUpdate() throws URISyntaxException, IOException, SAXException, ParserConfigurationException {
+ 		
+    	com.exergyRestApi.policy.TESTPolicyHolderUpdate.tESTPolicyHolderUpdate(extent);
+    	ApiHelper.softAssertion.assertAll();
+	}       
+    
+    
+    
+    @Test(priority =7,enabled=true)
+    public void UpdatePolicyHolder() throws URISyntaxException, IOException, SAXException, ParserConfigurationException {
+ 		
+    	com.exergyRestApi.policy.UpdatePolicyHolder.updatePolicyHolder(extent); 
+    	ApiHelper.softAssertion.assertAll();
+	}  
+    
+    @Test(priority =8,enabled=true)
+    public void ChangeBeneficiaries() throws URISyntaxException, IOException, SAXException, ParserConfigurationException {
+ 		
+    	com.exergyRestApi.policy.ChangeBeneficiaries.changeBeneficiaries(extent);
+    	ApiHelper.softAssertion.assertAll();
+	     
+	}   
+    
+    
+    @Test(priority =9,enabled=true)
+    public void UploadDocument() throws URISyntaxException, IOException, SAXException, ParserConfigurationException {
+ 		
+		com.exergyRestApi.policy.UploadDocument.uploadDocument(extent);
+		ApiHelper.softAssertion.assertAll();
+	     
+	}
+	
+	
+	
 	@AfterTest
 	public void EndTests() {
 		
 		
 		extent.flush();
+		Colextent.flush();
+		Partyextent.flush();
+		Polextent.flush();
+		
+		//
 
 	}
 	

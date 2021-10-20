@@ -1,0 +1,4005 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Hollard Application API</title>
+<link rel="apple-touch-icon" href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png">
+<link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png">
+<link href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@c43b89d03a7c43dae8bb8f0f078bad1997af6b3b/spark/css/spark-style.css" rel="stylesheet" />
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<script src="https://cdn.rawgit.com/extent-framework/extent-github-cdn/7cc78ce/spark/js/jsontree.js"></script>
+<style type="text/css"></style></head><body class="spa -report standard">
+  <div class="app">
+    <div class="layout">
+<div class="header navbar">
+<div class="vheader">
+<div class="nav-logo">
+<a href="#">
+<div class="logo" style="background-image: url('https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png')"></div>
+</a>
+</div>
+<ul class="nav-left">
+<li class="search-box">
+<a class="search-toggle" href="#">
+<i class="search-icon fa fa-search"></i>
+<i class="search-icon-close fa fa-close"></i>
+</a>
+</li>
+<li class="search-input"><input id="search-tests" class="form-control" type="text" placeholder="Search..."></li>
+</ul>
+<ul class="nav-right">
+<li class="m-r-10">
+<a href="#"><span class="badge badge-primary">thaboramalitse</span></a>
+</li>
+<li class="m-r-10">
+<a href="#"><span class="badge badge-primary">Oct 20, 2021 10:56:31 AM</span></a>
+</li>
+</ul>
+</div>
+</div><div class="side-nav">
+<div class="side-nav-inner">
+<ul class="side-nav-menu">
+<li class="nav-item dropdown" onclick="toggleView('test-view')">
+<a id="nav-test" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-list"></i></span>
+</a>
+</li>
+<li class="nav-item dropdown" onclick="toggleView('dashboard-view')">
+<a id="nav-dashboard" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-bar-chart"></i></span>
+</a>
+</li>
+</ul>
+</div>
+</div>      <div class="vcontainer">
+        <div class="main-content">
+<div class="test-wrapper row view test-view">
+  <div class="test-list">
+    <div class="test-list-tools">
+<ul class="tools pull-left">
+<li><a href="#"><span class="font-size-14">Tests</span></a></li>
+</ul>
+<ul class="tools text-right">
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-exclamation-circle"></i></a>
+<ul id="status-toggle" class="dropdown-menu dropdown-md p-v-0">
+<a class="dropdown-item" status="pass" href="#"><span>Pass</span><span class="status success"></span></a>
+<a class="dropdown-item" status="fail" href="#"><span>Fail</span><span class="status danger"></span></a>
+<div class="dropdown-divider"></div>
+<a status="clear" class="dropdown-item" href="#"><span>Clear</span><span class="pull-right"><i class="fa fa-close"></i></span></a>
+</ul>
+</li>
+</ul>
+</div>    <div class="test-list-wrapper scrollable">
+      <ul class="test-list-item">
+        <li class="test-item"  status="pass" test-id="1"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Create Application</p>
+            <p class="text-sm">
+              <span>10:56:32 AM</span> / <span>00:00:07:942</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">Create Application</h5>
+<span class='badge badge-success'>10.20.2021 10:56:32</span>
+<span class='badge badge-danger'>10.20.2021 10:56:40</span>
+<span class='badge badge-default'>00:00:07:942</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>10:56:40 AM</td>
+        <td>
+          validation for Status code has passed
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>10:56:40 AM</td>
+        <td>
+          validation for application Reference has passed
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>10:56:40 AM</td>
+        <td>
+          validation for source Reference has passed
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>10:56:40 AM</td>
+        <td>
+          validation for campaignCode has passed
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>10:56:40 AM</td>
+        <td>
+          validation for productName has passed
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:56:40 AM</td>
+        <td>
+          Find payload(Request) below
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:56:40 AM</td>
+        <td>
+           <div class='json-tree' id='code-block-json-0'></div>
+ <script>
+  function jsonTreeCreate0() { 
+   document.getElementById('code-block-json-0').innerHTML = JSONTree.create({
+  "sourceReference": "T00005100",
+  "campaignCode": "60200000",
+  "productCode": "60200000",
+  "policyHolders": [
+    {
+      "preferedCommunicationMethod": "Phone",
+      "initials": "RY",
+      "firstNames": "RANDY",
+      "surname": "RAYMOND",
+      "gender": "Male",
+      "birthDate": "1991-05-05T08:47:19.361Z",
+      "countryOfResidence": "South Africa",
+      "identities": [
+        {
+          "identityType": "NationalIdentityNumber",
+          "identityNumber": "9105055913089",
+          "issueCountry": "South Africa",
+          "issueDate": "2020-07-09T08:47:19.361Z",
+          "expiryDate": "2020-07-09T08:47:19.361Z",
+          "citizenshipCountry": "South Africa"
+        }
+      ],
+      "contactNumbers": [
+        {
+          "contactType": "Mobile",
+          "contactNumber": "0720726932",
+          "countryCode": "27",
+          "extension": null
+        }
+      ],
+      "emailAddress": "randy@gmail.com",
+      "partyType": "Person",
+      "rolePlayerType": "PolicyHolder"
+    }
+  ],
+    "channel": {
+      "channelType": "Kiosk",
+      "channelLocation": "Latitude: 10.8006252, Longitude: 106.705828",
+      "channelLocationName": "Tyme",
+      "channelReference": "TymeTest",
+      "deviceSerialNumber": "352222081992046"
+    }
+}); 
+  }
+  jsonTreeCreate0();
+ </script>
+
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:56:40 AM</td>
+        <td>
+          Find response below
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:56:40 AM</td>
+        <td>
+           <div class='json-tree' id='code-block-json-1'></div>
+ <script>
+  function jsonTreeCreate1() { 
+   document.getElementById('code-block-json-1').innerHTML = JSONTree.create({"application":{"applicationReference":"101929","sourceReference":"T0005100","campaignCode":"60200000","productCode":"60200000","policyHolders":[{"preferedCommunicationMethod":"Phone","addresses":[{"latitude":0.4342132,"longitude":0.12214214,"addressType":"Street","addressLine1":"Test","addressLine2":"10 Test Street","addressLine3":"Happy Land","suburb":"Happy Land","townCity":"Happy Town","provinceState":"Happy","country":"South Africa","postalZipCode":"1920"}],"emailAddress":"randy@gmail.com","language":"None","marketingConsent":{"hollardMarketingConsent":true,"hollardMarketingAndPartnerConsent":true},"policyReplacement":null,"employmentDetails":{"employmentStatus":"Employed","occupation":"Developer","employeeNumber":"HO1234","employerName":"Hollard","employerContactNumber":{"contactType":"Mobile","contactNumber":"0720720722","countryCode":"27","extension":""},"incomeGroup":null,"lsmGroup":"None","salaryDay":"None","salaryFrequency":"None"},"sourceOfIncome":"Salary","sourceOfIncomeOther":"Property investment","sourceOfWealth":"Other","sourceOfWealthOther":null,"countryOfResidence":"South Africa","verifications":[{"verificationType":"Identity","verified":true,"source":{"sourceName":"","sourceReference":"","sourceResult":""},"note":""}],"documents":[{"documentReference":"Test","documentName":null,"documentDescription":null,"documentFormat":"None","documentType":"ProofOfIdentity","otherDocumentType":null,"documentData":"Test24hskgiu3giugibehbioghv","documentDate":null}],"title":"Dr","initials":"RY","firstNames":"RANDY","surname":"RAYMOND","maidenName":"","gender":"Male","birthDate":"1991-05-05T08:47:19.361Z","identities":[{"identityType":"NationalIdentityNumber","identityNumber":"9105055913089","issueCountry":"South Africa","issueDate":"2020-07-09T08:47:19.361Z","expiryDate":"2020-07-09T08:47:19.361Z","citizenshipCountry":"South Africa"}],"maritalStatus":"Single","contactNumbers":[{"contactType":"Mobile","contactNumber":"0720726932","countryCode":"27","extension":""}],"partyType":"Person","rolePlayerType":"PolicyHolder","partyReference":"101929-PH-1"}],"premiumCollection":{"bankAccount":{"accountHolderName":"SA Matevhutevhu","accountType":"Savings","bankName":"CapitecBankLtd","branchName":null,"branchCode":"470010","accountNumber":"1455098025","verified":true,"verificationSource":null},"debitDay":"9","groupingIndicator":null,"collectionMethod":"DebitOrder","policyPayer":{"preferedCommunicationMethod":"None","addresses":[],"emailAddress":"farhaana@gmail.com","language":"None","marketingConsent":null,"employmentDetails":null,"sourceOfIncome":"None","sourceOfIncomeOther":null,"sourceOfWealth":"None","sourceOfWealthOther":null,"countryOfResidence":"None","verifications":[],"documents":[],"title":"Mrs","initials":null,"firstNames":"Farhaana","surname":"Baartman","maidenName":null,"gender":"None","birthDate":"1980-10-21T10:00:00Z","identities":[{"identityType":"NationalIdentityNumber","identityNumber":"8010214800089","issueCountry":"South Africa","issueDate":null,"expiryDate":null,"citizenshipCountry":"South Africa"}],"maritalStatus":"None","contactNumbers":[{"contactType":"Mobile","contactNumber":"0825577482","countryCode":"27","extension":null}],"partyType":"Person","rolePlayerType":"PolicyPayer","partyReference":"101929-PP-1"}},"benefits":[{"lifeAssureds":[{"lifeAssuredType":"MainLife","relationshipToPolicyHolder":"Self","relationshipToMainInsured":"Self","benefitPremiums":[null],"selectedCoverAmount":40000.0,"title":"Dr","initials":"RY","firstNames":"RANDY","surname":"RAYMOND","maidenName":"","gender":"Male","birthDate":"1991-05-05T08:47:19.361Z","identities":[{"identityType":"NationalIdentityNumber","identityNumber":"9105055913089","issueCountry":"South Africa","issueDate":"2020-07-09T08:47:19.361Z","expiryDate":"2020-07-09T08:47:19.361Z","citizenshipCountry":"South Africa"}],"maritalStatus":"Single","contactNumbers":[{"contactType":"Mobile","contactNumber":"0720720722","countryCode":"27","extension":""}],"partyType":"Person","rolePlayerType":"MainLifeAssured","partyReference":"101929-MAIN-1"},{"lifeAssuredType":"Partner","relationshipToPolicyHolder":"Self","relationshipToMainInsured":"Self","benefitPremiums":[{"coverDescription":"R20 000","minimumCoverAmount":0.0,"maximumCoverAmount":0.0,"coverAmount":20000.0,"premiumAmount":20.0,"dependantCoverAmount":20000.0,"dependantLifeAssuredType":"MainLife","dependantBenefitCategory":"FuneralBenefit"}],"selectedCoverAmount":20000.0,"title":"Dr","initials":"R","firstNames":"One","surname":"Partner","maidenName":"","gender":"Female","birthDate":"1992-01-17T08:47:19.361Z","identities":[],"maritalStatus":"None","contactNumbers":[{"contactType":"Mobile","contactNumber":"0720720722","countryCode":"27","extension":""}],"partyType":"Person","rolePlayerType":"LifeAssured","partyReference":"101929-PART-1"}],"benefitFeatures":[],"benefitName":"Tyme Funeral Benefit","description":"Tyme Funeral Benefit","benefitCategory":"FuneralBenefit"},{"benefitPremiums":[],"benefitName":"Grocery Benefit","description":"Turmeric Grocery Benefit","benefitCategory":"GroceryBenefit"},{"lifeAssureds":[],"benefitPremiums":[],"benefitName":"Monthly Assistance Benefit","description":"Turmeric Monthly Assistance Benefit","benefitCategory":"MonthlyAssistanceBenefit"},{"benefitPremium":{"coverDescription":"R250","minimumCoverAmount":0.0,"maximumCoverAmount":0.0,"coverAmount":250.0,"premiumAmount":0.0,"dependantCoverAmount":50000.0,"dependantLifeAssuredType":"MainLife","dependantBenefitCategory":"FuneralBenefit"},"benefitName":"Airtime Benefit","description":"Turmeric Airtime Benefit","benefitCategory":"AirtimeBenefit"}],"beneficiaries":{"personBeneficiaries":[{"percentageShare":100,"relationshipToPolicyHolder":"Brother","relationshipToMainInsured":"Brother","note":"This is a test","title":"Dr","initials":"H","firstNames":"Happy","surname":"Vandham","maidenName":"string","gender":"Male","birthDate":"1992-05-06T10:01:09.579Z","identities":[],"maritalStatus":"Single","contactNumbers":[],"partyType":"Person","rolePlayerType":"Beneficiary","partyReference":"101929-BENF-1"}],"organisationBeneficiaries":[]},"premiumAmount":{"adminFee":"0","benefitPremiums":"20","total":"20"},"channel":{"deviceSerialNumber":"352222081992046","channelType":"Kiosk","channelLocation":"Latitude: 10.8006252, Longitude: 106.705828","channelLocationName":"Tyme","channelReference":"TymeTest","channelCode":"PNP"},"status":"Accepted","commencementDate":null,"inceptionDate":null,"statusDate":"2021-07-13T11:01:30.9024118+02:00","requirements":[]},"product":{"productCode":"60200000","productName":"Tyme Bank Funeral (Boxer)","productDescription":"Tyme Bank Funeral (Boxer)","benefitRules":[{"benefitFeatures":[],"benefitCode":"60110000","benefitName":"Funeral Benefit","benefitDescription":"Turmeric Funeral Benefit","isMandatory":true,"isEmbedded":false,"minCoverAmount":0.0,"maxCoverAmount":0.0,"benefitCategory":"FuneralBenefit","lifeAssuredRules":[{"lifeAssuredType":"MainLife","isMandatory":false,"minAge":18.0,"maxAge":79.0,"minAgeInMonths":216,"maxAgeInMonths":958,"minAllowed":1,"maxAllowed":1,"minCoverAllowed":10000.0,"maxCoverAllowed":50000.0,"intervalAmounts":[]},{"lifeAssuredType":"Partner","isMandatory":false,"minAge":18.0,"maxAge":79.0,"minAgeInMonths":216,"maxAgeInMonths":958,"minAllowed":0,"maxAllowed":1,"minCoverAllowed":10000.0,"maxCoverAllowed":50000.0,"intervalAmounts":[]},{"lifeAssuredType":"Child","isMandatory":false,"minAge":0.0,"maxAge":20.0,"minAgeInMonths":0,"maxAgeInMonths":239,"minAllowed":0,"maxAllowed":5,"minCoverAllowed":5000.0,"maxCoverAllowed":20000.0,"intervalAmounts":[]},{"lifeAssuredType":"Parent","isMandatory":false,"minAge":18.0,"maxAge":79.0,"minAgeInMonths":216,"maxAgeInMonths":958,"minAllowed":0,"maxAllowed":2,"minCoverAllowed":10000.0,"maxCoverAllowed":20000.0,"intervalAmounts":[]}],"extendedBenefitRules":[],"dependantBenefitCategories":["FuneralBenefit","FuneralBenefit","FuneralBenefit","FuneralBenefit"]},{"benefitCode":"60180000","benefitName":"Grocery Benefit","benefitDescription":"Turmeric Grocery Benefit","isMandatory":false,"isEmbedded":true,"minCoverAmount":0.0,"maxCoverAmount":0.0,"benefitCategory":"GroceryBenefit","lifeAssuredRules":[{"lifeAssuredType":"MainLife","isMandatory":false,"minAge":18.0,"maxAge":79.0,"minAgeInMonths":216,"maxAgeInMonths":958,"minAllowed":1,"maxAllowed":1,"minCoverAllowed":0.0,"maxCoverAllowed":0.0,"intervalAmounts":[]}],"extendedBenefitRules":[],"dependantBenefitCategories":[]},{"benefitCode":"60170000","benefitName":"Monthly Assistance Benefit","benefitDescription":"Turmeric Monthly Assistance Benefit","isMandatory":false,"isEmbedded":true,"minCoverAmount":0.0,"maxCoverAmount":0.0,"benefitCategory":"MonthlyAssistanceBenefit","lifeAssuredRules":[{"lifeAssuredType":"MainLife","isMandatory":false,"minAge":18.0,"maxAge":79.0,"minAgeInMonths":216,"maxAgeInMonths":958,"minAllowed":1,"maxAllowed":1,"minCoverAllowed":0.0,"maxCoverAllowed":0.0,"intervalAmounts":[]}],"extendedBenefitRules":[],"dependantBenefitCategories":[]},{"benefitCode":"60160000","benefitName":"Airtime Benefit","benefitDescription":"Turmeric Airtime Benefit","isMandatory":false,"isEmbedded":true,"minCoverAmount":0.0,"maxCoverAmount":0.0,"benefitCategory":"AirtimeBenefit","lifeAssuredRules":[{"lifeAssuredType":"MainLife","isMandatory":false,"minAge":18.0,"maxAge":79.0,"minAgeInMonths":216,"maxAgeInMonths":958,"minAllowed":1,"maxAllowed":1,"minCoverAllowed":0.0,"maxCoverAllowed":0.0,"intervalAmounts":[]},{"lifeAssuredType":"Partner","isMandatory":false,"minAge":18.0,"maxAge":79.0,"minAgeInMonths":216,"maxAgeInMonths":958,"minAllowed":1,"maxAllowed":1,"minCoverAllowed":0.0,"maxCoverAllowed":0.0,"intervalAmounts":[]},{"lifeAssuredType":"Child","isMandatory":false,"minAge":0.0,"maxAge":20.0,"minAgeInMonths":0,"maxAgeInMonths":240,"minAllowed":1,"maxAllowed":1,"minCoverAllowed":0.0,"maxCoverAllowed":0.0,"intervalAmounts":[]},{"lifeAssuredType":"Parent","isMandatory":false,"minAge":18.0,"maxAge":79.0,"minAgeInMonths":216,"maxAgeInMonths":958,"minAllowed":1,"maxAllowed":1,"minCoverAllowed":0.0,"maxCoverAllowed":0.0,"intervalAmounts":[]}],"extendedBenefitRules":[],"dependantBenefitCategories":[]}],"productRules":{"mandatoryBenefits":["FuneralBenefit"],"optionalBenefits":["GroceryBenefit","MonthlyAssistanceBenefit","AirtimeBenefit"],"isPolicyHolderPolicyPayer":true,"isPolicyHolderMainInsured":true,"isPolicyPayerMainInsured":true,"rolePlayerRules":[{"rolePlayerType":"Beneficiary","isMandatory":true,"minAge":18.0,"maxAge":99.0,"minAgeInMonths":216,"maxAgeInMonths":1188,"minAllowed":1,"maxAllowed":1},{"rolePlayerType":"PolicyPayer","isMandatory":true,"minAge":18.0,"maxAge":79.0,"minAgeInMonths":216,"maxAgeInMonths":959,"minAllowed":1,"maxAllowed":1},{"rolePlayerType":"PolicyHolder","isMandatory":true,"minAge":18.0,"maxAge":79.0,"minAgeInMonths":216,"maxAgeInMonths":959,"minAllowed":1,"maxAllowed":1}],"premiumCollectionMethodsAllowed":["DebitOrder"],"policyReplacementAllowed":true},"applicationRules":{"commencementDate":null,"debitDates":[]}}}); 
+  }
+  jsonTreeCreate1();
+ </script>
+
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="2"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Policy by Policy Reference</p>
+            <p class="text-sm">
+              <span>10:56:40 AM</span> / <span>00:00:11:317</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">Policy by Policy Reference</h5>
+<span class='badge badge-success'>10.20.2021 10:56:40</span>
+<span class='badge badge-danger'>10.20.2021 10:56:51</span>
+<span class='badge badge-default'>00:00:11:317</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=2</span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>10:56:51 AM</td>
+        <td>
+          validation for Status code has passed
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>10:56:51 AM</td>
+        <td>
+          validation for policyNumber has passed
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>10:56:51 AM</td>
+        <td>
+          validation for productCode has passed
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>10:56:51 AM</td>
+        <td>
+          validation for collectionMethod has passed
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>10:56:51 AM</td>
+        <td>
+          validation for benefitPremiums has passed
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:56:51 AM</td>
+        <td>
+           <div class='json-tree' id='code-block-json-2'></div>
+ <script>
+  function jsonTreeCreate2() { 
+   document.getElementById('code-block-json-2').innerHTML = JSONTree.create({
+    "policyNumber": "13402150",
+    "campaignCode": "KURHDSFUN001",
+    "productCode": "1975",
+    "policyHolders": [
+        {
+            "preferedCommunicationMethod": "None",
+            "addresses": [
+                {
+                    "$type": "BoxAddress",
+                    "addressType": "Box",
+                    "addressLine1": "PO-BOX 2035 Kuruman,  Kuruman, Northern Cape, South Africa",
+                    "addressLine2": null,
+                    "addressLine3": null,
+                    "suburb": null,
+                    "townCity": null,
+                    "provinceState": null,
+                    "country": "SouthAfrica",
+                    "postalZipCode": null
+                }
+            ],
+            "emailAddress": "mcmaroro@gmail.com",
+            "language": "None",
+            "marketingConsent": null,
+            "policyReplacement": null,
+            "employmentDetails": null,
+            "sourceOfIncome": "None",
+            "sourceOfIncomeOther": null,
+            "sourceOfWealth": "None",
+            "sourceOfWealthOther": null,
+            "countryOfResidence": "None",
+            "requirements": [
+                
+            ],
+            "verifications": [
+                
+            ],
+            "documents": [
+                
+            ],
+            "title": "Mrs",
+            "initials": "MC",
+            "firstNames": "Mathapelo Confidence ",
+            "surname": "Motshedi",
+            "maidenName": null,
+            "gender": "Female",
+            "birthDate": "1986-10-03T00:00:00",
+            "identities": [
+                {
+                    "identityType": "NationalIdentityNumber",
+                    "identityNumber": "8610030934085",
+                    "issueCountry": "None",
+                    "issueDate": null,
+                    "expiryDate": null,
+                    "citizenshipCountry": "SouthAfrica"
+                }
+            ],
+            "maritalStatus": "Single",
+            "contactNumbers": [
+                {
+                    "contactType": "Mobile",
+                    "contactNumber": "0608016270",
+                    "countryCode": "27",
+                    "extension": null
+                },
+                {
+                    "contactType": "None",
+                    "contactNumber": "0745529884",
+                    "countryCode": "27",
+                    "extension": null
+                },
+                {
+                    "contactType": "None",
+                    "contactNumber": "0745529884",
+                    "countryCode": "27",
+                    "extension": null
+                }
+            ],
+            "partyType": "Person",
+            "rolePlayerType": "PolicyHolder",
+            "partyReference": "Person_1933380894.188"
+        }
+    ],
+    "premiumCollection": {
+        "$type": "Cash",
+        "paymentDay": "1",
+        "collectionMethod": "Cash",
+        "policyPayer": {
+            "preferedCommunicationMethod": "None",
+            "addresses": [
+                {
+                    "$type": "BoxAddress",
+                    "addressType": "Box",
+                    "addressLine1": "PO-BOX 2035 Kuruman,  Kuruman, Northern Cape, South Africa",
+                    "addressLine2": null,
+                    "addressLine3": null,
+                    "suburb": null,
+                    "townCity": null,
+                    "provinceState": null,
+                    "country": "SouthAfrica",
+                    "postalZipCode": null
+                }
+            ],
+            "emailAddress": "mcmaroro@gmail.com",
+            "language": "None",
+            "marketingConsent": null,
+            "employmentDetails": null,
+            "sourceOfIncome": "None",
+            "sourceOfIncomeOther": null,
+            "sourceOfWealth": "None",
+            "sourceOfWealthOther": null,
+            "countryOfResidence": "None",
+            "requirements": [
+                
+            ],
+            "verifications": [
+                
+            ],
+            "documents": [
+                
+            ],
+            "title": "Mrs",
+            "initials": "MC",
+            "firstNames": "Mathapelo Confidence ",
+            "surname": "Motshedi",
+            "maidenName": null,
+            "gender": "Female",
+            "birthDate": "1986-10-03T00:00:00",
+            "identities": [
+                {
+                    "identityType": "NationalIdentityNumber",
+                    "identityNumber": "8610030934085",
+                    "issueCountry": "None",
+                    "issueDate": null,
+                    "expiryDate": null,
+                    "citizenshipCountry": "SouthAfrica"
+                }
+            ],
+            "maritalStatus": "Single",
+            "contactNumbers": [
+                {
+                    "contactType": "Mobile",
+                    "contactNumber": "0608016270",
+                    "countryCode": "27",
+                    "extension": null
+                },
+                {
+                    "contactType": "None",
+                    "contactNumber": "0745529884",
+                    "countryCode": "27",
+                    "extension": null
+                },
+                {
+                    "contactType": "None",
+                    "contactNumber": "0745529884",
+                    "countryCode": "27",
+                    "extension": null
+                }
+            ],
+            "partyType": "Person",
+            "rolePlayerType": "PolicyPayer",
+            "partyReference": "Person_1933380894.188"
+        }
+    },
+    "benefits": [
+        {
+            "$type": "FuneralBenefit",
+            "lifeAssureds": [
+                
+            ],
+            "benefitName": "Funeral Benefit",
+            "description": null,
+            "benefitCategory": "FuneralBenefit"
+        }
+    ],
+    "beneficiaries": {
+        "personBeneficiaries": [
+            {
+                "percentageShare": 100,
+                "relationshipToPolicyHolder": "None",
+                "relationshipToMainInsured": "None",
+                "note": null,
+                "title": "Mr",
+                "initials": "LC",
+                "firstNames": "Lebogang Collin",
+                "surname": "Motshedi",
+                "maidenName": null,
+                "gender": "Male",
+                "birthDate": "1981-06-22T00:00:00",
+                "identities": [
+                    {
+                        "identityType": "NationalIdentityNumber",
+                        "identityNumber": "8106225470084",
+                        "issueCountry": "None",
+                        "issueDate": null,
+                        "expiryDate": null,
+                        "citizenshipCountry": "SouthAfrica"
+                    }
+                ],
+                "maritalStatus": "Single",
+                "contactNumbers": [
+                    {
+                        "contactType": "Mobile",
+                        "contactNumber": "0818116377 ",
+                        "countryCode": "27",
+                        "extension": null
+                    }
+                ],
+                "partyType": "Person",
+                "rolePlayerType": "PolicyPayer",
+                "partyReference": "Person_260311002.188"
+            }
+        ],
+        "organisationBeneficiaries": [
+            
+        ]
+    },
+    "premiumAmount": {
+        "adminFee": "0",
+        "benefitPremiums": "876.44",
+        "total": "876.44"
+    },
+    "premiumAmountDue": "876.44",
+    "arrears": "0",
+    "channel": null,
+    "commencementDate": "2016-08-01T00:00:00",
+    "inceptionDate": "2016-08-01T00:00:00",
+    "applicationDate": "2016-08-01T00:00:00",
+    "statusDate": null,
+    "lastPremiumCollectionDate": null,
+    "nextPremiumCollectionDate": null,
+    "premiumDueDate": null,
+    "status": "Cancelled",
+    "references": [
+        {
+            "referenceValue": "13402150",
+            "referenceType": "Policy"
+        },
+        {
+            "referenceValue": "1171113402150",
+            "referenceType": "PayAt"
+        },
+        {
+            "referenceValue": "4655213402150",
+            "referenceType": "Pnp"
+        }
+    ],
+    "movements": null,
+    "pendingActivation": null,
+    "lineOfBusinessSystem": "Mip"
+}); 
+  }
+  jsonTreeCreate2();
+ </script>
+
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="3"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">PolicyByReferenceNumber</p>
+            <p class="text-sm">
+              <span>10:56:51 AM</span> / <span>00:00:16:273</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">PolicyByReferenceNumber</h5>
+<span class='badge badge-success'>10.20.2021 10:56:51</span>
+<span class='badge badge-danger'>10.20.2021 10:57:07</span>
+<span class='badge badge-default'>00:00:16:273</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=3</span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>10:57:07 AM</td>
+        <td>
+          validation for policyNumber has passed
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>10:57:07 AM</td>
+        <td>
+          validation for policyReference has passed
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>10:57:07 AM</td>
+        <td>
+          validation for identityNumber has passed
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:57:07 AM</td>
+        <td>
+          Find response below
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:57:07 AM</td>
+        <td>
+           <div class='json-tree' id='code-block-json-3'></div>
+ <script>
+  function jsonTreeCreate3() { 
+   document.getElementById('code-block-json-3').innerHTML = JSONTree.create({"policyNumber":"13887792","policyReference":"1171113887792","status":4,"product":"1975","premiumAmount":"171.67","firstNames":"Test  ","surname":"Case ","identityNumber":"8412121272081","contactNumber":"0724751515"}); 
+  }
+  jsonTreeCreate3();
+ </script>
+
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="4"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">ValidatePersonHighRisk</p>
+            <p class="text-sm">
+              <span>10:57:07 AM</span> / <span>00:00:16:633</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">ValidatePersonHighRisk</h5>
+<span class='badge badge-success'>10.20.2021 10:57:07</span>
+<span class='badge badge-danger'>10.20.2021 10:57:24</span>
+<span class='badge badge-default'>00:00:16:633</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=4</span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:57:24 AM</td>
+        <td>
+          <div class='row'>
+ <div class='col-md-12'>
+  <textarea readonly class='code-block'><html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+    <title>502 - Web server received an invalid response while acting as a gateway or proxy server.</title>
+    <style type="text/css">
+&lt;!--
+body{margin:0;font-size:.7em;font-family:Verdana, Arial, Helvetica, sans-serif;background:#EEEEEE;}
+fieldset{padding:0 15px 10px 15px;} 
+h1{font-size:2.4em;margin:0;color:#FFF;}
+h2{font-size:1.7em;margin:0;color:#CC0000;} 
+h3{font-size:1.2em;margin:10px 0 0 0;color:#000000;} 
+#header{width:96%;margin:0 0 0 0;padding:6px 2% 6px 2%;font-family:"trebuchet MS", Verdana, sans-serif;color:#FFF;
+background-color:#555555;}
+#content{margin:0 0 0 2%;position:relative;}
+.content-container{background:#FFF;width:96%;margin-top:8px;padding:10px;position:relative;}
+--&gt;
+</style>
+  </head>
+  <body>
+    <div id="header">
+      <h1>Server Error</h1>
+    </div>
+    <div id="content">
+      <div class="content-container">
+        <fieldset>
+          <h2>502 - Web server received an invalid response while acting as a gateway or proxy server.</h2>
+          <h3>There is a problem with the page you are looking for, and it cannot be displayed. When the Web server (while acting as a gateway or proxy) contacted the upstream content server, it received an invalid response from the content server.</h3>
+        </fieldset>
+      </div>
+    </div>
+  </body>
+</html></textarea>
+ </div>
+</div>
+
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>10:57:24 AM</td>
+        <td>
+          validation for Status code has failled. expected 200  but got 502
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="5"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Create Application Benefits</p>
+            <p class="text-sm">
+              <span>10:57:24 AM</span> / <span>00:00:03:016</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">Create Application Benefits</h5>
+<span class='badge badge-success'>10.20.2021 10:57:24</span>
+<span class='badge badge-danger'>10.20.2021 10:57:27</span>
+<span class='badge badge-default'>00:00:03:016</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=5</span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>10:57:27 AM</td>
+        <td>
+          validation for Status code has passed
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>10:57:27 AM</td>
+        <td>
+          validation for applicationReference has passed
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>10:57:27 AM</td>
+        <td>
+          validation for sourceReference has passed
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>10:57:27 AM</td>
+        <td>
+          validation for benefitPremiums has passed
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>10:57:27 AM</td>
+        <td>
+          validation for productCode has passed
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:57:27 AM</td>
+        <td>
+          Find payload(Request) below
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:57:27 AM</td>
+        <td>
+           <div class='json-tree' id='code-block-json-4'></div>
+ <script>
+  function jsonTreeCreate4() { 
+   document.getElementById('code-block-json-4').innerHTML = JSONTree.create([
+	{
+		"$type": "FuneralBenefit",
+		"benefitCode": "638",
+		"benefitName": "Tyme Funeral Benefit",
+		"description": "Tyme Funeral Benefit",
+		"benefitCategory": "FuneralBenefit",
+		"lifeAssureds": [
+			{
+				"partyType": "Person",
+				"rolePlayerType": "MainLifeAssured",
+				"partyReference": "",
+				"title": "Dr",
+				"initials": "RY",
+				"firstNames": "RANDY",
+				"surname": "RAYMOND",
+				"maidenName": "",
+				"gender": "Male",
+				"birthDate": "1991-05-05T08:47:19.361Z",
+				"identities": [
+					{
+						"identityType": "NationalIdentityNumber",
+						"identityNumber": "9105055913089",
+						"issueCountry": "South Africa",
+						"issueDate": "2020-07-09T08:47:19.361Z",
+						"expiryDate": "2020-07-09T08:47:19.361Z",
+						"citizenshipCountry": "South Africa"
+					}
+				],
+				"maritalStatus": "Single",
+				"contactNumbers": [
+					{
+						"contactType": "Mobile",
+						"contactNumber": "0720720722",
+						"countryCode": "27",
+						"extension": ""
+					}
+				],
+				"lifeAssuredType": "MainLife",
+				"relationshipToPolicyHolder": "Self",
+				"relationshipToMainInsured": "Self",
+				"selectedCoverAmount": 40000.0,
+				"benefitPremiums": []
+			},
+			{
+				"partyType": "Person",
+				"rolePlayerType": "LifeAssured",
+				"partyReference": "",
+				"title": "Dr",
+				"initials": "R",
+				"firstNames": "One",
+				"surname": "Partner",
+				"maidenName": "",
+				"gender": "Female",
+				"birthDate": "1992-01-17T08:47:19.361Z",
+				"contactNumbers": [
+					{
+						"contactType": "Mobile",
+						"contactNumber": "0720720722",
+						"countryCode": "27",
+						"extension": ""
+					}
+				],
+				"lifeAssuredType": "Partner",
+				"relationshipToPolicyHolder": "Self",
+				"relationshipToMainInsured": "Self",
+				"selectedCoverAmount": 20000.0,
+				"benefitPremiums": []
+			}
+		]
+	}
+]); 
+  }
+  jsonTreeCreate4();
+ </script>
+
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:57:27 AM</td>
+        <td>
+          Find response below
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:57:27 AM</td>
+        <td>
+           <div class='json-tree' id='code-block-json-5'></div>
+ <script>
+  function jsonTreeCreate5() { 
+   document.getElementById('code-block-json-5').innerHTML = JSONTree.create({"applicationReference":"1598","sourceReference":"Tyme01","campaignCode":"60100000","productCode":"60100000","policyHolders":[{"preferedCommunicationMethod":"None","addresses":[],"emailAddress":"farhaana@gmail.com","language":"None","marketingConsent":null,"policyReplacement":null,"employmentDetails":null,"sourceOfIncome":"None","sourceOfIncomeOther":null,"sourceOfWealth":"None","sourceOfWealthOther":null,"countryOfResidence":"None","verifications":[],"documents":[],"title":"Mrs","initials":null,"firstNames":"Farhaana","surname":"Baartman","maidenName":null,"gender":"None","birthDate":"1980-10-21T10:00:00Z","identities":[{"identityType":"NationalIdentityNumber","identityNumber":"8010214800089","issueCountry":"South Africa","issueDate":null,"expiryDate":null,"citizenshipCountry":"None"}],"maritalStatus":"None","contactNumbers":[{"contactType":"Mobile","contactNumber":"0825577482","countryCode":"+27","extension":null}],"partyType":"Person","rolePlayerType":"PolicyHolder","partyReference":"1598-PH-1"}],"premiumCollection":null,"benefits":[{"lifeAssureds":[{"lifeAssuredType":"MainLife","relationshipToPolicyHolder":"Self","relationshipToMainInsured":"Self","benefitPremiums":[{"coverDescription":"R40 000","minimumCoverAmount":0.0,"maximumCoverAmount":0.0,"coverAmount":40000.0,"premiumAmount":224.0,"dependantCoverAmount":0.0,"dependantLifeAssuredType":"None","dependantBenefitCategory":"None"}],"selectedCoverAmount":40000.0,"title":"Dr","initials":"RY","firstNames":"RANDY","surname":"RAYMOND","maidenName":"","gender":"Male","birthDate":"1991-05-05T08:47:19.361Z","identities":[{"identityType":"NationalIdentityNumber","identityNumber":"9105055913089","issueCountry":"South Africa","issueDate":"2020-07-09T08:47:19.361Z","expiryDate":"2020-07-09T08:47:19.361Z","citizenshipCountry":"South Africa"}],"maritalStatus":"Single","contactNumbers":[{"contactType":"Mobile","contactNumber":"0720720722","countryCode":"27","extension":""}],"partyType":"Person","rolePlayerType":"MainLifeAssured","partyReference":"1598-MAIN-1"},{"lifeAssuredType":"Partner","relationshipToPolicyHolder":"Self","relationshipToMainInsured":"Self","benefitPremiums":[{"coverDescription":"R20 000","minimumCoverAmount":0.0,"maximumCoverAmount":0.0,"coverAmount":20000.0,"premiumAmount":32.0,"dependantCoverAmount":20000.0,"dependantLifeAssuredType":"MainLife","dependantBenefitCategory":"FuneralBenefit"}],"selectedCoverAmount":20000.0,"title":"Dr","initials":"R","firstNames":"One","surname":"Partner","maidenName":"","gender":"Female","birthDate":"1992-01-17T08:47:19.361Z","identities":[],"maritalStatus":"None","contactNumbers":[{"contactType":"Mobile","contactNumber":"0720720722","countryCode":"27","extension":""}],"partyType":"Person","rolePlayerType":"LifeAssured","partyReference":"1598-PART-1"}],"benefitFeatures":[],"benefitName":"Tyme Funeral Benefit","description":"Tyme Funeral Benefit","benefitCategory":"FuneralBenefit"},{"benefitPremiums":[],"benefitName":"Grocery Benefit","description":"Turmeric Grocery Benefit","benefitCategory":"GroceryBenefit"},{"lifeAssureds":[],"benefitPremiums":[],"benefitName":"Monthly Assistance Benefit","description":"Turmeric Monthly Assistance Benefit","benefitCategory":"MonthlyAssistanceBenefit"},{"benefitPremium":{"coverDescription":"0","minimumCoverAmount":0.0,"maximumCoverAmount":0.0,"coverAmount":0.0,"premiumAmount":0.0,"dependantCoverAmount":0.0,"dependantLifeAssuredType":"None","dependantBenefitCategory":"None"},"benefitName":"Moneyback Benefit","description":"Turmeric Moneyback Benefit","benefitCategory":"MoneyBackBenefit"},{"benefitPremium":{"coverDescription":"R250","minimumCoverAmount":0.0,"maximumCoverAmount":0.0,"coverAmount":250.0,"premiumAmount":0.0,"dependantCoverAmount":50000.0,"dependantLifeAssuredType":"MainLife","dependantBenefitCategory":"FuneralBenefit"},"benefitName":"Airtime Benefit","description":"Turmeric Airtime Benefit","benefitCategory":"AirtimeBenefit"}],"beneficiaries":{"personBeneficiaries":[{"percentageShare":100,"relationshipToPolicyHolder":"Brother","relationshipToMainInsured":"Brother","note":"This is a test","title":"Dr","initials":"H","firstNames":"Happy","surname":"Vandham","maidenName":"string","gender":"Male","birthDate":"1992-05-06T10:01:09.579Z","identities":[],"maritalStatus":"Single","contactNumbers":[],"partyType":"Person","rolePlayerType":"Beneficiary","partyReference":"1598-BENF-1"}],"organisationBeneficiaries":[]},"premiumAmount":{"adminFee":"0","benefitPremiums":"256","total":"256"},"channel":null,"status":"New","commencementDate":null,"inceptionDate":null,"statusDate":"2020-08-11T13:52:57.6944952+02:00","requirements":[]}); 
+  }
+  jsonTreeCreate5();
+ </script>
+
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="6"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Policy by Policy number</p>
+            <p class="text-sm">
+              <span>10:57:27 AM</span> / <span>00:01:02:686</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">Policy by Policy number</h5>
+<span class='badge badge-success'>10.20.2021 10:57:27</span>
+<span class='badge badge-danger'>10.20.2021 10:58:30</span>
+<span class='badge badge-default'>00:01:02:686</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=6</span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>10:58:30 AM</td>
+        <td>
+          validation for Status code has passed
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:58:30 AM</td>
+        <td>
+           <div class='json-tree' id='code-block-json-6'></div>
+ <script>
+  function jsonTreeCreate6() { 
+   document.getElementById('code-block-json-6').innerHTML = JSONTree.create([
+    {
+        "policyNumber": "50000007",
+        "campaignCode": null,
+        "productCode": "60100000",
+        "policyHolders": [
+            {
+                "preferedCommunicationMethod": "None",
+                "addresses": [
+                    {
+                        "$type": "StreetAddress",
+                        "latitude": null,
+                        "longitude": null,
+                        "addressType": "Street",
+                        "addressLine1": "21 Jump Street, Eikenhof, Johanneburg, Gauteng, 1818",
+                        "addressLine2": null,
+                        "addressLine3": null,
+                        "suburb": null,
+                        "townCity": null,
+                        "provinceState": null,
+                        "country": "None",
+                        "postalZipCode": null
+                    }
+                ],
+                "emailAddress": "Testman@Gmail.Com",
+                "language": "None",
+                "marketingConsent": null,
+                "policyReplacement": null,
+                "employmentDetails": null,
+                "sourceOfIncome": "None",
+                "sourceOfIncomeOther": null,
+                "sourceOfWealth": "None",
+                "sourceOfWealthOther": null,
+                "countryOfResidence": "None",
+                "requirements": [
+                    
+                ],
+                "verifications": [
+                    
+                ],
+                "documents": [
+                    
+                ],
+                "title": "None",
+                "initials": null,
+                "firstNames": "Zenzi",
+                "surname": "Dlangamandla",
+                "maidenName": null,
+                "gender": "None",
+                "birthDate": "1984-12-26T00:00:00+00:00",
+                "identities": [
+                    {
+                        "identityType": "NationalIdentityNumber",
+                        "identityNumber": "8412260245088",
+                        "issueCountry": "None",
+                        "issueDate": null,
+                        "expiryDate": null,
+                        "citizenshipCountry": "SouthAfrica"
+                    }
+                ],
+                "maritalStatus": "None",
+                "contactNumbers": [
+                    {
+                        "contactType": "Mobile",
+                        "contactNumber": "0720720000",
+                        "countryCode": "27",
+                        "extension": null
+                    }
+                ],
+                "partyType": "Person",
+                "rolePlayerType": "PolicyHolder",
+                "partyReference": "C1EA9C65-CD0B-4534-8AF3-AC3A009190A0"
+            }
+        ],
+        "premiumCollection": {
+            "$type": "DebitOrder",
+            "bankAccount": {
+                "accountHolderName": "ZenziDlangamandla",
+                "accountType": "Cheque",
+                "bankName": "TymeBank",
+                "branchName": "Tyme Rosebank",
+                "branchCode": null,
+                "accountNumber": "51024594455",
+                "verified": null,
+                "verificationSource": null
+            },
+            "debitDay": "9",
+            "groupingIndicator": null,
+            "collectionMethod": "DebitOrder",
+            "policyPayer": {
+                "preferedCommunicationMethod": "None",
+                "addresses": [
+                    
+                ],
+                "emailAddress": null,
+                "language": "None",
+                "marketingConsent": null,
+                "employmentDetails": null,
+                "sourceOfIncome": "None",
+                "sourceOfIncomeOther": null,
+                "sourceOfWealth": "None",
+                "sourceOfWealthOther": null,
+                "countryOfResidence": "None",
+                "requirements": [
+                    
+                ],
+                "verifications": [
+                    
+                ],
+                "documents": [
+                    
+                ],
+                "title": "None",
+                "initials": null,
+                "firstNames": "Zenzi",
+                "surname": "Dlangamandla",
+                "maidenName": null,
+                "gender": "None",
+                "birthDate": "1984-12-26T00:00:00+00:00",
+                "identities": [
+                    {
+                        "identityType": "NationalIdentityNumber",
+                        "identityNumber": "8412260245088",
+                        "issueCountry": "None",
+                        "issueDate": null,
+                        "expiryDate": null,
+                        "citizenshipCountry": "SouthAfrica"
+                    }
+                ],
+                "maritalStatus": "None",
+                "contactNumbers": [
+                    {
+                        "contactType": "Mobile",
+                        "contactNumber": "0720720000",
+                        "countryCode": "27",
+                        "extension": null
+                    }
+                ],
+                "partyType": "Person",
+                "rolePlayerType": "PolicyPayer",
+                "partyReference": "C1EA9C65-CD0B-4534-8AF3-AC3A009190A0"
+            }
+        },
+        "benefits": [
+            {
+                "$type": "MoneybackBenefit",
+                "benefitPremium": {
+                    "coverDescription": null,
+                    "minimumCoverAmount": null,
+                    "maximumCoverAmount": null,
+                    "coverAmount": null,
+                    "premiumAmount": null,
+                    "dependantCoverAmount": null,
+                    "dependantLifeAssuredType": "None",
+                    "dependantBenefitCategory": "None"
+                },
+                "benefitStartDate": "2020-09-01T00:00:00",
+                "benefitName": null,
+                "description": null,
+                "benefitCategory": "MoneyBackBenefit"
+            },
+            {
+                "$type": "GroceryBenefit",
+                "benefitPremiums": [
+                    
+                ],
+                "benefitStartDate": "2020-09-01T00:00:00",
+                "benefitName": null,
+                "description": null,
+                "benefitCategory": "GroceryBenefit"
+            },
+            {
+                "$type": "AirtimeBenefit",
+                "benefitPremium": {
+                    "coverDescription": null,
+                    "minimumCoverAmount": null,
+                    "maximumCoverAmount": null,
+                    "coverAmount": null,
+                    "premiumAmount": null,
+                    "dependantCoverAmount": null,
+                    "dependantLifeAssuredType": "None",
+                    "dependantBenefitCategory": "None"
+                },
+                "benefitStartDate": "2020-09-01T00:00:00",
+                "benefitName": null,
+                "description": null,
+                "benefitCategory": "AirtimeBenefit"
+            },
+            {
+                "$type": "FuneralBenefit",
+                "lifeAssureds": [
+                    {
+                        "lifeAssuredType": "MainLife",
+                        "relationshipToPolicyHolder": "None",
+                        "relationshipToMainInsured": "None",
+                        "benefitPremiums": [
+                            
+                        ],
+                        "selectedCoverAmount": 20000.0,
+                        "selectedBenefitPremium": {
+                            "coverDescription": null,
+                            "minimumCoverAmount": null,
+                            "maximumCoverAmount": null,
+                            "coverAmount": 20000.0,
+                            "premiumAmount": 166.0,
+                            "dependantCoverAmount": null,
+                            "dependantLifeAssuredType": "None",
+                            "dependantBenefitCategory": "None"
+                        },
+                        "benefitStartDate": "2020-09-01T00:00:00",
+                        "title": "None",
+                        "initials": null,
+                        "firstNames": "Zenzi",
+                        "surname": "Dlangamandla",
+                        "maidenName": null,
+                        "gender": "None",
+                        "birthDate": "1984-12-26T00:00:00",
+                        "identities": [
+                            {
+                                "identityType": "NationalIdentityNumber",
+                                "identityNumber": "8412260245088",
+                                "issueCountry": "None",
+                                "issueDate": null,
+                                "expiryDate": null,
+                                "citizenshipCountry": "None"
+                            }
+                        ],
+                        "maritalStatus": "None",
+                        "contactNumbers": [
+                            {
+                                "contactType": "Mobile",
+                                "contactNumber": "0720720000",
+                                "countryCode": "27",
+                                "extension": null
+                            }
+                        ],
+                        "partyType": "Person",
+                        "rolePlayerType": "None",
+                        "partyReference": "C1EA9C65-CD0B-4534-8AF3-AC3A009190A0"
+                    },
+                    {
+                        "lifeAssuredType": "Child",
+                        "relationshipToPolicyHolder": "None",
+                        "relationshipToMainInsured": "None",
+                        "benefitPremiums": [
+                            
+                        ],
+                        "selectedCoverAmount": 10000.0,
+                        "selectedBenefitPremium": {
+                            "coverDescription": null,
+                            "minimumCoverAmount": null,
+                            "maximumCoverAmount": null,
+                            "coverAmount": 10000.0,
+                            "premiumAmount": 0.0,
+                            "dependantCoverAmount": null,
+                            "dependantLifeAssuredType": "None",
+                            "dependantBenefitCategory": "None"
+                        },
+                        "benefitStartDate": "2020-09-01T00:00:00",
+                        "title": "None",
+                        "initials": null,
+                        "firstNames": "ZIZIPHO",
+                        "surname": "BENNETT",
+                        "maidenName": null,
+                        "gender": "None",
+                        "birthDate": "2009-12-24T00:00:00",
+                        "identities": [
+                            {
+                                "identityType": "NationalIdentityNumber",
+                                "identityNumber": "",
+                                "issueCountry": "None",
+                                "issueDate": null,
+                                "expiryDate": null,
+                                "citizenshipCountry": "None"
+                            }
+                        ],
+                        "maritalStatus": "None",
+                        "contactNumbers": [
+                            
+                        ],
+                        "partyType": "Person",
+                        "rolePlayerType": "None",
+                        "partyReference": "BD0D44E7-4734-445F-8AA5-AC3A009190C4"
+                    },
+                    {
+                        "lifeAssuredType": "Child",
+                        "relationshipToPolicyHolder": "None",
+                        "relationshipToMainInsured": "None",
+                        "benefitPremiums": [
+                            
+                        ],
+                        "selectedCoverAmount": 10000.0,
+                        "selectedBenefitPremium": {
+                            "coverDescription": null,
+                            "minimumCoverAmount": null,
+                            "maximumCoverAmount": null,
+                            "coverAmount": 10000.0,
+                            "premiumAmount": 0.0,
+                            "dependantCoverAmount": null,
+                            "dependantLifeAssuredType": "None",
+                            "dependantBenefitCategory": "None"
+                        },
+                        "benefitStartDate": "2020-09-01T00:00:00",
+                        "title": "None",
+                        "initials": null,
+                        "firstNames": "ZOYAMA",
+                        "surname": "BENNETT",
+                        "maidenName": null,
+                        "gender": "None",
+                        "birthDate": "2012-07-29T00:00:00",
+                        "identities": [
+                            {
+                                "identityType": "NationalIdentityNumber",
+                                "identityNumber": "",
+                                "issueCountry": "None",
+                                "issueDate": null,
+                                "expiryDate": null,
+                                "citizenshipCountry": "None"
+                            }
+                        ],
+                        "maritalStatus": "None",
+                        "contactNumbers": [
+                            
+                        ],
+                        "partyType": "Person",
+                        "rolePlayerType": "None",
+                        "partyReference": "AA14BC44-3D86-49CF-B24B-AC3A009190C9"
+                    },
+                    {
+                        "lifeAssuredType": "Child",
+                        "relationshipToPolicyHolder": "None",
+                        "relationshipToMainInsured": "None",
+                        "benefitPremiums": [
+                            
+                        ],
+                        "selectedCoverAmount": 10000.0,
+                        "selectedBenefitPremium": {
+                            "coverDescription": null,
+                            "minimumCoverAmount": null,
+                            "maximumCoverAmount": null,
+                            "coverAmount": 10000.0,
+                            "premiumAmount": 0.0,
+                            "dependantCoverAmount": null,
+                            "dependantLifeAssuredType": "None",
+                            "dependantBenefitCategory": "None"
+                        },
+                        "benefitStartDate": "2020-09-01T00:00:00",
+                        "title": "None",
+                        "initials": null,
+                        "firstNames": "ZENANI",
+                        "surname": "BENNETT",
+                        "maidenName": null,
+                        "gender": "None",
+                        "birthDate": "2014-04-15T00:00:00",
+                        "identities": [
+                            {
+                                "identityType": "NationalIdentityNumber",
+                                "identityNumber": "",
+                                "issueCountry": "None",
+                                "issueDate": null,
+                                "expiryDate": null,
+                                "citizenshipCountry": "None"
+                            }
+                        ],
+                        "maritalStatus": "None",
+                        "contactNumbers": [
+                            
+                        ],
+                        "partyType": "Person",
+                        "rolePlayerType": "None",
+                        "partyReference": "AE592FD3-057C-40D4-A1AE-AC3A009190D2"
+                    }
+                ],
+                "benefitName": null,
+                "description": null,
+                "benefitCategory": "FuneralBenefit"
+            },
+            {
+                "$type": "MonthlyAssistanceBenefit",
+                "benefitPremiums": [
+                    
+                ],
+                "lifeAssureds": [
+                    {
+                        "lifeAssuredType": "MainLife",
+                        "relationshipToPolicyHolder": "None",
+                        "relationshipToMainInsured": "None",
+                        "benefitPremiums": [
+                            
+                        ],
+                        "selectedCoverAmount": 2000.0,
+                        "selectedBenefitPremium": {
+                            "coverDescription": null,
+                            "minimumCoverAmount": null,
+                            "maximumCoverAmount": null,
+                            "coverAmount": 2000.0,
+                            "premiumAmount": 0.0,
+                            "dependantCoverAmount": null,
+                            "dependantLifeAssuredType": "None",
+                            "dependantBenefitCategory": "None"
+                        },
+                        "benefitStartDate": "2020-09-01T00:00:00",
+                        "title": "None",
+                        "initials": null,
+                        "firstNames": "Zenzi",
+                        "surname": "Dlangamandla",
+                        "maidenName": null,
+                        "gender": "None",
+                        "birthDate": "1984-12-26T00:00:00",
+                        "identities": [
+                            {
+                                "identityType": "NationalIdentityNumber",
+                                "identityNumber": "8412260245088",
+                                "issueCountry": "None",
+                                "issueDate": null,
+                                "expiryDate": null,
+                                "citizenshipCountry": "None"
+                            }
+                        ],
+                        "maritalStatus": "None",
+                        "contactNumbers": [
+                            {
+                                "contactType": "Mobile",
+                                "contactNumber": "0720720000",
+                                "countryCode": "27",
+                                "extension": null
+                            }
+                        ],
+                        "partyType": "Person",
+                        "rolePlayerType": "None",
+                        "partyReference": "C1EA9C65-CD0B-4534-8AF3-AC3A009190A0"
+                    }
+                ],
+                "benefitName": null,
+                "description": null,
+                "benefitCategory": "MonthlyAssistanceBenefit"
+            }
+        ],
+        "beneficiaries": {
+            "personBeneficiaries": [
+                {
+                    "percentageShare": null,
+                    "relationshipToPolicyHolder": "None",
+                    "relationshipToMainInsured": "None",
+                    "note": null,
+                    "title": "None",
+                    "initials": null,
+                    "firstNames": "DANIEL",
+                    "surname": "BENNETT",
+                    "maidenName": null,
+                    "gender": "None",
+                    "birthDate": "1967-01-01T00:00:00+00:00",
+                    "identities": [
+                        {
+                            "identityType": "NationalIdentityNumber",
+                            "identityNumber": "6701015800086",
+                            "issueCountry": "None",
+                            "issueDate": null,
+                            "expiryDate": null,
+                            "citizenshipCountry": "SouthAfrica"
+                        }
+                    ],
+                    "maritalStatus": "None",
+                    "contactNumbers": [
+                        
+                    ],
+                    "partyType": "Person",
+                    "rolePlayerType": "Beneficiary",
+                    "partyReference": "2B8B809F-6E9B-478A-8E4F-AD9B0110075B"
+                }
+            ],
+            "organisationBeneficiaries": [
+                
+            ]
+        },
+        "premiumAmount": {
+            "adminFee": "0",
+            "benefitPremiums": "166",
+            "total": "166"
+        },
+        "premiumAmountDue": "166",
+        "arrears": "2005.28",
+        "channel": null,
+        "commencementDate": "2020-09-01T00:00:00+00:00",
+        "inceptionDate": "2020-09-18T00:00:00+00:00",
+        "applicationDate": "2020-09-18T00:00:00+00:00",
+        "statusDate": "2020-09-01T00:00:00",
+        "lastPremiumCollectionDate": "2020-08-31T00:00:00+00:00",
+        "nextPremiumCollectionDate": "2020-09-01T00:00:00+00:00",
+        "premiumDueDate": "2020-09-01T00:00:00+00:00",
+        "status": "Cancelled",
+        "references": [
+            {
+                "referenceValue": "05FCD318-E205-4E1C-B859-AC3A009190E6",
+                "referenceType": "InternalPolicy"
+            },
+            {
+                "referenceValue": "E88059E5-0957-4C03-B9F0-AD8300F05753",
+                "referenceType": "InternalBankAccount"
+            },
+            {
+                "referenceValue": "A745D2F2-A85B-43EF-A195-AC3A009190EA",
+                "referenceType": "InternalContract"
+            },
+            {
+                "referenceValue": "Tyme01",
+                "referenceType": "Source"
+            },
+            {
+                "referenceValue": "1011",
+                "referenceType": "Application"
+            },
+            {
+                "referenceValue": "117110150000007",
+                "referenceType": "PayAt"
+            }
+        ],
+        "movements": null,
+        "pendingActivation": false,
+        "lineOfBusinessSystem": "ExergyLife"
+    }
+]); 
+  }
+  jsonTreeCreate6();
+ </script>
+
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="7"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">CreateCollection</p>
+            <p class="text-sm">
+              <span>10:58:30 AM</span> / <span>00:00:05:051</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">CreateCollection</h5>
+<span class='badge badge-success'>10.20.2021 10:58:30</span>
+<span class='badge badge-danger'>10.20.2021 10:58:35</span>
+<span class='badge badge-default'>00:00:05:051</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=7</span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>10:58:35 AM</td>
+        <td>
+          validation for policyNumber has passed
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>10:58:35 AM</td>
+        <td>
+          validation for policyNumber has passed
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>10:58:35 AM</td>
+        <td>
+          validation for tenderType has passed
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:58:35 AM</td>
+        <td>
+          Find payload(Request) below
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:58:35 AM</td>
+        <td>
+           <div class='json-tree' id='code-block-json-7'></div>
+ <script>
+  function jsonTreeCreate7() { 
+   document.getElementById('code-block-json-7').innerHTML = JSONTree.create({
+"policyNumber": 1171113887792,
+"policyReference": 1171113887792,
+"collectionReference": "",
+"amount": 180.0,
+"tenderType": "Cash",
+"channel": {
+"type": "TillPoint",
+"tillNumber": "",
+"serialNumber": "",
+"transactionIdentity": "",
+"messageIdentity": "",
+"networkTransactionIdentity": "",
+				   
+"vendor": "PayAt",
+	  
+"channelType": "TillPoint",
+"channelLocation": "",
+"channelReference": ""
+},
+"source": {
+"sourceName": "Pay@",
+"sourceReference": ""
+},
+"status": "None",
+"message": ""
+}); 
+  }
+  jsonTreeCreate7();
+ </script>
+
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:58:35 AM</td>
+        <td>
+          Find response below
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:58:35 AM</td>
+        <td>
+           <div class='json-tree' id='code-block-json-8'></div>
+ <script>
+  function jsonTreeCreate8() { 
+   document.getElementById('code-block-json-8').innerHTML = JSONTree.create({"policyNumber":"13887792","policyReference":"1171113887792","collectionReference":"08235221-00fe-4537-b84e-974e9caf2431","amount":180.0,"tenderType":"Cash","channel":{"collectionVendorReference":null,"tillNumber":"","serialNumber":"","transactionIdentity":"","messageIdentity":"","networkTransactionIdentity":"","vendor":"PayAt","channelType":"TillPoint","channelLocation":"","channelLocationName":null,"channelReference":""},"source":{"sourceName":"Pay@","sourceReference":""},"status":"New","message":""}); 
+  }
+  jsonTreeCreate8();
+ </script>
+
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="8"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">ValidatePersonPassPortNumber</p>
+            <p class="text-sm">
+              <span>10:58:35 AM</span> / <span>00:00:04:166</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">ValidatePersonPassPortNumber</h5>
+<span class='badge badge-success'>10.20.2021 10:58:35</span>
+<span class='badge badge-danger'>10.20.2021 10:58:39</span>
+<span class='badge badge-default'>00:00:04:166</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=8</span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:58:39 AM</td>
+        <td>
+          <div class='row'>
+ <div class='col-md-12'>
+  <textarea readonly class='code-block'><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+<title>502 - Web server received an invalid response while acting as a gateway or proxy server.</title>
+<style type="text/css">
+<!--
+body{margin:0;font-size:.7em;font-family:Verdana, Arial, Helvetica, sans-serif;background:#EEEEEE;}
+fieldset{padding:0 15px 10px 15px;} 
+h1{font-size:2.4em;margin:0;color:#FFF;}
+h2{font-size:1.7em;margin:0;color:#CC0000;} 
+h3{font-size:1.2em;margin:10px 0 0 0;color:#000000;} 
+#header{width:96%;margin:0 0 0 0;padding:6px 2% 6px 2%;font-family:"trebuchet MS", Verdana, sans-serif;color:#FFF;
+background-color:#555555;}
+#content{margin:0 0 0 2%;position:relative;}
+.content-container{background:#FFF;width:96%;margin-top:8px;padding:10px;position:relative;}
+-->
+</style>
+</head>
+<body>
+<div id="header"><h1>Server Error</h1></div>
+<div id="content">
+ <div class="content-container"><fieldset>
+  <h2>502 - Web server received an invalid response while acting as a gateway or proxy server.</h2>
+  <h3>There is a problem with the page you are looking for, and it cannot be displayed. When the Web server (while acting as a gateway or proxy) contacted the upstream content server, it received an invalid response from the content server.</h3>
+ </fieldset></div>
+</div>
+</body>
+</html>
+</textarea>
+ </div>
+</div>
+
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>10:58:39 AM</td>
+        <td>
+          validation for Status code has failled. expected 200  but got 502
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="9"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Create Application Policy holder</p>
+            <p class="text-sm">
+              <span>10:58:46 AM</span> / <span>00:00:01:602</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">Create Application Policy holder</h5>
+<span class='badge badge-success'>10.20.2021 10:58:46</span>
+<span class='badge badge-danger'>10.20.2021 10:58:48</span>
+<span class='badge badge-default'>00:00:01:602</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=9</span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>10:58:48 AM</td>
+        <td>
+          validation for Status code has failled. expected 200  but got 404
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:58:48 AM</td>
+        <td>
+          Find payload(Request) below
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:58:48 AM</td>
+        <td>
+           <div class='json-tree' id='code-block-json-9'></div>
+ <script>
+  function jsonTreeCreate9() { 
+   document.getElementById('code-block-json-9').innerHTML = JSONTree.create([
+  {
+    "title": "Dr",
+    "initials": "R",
+    "firstNames": "Randy",
+    "surname": "Vandham",
+    "maidenName": "",
+    "gender": "Male",
+    "birthDate": "1992-04-17T08:47:19.361Z",
+    "countryOfResidence": "South Africa",
+    "identities": [
+        {
+            "identityType": "NationalIdentityNumber",
+            "identityNumber": "9204175130086",
+            "issueCountry": "South Africa",
+            "issueDate": "2020-07-09T08:47:19.361Z",
+            "expiryDate": "2020-07-09T08:47:19.361Z",
+            "citizenshipCountry": "South Africa"
+        }
+    ],
+    "maritalStatus": "Single",
+    "contactNumbers": [
+        {
+            "contactType": "Mobile",
+            "contactNumber": "0720726932",
+            "countryCode": "27",
+            "extension": ""
+        }
+    ],
+    "addresses": [
+        {
+            "latitude": 0.4342132,
+            "longitude": 0.12214214,
+            "addressType": "Street",
+            "addressLine1": "Test",
+            "addressLine2": "10 Test Street",
+            "addressLine3": "Happy Land",
+            "suburb": "Happy Land",
+            "townCity": "Happy Town",
+            "provinceState": "Happy",
+            "country": "South Africa",
+            "postalZipCode": "1920"
+        }
+    ],
+    "emailAddress": "randy@gmail.com",
+    "partyType": "Person",
+    "rolePlayerType": "PolicyHolder",
+    "partyReference": "PWYYZZZPI",
+    "preferedCommunicationMethod": "Phone",
+    "marketingConsent": {
+      "hollardMarketingConsent": true,
+      "HollardMarketingAndPartnerConsent": true
+    },
+    "employmentDetails": {
+      "employmentStatus": "Employed",
+      "occupation": "Developer",
+      "employeeNumber": "HO1234",
+      "employerName": "Hollard",
+      "employerContactNumber": {
+        "contactType": "Mobile",
+        "contactNumber": "0720720722",
+        "countryCode": "27",
+        "extension": ""
+      }
+    },
+    "sourceOfIncome": "Salary",
+    "sourceOfWealth": "Savings",
+    "requirements": [
+      {
+        "requirementReason": "FICA",
+        "requirementType": "ProofOfIdentity"
+      }
+    ],
+    "verifications": [
+      {
+        "verificationType": "Identity",
+        "verified": true,
+        "source": {
+          "sourceName": "",
+          "sourceReference": "",
+          "sourceResult": ""
+        },
+        "note": ""
+      }
+    ],
+    "documents": [
+      {
+        "documentReference": "Test",
+        "documentType": "ProofOfIdentity",
+        "documentData": "Test24hskgiu3giugibehbioghv"
+      }
+    ]
+  }
+]); 
+  }
+  jsonTreeCreate9();
+ </script>
+
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:58:48 AM</td>
+        <td>
+          Find response below
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:58:48 AM</td>
+        <td>
+           <div class='json-tree' id='code-block-json-10'></div>
+ <script>
+  function jsonTreeCreate10() { 
+   document.getElementById('code-block-json-10').innerHTML = JSONTree.create({ "statusCode": 404, "message": "Resource not found" }); 
+  }
+  jsonTreeCreate10();
+ </script>
+
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="10"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Policy by Identity Number</p>
+            <p class="text-sm">
+              <span>10:58:48 AM</span> / <span>00:00:08:477</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">Policy by Identity Number</h5>
+<span class='badge badge-success'>10.20.2021 10:58:48</span>
+<span class='badge badge-danger'>10.20.2021 10:58:56</span>
+<span class='badge badge-default'>00:00:08:477</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=10</span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>10:58:56 AM</td>
+        <td>
+          validation for Status code has failled. expected 200  but got 404
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:58:56 AM</td>
+        <td>
+           <div class='json-tree' id='code-block-json-11'></div>
+ <script>
+  function jsonTreeCreate11() { 
+   document.getElementById('code-block-json-11').innerHTML = JSONTree.create({
+    "statusCode": 404,
+    "message": "Resource not found"
+}); 
+  }
+  jsonTreeCreate11();
+ </script>
+
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="11"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">ConfirmCollection</p>
+            <p class="text-sm">
+              <span>10:58:56 AM</span> / <span>00:00:23:062</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">ConfirmCollection</h5>
+<span class='badge badge-success'>10.20.2021 10:58:56</span>
+<span class='badge badge-danger'>10.20.2021 10:59:19</span>
+<span class='badge badge-default'>00:00:23:062</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=11</span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>10:59:08 AM</td>
+        <td>
+          validation for policyNumber has passed
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>10:59:08 AM</td>
+        <td>
+          validation for policyNumber has passed
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>10:59:08 AM</td>
+        <td>
+          validation for tenderType has passed
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:59:19 AM</td>
+        <td>
+          Find payload(Request) below
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:59:19 AM</td>
+        <td>
+           <div class='json-tree' id='code-block-json-12'></div>
+ <script>
+  function jsonTreeCreate12() { 
+   document.getElementById('code-block-json-12').innerHTML = JSONTree.create({
+"policyNumber": 1171113887792,
+"policyReference": 1171113887792,
+"collectionReference": "",
+"amount": 180.0,
+"tenderType": "Cash",
+"channel": {
+"type": "TillPoint",
+"tillNumber": "",
+"serialNumber": "",
+"transactionIdentity": "",
+"messageIdentity": "",
+"networkTransactionIdentity": "",
+				   
+"vendor": "PayAt",
+	  
+"channelType": "TillPoint",
+"channelLocation": "",
+"channelReference": ""
+},
+"source": {
+"sourceName": "Pay@",
+"sourceReference": ""
+},
+"status": "None",
+"message": ""
+}); 
+  }
+  jsonTreeCreate12();
+ </script>
+
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:59:19 AM</td>
+        <td>
+          Find response below
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:59:19 AM</td>
+        <td>
+           <div class='json-tree' id='code-block-json-13'></div>
+ <script>
+  function jsonTreeCreate13() { 
+   document.getElementById('code-block-json-13').innerHTML = JSONTree.create({"policyNumber":"13887792","policyReference":"1171113887792","collectionReference":"8b1979a1-8888-441c-8632-3ab08a2f0de6","amount":180.0,"tenderType":"Cash","channel":{"collectionVendorReference":null,"tillNumber":"","serialNumber":"","transactionIdentity":"","messageIdentity":"","networkTransactionIdentity":"","vendor":"PayAt","channelType":"TillPoint","channelLocation":"","channelLocationName":null,"channelReference":""},"source":{"sourceName":"Pay@","sourceReference":""},"status":"New","message":""}); 
+  }
+  jsonTreeCreate13();
+ </script>
+
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="12"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Create Application Beneficiaries</p>
+            <p class="text-sm">
+              <span>10:59:19 AM</span> / <span>00:00:07:122</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">Create Application Beneficiaries</h5>
+<span class='badge badge-success'>10.20.2021 10:59:19</span>
+<span class='badge badge-danger'>10.20.2021 10:59:26</span>
+<span class='badge badge-default'>00:00:07:122</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=12</span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>10:59:26 AM</td>
+        <td>
+          validation for Status code has failled. expected 200  but got 404
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="13"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Create Application Premium Collection</p>
+            <p class="text-sm">
+              <span>10:59:26 AM</span> / <span>00:00:08:850</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">Create Application Premium Collection</h5>
+<span class='badge badge-success'>10.20.2021 10:59:26</span>
+<span class='badge badge-danger'>10.20.2021 10:59:35</span>
+<span class='badge badge-default'>00:00:08:850</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=13</span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>10:59:35 AM</td>
+        <td>
+          validation for Status code has failled. expected 200  but got 404
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="14"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Documents by Policy Reference</p>
+            <p class="text-sm">
+              <span>10:59:35 AM</span> / <span>00:00:09:177</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">Documents by Policy Reference</h5>
+<span class='badge badge-success'>10.20.2021 10:59:35</span>
+<span class='badge badge-danger'>10.20.2021 10:59:44</span>
+<span class='badge badge-default'>00:00:09:177</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=14</span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>10:59:44 AM</td>
+        <td>
+          validation for Status code has failled. expected 200  but got 404
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:59:44 AM</td>
+        <td>
+           <div class='json-tree' id='code-block-json-14'></div>
+ <script>
+  function jsonTreeCreate14() { 
+   document.getElementById('code-block-json-14').innerHTML = JSONTree.create({
+    "statusCode": 404,
+    "message": "Resource not found"
+}); 
+  }
+  jsonTreeCreate14();
+ </script>
+
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="15"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">CancelCollection</p>
+            <p class="text-sm">
+              <span>10:59:44 AM</span> / <span>00:00:14:249</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">CancelCollection</h5>
+<span class='badge badge-success'>10.20.2021 10:59:44</span>
+<span class='badge badge-danger'>10.20.2021 10:59:59</span>
+<span class='badge badge-default'>00:00:14:249</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=15</span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>10:59:59 AM</td>
+        <td>
+          validation for policyNumber has passed
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>10:59:59 AM</td>
+        <td>
+          validation for policyNumber has passed
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>10:59:59 AM</td>
+        <td>
+          validation for tenderType has passed
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:59:59 AM</td>
+        <td>
+          Find payload(Request) below
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:59:59 AM</td>
+        <td>
+           <div class='json-tree' id='code-block-json-15'></div>
+ <script>
+  function jsonTreeCreate15() { 
+   document.getElementById('code-block-json-15').innerHTML = JSONTree.create({
+  "policyNumber": "50000043",
+  "collectionReference": "ref123",
+  "channel": {
+    "tillNumber": "till",
+    "serialNumber": "serial",
+    "transactionIdentity": "transid",
+    "messageIdentity": "id",
+    "networkTransactionIdentity": "network",
+    "vendorType": {
+      "paymentSources": "PayAt"
+    },
+    "channelType": "TillPoint",
+    "channelLocation": "location",
+    "channelReference": "reference"
+  },
+  "amount": 319,
+  "status": "None",
+  "message": "message"
+}); 
+  }
+  jsonTreeCreate15();
+ </script>
+
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:59:59 AM</td>
+        <td>
+          Find response below
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:59:59 AM</td>
+        <td>
+           <div class='json-tree' id='code-block-json-16'></div>
+ <script>
+  function jsonTreeCreate16() { 
+   document.getElementById('code-block-json-16').innerHTML = JSONTree.create({"policyNumber":"13887792","policyReference":"1171113887792","collectionReference":"ffb62e65-3e71-4059-9987-32ba0cd395e5","amount":180.0,"tenderType":"Cash","channel":{"collectionVendorReference":null,"tillNumber":"","serialNumber":"","transactionIdentity":"","messageIdentity":"","networkTransactionIdentity":"","vendor":"PayAt","channelType":"TillPoint","channelLocation":"","channelLocationName":null,"channelReference":""},"source":{"sourceName":"Pay@","sourceReference":""},"status":"New","message":""}); 
+  }
+  jsonTreeCreate16();
+ </script>
+
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="16"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Create Application Status</p>
+            <p class="text-sm">
+              <span>10:59:59 AM</span> / <span>00:00:03:660</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">Create Application Status</h5>
+<span class='badge badge-success'>10.20.2021 10:59:59</span>
+<span class='badge badge-danger'>10.20.2021 11:00:02</span>
+<span class='badge badge-default'>00:00:03:660</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=16</span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>11:00:02 AM</td>
+        <td>
+          validation for Status code has failled. expected 200  but got 404
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:00:02 AM</td>
+        <td>
+          Find payload(Request) below
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:00:02 AM</td>
+        <td>
+           <div class='json-tree' id='code-block-json-17'></div>
+ <script>
+  function jsonTreeCreate17() { 
+   document.getElementById('code-block-json-17').innerHTML = JSONTree.create("New"); 
+  }
+  jsonTreeCreate17();
+ </script>
+
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:00:02 AM</td>
+        <td>
+          Find response below
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:00:02 AM</td>
+        <td>
+           <div class='json-tree' id='code-block-json-18'></div>
+ <script>
+  function jsonTreeCreate18() { 
+   document.getElementById('code-block-json-18').innerHTML = JSONTree.create({ "statusCode": 404, "message": "Resource not found" }); 
+  }
+  jsonTreeCreate18();
+ </script>
+
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="17"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Update Bank Account And Debit Day</p>
+            <p class="text-sm">
+              <span>11:00:02 AM</span> / <span>00:00:01:571</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">Update Bank Account And Debit Day</h5>
+<span class='badge badge-success'>10.20.2021 11:00:02</span>
+<span class='badge badge-danger'>10.20.2021 11:00:04</span>
+<span class='badge badge-default'>00:00:01:571</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=17</span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>11:00:04 AM</td>
+        <td>
+          validation for Status code has failled. expected 200  but got 404
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:00:04 AM</td>
+        <td>
+          Find payload(Request) below
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:00:04 AM</td>
+        <td>
+           <div class='json-tree' id='code-block-json-19'></div>
+ <script>
+  function jsonTreeCreate19() { 
+   document.getElementById('code-block-json-19').innerHTML = JSONTree.create({
+    "$type": "DebitOrder",
+    "bankAccount": {
+        "accountHolderName": "ZenziDlangamandla",
+        "accountType": "Cheque",
+        "bankName": "TymeBank",
+        "branchCode": "678910",
+        "accountNumber": "51024594455"
+    },
+    "debitDay": "18",
+    "collectionMethod": "DebitOrder",
+    "policyPayer": {
+        "$type": "PolicyPayer",
+        "preferedCommunicationMethod": "None",
+        "addresses": [],
+        "emailAddress": "Testcase@Gmail.Com",
+        "language": "None",
+        "sourceOfIncome": "None",
+        "sourceOfWealth": "None",
+        "countryOfResidence": "None",
+        "requirements": [],
+        "verifications": [],
+        "documents": [],
+        "title": "None",
+        "initials": "Z",
+        "firstNames": "Zenzi",
+        "surname": "Dlangamandla",
+        "gender": "None",
+        "birthDate": "1984-12-26T00:00:00+00:00",
+        "identities": [
+            {
+                "identityType": "NationalIdentityNumber",
+                "identityNumber": "8412260245088",
+                "issueCountry": "None",
+                "citizenshipCountry": "SouthAfrica"
+            }
+        ],
+        "maritalStatus": "None",
+        "contactNumbers": [
+            {
+                "contactType": "Mobile",
+                "contactNumber": "0820720777",
+                "countryCode": "27"
+            }
+        ],
+        "partyType": "Person",
+        "rolePlayerType": "PolicyPayer",
+        "partyReference": "C1EA9C65-CD0B-4534-8AF3-AC3A009190A0"
+    }
+}); 
+  }
+  jsonTreeCreate19();
+ </script>
+
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:00:04 AM</td>
+        <td>
+          Find response below
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:00:04 AM</td>
+        <td>
+           <div class='json-tree' id='code-block-json-20'></div>
+ <script>
+  function jsonTreeCreate20() { 
+   document.getElementById('code-block-json-20').innerHTML = JSONTree.create({
+    "statusCode": 404,
+    "message": "Resource not found"
+}); 
+  }
+  jsonTreeCreate20();
+ </script>
+
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="18"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Create Application Acceptance</p>
+            <p class="text-sm">
+              <span>11:00:04 AM</span> / <span>00:00:01:375</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">Create Application Acceptance</h5>
+<span class='badge badge-success'>10.20.2021 11:00:04</span>
+<span class='badge badge-danger'>10.20.2021 11:00:05</span>
+<span class='badge badge-default'>00:00:01:375</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=18</span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>11:00:05 AM</td>
+        <td>
+          validation for Status code has failled. expected 200  but got 404
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:00:05 AM</td>
+        <td>
+          Find payload(Request) below
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:00:05 AM</td>
+        <td>
+           <div class='json-tree' id='code-block-json-21'></div>
+ <script>
+  function jsonTreeCreate21() { 
+   document.getElementById('code-block-json-21').innerHTML = JSONTree.create({
+  "sourceReference": "T00005100",
+  "campaignCode": "60200000",
+  "productCode": "60200000",
+  "policyHolders": [
+    {
+      "preferedCommunicationMethod": "Phone",
+      "initials": "RY",
+      "firstNames": "RANDY",
+      "surname": "RAYMOND",
+      "gender": "Male",
+      "birthDate": "1991-05-05T08:47:19.361Z",
+      "countryOfResidence": "South Africa",
+      "identities": [
+        {
+          "identityType": "NationalIdentityNumber",
+          "identityNumber": "9105055913089",
+          "issueCountry": "South Africa",
+          "issueDate": "2020-07-09T08:47:19.361Z",
+          "expiryDate": "2020-07-09T08:47:19.361Z",
+          "citizenshipCountry": "South Africa"
+        }
+      ],
+      "contactNumbers": [
+        {
+          "contactType": "Mobile",
+          "contactNumber": "0720726932",
+          "countryCode": "27",
+          "extension": null
+        }
+      ],
+      "emailAddress": "randy@gmail.com",
+      "partyType": "Person",
+      "rolePlayerType": "PolicyHolder"
+    }
+  ],
+    "channel": {
+      "channelType": "Kiosk",
+      "channelLocation": "Latitude: 10.8006252, Longitude: 106.705828",
+      "channelLocationName": "Tyme",
+      "channelReference": "TymeTest",
+      "deviceSerialNumber": "352222081992046"
+    }
+}); 
+  }
+  jsonTreeCreate21();
+ </script>
+
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:00:05 AM</td>
+        <td>
+          Find response below
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:00:05 AM</td>
+        <td>
+           <div class='json-tree' id='code-block-json-22'></div>
+ <script>
+  function jsonTreeCreate22() { 
+   document.getElementById('code-block-json-22').innerHTML = JSONTree.create({
+    "statusCode": 404,
+    "message": "Resource not found"
+}); 
+  }
+  jsonTreeCreate22();
+ </script>
+
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="19"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">TEST Policy Holder Update</p>
+            <p class="text-sm">
+              <span>11:00:05 AM</span> / <span>00:00:01:298</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">TEST Policy Holder Update</h5>
+<span class='badge badge-success'>10.20.2021 11:00:05</span>
+<span class='badge badge-danger'>10.20.2021 11:00:07</span>
+<span class='badge badge-default'>00:00:01:298</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=19</span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>11:00:07 AM</td>
+        <td>
+          validation for Status code has failled. expected 200  but got 404
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:00:07 AM</td>
+        <td>
+          Find payload(Request) below
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:00:07 AM</td>
+        <td>
+           <div class='json-tree' id='code-block-json-23'></div>
+ <script>
+  function jsonTreeCreate23() { 
+   document.getElementById('code-block-json-23').innerHTML = JSONTree.create({
+    "preferedCommunicationMethod": "None",
+    "addresses": [
+        {
+            "addressType": "Street",
+            "addressLine1": "21 Jump Street, Eikenhof, Johanneburg, Gauteng, 1818",
+            "addressLine2": null,
+            "addressLine3": null,
+            "suburb": null,
+            "townCity": null,
+            "provinceState": null,
+            "country": "None",
+            "postalZipCode": null
+        }
+    ],
+    "emailAddress": "postman@Gmail.Com",
+    "language": "None",
+    "marketingConsent": null,
+    "policyReplacement": null,
+    "employmentDetails": null,
+    "sourceOfIncome": "None",
+    "sourceOfIncomeOther": null,
+    "sourceOfWealth": "None",
+    "sourceOfWealthOther": null,
+    "countryOfResidence": "None",
+    "requirements": [],
+    "verifications": [],
+    "documents": [],
+    "title": "None",
+    "initials": null,
+    "firstNames": "ZENZI",
+    "surname": "DLANGAMANDLA",
+    "maidenName": null,
+    "gender": "None",
+    "birthDate": "1984-12-26T00:00:00+00:00",
+    "identities": [
+        {
+            "identityType": "NationalIdentityNumber",
+            "identityNumber": "8412260245088",
+            "issueCountry": "None",
+            "issueDate": null,
+            "expiryDate": null,
+            "citizenshipCountry": "SouthAfrica"
+        }
+    ],
+    "maritalStatus": "None",
+    "contactNumbers": [
+        {
+            "contactType": "Mobile",
+            "contactNumber": "0720720722",
+            "countryCode": "27",
+            "extension": null
+        }
+    ],
+    "partyType": "Person",
+    "rolePlayerType": "PolicyHolder",
+    "partyReference": "C1EA9C65-CD0B-4534-8AF3-AC3A009190A0"
+}); 
+  }
+  jsonTreeCreate23();
+ </script>
+
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:00:07 AM</td>
+        <td>
+          Find response below
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:00:07 AM</td>
+        <td>
+           <div class='json-tree' id='code-block-json-24'></div>
+ <script>
+  function jsonTreeCreate24() { 
+   document.getElementById('code-block-json-24').innerHTML = JSONTree.create({
+    "statusCode": 404,
+    "message": "Resource not found"
+}); 
+  }
+  jsonTreeCreate24();
+ </script>
+
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="20"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">PersonPassportNumberValid</p>
+            <p class="text-sm">
+              <span>11:00:07 AM</span> / <span>00:00:02:730</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">PersonPassportNumberValid</h5>
+<span class='badge badge-success'>10.20.2021 11:00:07</span>
+<span class='badge badge-danger'>10.20.2021 11:00:09</span>
+<span class='badge badge-default'>00:00:02:730</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=20</span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:00:09 AM</td>
+        <td>
+          <div class='row'>
+ <div class='col-md-12'>
+  <textarea readonly class='code-block'><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+<title>502 - Web server received an invalid response while acting as a gateway or proxy server.</title>
+<style type="text/css">
+<!--
+body{margin:0;font-size:.7em;font-family:Verdana, Arial, Helvetica, sans-serif;background:#EEEEEE;}
+fieldset{padding:0 15px 10px 15px;} 
+h1{font-size:2.4em;margin:0;color:#FFF;}
+h2{font-size:1.7em;margin:0;color:#CC0000;} 
+h3{font-size:1.2em;margin:10px 0 0 0;color:#000000;} 
+#header{width:96%;margin:0 0 0 0;padding:6px 2% 6px 2%;font-family:"trebuchet MS", Verdana, sans-serif;color:#FFF;
+background-color:#555555;}
+#content{margin:0 0 0 2%;position:relative;}
+.content-container{background:#FFF;width:96%;margin-top:8px;padding:10px;position:relative;}
+-->
+</style>
+</head>
+<body>
+<div id="header"><h1>Server Error</h1></div>
+<div id="content">
+ <div class="content-container"><fieldset>
+  <h2>502 - Web server received an invalid response while acting as a gateway or proxy server.</h2>
+  <h3>There is a problem with the page you are looking for, and it cannot be displayed. When the Web server (while acting as a gateway or proxy) contacted the upstream content server, it received an invalid response from the content server.</h3>
+ </fieldset></div>
+</div>
+</body>
+</html>
+</textarea>
+ </div>
+</div>
+
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>11:00:09 AM</td>
+        <td>
+          validation for Status code has failled. expected 200  but got 502
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="21"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Get Application</p>
+            <p class="text-sm">
+              <span>11:00:12 AM</span> / <span>00:00:05:449</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">Get Application</h5>
+<span class='badge badge-success'>10.20.2021 11:00:12</span>
+<span class='badge badge-danger'>10.20.2021 11:00:18</span>
+<span class='badge badge-default'>00:00:05:449</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=21</span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>11:00:18 AM</td>
+        <td>
+          validation for Status code has failled. expected 200  but got 404
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="22"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Update Policy Holder</p>
+            <p class="text-sm">
+              <span>11:00:18 AM</span> / <span>00:00:04:880</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">Update Policy Holder</h5>
+<span class='badge badge-success'>10.20.2021 11:00:18</span>
+<span class='badge badge-danger'>10.20.2021 11:00:22</span>
+<span class='badge badge-default'>00:00:04:880</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=22</span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>11:00:22 AM</td>
+        <td>
+          validation for Status code has failled. expected 200  but got 404
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:00:22 AM</td>
+        <td>
+          Find payload(Request) below
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:00:22 AM</td>
+        <td>
+           <div class='json-tree' id='code-block-json-25'></div>
+ <script>
+  function jsonTreeCreate25() { 
+   document.getElementById('code-block-json-25').innerHTML = JSONTree.create({
+    "$type": "PolicyHolder",
+    "preferedCommunicationMethod": "None",
+    "addresses": [
+        {
+            "$type": "Address",
+            "addressType": "Street",
+            "addressLine1": "21 Jump Street",
+            "addressLine2": null,
+            "addressLine3": null,
+            "suburb": "Eikenhof",
+            "townCity": "Johanneburg",
+            "provinceState": "Gauteng",
+            "country": "None",
+            "postalZipCode": 1818
+        }
+    ],
+    "emailAddress": "testman@gmail.com",
+    "language": "None",
+    "marketingConsent": null,
+    "policyReplacement": null,
+    "employmentDetails": null,
+    "sourceOfIncome": "None",
+    "sourceOfIncomeOther": null,
+    "sourceOfWealth": "None",
+    "sourceOfWealthOther": null,
+    "countryOfResidence": "None",
+    "requirements": [],
+    "verifications": [],
+    "documents": [],
+    "title": "None",
+    "initials": null,
+    "firstNames": "ZENZI",
+    "surname": "DLANGAMANDLA",
+    "maidenName": null,
+    "gender": "None",
+    "birthDate": "1984-12-26T00:00:00+00:00",
+    "identities": [
+        {
+            "identityType": "NationalIdentityNumber",
+            "identityNumber": "8412260245088",
+            "issueCountry": "None",
+            "issueDate": null,
+            "expiryDate": null,
+            "citizenshipCountry": "SouthAfrica"
+        }
+    ],
+    "maritalStatus": "None",
+    "contactNumbers": [
+        {
+            "contactType": "Mobile",
+            "contactNumber": "0720720000",
+            "countryCode": "27",
+            "extension": null
+        }
+    ],
+    "partyType": "Person",
+    "rolePlayerType": "PolicyHolder",
+    "partyReference": "C1EA9C65-CD0B-4534-8AF3-AC3A009190A0"
+}); 
+  }
+  jsonTreeCreate25();
+ </script>
+
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:00:22 AM</td>
+        <td>
+          Find response below
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:00:22 AM</td>
+        <td>
+           <div class='json-tree' id='code-block-json-26'></div>
+ <script>
+  function jsonTreeCreate26() { 
+   document.getElementById('code-block-json-26').innerHTML = JSONTree.create({ "statusCode": 404, "message": "Resource not found" }); 
+  }
+  jsonTreeCreate26();
+ </script>
+
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="23"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">ValidatePersonTest</p>
+            <p class="text-sm">
+              <span>11:00:22 AM</span> / <span>00:00:04:824</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">ValidatePersonTest</h5>
+<span class='badge badge-success'>10.20.2021 11:00:22</span>
+<span class='badge badge-danger'>10.20.2021 11:00:27</span>
+<span class='badge badge-default'>00:00:04:824</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=23</span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:00:27 AM</td>
+        <td>
+          <div class='row'>
+ <div class='col-md-12'>
+  <textarea readonly class='code-block'><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+<title>502 - Web server received an invalid response while acting as a gateway or proxy server.</title>
+<style type="text/css">
+<!--
+body{margin:0;font-size:.7em;font-family:Verdana, Arial, Helvetica, sans-serif;background:#EEEEEE;}
+fieldset{padding:0 15px 10px 15px;} 
+h1{font-size:2.4em;margin:0;color:#FFF;}
+h2{font-size:1.7em;margin:0;color:#CC0000;} 
+h3{font-size:1.2em;margin:10px 0 0 0;color:#000000;} 
+#header{width:96%;margin:0 0 0 0;padding:6px 2% 6px 2%;font-family:"trebuchet MS", Verdana, sans-serif;color:#FFF;
+background-color:#555555;}
+#content{margin:0 0 0 2%;position:relative;}
+.content-container{background:#FFF;width:96%;margin-top:8px;padding:10px;position:relative;}
+-->
+</style>
+</head>
+<body>
+<div id="header"><h1>Server Error</h1></div>
+<div id="content">
+ <div class="content-container"><fieldset>
+  <h2>502 - Web server received an invalid response while acting as a gateway or proxy server.</h2>
+  <h3>There is a problem with the page you are looking for, and it cannot be displayed. When the Web server (while acting as a gateway or proxy) contacted the upstream content server, it received an invalid response from the content server.</h3>
+ </fieldset></div>
+</div>
+</body>
+</html>
+</textarea>
+ </div>
+</div>
+
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>11:00:27 AM</td>
+        <td>
+          validation for Status code has failled. expected 200  but got 502
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="24"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Change Beneficiaries</p>
+            <p class="text-sm">
+              <span>11:00:31 AM</span> / <span>00:00:01:307</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">Change Beneficiaries</h5>
+<span class='badge badge-success'>10.20.2021 11:00:31</span>
+<span class='badge badge-danger'>10.20.2021 11:00:32</span>
+<span class='badge badge-default'>00:00:01:307</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=24</span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>11:00:32 AM</td>
+        <td>
+          validation for Status code has failled. expected 200  but got 404
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:00:32 AM</td>
+        <td>
+          Find payload(Request) below
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:00:32 AM</td>
+        <td>
+           <div class='json-tree' id='code-block-json-27'></div>
+ <script>
+  function jsonTreeCreate27() { 
+   document.getElementById('code-block-json-27').innerHTML = JSONTree.create(
+{
+    "personBeneficiaries": [
+        {
+            "$type": "Beneficiary",
+            "percentageShare": 100,
+            "title": "Mr",
+            "initials": "R",
+            "firstNames": "DANIEL",
+            "surname": "BENNETT",
+            "birthDate": "1989-11-11T00:00:00+00:00",
+            "identities": [
+                {
+                    "identityType": "NationalIdentityNumber",
+                    "identityNumber": "8911115071086"
+                }
+            ],
+            "contactNumbers": [
+                {
+                    "contactType": "Mobile",
+                    "contactNumber": "0739455362",
+                    "countryCode": "27"
+                }
+            ],
+            "partyType": "Person",
+            "rolePlayerType": "Beneficiary"
+        }
+    ]
+}
+); 
+  }
+  jsonTreeCreate27();
+ </script>
+
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:00:32 AM</td>
+        <td>
+          Find response below
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:00:32 AM</td>
+        <td>
+           <div class='json-tree' id='code-block-json-28'></div>
+ <script>
+  function jsonTreeCreate28() { 
+   document.getElementById('code-block-json-28').innerHTML = JSONTree.create({
+    "statusCode": 404,
+    "message": "Resource not found"
+}); 
+  }
+  jsonTreeCreate28();
+ </script>
+
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="25"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Qualification Product 1960</p>
+            <p class="text-sm">
+              <span>11:00:32 AM</span> / <span>00:00:01:478</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">Qualification Product 1960</h5>
+<span class='badge badge-success'>10.20.2021 11:00:32</span>
+<span class='badge badge-danger'>10.20.2021 11:00:33</span>
+<span class='badge badge-default'>00:00:01:478</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=25</span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:00:33 AM</td>
+        <td>
+          validation for Status code has passed
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:00:33 AM</td>
+        <td>
+          Find payload(Request) below
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:00:33 AM</td>
+        <td>
+           <div class='json-tree' id='code-block-json-29'></div>
+ <script>
+  function jsonTreeCreate29() { 
+   document.getElementById('code-block-json-29').innerHTML = JSONTree.create({
+    "IdentityNumber": "9104049687081",
+    "FirstNames": "Simon Stones",
+    "Surname": "Lee",
+    "ProductCode": "1960",
+    "Channel": {
+        "ChannelType": "Kiosk",
+        "ChannelLocation": "Braamfontein",
+        "ChannelLocationName": "Braamfontein",
+        "ChannelReference": "XJK3232",
+        "DeviceSerialNumber":"TestDevice"
+    }
+}); 
+  }
+  jsonTreeCreate29();
+ </script>
+
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:00:33 AM</td>
+        <td>
+          Find response below
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:00:33 AM</td>
+        <td>
+           <div class='json-tree' id='code-block-json-30'></div>
+ <script>
+  function jsonTreeCreate30() { 
+   document.getElementById('code-block-json-30').innerHTML = JSONTree.create({
+    "productCode": "1960",
+    "qualificationReference": "NOU8FCME",
+    "qualificationResult": false,
+    "rejectionReason": null,
+    "policyList": {
+        "policy": []
+    }
+}); 
+  }
+  jsonTreeCreate30();
+ </script>
+
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="26"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">ValidatePersonVeryHigh</p>
+            <p class="text-sm">
+              <span>11:00:33 AM</span> / <span>00:00:05:467</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">ValidatePersonVeryHigh</h5>
+<span class='badge badge-success'>10.20.2021 11:00:33</span>
+<span class='badge badge-danger'>10.20.2021 11:00:39</span>
+<span class='badge badge-default'>00:00:05:467</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=26</span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:00:39 AM</td>
+        <td>
+          <div class='row'>
+ <div class='col-md-12'>
+  <textarea readonly class='code-block'><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+<title>502 - Web server received an invalid response while acting as a gateway or proxy server.</title>
+<style type="text/css">
+<!--
+body{margin:0;font-size:.7em;font-family:Verdana, Arial, Helvetica, sans-serif;background:#EEEEEE;}
+fieldset{padding:0 15px 10px 15px;} 
+h1{font-size:2.4em;margin:0;color:#FFF;}
+h2{font-size:1.7em;margin:0;color:#CC0000;} 
+h3{font-size:1.2em;margin:10px 0 0 0;color:#000000;} 
+#header{width:96%;margin:0 0 0 0;padding:6px 2% 6px 2%;font-family:"trebuchet MS", Verdana, sans-serif;color:#FFF;
+background-color:#555555;}
+#content{margin:0 0 0 2%;position:relative;}
+.content-container{background:#FFF;width:96%;margin-top:8px;padding:10px;position:relative;}
+-->
+</style>
+</head>
+<body>
+<div id="header"><h1>Server Error</h1></div>
+<div id="content">
+ <div class="content-container"><fieldset>
+  <h2>502 - Web server received an invalid response while acting as a gateway or proxy server.</h2>
+  <h3>There is a problem with the page you are looking for, and it cannot be displayed. When the Web server (while acting as a gateway or proxy) contacted the upstream content server, it received an invalid response from the content server.</h3>
+ </fieldset></div>
+</div>
+</body>
+</html>
+</textarea>
+ </div>
+</div>
+
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>11:00:39 AM</td>
+        <td>
+          validation for Status code has failled. expected 200  but got 502
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="27"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Qualification Produc t60200000</p>
+            <p class="text-sm">
+              <span>11:00:47 AM</span> / <span>00:00:04:382</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">Qualification Produc t60200000</h5>
+<span class='badge badge-success'>10.20.2021 11:00:47</span>
+<span class='badge badge-danger'>10.20.2021 11:00:52</span>
+<span class='badge badge-default'>00:00:04:382</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=27</span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>11:00:52 AM</td>
+        <td>
+          validation for Status code has failled. expected 200  but got 404
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="28"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Upload document</p>
+            <p class="text-sm">
+              <span>11:00:52 AM</span> / <span>00:00:02:918</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">Upload document</h5>
+<span class='badge badge-success'>10.20.2021 11:00:52</span>
+<span class='badge badge-danger'>10.20.2021 11:00:55</span>
+<span class='badge badge-default'>00:00:02:918</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=28</span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>11:00:55 AM</td>
+        <td>
+          validation for Status code has failled. expected 200  but got 404
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:00:55 AM</td>
+        <td>
+          Find payload(Request) below
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:00:55 AM</td>
+        <td>
+           <div class='json-tree' id='code-block-json-31'></div>
+ <script>
+  function jsonTreeCreate31() { 
+   document.getElementById('code-block-json-31').innerHTML = JSONTree.create({
+  "documentReference": "Postman1234SIT",
+  "documentName": "Application1234Postman",
+  "documentDescription": "This is a test via postman in SIT",
+  "documentFormat": "Html",
+  "documentType": "PolicyDocument",
+  "otherDocumentType": null,
+  "documentData": "JVBERi0xLjUKJeLjz9MKNSAwIG9iago8PC9GaWx0ZXIvRmxhdGVEZWNvZGUvTGVuZ3RoIDMzMDg+PnN0cmVhbQp4nL1cWY8bxxFugG/0g6XIsmVZAQhIWa2sFXd6+pih4adgd8mVNt57qYN6SGxLcBDZiAMkfz9V1XPUUGKzmsPEa5HTPUd1f3VX9/Cfwz9fDY0flZkfXf00PLwang/z0XPs1aMM",
+  "documentDate": "2021-05-12T09:01:24.809Z"
+}); 
+  }
+  jsonTreeCreate31();
+ </script>
+
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:00:55 AM</td>
+        <td>
+          Find response below
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:00:55 AM</td>
+        <td>
+           <div class='json-tree' id='code-block-json-32'></div>
+ <script>
+  function jsonTreeCreate32() { 
+   document.getElementById('code-block-json-32').innerHTML = JSONTree.create({
+    "statusCode": 404,
+    "message": "Resource not found"
+}); 
+  }
+  jsonTreeCreate32();
+ </script>
+
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="29"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">ValidateOrganisation</p>
+            <p class="text-sm">
+              <span>11:00:55 AM</span> / <span>00:00:02:731</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">ValidateOrganisation</h5>
+<span class='badge badge-success'>10.20.2021 11:00:55</span>
+<span class='badge badge-danger'>10.20.2021 11:00:57</span>
+<span class='badge badge-default'>00:00:02:731</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=29</span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:00:57 AM</td>
+        <td>
+          <div class='row'>
+ <div class='col-md-12'>
+  <textarea readonly class='code-block'><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+<title>502 - Web server received an invalid response while acting as a gateway or proxy server.</title>
+<style type="text/css">
+<!--
+body{margin:0;font-size:.7em;font-family:Verdana, Arial, Helvetica, sans-serif;background:#EEEEEE;}
+fieldset{padding:0 15px 10px 15px;} 
+h1{font-size:2.4em;margin:0;color:#FFF;}
+h2{font-size:1.7em;margin:0;color:#CC0000;} 
+h3{font-size:1.2em;margin:10px 0 0 0;color:#000000;} 
+#header{width:96%;margin:0 0 0 0;padding:6px 2% 6px 2%;font-family:"trebuchet MS", Verdana, sans-serif;color:#FFF;
+background-color:#555555;}
+#content{margin:0 0 0 2%;position:relative;}
+.content-container{background:#FFF;width:96%;margin-top:8px;padding:10px;position:relative;}
+-->
+</style>
+</head>
+<body>
+<div id="header"><h1>Server Error</h1></div>
+<div id="content">
+ <div class="content-container"><fieldset>
+  <h2>502 - Web server received an invalid response while acting as a gateway or proxy server.</h2>
+  <h3>There is a problem with the page you are looking for, and it cannot be displayed. When the Web server (while acting as a gateway or proxy) contacted the upstream content server, it received an invalid response from the content server.</h3>
+ </fieldset></div>
+</div>
+</body>
+</html>
+</textarea>
+ </div>
+</div>
+
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>11:00:57 AM</td>
+        <td>
+          validation for Status code has failled. expected 200  but got 502
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="30"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Qualification Product 60100000</p>
+            <p class="text-sm">
+              <span>11:01:01 AM</span> / <span>00:00:03:915</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">Qualification Product 60100000</h5>
+<span class='badge badge-success'>10.20.2021 11:01:01</span>
+<span class='badge badge-danger'>10.20.2021 11:01:05</span>
+<span class='badge badge-default'>00:00:03:915</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=30</span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>11:01:05 AM</td>
+        <td>
+          validation for Status code has failled. expected 200  but got 404
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="31"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">ScreenAndVerifyPartyPerson</p>
+            <p class="text-sm">
+              <span>11:01:05 AM</span> / <span>00:00:04:364</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">ScreenAndVerifyPartyPerson</h5>
+<span class='badge badge-success'>10.20.2021 11:01:05</span>
+<span class='badge badge-danger'>10.20.2021 11:01:10</span>
+<span class='badge badge-default'>00:00:04:364</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=31</span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:01:10 AM</td>
+        <td>
+          <div class='row'>
+ <div class='col-md-12'>
+  <textarea readonly class='code-block'><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+<title>502 - Web server received an invalid response while acting as a gateway or proxy server.</title>
+<style type="text/css">
+<!--
+body{margin:0;font-size:.7em;font-family:Verdana, Arial, Helvetica, sans-serif;background:#EEEEEE;}
+fieldset{padding:0 15px 10px 15px;} 
+h1{font-size:2.4em;margin:0;color:#FFF;}
+h2{font-size:1.7em;margin:0;color:#CC0000;} 
+h3{font-size:1.2em;margin:10px 0 0 0;color:#000000;} 
+#header{width:96%;margin:0 0 0 0;padding:6px 2% 6px 2%;font-family:"trebuchet MS", Verdana, sans-serif;color:#FFF;
+background-color:#555555;}
+#content{margin:0 0 0 2%;position:relative;}
+.content-container{background:#FFF;width:96%;margin-top:8px;padding:10px;position:relative;}
+-->
+</style>
+</head>
+<body>
+<div id="header"><h1>Server Error</h1></div>
+<div id="content">
+ <div class="content-container"><fieldset>
+  <h2>502 - Web server received an invalid response while acting as a gateway or proxy server.</h2>
+  <h3>There is a problem with the page you are looking for, and it cannot be displayed. When the Web server (while acting as a gateway or proxy) contacted the upstream content server, it received an invalid response from the content server.</h3>
+ </fieldset></div>
+</div>
+</body>
+</html>
+</textarea>
+ </div>
+</div>
+
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>11:01:10 AM</td>
+        <td>
+          validation for Status code has failled. expected 200  but got 502
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="32"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Qualification Product 60200001 Negetive Test</p>
+            <p class="text-sm">
+              <span>11:01:17 AM</span> / <span>00:00:05:330</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">Qualification Product 60200001 Negetive Test</h5>
+<span class='badge badge-success'>10.20.2021 11:01:17</span>
+<span class='badge badge-danger'>10.20.2021 11:01:22</span>
+<span class='badge badge-default'>00:00:05:330</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=32</span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>11:01:22 AM</td>
+        <td>
+          validation for Status code has failled. expected 200  but got 404
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="33"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Qualification Product 60100001 Negetive Test</p>
+            <p class="text-sm">
+              <span>11:01:22 AM</span> / <span>00:00:01:354</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">Qualification Product 60100001 Negetive Test</h5>
+<span class='badge badge-success'>10.20.2021 11:01:22</span>
+<span class='badge badge-danger'>10.20.2021 11:01:23</span>
+<span class='badge badge-default'>00:00:01:354</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=33</span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>11:01:23 AM</td>
+        <td>
+          validation for Status code has failled. expected 200  but got 404
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="34"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Rates</p>
+            <p class="text-sm">
+              <span>11:01:23 AM</span> / <span>00:00:03:100</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">Rates</h5>
+<span class='badge badge-success'>10.20.2021 11:01:23</span>
+<span class='badge badge-danger'>10.20.2021 11:01:27</span>
+<span class='badge badge-default'>00:00:03:100</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=34</span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>11:01:27 AM</td>
+        <td>
+          validation for Status code has failled. expected 200  but got 404
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:01:27 AM</td>
+        <td>
+          Find payload(Request) below
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:01:27 AM</td>
+        <td>
+           <div class='json-tree' id='code-block-json-33'></div>
+ <script>
+  function jsonTreeCreate33() { 
+   document.getElementById('code-block-json-33').innerHTML = JSONTree.create({
+  "ProductCode": "60100000",
+  "CampaignCode": "60100000",
+  "LifeAssureds": [
+    {
+      "LifeAssuredType": "MainLife",
+      "BirthDate": "1980-01-01T00:00:00",
+      "PartyReference": "1"
+    },
+    {
+      "LifeAssuredType": "Partner",
+      "BirthDate": "1985-01-01T00:00:00",
+      "PartyReference": "2"
+    },
+    {
+      "LifeAssuredType": "Child",
+      "BirthDate": "2010-01-01T00:00:00",
+      "PartyReference": "3"
+    },
+    {
+      "LifeAssuredType": "Child",
+      "BirthDate": "2011-01-01T00:00:00",
+      "PartyReference": "4"
+    },
+    {
+      "LifeAssuredType": "Parent",
+      "BirthDate": "1970-01-01T00:00:00",
+      "PartyReference": "5"
+    },
+    {
+      "LifeAssuredType": "Parent",
+      "BirthDate": "1971-01-01T00:00:00",
+      "PartyReference": "6"
+    }
+  ]
+}); 
+  }
+  jsonTreeCreate33();
+ </script>
+
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:01:27 AM</td>
+        <td>
+          Find response below
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:01:27 AM</td>
+        <td>
+           <div class='json-tree' id='code-block-json-34'></div>
+ <script>
+  function jsonTreeCreate34() { 
+   document.getElementById('code-block-json-34').innerHTML = JSONTree.create({ "statusCode": 404, "message": "Resource not found" }); 
+  }
+  jsonTreeCreate34();
+ </script>
+
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+<div class="test-content scrollable">
+<div class="test-content-tools">
+<ul><li><a class="back-to-test" href="#"><i class="fa fa-arrow-left"></i></a></li></ul>
+</div>
+<div class="test-content-detail"><div class="detail-body"></div></div>
+</div></div>
+<div class="container-fluid p-4 view dashboard-view">
+<div class="row">
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0">Started</p>
+<h3>Oct 20, 2021 10:56:31 AM</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0">Ended</p>
+<h3>Oct 20, 2021 11:01:27 AM</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0 text-pass">Tests Passed</p>
+<h3>9</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0 text-fail">Tests Failed</p>
+<h3>25</h3>
+</div></div>
+</div>
+</div>
+<div class="row">
+<div class="col-md-6">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Tests</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='parent-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='26%'>
+<b>9</b> tests passed
+</small>
+</div>
+<div>
+<small data-tooltip='73%'><b>25</b> tests failed,
+<b>0</b> skipped, <b data-tooltip='0%'>0</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-6">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Log events</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='events-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='22%'><b>29</b> events passed</small></div>
+<div>
+<small data-tooltip='19%'><b>25</b> events failed,
+<b data-tooltip='%'>73</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><div class="col-md-12">
+<div class="card"><div class="card-header"><p>Timeline</p></div>
+<div class="card-body pt-0"><div>
+<canvas id="timeline" height="120"></canvas>
+</div></div>
+</div>
+</div></div>
+<script>
+var timeline = {
+"Create Application":7.942,"Policy by Policy Reference":11.317,"PolicyByReferenceNumber":16.273,"ValidatePersonHighRisk":16.633,"Create Application Benefits":3.016,"Policy by Policy number":62.686,"CreateCollection":5.051,"ValidatePersonPassPortNumber":4.166,"Create Application Policy holder":1.602,"Policy by Identity Number":8.477,"ConfirmCollection":23.062,"Create Application Beneficiaries":7.122,"Create Application Premium Collection":8.85,"Documents by Policy Reference":9.177,"CancelCollection":14.249,"Create Application Status":3.66,"Update Bank Account And Debit Day":1.571,"Create Application Acceptance":1.375,"TEST Policy Holder Update":1.298,"PersonPassportNumberValid":2.73,"Get Application":5.449,"Update Policy Holder":4.88,"ValidatePersonTest":4.824,"Change Beneficiaries":1.307,"Qualification Product 1960":1.478,"ValidatePersonVeryHigh":5.467,"Qualification Produc t60200000":4.382,"Upload document":2.918,"ValidateOrganisation":2.731,"Qualification Product 60100000":3.915,"ScreenAndVerifyPartyPerson":4.364,"Qualification Product 60200001 Negetive Test":5.33,"Qualification Product 60100001 Negetive Test":1.354,"Rates":3.1
+};
+</script>
+<div class="row">
+</div>
+</div>
+<script>
+var statusGroup = {
+parentCount: 5,
+passParent: 9,
+failParent: 25,
+warningParent: 0,
+skipParent: 0,
+childCount: 5,
+passChild: 0,
+failChild: 0,
+warningChild: 0,
+skipChild: 0,
+infoChild: 0,
+grandChildCount: 5,
+passGrandChild: 0,
+failGrandChild: 0,
+warningGrandChild: 0,
+skipGrandChild: 0,
+infoGrandChild: 0,
+eventsCount: 5,
+passEvents: 29,
+failEvents: 25,
+warningEvents: 0,
+skipEvents: 0,
+infoEvents: 73
+};
+</script>        </div>
+      </div>
+    </div>
+  </div>
+<script src="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@14e9bb345ef7e2ed3a102f271d84e9f0267c88e7/spark/js/spark-script.js"></script>
+<script type="text/javascript"></script></body>
+</html>
