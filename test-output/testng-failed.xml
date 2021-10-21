@@ -6,31 +6,23 @@
       <class name="runner.API_AllTestsRunner">
         <methods>
           <include name="PolicybyIdentityNumber"/>
-          <include name="CreateApplicationStatus"/>
           <include name="validatePassPortValid"/>
-          <include name="QualificationProduct60200001NegetiveTest"/>
-          <include name="QualificationProduct60100000"/>
+          <include name="PolicyListbyPolicyNumber"/>
           <include name="DocumentsbyPolicyReference"/>
           <include name="UploadDocument"/>
           <include name="ChangeBeneficiaries"/>
+          <include name="validatePersonHighRisk"/>
           <include name="validateOrganisation"/>
-          <include name="CreateApplicationPremiumCollection"/>
           <include name="UpdatePolicyHolder"/>
-          <include name="QualificationProduct60100001NegetiveTest"/>
+          <include name="ScreenAndVerifyPartyPerson"/>
+          <include name="PolicybyPolicyReference"/>
           <include name="UpdateBankAccountAndDebitDay"/>
           <include name="validatePersonVeryHigh"/>
+          <include name="EndTests"/>
           <include name="CreateApplicationAcceptance"/>
           <include name="TESTPolicyHolderUpdate"/>
-          <include name="validatePersonTest"/>
-          <include name="CreateApplicationPolicyHolder"/>
-          <include name="CreateApplicationBeneficiaries"/>
-          <include name="QualificationProduct60200000"/>
-          <include name="validatePersonHighRisk"/>
-          <include name="Rates"/>
-          <include name="GetApplication"/>
-          <include name="ScreenAndVerifyPartyPerson"/>
-          <include name="EndTests"/>
           <include name="validatePersonPassPortNumber"/>
+          <include name="validatePersonTest"/>
         </methods>
       </class> <!-- runner.API_AllTestsRunner -->
     </classes>
