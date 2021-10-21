@@ -25,14 +25,14 @@ public class PartyVerificationRestRunner {
 	String TesterName = System.getProperty("user.name");
 	ExtentReports extent=new ExtentManager().extentTest(reportname, pageTile, TesterName);
 
-	@Test(priority = 1,enabled=false)
+	@Test(priority = 1,enabled=true)
 	public void TC_001_PersonIdentification_Basic() throws URISyntaxException, SAXException, IOException, ParserConfigurationException {
 		
 		TC_001.TC_001_PersonIdentification_Basic(extent);
 		ApiHelper.softAssertion.assertAll();
 		
 	}   
-	@Test(priority = 2,enabled=false)
+	@Test(priority = 2,enabled=true)
 	public void TC_002_PersonIdentification_Basic_Invalid_ID() throws URISyntaxException, IOException, SAXException, ParserConfigurationException {
 		
 		TC_002.PersonIdentification_Basic_Invalid_ID(extent);

@@ -5,8 +5,8 @@
     <classes>
       <class name="runner.PartyVerificationRestRunner">
         <methods>
+          <include name="TC_002_PersonIdentification_Basic_Invalid_ID"/>
           <include name="EndTests"/>
-          <include name="TC_006_PersonIdentificationComprehensiveWithMortalityInformation_Invalid_ID"/>
         </methods>
       </class> <!-- runner.PartyVerificationRestRunner -->
     </classes>
