@@ -33,7 +33,7 @@ public static void PersonIdentification_Enhanced_Invalid_ID(ExtentReports extent
 	
 	
 	ExtentTest test;
-	test=extent.createTest("Person Identification Enhanced invalid");
+	test=extent.createTest("TC_004_PersonIdentification_Enhanced_Invalid_ID");
 	Response response;
 	response =  ApiHelper.sendRestPostRequest(PartyVerificationSitUrl,PartySubKey, PartySubId,PersonIndentificationEnhanced, "/Person/9705145018089/Identification");
 	
@@ -52,7 +52,12 @@ public static void PersonIdentification_Enhanced_Invalid_ID(ExtentReports extent
 	ApiHelper.AssertEquals("errorMessage" ,"The person is not found using specified Identity Number", error, test);
 	
 	
-	test.info( MarkupHelper.createCodeBlock(response.asString(),CodeLanguage.JSON));
+	test.info( "ID Number used: 9705145018089");
+	
+	test.info( "Find payload(Request) below");
+    test.info( MarkupHelper.createCodeBlock(PersonIndentificationEnhanced,CodeLanguage.JSON));
+    test.info( "Find response below");
+    test.info( MarkupHelper.createCodeBlock(response.asString(),CodeLanguage.JSON));
 	
 	
 	}

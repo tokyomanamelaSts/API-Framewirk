@@ -32,11 +32,10 @@ public static void PersonIdentificationComprehensiveWithMortalityInformation_Inv
 			
 
 	ExtentTest test;
-	test=extent.createTest("Person Verification Risk Rating High Passport");
+	test=extent.createTest("TC_006_PersonIdentificationComprehensiveWithMortalityInformation_Invalid_ID");
 	Response response;
 	response =  ApiHelper.sendRestPostRequest(PartyVerificationSitUrl,PartySubKey,PartySubId, PersonIndentificationWCMI,"/Person/9706145018089/Identification");
 	ApiHelper.AssertEquals("Status code" ,"400", String.valueOf(response.statusCode()) , test);
-	test.info( MarkupHelper.createCodeBlock(response.asString(),CodeLanguage.JSON));
 	
 	
 	//Validations
@@ -52,9 +51,12 @@ public static void PersonIdentificationComprehensiveWithMortalityInformation_Inv
 		String error = innerJson.get("errorMessage").toString();
 		ApiHelper.AssertEquals("errorMessage" ,"The person is not found using specified Identity Number", error, test);
 		
+		test.info( "ID Number used: 9706145018089");
 		
-		test.info( MarkupHelper.createCodeBlock(response.asString(),CodeLanguage.JSON));
-		
+		test.info( "Find payload(Request) below");
+	    test.info( MarkupHelper.createCodeBlock(PersonIndentificationWCMI,CodeLanguage.JSON));
+	    test.info( "Find response below");
+	    test.info( MarkupHelper.createCodeBlock(response.asString(),CodeLanguage.JSON));
 		
 	}
 

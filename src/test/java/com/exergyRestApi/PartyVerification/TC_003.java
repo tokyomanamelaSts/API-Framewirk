@@ -33,7 +33,7 @@ public static void PersonIdentification_Enhanced(ExtentReports extent) throws UR
 	
 	
 	ExtentTest test;
-	test=extent.createTest("Person Identification Enhanced");
+	test=extent.createTest("TC_003_PersonIdentification_Enhanced");
 	Response response;
 	response =  ApiHelper.sendRestPostRequest(PartyVerificationSitUrl,PartySubKey, PartySubId,PersonIndentificationEnhanced, "/Person/9706145018084/Identification");
 	ApiHelper.AssertEquals("Status code" ,"200", String.valueOf(response.statusCode()) , test);
@@ -61,8 +61,12 @@ public static void PersonIdentification_Enhanced(ExtentReports extent) throws UR
 		ApiHelper.AssertEquals("identificationType" ,"Enhanced", IDType, test);
 		
 	
-	
-		test.info( MarkupHelper.createCodeBlock(response.asString(),CodeLanguage.JSON));
+		test.info( "ID Number used: 9706145018084");
+		
+		test.info( "Find payload(Request) below");
+	    test.info( MarkupHelper.createCodeBlock(PersonIndentificationEnhanced,CodeLanguage.JSON));
+	    test.info( "Find response below");
+	    test.info( MarkupHelper.createCodeBlock(response.asString(),CodeLanguage.JSON));
 	}
 
 	

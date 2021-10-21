@@ -26,7 +26,7 @@ public class TC_002 extends PartyApiSitPayloads{
 		
 		
 		ExtentTest test;
-		test=extent.createTest("Person Identification Enhanced");
+		test=extent.createTest("TC_002_PersonIdentification_Basic");
 		Response response;
 		response =  ApiHelper.sendRestPostRequest("","", "",PersonIndentificationEnhanced, "");
 		response.prettyPrint();

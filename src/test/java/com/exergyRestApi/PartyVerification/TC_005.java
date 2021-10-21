@@ -31,7 +31,7 @@ public static void PersonIdentificationComprehensiveWithMortalityInformation(Ext
 				
 	
 		ExtentTest test;
-		test=extent.createTest("Person Verification Risk Rating High Passport");
+		test=extent.createTest("TC_005_PersonIdentification_ComprehensiveWithMortalityInformation");
 		Response response;
 		response =  ApiHelper.sendRestPostRequest(PartyVerificationSitUrl,PartySubKey,PartySubId, PersonIndentificationWCMI,"/Person/9706145018084/Identification");
 		ApiHelper.AssertEquals("Status code" ,"200", String.valueOf(response.statusCode()) , test);
@@ -58,8 +58,13 @@ public static void PersonIdentificationComprehensiveWithMortalityInformation(Ext
 			ApiHelper.AssertEquals("identificationType" ,"Enhanced", IDType, test);
 			
 		
+			test.info( "ID Number used: 9706145018084");
 		
-			test.info( MarkupHelper.createCodeBlock(response.asString(),CodeLanguage.JSON));
+			test.info( "Find payload(Request) below");
+		    test.info( MarkupHelper.createCodeBlock(PersonIndentificationWCMI,CodeLanguage.JSON));
+		    test.info( "Find response below");
+		    test.info( MarkupHelper.createCodeBlock(response.asString(),CodeLanguage.JSON));
+			
 		
 		
 	}
