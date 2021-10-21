@@ -1,4 +1,4 @@
-package com.exergySoapRequest;
+package com.PartyVerification.Soap.Request;
 import static io.restassured.RestAssured.given;
 
 import java.io.File;

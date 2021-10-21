@@ -1,30 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
+<suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="runner.API_AllTestsRunner">
+      <class name="runner.PartyVerificationRestRunner">
         <methods>
-          <include name="PolicybyIdentityNumber"/>
-          <include name="validatePassPortValid"/>
-          <include name="PolicyListbyPolicyNumber"/>
-          <include name="DocumentsbyPolicyReference"/>
-          <include name="UploadDocument"/>
-          <include name="ChangeBeneficiaries"/>
-          <include name="validatePersonHighRisk"/>
-          <include name="validateOrganisation"/>
-          <include name="UpdatePolicyHolder"/>
-          <include name="ScreenAndVerifyPartyPerson"/>
-          <include name="PolicybyPolicyReference"/>
-          <include name="UpdateBankAccountAndDebitDay"/>
-          <include name="validatePersonVeryHigh"/>
           <include name="EndTests"/>
-          <include name="CreateApplicationAcceptance"/>
-          <include name="TESTPolicyHolderUpdate"/>
-          <include name="validatePersonPassPortNumber"/>
-          <include name="validatePersonTest"/>
+          <include name="TC_005_PersonIdentificationComprehensiveWithMortalityInformation"/>
         </methods>
-      </class> <!-- runner.API_AllTestsRunner -->
+      </class> <!-- runner.PartyVerificationRestRunner -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

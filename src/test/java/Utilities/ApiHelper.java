@@ -7,6 +7,7 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.URI;
 import java.util.Iterator;
+import java.util.Properties;
 
 import org.assertj.core.internal.bytebuddy.utility.JavaDispatcher.Instance;
 import org.json.JSONArray;
@@ -47,12 +48,6 @@ public class ApiHelper {
 	public static String policySitUrl = "https://apim-hl-life-test-za.azure-api.net/Policy/uat";
 	public static String policySubId = "Automation-Test-Team";
 	public static String policySubKey = "fc5e1ef728f44652a03e16c9525f2d49";
-	
-	public static String PartyIdentificationSitUrl = "https://apim-hl-life-test-za.azure-api.net/Party/sit/Person/9706145018084/Identification";
-	public static String PartyVerificationSitUrl = "https://apim-hl-life-test-za.azure-api.net/Party/sit/Person";
-	public static String PartySubId = "Automation-Test-Team";
-	public static String PartySubKey = "d05d946b0e9b480ea9c2d751549bd5ef";
-	
 	
 	public static SoftAssert softAssertion;
 	

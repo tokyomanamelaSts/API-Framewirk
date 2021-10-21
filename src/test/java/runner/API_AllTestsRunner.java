@@ -10,6 +10,13 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.Test;
 import org.xml.sax.SAXException;
 
+import com.PartyVerification.Soap.Request.PersonHighRisk;
+import com.PartyVerification.Soap.Request.PersonPassportNumber;
+import com.PartyVerification.Soap.Request.PersonPassportNumberValid;
+import com.PartyVerification.Soap.Request.PersonTest;
+import com.PartyVerification.Soap.Request.PersonVeryHigh;
+import com.PartyVerification.Soap.Request.ScreenAndVerifyPartyOrganisation;
+import com.PartyVerification.Soap.Request.ScreenAndVerifyPartyPerson;
 import com.aventstack.extentreports.ExtentReports;
 import com.exergyRestApi.Application.CreateAplication;
 import com.exergyRestApi.Application.CreateApplicationBeneficiaries;
@@ -19,13 +26,6 @@ import com.exergyRestApi.Application.GetApplication;
 import com.exergyRestApi.Application.QualificationProduct1960;
 import com.exergyRestApi.Collection.TC01PolicyByReferenceNumber;
 import com.exergyRestApi.Collection.TC02CreateCollectionPost;
-import com.exergySoapRequest.PersonHighRisk;
-import com.exergySoapRequest.PersonPassportNumber;
-import com.exergySoapRequest.PersonPassportNumberValid;
-import com.exergySoapRequest.PersonTest;
-import com.exergySoapRequest.PersonVeryHigh;
-import com.exergySoapRequest.ScreenAndVerifyPartyOrganisation;
-import com.exergySoapRequest.ScreenAndVerifyPartyPerson;
 
 import Utilities.ApiHelper;
 import Utilities.ExtentManager;

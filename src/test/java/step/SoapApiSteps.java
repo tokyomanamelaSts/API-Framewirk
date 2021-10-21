@@ -1,6 +1,7 @@
 package step;
 
-import com.exergySoapRequest.ScreenAndVerifyPartyPerson;
+import com.PartyVerification.Soap.Request.ScreenAndVerifyPartyPerson;
+
 import io.cucumber.java.en.Given;
 
 public class SoapApiSteps {
