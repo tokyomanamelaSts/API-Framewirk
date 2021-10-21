@@ -20,19 +20,19 @@ import Utilities.ExtentManager;
 public class PartyVerificationRestRunner {
 	
 	String timeStamp = new SimpleDateFormat("yyyy.MM.dd").format(new java.util.Date());
-	String reportname = "Hollard Party Verification API "+timeStamp+".html";
-	String pageTile = "Hollard Party Verification API";
+	String reportname = "Hollard Party Verification API(REST)"+timeStamp+".html";
+	String pageTile = "Hollard Party Verification API(REST)";
 	String TesterName = System.getProperty("user.name");
 	ExtentReports extent=new ExtentManager().extentTest(reportname, pageTile, TesterName);
 
-	@Test(priority = 1,enabled=true)
+	@Test(priority = 1,enabled=false)
 	public void TC_001_PersonIdentification_Basic() throws URISyntaxException, SAXException, IOException, ParserConfigurationException {
 		
 		TC_001.TC_001_PersonIdentification_Basic(extent);
 		ApiHelper.softAssertion.assertAll();
 		
 	}   
-	@Test(priority = 2,enabled=true)
+	@Test(priority = 2,enabled=false)
 	public void TC_002_PersonIdentification_Basic_Invalid_ID() throws URISyntaxException, IOException, SAXException, ParserConfigurationException {
 		
 		TC_002.PersonIdentification_Basic_Invalid_ID(extent);
@@ -64,8 +64,8 @@ public class PartyVerificationRestRunner {
 		
 	} 
 	
-	@Test(priority = 5,enabled=true)
-	public void TC_005_PersonIdentificationComprehensiveWithMortalityInformation_Invalid_ID() throws URISyntaxException, IOException, SAXException, ParserConfigurationException {
+	@Test(priority = 6,enabled=true)
+	public void TC_006_PersonIdentificationComprehensiveWithMortalityInformation_Invalid_ID() throws URISyntaxException, IOException, SAXException, ParserConfigurationException {
 		
 		TC_006.PersonIdentificationComprehensiveWithMortalityInformation_Invalid_ID(extent);
 		ApiHelper.softAssertion.assertAll();

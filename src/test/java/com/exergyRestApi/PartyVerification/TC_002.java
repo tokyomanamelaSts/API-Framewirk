@@ -14,6 +14,7 @@ import com.aventstack.extentreports.markuputils.CodeLanguage;
 import com.aventstack.extentreports.markuputils.MarkupHelper;
 
 import Utilities.ApiHelper;
+import Utilities.DataProvider;
 import io.restassured.response.Response;
 
 public class TC_002 extends PartyApiSitPayloads{
@@ -21,9 +22,11 @@ public class TC_002 extends PartyApiSitPayloads{
 	public static void PersonIdentification_Basic_Invalid_ID(ExtentReports extent) throws URISyntaxException, SAXException, IOException, ParserConfigurationException {
 		
 		
+	
+		
 		
 		ExtentTest test;
-		test=extent.createTest("Person Identification Enhanced");
+		test=extent.createTest("TC_002_PersonIdentification_Basic");
 		Response response;
 		response =  ApiHelper.sendRestPostRequest("","", "",PersonIndentificationEnhanced, "");
 		response.prettyPrint();
