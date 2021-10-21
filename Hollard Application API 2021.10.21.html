@@ -5,7 +5,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<title>Hollard Party Verification API</title>
+<title>Hollard Application API</title>
 <link rel="apple-touch-icon" href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png">
 <link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png">
 <link href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@c43b89d03a7c43dae8bb8f0f078bad1997af6b3b/spark/css/spark-style.css" rel="stylesheet" />
@@ -35,7 +35,7 @@
 <a href="#"><span class="badge badge-primary">thaboramalitse</span></a>
 </li>
 <li class="m-r-10">
-<a href="#"><span class="badge badge-primary">Oct 21, 2021 01:47:37 PM</span></a>
+<a href="#"><span class="badge badge-primary">Oct 21, 2021 12:31:43 PM</span></a>
 </li>
 </ul>
 </div>
@@ -79,9 +79,9 @@
           tag=""
           device="">
           <div class="test-detail">
-            <p class="name">Person Verification Risk Rating High Passport</p>
+            <p class="name">Qualification Product 60100001 Negetive Test</p>
             <p class="text-sm">
-              <span>13:47:37 PM</span> / <span>00:00:18:978</span>
+              <span>12:31:44 PM</span> / <span>00:00:31:488</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -89,10 +89,10 @@
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-pass">Person Verification Risk Rating High Passport</h5>
-<span class='badge badge-success'>10.21.2021 13:47:37</span>
-<span class='badge badge-danger'>10.21.2021 13:47:56</span>
-<span class='badge badge-default'>00:00:18:978</span>
+<h5 class="test-status text-pass">Qualification Product 60100001 Negetive Test</h5>
+<span class='badge badge-success'>10.21.2021 12:31:44</span>
+<span class='badge badge-danger'>10.21.2021 12:32:15</span>
+<span class='badge badge-default'>00:00:31:488</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
 </div>
 </div>
@@ -102,19 +102,59 @@
   <tbody>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>1:47:56 PM</td>
+        <td>12:32:15 PM</td>
         <td>
           validation for Status code has passed
         </td>
       </tr>
       <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>12:32:15 PM</td>
+        <td>
+          validation for productCode has passed
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>12:32:15 PM</td>
+        <td>
+          validation for rejectionReason has passed
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>12:32:15 PM</td>
+        <td>
+          validation for qualificationResult has passed
+        </td>
+      </tr>
+      <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>1:47:56 PM</td>
+        <td>12:32:15 PM</td>
+        <td>
+          Find payload(Request) below
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:32:15 PM</td>
         <td>
            <div class='json-tree' id='code-block-json-0'></div>
  <script>
   function jsonTreeCreate0() { 
-   document.getElementById('code-block-json-0').innerHTML = JSONTree.create({"errorCode":"404","errorMessage":"The person is not found using specified Identity Number","friendlyErrorMessage":"The person is not found using specified Identity Number","uri":null,"reference":"Pascal12","type":"Server"}); 
+   document.getElementById('code-block-json-0').innerHTML = JSONTree.create({
+    "IdentityNumber": "9105055913089",
+    "FirstNames": "Teams Stones",
+    "Surname": "Keanu",
+    "ProductCode": "60100000",
+    "Channel": {
+        "ChannelType": "Kiosk",
+        "ChannelLocation": "Braamfontein",
+        "ChannelLocationName": "Braamfontein",
+        "ChannelReference": "XJK3232",
+        "DeviceSerialNumber":"TestDevice"
+    }
+}); 
   }
   jsonTreeCreate0();
  </script>
@@ -122,27 +162,20 @@
         </td>
       </tr>
       <tr class="event-row">
-        <td><span class="badge log pass-bg">Pass</span></td>
-        <td>1:47:56 PM</td>
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:32:15 PM</td>
         <td>
-          validation for reference has passed
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log pass-bg">Pass</span></td>
-        <td>1:47:56 PM</td>
-        <td>
-          validation for errorMessage has passed
+          Find response below
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>1:47:56 PM</td>
+        <td>12:32:15 PM</td>
         <td>
            <div class='json-tree' id='code-block-json-1'></div>
  <script>
   function jsonTreeCreate1() { 
-   document.getElementById('code-block-json-1').innerHTML = JSONTree.create({"errorCode":"404","errorMessage":"The person is not found using specified Identity Number","friendlyErrorMessage":"The person is not found using specified Identity Number","uri":null,"reference":"Pascal12","type":"Server"}); 
+   document.getElementById('code-block-json-1').innerHTML = JSONTree.create({"productCode":"60100000","qualificationReference":"2MTJWXA9Y","qualificationResult":false,"rejectionReason":"The applicant already has a policy for this product and is not allowed to take additional policies","policyList":{"policy":[{"policyNumber":"50016108","policyReference":"B4045A7E-689B-4FB4-A9CE-AD9700B858DF","status":"InForce","product":null},{"policyNumber":"50016107","policyReference":"A7703A2B-C683-4585-820F-AD97009F394A","status":"New","product":null},{"policyNumber":"50015625","policyReference":"CFE109A5-5721-4378-9A13-AD1000F2E9BB","status":"New","product":null},{"policyNumber":"50015609","policyReference":"06D22C3A-C7E0-4EEE-BB36-AD09009D8BFE","status":"New","product":null},{"policyNumber":"50015428","policyReference":"47497014-3D0C-4865-818A-ACE0009517F2","status":"New","product":null},{"policyNumber":"50015374","policyReference":"6870C5C8-075E-48A6-BAF3-ACD100F8171C","status":"New","product":null},{"policyNumber":"50015370","policyReference":"501E70FB-E69E-492F-A1A1-ACD100B2EAAD","status":"New","product":null},{"policyNumber":"50015342","policyReference":"84FD6CE7-584E-43C4-B5F2-ACC900FBA3F8","status":"InForce","product":null},{"policyNumber":"50015340","policyReference":"1AAF29FA-1917-4900-8FC9-ACC90098F73E","status":"InForce","product":null},{"policyNumber":"50015297","policyReference":"3749EAF7-B6F6-4D42-B926-ACBD008B0A93","status":"InForce","product":null}]}}); 
   }
   jsonTreeCreate1();
  </script>
@@ -168,13 +201,13 @@
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Started</p>
-<h3>Oct 21, 2021 01:47:37 PM</h3>
+<h3>Oct 21, 2021 12:31:43 PM</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Ended</p>
-<h3>Oct 21, 2021 01:47:56 PM</h3>
+<h3>Oct 21, 2021 12:32:15 PM</h3>
 </div></div>
 </div>
 <div class="col-md-3">
@@ -225,10 +258,10 @@
 </div>
 </div>
 <div class="card-footer">
-<div><small data-tooltip='60%'><b>3</b> events passed</small></div>
+<div><small data-tooltip='50%'><b>4</b> events passed</small></div>
 <div>
 <small data-tooltip='0%'><b>0</b> events failed,
-<b data-tooltip='%'>2</b> others
+<b data-tooltip='%'>4</b> others
 </small>
 </div>
 </div>
@@ -244,7 +277,7 @@
 </div></div>
 <script>
 var timeline = {
-"Person Verification Risk Rating High Passport":18.978
+"Qualification Product 60100001 Negetive Test":31.488
 };
 </script>
 <div class="row">
@@ -270,11 +303,11 @@ warningGrandChild: 0,
 skipGrandChild: 0,
 infoGrandChild: 0,
 eventsCount: 5,
-passEvents: 3,
+passEvents: 4,
 failEvents: 0,
 warningEvents: 0,
 skipEvents: 0,
-infoEvents: 2
+infoEvents: 4
 };
 </script>        </div>
       </div>

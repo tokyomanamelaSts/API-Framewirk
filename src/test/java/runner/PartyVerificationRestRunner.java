@@ -64,8 +64,8 @@ public class PartyVerificationRestRunner {
 		
 	} 
 	
-	@Test(priority = 5,enabled=true)
-	public void TC_005_PersonIdentificationComprehensiveWithMortalityInformation_Invalid_ID() throws URISyntaxException, IOException, SAXException, ParserConfigurationException {
+	@Test(priority = 6,enabled=true)
+	public void TC_006_PersonIdentificationComprehensiveWithMortalityInformation_Invalid_ID() throws URISyntaxException, IOException, SAXException, ParserConfigurationException {
 		
 		TC_006.PersonIdentificationComprehensiveWithMortalityInformation_Invalid_ID(extent);
 		ApiHelper.softAssertion.assertAll();

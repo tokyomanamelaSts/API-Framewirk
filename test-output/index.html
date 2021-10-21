@@ -24,22 +24,22 @@
   <body>
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
-      <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
+      <button class="button" id="button">Switch Retro Theme</button> <!-- button -->
       <br/>
       <span class="top-banner-font-1">1 suite</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
         <span>All suites</span>
-        <a href="#" title="Collapse/expand all the suites" class="collapse-all-link">
-          <img src="collapseall.gif" class="collapse-all-icon">
+        <a href="#" class="collapse-all-link" title="Collapse/expand all the suites">
+          <img class="collapse-all-icon" src="collapseall.gif">
           </img> <!-- collapse-all-icon -->
         </a> <!-- collapse-all-link -->
       </div> <!-- navigator-suite-header -->
       <div class="suite">
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
-            <a href="#" panel-name="suite-Default_suite" class="navigator-link">
+            <a href="#" class="navigator-link" panel-name="suite-Default_suite">
               <span class="suite-name border-passed">Default suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
@@ -50,37 +50,37 @@
             <div class="suite-section-content">
               <ul>
                 <li>
-                  <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
+                  <a href="#" class="navigator-link " panel-name="test-xml-Default_suite">
                     <span>testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" panel-name="testlist-Default_suite" class="navigator-link ">
+                  <a href="#" class="navigator-link " panel-name="testlist-Default_suite">
                     <span class="test-stats">1 test</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" panel-name="group-Default_suite" class="navigator-link ">
+                  <a href="#" class="navigator-link " panel-name="group-Default_suite">
                     <span>0 groups</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" panel-name="times-Default_suite" class="navigator-link ">
+                  <a href="#" class="navigator-link " panel-name="times-Default_suite">
                     <span>Times</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" panel-name="reporter-Default_suite" class="navigator-link ">
+                  <a href="#" class="navigator-link " panel-name="reporter-Default_suite">
                     <span>Reporter output</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" panel-name="ignored-methods-Default_suite" class="navigator-link ">
+                  <a href="#" class="navigator-link " panel-name="ignored-methods-Default_suite">
                     <span>Ignored methods</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" panel-name="chronological-Default_suite" class="navigator-link ">
+                  <a href="#" class="navigator-link " panel-name="chronological-Default_suite">
                     <span>Chronological view</span>
                   </a> <!-- navigator-link  -->
                 </li>
@@ -103,8 +103,8 @@
                     </span>
                     <div class="method-list-content passed suite-Default_suite">
                       <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="runner.PartyVerificationRestRunner" class="method navigator-link" hash-for-method="TC_005_PersonIdentificationComprehensiveWithMortalityInformation">TC_005_PersonIdentificationComprehensiveWithMortalityInformation</a> <!-- method navigator-link -->
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="runner.PartyVerificationRestRunner" hash-for-method="TC_006_PersonIdentificationComprehensiveWithMortalityInformation_Invalid_ID">TC_006_PersonIdentificationComprehensiveWithMortalityInformation_Invalid_ID</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Default_suite -->
@@ -127,9 +127,9 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="TC_005_PersonIdentificationComprehensiveWithMortalityInformation">
-                  </a> <!-- TC_005_PersonIdentificationComprehensiveWithMortalityInformation -->
-                  <span class="method-name">TC_005_PersonIdentificationComprehensiveWithMortalityInformation</span>
+                  <a name="TC_006_PersonIdentificationComprehensiveWithMortalityInformation_Invalid_ID">
+                  </a> <!-- TC_006_PersonIdentificationComprehensiveWithMortalityInformation_Invalid_ID -->
+                  <span class="method-name">TC_006_PersonIdentificationComprehensiveWithMortalityInformation_Invalid_ID</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -137,18 +137,18 @@
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">/private/var/folders/10/nx41rvp50wq94v07drs_5f7w0000gn/T/testng-eclipse-1403725696/testng-customsuite.xml</span>
+            <span class="header-content">/private/var/folders/_2/m1y0fhjd33jg4xcvqnhbdpkr0000gn/T/testng-eclipse-1836708974/testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
-&lt;suite name=&quot;Default suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
-  &lt;test thread-count=&quot;5&quot; name=&quot;Default test&quot; verbose=&quot;2&quot;&gt;
+&lt;suite guice-stage=&quot;DEVELOPMENT&quot; name=&quot;Default suite&quot;&gt;
+  &lt;test thread-count=&quot;5&quot; verbose=&quot;2&quot; name=&quot;Default test&quot;&gt;
     &lt;classes&gt;
       &lt;class name=&quot;runner.PartyVerificationRestRunner&quot;&gt;
         &lt;methods&gt;
-          &lt;include name=&quot;TC_005_PersonIdentificationComprehensiveWithMortalityInformation&quot;/&gt;
+          &lt;include name=&quot;TC_006_PersonIdentificationComprehensiveWithMortalityInformation_Invalid_ID&quot;/&gt;
         &lt;/methods&gt;
       &lt;/class&gt; &lt;!-- runner.PartyVerificationRestRunner --&gt;
     &lt;/classes&gt;
@@ -192,14 +192,14 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'TC_005_PersonIdentificationComprehensiveWithMortalityInformation')
+data.setCell(0, 1, 'TC_006_PersonIdentificationComprehensiveWithMortalityInformation_Invalid_ID')
 data.setCell(0, 2, 'runner.PartyVerificationRestRunner')
-data.setCell(0, 3, 15468);
+data.setCell(0, 3, 18991);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 15 seconds</span>
+              <span class="suite-total-time">Total running time: 18 seconds</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -224,7 +224,7 @@ return data;
                 <br/>
                 <span class="ignored-method-name">TC_001_PersonIdentification_Basic</span>
                 <br/>
-                <span class="ignored-method-name">TC_005_PersonIdentificationComprehensiveWithMortalityInformation_Invalid_ID</span>
+                <span class="ignored-method-name">TC_005_PersonIdentificationComprehensiveWithMortalityInformation</span>
                 <br/>
                 <span class="ignored-method-name">TC_004_PersonIdentification_Enhanced_Invalid_ID</span>
                 <br/>
@@ -242,12 +242,12 @@ return data;
             <div class="chronological-class">
               <div class="chronological-class-name">runner.PartyVerificationRestRunner</div> <!-- chronological-class-name -->
               <div class="test-method">
-                <span class="method-name">TC_005_PersonIdentificationComprehensiveWithMortalityInformation</span>
+                <span class="method-name">TC_006_PersonIdentificationComprehensiveWithMortalityInformation_Invalid_ID</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-test after">
                 <span class="method-name">EndTests</span>
-                <span class="method-start">15476 ms</span>
+                <span class="method-start">19002 ms</span>
               </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
