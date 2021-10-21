@@ -31,17 +31,17 @@ public class TC_002 extends PartyApiSitPayloads{
 		
 		
 		ExtentTest test;
-		test=extent.createTest("TC_002_PersonIdentification_Basic");
+		test=extent.createTest("TC_002_PersonIdentification_Basic_Invalid_ID");
 		Response response;
 		response =  ApiHelper.sendRestPostRequest(PartyVerificationSitUrl,PartySubKey, PartySubId,PersonIndentificationBasic, "/Person/0706145018084/Identification");
 		response.prettyPrint();
-		ApiHelper.AssertEquals("Status code" ,"500", String.valueOf(response.statusCode()) , test);
+		ApiHelper.AssertEquals("Status code" ,"400", String.valueOf(response.statusCode()) , test);
 		
 		JSONObject innerJson = new JSONObject(response.getBody().asString());
 		
 	
 		String error = innerJson.get("ErrorMessage").toString();
-		ApiHelper.AssertEquals("Error Message" ,"Object reference not set to an instance of an object.", error, test);
+		ApiHelper.AssertEquals("Error Message" ,"The person is not found using specified Identity Number", error, test);
 		
 		String uri = innerJson.get("URI").toString();
 		ApiHelper.AssertEquals("uri" ,"/Person/0706145018084/Identification", uri, test);

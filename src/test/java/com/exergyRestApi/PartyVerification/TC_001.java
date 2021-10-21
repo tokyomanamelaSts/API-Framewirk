@@ -46,7 +46,7 @@ public class TC_001 extends PartyApiSitPayloads {
 		
 		
 		ExtentTest test;
-		test=extent.createTest("Person Identification Basic");
+		test=extent.createTest("TC_001_PersonIdentification_Basic");
 		Response response;
 		response =  ApiHelper.sendRestPostRequest(PartyVerificationSitUrl,PartySubKey, PartySubId,PersonIndentificationBasic, "/Person/9706145018084/Identification");
 		response.prettyPrint();
@@ -71,7 +71,7 @@ public class TC_001 extends PartyApiSitPayloads {
 		String livingStatus = innerJson.getJSONObject("personIdentification").getJSONObject("person").getString("livingStatus");
 		ApiHelper.AssertEquals("Living status" ,"Alive", livingStatus, test);
 	
-		test.info( "ID Number used: 9705145018089");
+		test.info( "ID Number used: 9706145018084");
 		
 		test.info( "Find payload(Request) below");
 		
