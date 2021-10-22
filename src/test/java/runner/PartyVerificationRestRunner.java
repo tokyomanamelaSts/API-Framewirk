@@ -72,6 +72,22 @@ public class PartyVerificationRestRunner {
 		
 	} 
 	
+	@Test(priority = 7,enabled=true)
+	public void TC_007_PersonVerification_RiskRating_Low_ID() throws URISyntaxException, IOException, SAXException, ParserConfigurationException {
+		
+		TC_007.TC_007_PersonVerification_RiskRating_Low_ID(extent);
+		ApiHelper.softAssertion.assertAll();
+		
+	} 
+	
+	@Test(priority = 8,enabled=true)
+	public void TC_008_PersonVerification_RiskRating_Low_ID_Invalid_ID() throws URISyntaxException, IOException, SAXException, ParserConfigurationException {
+		
+		TC_008.TC_008_PersonVerification_RiskRating_Low_ID_Invalid_ID(extent);
+		ApiHelper.softAssertion.assertAll();
+		
+	} 
+	
 	@AfterTest
 	public void EndTests() {
 		
