@@ -46,7 +46,7 @@ public class TC_007 extends PartyApiSitPayloads {
 		
 		
 		ExtentTest test;
-		test=extent.createTest("TC_007_PersonVerification_RiskRating_Low_ID");
+		test=extent.createTest("TC_007_PersonVerification_RiskRating_Low_IdentityNumber");
 		Response response;
 		response =  ApiHelper.sendRestPostRequest(PartyVerificationSitUrl,PartySubKey, PartySubId,PersonVerificationRRLowID, "/Person/9306116219082/Verification");
 		response.prettyPrint();
