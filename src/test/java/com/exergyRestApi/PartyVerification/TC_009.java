@@ -33,9 +33,9 @@ import com.aventstack.extentreports.markuputils.MarkupHelper;
 import Utilities.ApiHelper;
 import io.restassured.response.Response;
 
-public class TC_007 extends PartyApiSitPayloads {
+public class TC_009 extends PartyApiSitPayloads {
 	
-	public static void  TC_007_PersonVerification_RiskRating_Low_ID(ExtentReports extent) throws URISyntaxException, SAXException, IOException, ParserConfigurationException {
+	public static void  TC_009_PersonVerification_RiskRating_High_ID(ExtentReports extent) throws URISyntaxException, SAXException, IOException, ParserConfigurationException {
 		
 		
 		String PartyVerificationSitUrl = DataProvider.GetPropVal(DataProvider.propertyFilePath, "PartyVerificationSitUrl");
@@ -46,9 +46,9 @@ public class TC_007 extends PartyApiSitPayloads {
 		
 		
 		ExtentTest test;
-		test=extent.createTest("TC_007_PersonVerification_RiskRating_Low_IdentityNumber");
+		test=extent.createTest("TC_009_PersonVerification_RiskRating_High_IdentityNumber");
 		Response response;
-		response =  ApiHelper.sendRestPostRequest(PartyVerificationSitUrl,PartySubKey, PartySubId,PersonVerificationRRLowID, "/Person/9306116219082/Verification");
+		response =  ApiHelper.sendRestPostRequest(PartyVerificationSitUrl,PartySubKey, PartySubId,PersonVerificationRRHighID, "/Person/7606060795082/Verification");
 		response.prettyPrint();
 		ApiHelper.AssertEquals("Status code" ,"200", String.valueOf(response.statusCode()) , test);
 		
@@ -56,7 +56,7 @@ public class TC_007 extends PartyApiSitPayloads {
 		JSONObject innerJson = new JSONObject(response.getBody().asString());
 
 		String verification = innerJson.get("verification").toString();
-		ApiHelper.AssertEquals("verification" ,"Verified", verification, test);
+		ApiHelper.AssertEquals("verification" ,"None", verification, test);
 		
 		String externalReference = innerJson.get("externalReference").toString();
 		ApiHelper.AssertEquals("externalReference" ,"MyRef123", externalReference, test);
@@ -73,7 +73,7 @@ public class TC_007 extends PartyApiSitPayloads {
 		String livingStatus = innerJson.getJSONObject("verification").getJSONObject("person").getString("livingStatus");
 		ApiHelper.AssertEquals("Living status" ,"Alive", livingStatus, test);*/
 	
-		test.info( "ID Number used: 9306116219082");
+		test.info( "ID Number used: 7606060795082");
 		
 		test.info( "Find payload(Request) below");
 		

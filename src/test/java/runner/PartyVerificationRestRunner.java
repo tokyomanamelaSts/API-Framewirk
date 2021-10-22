@@ -88,6 +88,14 @@ public class PartyVerificationRestRunner {
 		
 	} 
 	
+	@Test(priority = 9,enabled=true)
+	public void TC_009_PersonVerification_RiskRating_High_ID() throws URISyntaxException, IOException, SAXException, ParserConfigurationException {
+		
+		TC_009.TC_009_PersonVerification_RiskRating_High_ID(extent);
+		ApiHelper.softAssertion.assertAll();
+		
+	} 
+	
 	@AfterTest
 	public void EndTests() {
 		
