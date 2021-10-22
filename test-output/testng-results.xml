@@ -1,37 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="6" passed="6">
+<testng-results skipped="0" failed="0" ignored="0" total="9" passed="9">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="37040" started-at="2021-10-21T16:58:50 SAST" finished-at="2021-10-21T16:59:27 SAST">
+  <suite name="Default suite" duration-ms="61001" started-at="2021-10-22T10:29:41 SAST" finished-at="2021-10-22T10:30:42 SAST">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="37040" started-at="2021-10-21T16:58:50 SAST" finished-at="2021-10-21T16:59:27 SAST">
+    <test name="Default test" duration-ms="61001" started-at="2021-10-22T10:29:41 SAST" finished-at="2021-10-22T10:30:42 SAST">
       <class name="runner.PartyVerificationRestRunner">
-        <test-method status="PASS" signature="TC_001_PersonIdentification_Basic()[pri:1, instance:runner.PartyVerificationRestRunner@2a5c8d3f]" name="TC_001_PersonIdentification_Basic" duration-ms="14390" started-at="2021-10-21T16:58:50 SAST" finished-at="2021-10-21T16:59:04 SAST">
+        <test-method status="PASS" signature="TC_001_PersonIdentification_Basic()[pri:1, instance:runner.PartyVerificationRestRunner@279fedbd]" name="TC_001_PersonIdentification_Basic" duration-ms="12913" started-at="2021-10-22T10:29:41 SAST" finished-at="2021-10-22T10:29:54 SAST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_001_PersonIdentification_Basic -->
-        <test-method status="PASS" signature="TC_002_PersonIdentification_Basic_Invalid_ID()[pri:2, instance:runner.PartyVerificationRestRunner@2a5c8d3f]" name="TC_002_PersonIdentification_Basic_Invalid_ID" duration-ms="2813" started-at="2021-10-21T16:59:04 SAST" finished-at="2021-10-21T16:59:07 SAST">
+        <test-method status="PASS" signature="TC_002_PersonIdentification_Basic_Invalid_ID()[pri:2, instance:runner.PartyVerificationRestRunner@279fedbd]" name="TC_002_PersonIdentification_Basic_Invalid_ID" duration-ms="4958" started-at="2021-10-22T10:29:54 SAST" finished-at="2021-10-22T10:29:59 SAST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_002_PersonIdentification_Basic_Invalid_ID -->
-        <test-method status="PASS" signature="TC_003_PersonIdentification_Enhanced()[pri:3, instance:runner.PartyVerificationRestRunner@2a5c8d3f]" name="TC_003_PersonIdentification_Enhanced" duration-ms="7390" started-at="2021-10-21T16:59:07 SAST" finished-at="2021-10-21T16:59:15 SAST">
+        <test-method status="PASS" signature="TC_003_PersonIdentification_Enhanced()[pri:3, instance:runner.PartyVerificationRestRunner@279fedbd]" name="TC_003_PersonIdentification_Enhanced" duration-ms="9389" started-at="2021-10-22T10:29:59 SAST" finished-at="2021-10-22T10:30:08 SAST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_003_PersonIdentification_Enhanced -->
-        <test-method status="PASS" signature="TC_004_PersonIdentification_Enhanced_Invalid_ID()[pri:4, instance:runner.PartyVerificationRestRunner@2a5c8d3f]" name="TC_004_PersonIdentification_Enhanced_Invalid_ID" duration-ms="2734" started-at="2021-10-21T16:59:15 SAST" finished-at="2021-10-21T16:59:17 SAST">
+        <test-method status="PASS" signature="TC_004_PersonIdentification_Enhanced_Invalid_ID()[pri:4, instance:runner.PartyVerificationRestRunner@279fedbd]" name="TC_004_PersonIdentification_Enhanced_Invalid_ID" duration-ms="3209" started-at="2021-10-22T10:30:08 SAST" finished-at="2021-10-22T10:30:12 SAST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_004_PersonIdentification_Enhanced_Invalid_ID -->
-        <test-method status="PASS" signature="TC_005_PersonIdentificationComprehensiveWithMortalityInformation()[pri:5, instance:runner.PartyVerificationRestRunner@2a5c8d3f]" name="TC_005_PersonIdentificationComprehensiveWithMortalityInformation" duration-ms="6045" started-at="2021-10-21T16:59:17 SAST" finished-at="2021-10-21T16:59:23 SAST">
+        <test-method status="PASS" signature="TC_005_PersonIdentificationComprehensiveWithMortalityInformation()[pri:5, instance:runner.PartyVerificationRestRunner@279fedbd]" name="TC_005_PersonIdentificationComprehensiveWithMortalityInformation" duration-ms="9317" started-at="2021-10-22T10:30:12 SAST" finished-at="2021-10-22T10:30:21 SAST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_005_PersonIdentificationComprehensiveWithMortalityInformation -->
-        <test-method status="PASS" signature="TC_006_PersonIdentificationComprehensiveWithMortalityInformation_Invalid_ID()[pri:6, instance:runner.PartyVerificationRestRunner@2a5c8d3f]" name="TC_006_PersonIdentificationComprehensiveWithMortalityInformation_Invalid_ID" duration-ms="3153" started-at="2021-10-21T16:59:23 SAST" finished-at="2021-10-21T16:59:27 SAST">
+        <test-method status="PASS" signature="TC_006_PersonIdentificationComprehensiveWithMortalityInformation_Invalid_ID()[pri:6, instance:runner.PartyVerificationRestRunner@279fedbd]" name="TC_006_PersonIdentificationComprehensiveWithMortalityInformation_Invalid_ID" duration-ms="5712" started-at="2021-10-22T10:30:21 SAST" finished-at="2021-10-22T10:30:27 SAST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_006_PersonIdentificationComprehensiveWithMortalityInformation_Invalid_ID -->
-        <test-method status="PASS" signature="EndTests()[pri:0, instance:runner.PartyVerificationRestRunner@2a5c8d3f]" name="EndTests" is-config="true" duration-ms="415" started-at="2021-10-21T16:59:27 SAST" finished-at="2021-10-21T16:59:27 SAST">
+        <test-method status="PASS" signature="TC_010_PersonVerificationRiskRatinghigh_Identitynumber_invalid_ID()[pri:7, instance:runner.PartyVerificationRestRunner@279fedbd]" name="TC_010_PersonVerificationRiskRatinghigh_Identitynumber_invalid_ID" duration-ms="4788" started-at="2021-10-22T10:30:27 SAST" finished-at="2021-10-22T10:30:32 SAST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_010_PersonVerificationRiskRatinghigh_Identitynumber_invalid_ID -->
+        <test-method status="PASS" signature="TC_011_PersonVerification_RiskRating_Low_Passport()[pri:8, instance:runner.PartyVerificationRestRunner@279fedbd]" name="TC_011_PersonVerification_RiskRating_Low_Passport" duration-ms="5433" started-at="2021-10-22T10:30:32 SAST" finished-at="2021-10-22T10:30:37 SAST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_011_PersonVerification_RiskRating_Low_Passport -->
+        <test-method status="PASS" signature="TC_012_PersonVerification_RiskRating_Low_Passport_Invalid_Passport()[pri:9, instance:runner.PartyVerificationRestRunner@279fedbd]" name="TC_012_PersonVerification_RiskRating_Low_Passport_Invalid_Passport" duration-ms="4696" started-at="2021-10-22T10:30:37 SAST" finished-at="2021-10-22T10:30:42 SAST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_012_PersonVerification_RiskRating_Low_Passport_Invalid_Passport -->
+        <test-method status="PASS" signature="EndTests()[pri:0, instance:runner.PartyVerificationRestRunner@279fedbd]" name="EndTests" is-config="true" duration-ms="436" started-at="2021-10-22T10:30:42 SAST" finished-at="2021-10-22T10:30:42 SAST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- EndTests -->
