@@ -63,10 +63,24 @@ public class TC_009 extends PartyApiSitPayloads {
 		
 		String riskRating = innerJson.getJSONObject("riskRatingResult").getString("riskRating");
 		ApiHelper.AssertEquals("riskRating" ,"High", riskRating, test);
+		
 
 		String riskRatingReason = innerJson.getJSONObject("riskRatingResult").getString("riskRatingReason");
 		ApiHelper.AssertEquals("riskRatingReason" ,"Person is on PEP/FPIP/Adverse Media list", riskRatingReason, test);
 
+		test.info( "Requirements: ");
+		String proofOfIdentity = innerJson.getJSONArray("requirements").get(0).toString();
+		ApiHelper.AssertEquals("Proof Of Identity " ,"ProofOfIdentity", proofOfIdentity, test);
+		
+		String proofOfAddress = innerJson.getJSONArray("requirements").get(1).toString();
+		ApiHelper.AssertEquals("Proof Of Address" ,"ProofOfAddress", proofOfAddress, test);
+		
+		String proofOfSourceOfIncome = innerJson.getJSONArray("requirements").get(2).toString();
+		ApiHelper.AssertEquals("Proof Of Address" ,"ProofOfAddress", proofOfAddress, test);
+	
+		String proofOfSourceOfWealth = innerJson.getJSONArray("requirements").get(3).toString();
+		ApiHelper.AssertEquals("Proof of source of wealth " ,"ProofOfSourceOfWealth", proofOfSourceOfWealth, test);
+		
 			
 		test.info( "ID Number used: 7606060795082");
 		
