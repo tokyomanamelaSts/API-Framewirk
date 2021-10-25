@@ -37,8 +37,13 @@ public class API_AllTestsRunner {
 	String Appreportname = "Hollard Application API "+ApptimeStamp+".html";
 	String ApppageTile = "Hollard Application API";
 	String AppTesterName = System.getProperty("user.name");
-	ExtentReports Appextent=new ExtentManager().extentTest(Appreportname, ApppageTile, AppTesterName);
+	ExtentReports Appextent;
 
+	public API_AllTestsRunner() throws IOException {
+		
+		 Appextent=new ExtentManager().extentTest(Appreportname, ApppageTile, AppTesterName);
+	}
+	
 	@Test(priority = 1,enabled=true)
 	public void CreateApplication() throws URISyntaxException, IOException, SAXException, ParserConfigurationException {
 		CreateAplication.CreateApplication(Appextent);

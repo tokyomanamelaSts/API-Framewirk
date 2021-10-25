@@ -24,9 +24,15 @@ public class PolicyRunner {
 	String reportname = "Hollard Policy "+timeStamp+".html";
 	String pageTile = "Hollard Policy API";
 	String TesterName = System.getProperty("user.name");
-	ExtentReports extent=new ExtentManager().extentTest(reportname, reportname, TesterName);
+	ExtentReports extent;
 	
 
+	public PolicyRunner() throws IOException {
+		
+		 extent=new ExtentManager().extentTest(reportname, pageTile, TesterName);
+		 
+		}
+	
     @Test(priority =1,enabled=true)
     public void PolicybyPolicyReference() throws URISyntaxException, IOException, SAXException, ParserConfigurationException {
  		

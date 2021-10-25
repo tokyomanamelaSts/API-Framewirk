@@ -28,8 +28,14 @@ public class partyVerificationSoapRunner {
 	String reportname = "Hollard PartyVerification API(SOAP) "+timeStamp+".html";
 	String pageTile = "Hollard PartyVerification API"; 
 	String TesterName = System.getProperty("user.name");
-	ExtentReports extent=new ExtentManager().extentTest(reportname, reportname, TesterName);
+	ExtentReports extent;
 	
+	
+	public partyVerificationSoapRunner() throws IOException {
+		
+		 extent=new ExtentManager().extentTest(reportname, pageTile, TesterName);
+		 
+		}
 	
 	@Test(priority = 1,enabled=true)
 	public void validatePersonHighRisk() throws URISyntaxException, IOException, SAXException, ParserConfigurationException {

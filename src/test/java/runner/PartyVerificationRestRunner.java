@@ -23,7 +23,14 @@ public class PartyVerificationRestRunner {
 	String reportname = "Hollard Party Verification API(REST)"+timeStamp+".html";
 	String pageTile = "Hollard Party Verification API(REST)";
 	String TesterName = System.getProperty("user.name");
-	ExtentReports extent=new ExtentManager().extentTest(reportname, pageTile, TesterName);
+	ExtentReports extent;
+	
+	
+	public PartyVerificationRestRunner() throws IOException {
+		
+		 extent=new ExtentManager().extentTest(reportname, pageTile, TesterName);
+		 
+		}
 
 	@Test(priority = 1,enabled=true)
 	public void TC_001_PersonIdentification_Basic() throws URISyntaxException, SAXException, IOException, ParserConfigurationException {

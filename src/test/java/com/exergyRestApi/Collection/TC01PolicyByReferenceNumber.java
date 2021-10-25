@@ -7,18 +7,13 @@ import java.net.URI;
 import java.net.URISyntaxException;
 
 import javax.xml.parsers.ParserConfigurationException;
-
-import org.testng.Assert;
-import org.testng.annotations.Test;
 import org.xml.sax.SAXException;
-
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.markuputils.CodeLanguage;
 import com.aventstack.extentreports.markuputils.MarkupHelper;
 
 import Utilities.ApiHelper;
-import Utilities.ExtentManager;
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
 import io.restassured.path.json.JsonPath;

@@ -22,8 +22,16 @@ public class CollectionRunner {
 	String reportname = "Hollard Collection API "+timeStamp+".html";
 	String pageTile = "Hollard Collection API";
 	String TesterName = System.getProperty("user.name");
-	ExtentReports extent=new ExtentManager().extentTest(reportname, pageTile, TesterName);
+	ExtentReports extent;
 
+	
+	public CollectionRunner() throws IOException {
+		
+		 extent=new ExtentManager().extentTest(reportname, pageTile, TesterName);
+		 
+		}
+		
+	
 	@Test(priority = 1,enabled=true)
 	public void TC01PolicyByReferenceNumber() throws URISyntaxException, IOException, SAXException, ParserConfigurationException {
 		

@@ -1,24 +1,15 @@
 package com.exergyRestApi.Collection;
 import static io.restassured.RestAssured.given;
-import static org.hamcrest.Matchers.equalTo;
-
 import java.io.IOException;
-
 import javax.xml.parsers.ParserConfigurationException;
-
-import org.testng.Assert;
-import org.testng.annotations.Test;
 import org.xml.sax.SAXException;
-
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.markuputils.CodeLanguage;
 import com.aventstack.extentreports.markuputils.MarkupHelper;
 import com.collectionpayload.CancelCollectionPayLoad;
 import com.collectionpayload.CollectionPayLoad;
-
 import Utilities.ApiHelper;
-import Utilities.ExtentManager;
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
 import io.restassured.path.json.JsonPath;
@@ -95,12 +86,7 @@ public static void tc0004(ExtentReports extent) throws SAXException, IOException
 		
 	    test.info( "Find response below");
 	    test.info( MarkupHelper.createCodeBlock(response.asString(),CodeLanguage.JSON));
-
-
-
-		
-		
-	     
+    
 	}
 
 }

@@ -22,7 +22,13 @@ public class bankServiceRunner {
 	String pageTile = "Hollard Bank Service";
 	String TesterName = System.getProperty("user.name");
 	
-	ExtentReports extent=new ExtentManager().extentTest(reportname, pageTile, TesterName);
+	ExtentReports extent;
+	
+	
+	public bankServiceRunner() throws IOException {
+		 extent=new ExtentManager().extentTest(reportname, pageTile, TesterName);
+		}
+		
 
     @Test(priority =1,enabled=true)
     public void CreateAuthenticatedCollection() throws URISyntaxException, IOException, SAXException, ParserConfigurationException {
