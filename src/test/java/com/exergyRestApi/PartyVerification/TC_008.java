@@ -46,7 +46,7 @@ public class TC_008 extends PartyApiSitPayloads {
 		
 		
 		ExtentTest test;
-		test=extent.createTest("TC_007_PersonVerification RiskRating_Low_IdentityNumber");
+		test=extent.createTest("TC_008_PersonVerification RiskRating_Low_IdentityNumber Invalid ID");
 		Response response;
 		response =  ApiHelper.sendRestPostRequest(PartyVerificationSitUrl,PartySubKey, PartySubId,PersonVerificationRRLowID, "/Person/9306116219089/Verification");
 		response.prettyPrint();
@@ -54,16 +54,19 @@ public class TC_008 extends PartyApiSitPayloads {
 
 		
 		JSONObject innerJson = new JSONObject(response.getBody().asString());
-		
-
+	/*	
 		String error = innerJson.get("ErrorMessage").toString();
 		ApiHelper.AssertEquals("Error Message" ,"The person is not found using specified Identity Number", error, test);
+	*/	
+		String friendlyErrorMessage = innerJson.get("FriendlyErrorMessage").toString();
+		ApiHelper.AssertEquals("Friendly Error Message" ,"Internal server error. Please contact the system administrator.", friendlyErrorMessage, test);
+	
 		
 		String uri = innerJson.get("URI").toString();
 		ApiHelper.AssertEquals("uri" ,"/Person/9306116219089/Verification", uri, test);
 
 		
-		test.info( "ID Number used: 9306116219082/");
+		test.info( "ID Number used: 9306116219089");
 		
 		test.info( "Find payload(Request) below");
 		

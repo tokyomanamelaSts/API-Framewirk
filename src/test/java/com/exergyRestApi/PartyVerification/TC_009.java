@@ -61,18 +61,13 @@ public class TC_009 extends PartyApiSitPayloads {
 		String externalReference = innerJson.get("externalReference").toString();
 		ApiHelper.AssertEquals("externalReference" ,"MyRef123", externalReference, test);
 		
-	/*	String firstName = innerJson.getJSONObject("verifications").getJSONObject("verifiedPerson").getString("firstNames");
-		ApiHelper.AssertEquals("firstNames" ,"PASCAL", firstName, test);
-		
-		String surname = innerJson.getJSONObject("verifications").getJSONObject("verifiedPerson").getString("surname");
-		ApiHelper.AssertEquals("surname" ,"PASCAL", surname, test);
-	
-		String birthDate = innerJson.getJSONObject("verifications").getJSONObject("verifiedPerson").getString("birthDate");
-		ApiHelper.AssertEquals("birthDate" ,"1993-06-11T00:00:00", birthDate, test);
-	
-		String livingStatus = innerJson.getJSONObject("verification").getJSONObject("person").getString("livingStatus");
-		ApiHelper.AssertEquals("Living status" ,"Alive", livingStatus, test);*/
-	
+		String riskRating = innerJson.getJSONObject("riskRatingResult").getString("riskRating");
+		ApiHelper.AssertEquals("riskRating" ,"High", riskRating, test);
+
+		String riskRatingReason = innerJson.getJSONObject("riskRatingResult").getString("riskRatingReason");
+		ApiHelper.AssertEquals("riskRatingReason" ,"Person is on PEP/FPIP/Adverse Media list", riskRatingReason, test);
+
+			
 		test.info( "ID Number used: 7606060795082");
 		
 		test.info( "Find payload(Request) below");
@@ -92,4 +87,3 @@ public class TC_009 extends PartyApiSitPayloads {
 	
 
 }
-
