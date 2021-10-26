@@ -51,7 +51,7 @@ public class TC_014 extends PartyApiUatPayloads{
 					
 	    			
 				
-		test.info( "Passport Number used: A11111111");
+		test.info( "Passport Number(Invalid) used: A11111111");
 				
 	    test.info( "Find payload(Request) below");
 		test.info( MarkupHelper.createCodeBlock(PersonVerificationRRHighPassport,CodeLanguage.JSON));
