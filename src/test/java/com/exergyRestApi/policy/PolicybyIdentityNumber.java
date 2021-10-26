@@ -7,6 +7,7 @@ import com.aventstack.extentreports.markuputils.CodeLanguage;
 import com.aventstack.extentreports.markuputils.MarkupHelper;
 
 import Utilities.ApiHelper;
+import Utilities.DataProvider;
 import io.restassured.response.Response;
 import java.io.IOException;
 import java.net.URISyntaxException;
@@ -22,10 +23,19 @@ public static void  policybyIdentityNumber(ExtentReports extent) throws URISynta
 	
 	
 	
+	
+    String policySitUrl = DataProvider.GetPropVal(DataProvider.propertyFilePath, "policySitUrl");
+	
+	String policySubId = DataProvider.GetPropVal(DataProvider.propertyFilePath, "policySubId");
+
+	String policySubKey = DataProvider.GetPropVal(DataProvider.propertyFilePath, "policySubKey");
+	
+	
+	
 	ExtentTest test;
 	test=extent.createTest("Policy by Identity Number");
 	Response response;
-	response =  ApiHelper.sendRestGetRequest(ApiHelper.policySitUrl,ApiHelper.policySubKey, ApiHelper.policySubId,"/Policy?identityNumber=9204175130086");
+	response =  ApiHelper.sendRestGetRequest(policySitUrl,policySubKey,policySubId,"/Policy?identityNumber=9204175130086");
 	response.prettyPrint();
 	ApiHelper.AssertEquals("Status code" ,"200", String.valueOf(response.statusCode()) , test);
 	test.info( MarkupHelper.createCodeBlock(response.asString(),CodeLanguage.JSON));

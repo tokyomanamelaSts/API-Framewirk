@@ -8,6 +8,7 @@ import com.aventstack.extentreports.markuputils.CodeLanguage;
 import com.aventstack.extentreports.markuputils.MarkupHelper;
 
 import Utilities.ApiHelper;
+import Utilities.DataProvider;
 import io.restassured.response.Response;
 import java.io.IOException;
 import java.net.URISyntaxException;
@@ -21,10 +22,18 @@ public static void  qualificationProduct1960(ExtentReports extent) throws URISyn
 	
 	
 	
+    String applicationSitUrl = DataProvider.GetPropVal(DataProvider.propertyFilePath, "applicationSitUrl");
+	
+	String applicationSubId = DataProvider.GetPropVal(DataProvider.propertyFilePath, "applicationSubId");
+
+	String applicationSubKey = DataProvider.GetPropVal(DataProvider.propertyFilePath, "applicationSubKey");
+	
+	
+	
 	ExtentTest test;
 	test=extent.createTest("Qualification Product 1960");
 	Response response;
-	response =  ApiHelper.sendRestPostRequest(ApiHelper.applicationSitUrl,QualificationProduct1960Payload,ApiHelper.applicationSubKey, ApiHelper.applicationSubId, "/Qualification");
+	response =  ApiHelper.sendRestPostRequest(applicationSitUrl,applicationSubKey,applicationSubId,QualificationProduct1960Payload, "/Qualification");
 	ApiHelper.AssertEquals("Status code" ,"200", "200" , test);
 	
 	

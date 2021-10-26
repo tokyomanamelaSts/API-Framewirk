@@ -7,6 +7,7 @@ import com.aventstack.extentreports.markuputils.CodeLanguage;
 import com.aventstack.extentreports.markuputils.MarkupHelper;
 
 import Utilities.ApiHelper;
+import Utilities.DataProvider;
 import io.restassured.response.Response;
 import java.io.IOException;
 import java.net.URISyntaxException;
@@ -22,10 +23,17 @@ public static void  createApplicationPremiumCollection(ExtentReports extent) thr
 	
 	
 	
+    String applicationSitUrl = DataProvider.GetPropVal(DataProvider.propertyFilePath, "applicationSitUrl");
+	
+	String applicationSubId = DataProvider.GetPropVal(DataProvider.propertyFilePath, "applicationSubId");
+
+	String applicationSubKey = DataProvider.GetPropVal(DataProvider.propertyFilePath, "applicationSubKey");
+	
+	
 	ExtentTest test;
 	test=extent.createTest("Create Application Premium Collection");
 	Response response;
-	response =  ApiHelper.sendRestPutRequest(ApiHelper.applicationSitUrl,ApiHelper.applicationSubKey, ApiHelper.applicationSubId,CreateApplicationPremiumCollection, "/Application/101975/PremiumCollection");
+	response =  ApiHelper.sendRestPutRequest(applicationSitUrl,applicationSubKey,applicationSubId,CreateApplicationPremiumCollection, "/Application/101975/PremiumCollection");
 	response.prettyPrint();
 	ApiHelper.AssertEquals("Status code" ,"200", String.valueOf(response.statusCode()) , test);
 	

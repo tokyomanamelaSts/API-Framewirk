@@ -8,6 +8,7 @@ import com.aventstack.extentreports.markuputils.MarkupHelper;
 import com.policyPayloads.policyPayloads;
 
 import Utilities.ApiHelper;
+import Utilities.DataProvider;
 import io.restassured.response.Response;
 import java.io.IOException;
 import java.net.URISyntaxException;
@@ -21,10 +22,17 @@ public static void  changeBeneficiaries(ExtentReports extent) throws URISyntaxEx
 	
 	
 	
+    String policySitUrl = DataProvider.GetPropVal(DataProvider.propertyFilePath, "policySitUrl");
+	
+	String policySubId = DataProvider.GetPropVal(DataProvider.propertyFilePath, "policySubId");
+
+	String policySubKey = DataProvider.GetPropVal(DataProvider.propertyFilePath, "policySubKey");
+	
+	
 	ExtentTest test;
 	test=extent.createTest("Change Beneficiaries");
 	Response response;
-	response =  ApiHelper.sendRestPutRequest(ApiHelper.policySitUrl,ApiHelper.policySubKey, ApiHelper.policySubId,ChangeBeneficiariesPayload, "/Policy/50002008/Beneficiary?policyHolderIdentityNumber=8912111014088");
+	response =  ApiHelper.sendRestPutRequest(policySitUrl,policySubKey,policySubId,ChangeBeneficiariesPayload, "/Policy/50002008/Beneficiary?policyHolderIdentityNumber=8912111014088");
 	response.prettyPrint();
 	ApiHelper.AssertEquals("Status code" ,"200", String.valueOf(response.statusCode()) , test);
 	

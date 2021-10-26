@@ -7,6 +7,7 @@ import com.aventstack.extentreports.markuputils.CodeLanguage;
 import com.aventstack.extentreports.markuputils.MarkupHelper;
 
 import Utilities.ApiHelper;
+import Utilities.DataProvider;
 import io.restassured.response.Response;
 import java.io.IOException;
 import java.net.URISyntaxException;
@@ -21,10 +22,17 @@ public static void  getApplication(ExtentReports extent) throws URISyntaxExcepti
 	
 	
 	
+    String applicationSitUrl = DataProvider.GetPropVal(DataProvider.propertyFilePath, "applicationSitUrl");
+	
+	String applicationSubId = DataProvider.GetPropVal(DataProvider.propertyFilePath, "applicationSubId");
+
+	String applicationSubKey = DataProvider.GetPropVal(DataProvider.propertyFilePath, "applicationSubKey");
+	
+	
 	ExtentTest test;
 	test=extent.createTest("Get Application");
 	Response response;
-	response =  ApiHelper.sendRestGetRequest(ApiHelper.applicationSitUrl,ApiHelper.applicationSubKey, ApiHelper.applicationSubId,"/Application/1598");
+	response =  ApiHelper.sendRestGetRequest(applicationSitUrl,applicationSubKey,applicationSubId,"/Application/1598");
 	ApiHelper.AssertEquals("Status code" ,"200", String.valueOf(response.statusCode()) , test);
 	
 	

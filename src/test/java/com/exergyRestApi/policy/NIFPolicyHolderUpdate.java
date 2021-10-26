@@ -8,6 +8,7 @@ import com.aventstack.extentreports.markuputils.MarkupHelper;
 import com.policyPayloads.policyPayloads;
 
 import Utilities.ApiHelper;
+import Utilities.DataProvider;
 import io.restassured.response.Response;
 import java.io.IOException;
 import java.net.URISyntaxException;
@@ -21,10 +22,18 @@ public static void  nIFPolicyHolderUpdate(ExtentReports extent) throws URISyntax
 	
 	
 	
+    String policySitUrl = DataProvider.GetPropVal(DataProvider.propertyFilePath, "policySitUrl");
+	
+	String policySubId = DataProvider.GetPropVal(DataProvider.propertyFilePath, "policySubId");
+
+	String policySubKey = DataProvider.GetPropVal(DataProvider.propertyFilePath, "policySubKey");
+	
+	
+	
 	ExtentTest test;
 	test=extent.createTest("NIF Policy Holder Update");
 	Response response;
-	response =  ApiHelper.sendRestPutRequest(ApiHelper.policySitUrl,ApiHelper.policySubKey, ApiHelper.policySubId,NIFPolicyHolderUpdatepayload, "/Policy/50000541/PolicyHolder");
+	response =  ApiHelper.sendRestPutRequest(policySitUrl,policySubKey,policySubId,NIFPolicyHolderUpdatepayload, "/Policy/50000541/PolicyHolder");
 	response.prettyPrint();
 	ApiHelper.AssertEquals("Status code" ,"200", String.valueOf(response.statusCode()) , test);
 	

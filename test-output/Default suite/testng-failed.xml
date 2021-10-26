@@ -3,12 +3,12 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="runner.PartyVerificationRestRunner">
+      <class name="runner.ApplicationRunner">
         <methods>
           <include name="EndTests"/>
-          <include name="TC_014_PersonVerification_RiskRating_High_Passport_Invalid_passport"/>
+          <include name="CreateApplicationAcceptance"/>
         </methods>
-      </class> <!-- runner.PartyVerificationRestRunner -->
+      </class> <!-- runner.ApplicationRunner -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

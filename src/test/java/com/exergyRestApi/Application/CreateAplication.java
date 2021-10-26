@@ -7,6 +7,7 @@ import com.aventstack.extentreports.markuputils.CodeLanguage;
 import com.aventstack.extentreports.markuputils.MarkupHelper;
 
 import Utilities.ApiHelper;
+import Utilities.DataProvider;
 import io.restassured.response.Response;
 import java.io.IOException;
 import java.net.URISyntaxException;
@@ -22,11 +23,17 @@ public static void  CreateApplication(ExtentReports extent) throws URISyntaxExce
 	
 	
 	
+	String applicationSitUrl = DataProvider.GetPropVal(DataProvider.propertyFilePath, "applicationSitUrl");
+	
+	String applicationSubId = DataProvider.GetPropVal(DataProvider.propertyFilePath, "applicationSubId");
+
+	String applicationSubKey = DataProvider.GetPropVal(DataProvider.propertyFilePath, "applicationSubKey");
+	
+	
 	ExtentTest test;
 	test=extent.createTest("Create Application");
 	Response response;
-	response =  ApiHelper.sendRestPostRequest(ApiHelper.applicationSitUrl,ApiHelper.applicationSubKey, ApiHelper.applicationSubId, CreateApplicationPayLoad, "Application");
-	
+	response =  ApiHelper.sendRestPostRequest(applicationSitUrl,applicationSubKey,applicationSubId, CreateApplicationPayLoad, "Application");
 	
 	
 	ApiHelper.AssertEquals("Status code" ,"200", String.valueOf(response.statusCode()) , test);
@@ -47,7 +54,7 @@ public static void  CreateApplication(ExtentReports extent) throws URISyntaxExce
 	ApiHelper.AssertEquals("campaignCode" ,"60200000", campaigncode, test);
 	
 	String product = innerJson.getJSONObject("product").getString("productName");
-	ApiHelper.AssertEquals("productName" ,"Tyme Bank Funeral (Boxer)", product, test);
+	ApiHelper.AssertEquals("productName" ,"Tyme Bank Funeral", product, test);
 	
 	
 	
