@@ -8,6 +8,7 @@ import com.aventstack.extentreports.markuputils.MarkupHelper;
 import com.policyPayloads.policyPayloads;
 
 import Utilities.ApiHelper;
+import Utilities.DataProvider;
 import io.restassured.response.Response;
 import java.io.IOException;
 import java.net.URISyntaxException;
@@ -21,10 +22,19 @@ public static void  uploadDocument(ExtentReports extent) throws URISyntaxExcepti
 	
 	
 	
+	
+    String policySitUrl = DataProvider.GetPropVal(DataProvider.propertyFilePath, "policySitUrl");
+	
+	String policySubId = DataProvider.GetPropVal(DataProvider.propertyFilePath, "policySubId");
+
+	String policySubKey = DataProvider.GetPropVal(DataProvider.propertyFilePath, "policySubKey");
+	
+	
+	
 	ExtentTest test;
 	test=extent.createTest("Upload document");
 	Response response;
-	response =  ApiHelper.sendRestPostRequest(ApiHelper.policySitUrl,ApiHelper.policySubKey, ApiHelper.policySubId,UploadDocument, "/Policy/50000007/Attachment?policyHolderIdentityNumber=8412260245088");
+	response =  ApiHelper.sendRestPostRequest(policySitUrl,policySubKey,policySubId,UploadDocument, "/Policy/50000007/Attachment?policyHolderIdentityNumber=8412260245088");
 	response.prettyPrint();
 	ApiHelper.AssertEquals("Status code" ,"200", String.valueOf(response.statusCode()) , test);
 	
