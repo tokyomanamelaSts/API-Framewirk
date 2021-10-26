@@ -53,7 +53,7 @@ public static void PersonIdentification_Enhanced_Invalid_ID(ExtentReports extent
 	ApiHelper.AssertEquals("errorMessage" ,"The person is not found using specified Identity Number", error, test);
 	
 	
-	test.info( "ID Number used: 9705145018089");
+	test.info( "ID Number(Invalid) used: 9705145018089");
 	
 	test.info( "Find payload(Request) below");
     test.info( MarkupHelper.createCodeBlock(PersonIndentificationEnhanced,CodeLanguage.JSON));

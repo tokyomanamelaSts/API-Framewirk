@@ -57,28 +57,19 @@ public class TC_008 extends PartyApiUatPayloads {
 		//Validations//
 		
 		JSONObject innerJson = new JSONObject(response.getBody().asString());
-	/*	
+		
+		String errorCode = innerJson.get("ErrorCode").toString();
+		ApiHelper.AssertEquals("Error Code" ,"404", errorCode, test);
+	
 		String error = innerJson.get("ErrorMessage").toString();
 		ApiHelper.AssertEquals("Error Message" ,"The person is not found using specified Identity Number", error, test);
-	*/	
-		String friendlyErrorMessage = innerJson.get("FriendlyErrorMessage").toString();
-		ApiHelper.AssertEquals("Friendly Error Message" ,"Internal server error. Please contact the system administrator.", friendlyErrorMessage, test);
 	
 		
-		String uri = innerJson.get("URI").toString();
-		ApiHelper.AssertEquals("uri" ,"/Person/9306116219089/Verification", uri, test);
-
-		
-		test.info( "ID Number used: 9306116219089");
-		
+		test.info( "ID Number used(Invalid): 9306116219089");
 		test.info( "Find payload(Request) below");
-		
 		test.info( MarkupHelper.createCodeBlock(PersonIndentificationBasic,CodeLanguage.JSON));
 		test.info( "Find response below");
 		test.info( MarkupHelper.createCodeBlock(response.asString(),CodeLanguage.JSON));
-			
-		
-		
 	}
 
 

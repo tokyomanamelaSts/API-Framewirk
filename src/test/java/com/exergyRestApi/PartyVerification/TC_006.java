@@ -52,7 +52,7 @@ public static void PersonIdentificationComprehensiveWithMortalityInformation_Inv
 		String error = innerJson.get("errorMessage").toString();
 		ApiHelper.AssertEquals("errorMessage" ,"The person is not found using specified Identity Number", error, test);
 		
-		test.info( "ID Number used: 9706145018089");
+		test.info( "ID Number used(Invalid): 9706145018089");
 		
 		test.info( "Find payload(Request) below");
 	    test.info( MarkupHelper.createCodeBlock(PersonIndentificationWCMI,CodeLanguage.JSON));
