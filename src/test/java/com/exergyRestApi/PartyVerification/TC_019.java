@@ -16,11 +16,11 @@ import Utilities.ApiHelper;
 import Utilities.DataProvider;
 import io.restassured.response.Response;
 
-public class TC_019_PersonVerification_RiskRating_HighIdentityNumber_Invalid_Format extends PartyApiUatPayloads {
+public class TC_019 extends PartyApiUatPayloads {
 
 	
 	
-	public static void PersonVerification_RiskRating_HighIdentityNumber_Invalid_Format(ExtentReports extent) throws URISyntaxException, SAXException, IOException, ParserConfigurationException {
+	public static void TC_019_PersonVerification_RiskRating_HighIdentityNumber_Invalid_ID_Format(ExtentReports extent) throws URISyntaxException, SAXException, IOException, ParserConfigurationException {
 		
 		
 		String PartyVerificationUATUrl = DataProvider.GetPropVal(DataProvider.propertyFilePath, "PartyVerificationUATUrl");
@@ -31,7 +31,7 @@ public class TC_019_PersonVerification_RiskRating_HighIdentityNumber_Invalid_For
 				
 
 		ExtentTest test;
-		test=extent.createTest("TC_010_PersonVerificationRiskRatinghigh_Identitynumber_invalid_Format");
+		test=extent.createTest("TC_010_PersonVerificationRiskRatinghigh_Identitynumber_invalid_ID_Format");
 		Response response;
 		response =  ApiHelper.sendRestPostRequest(PartyVerificationUATUrl,PartySubKey,PartySubId, PersonVerificationRRHighID,"/Person/760605795082/Verification");
 		response.prettyPrint();

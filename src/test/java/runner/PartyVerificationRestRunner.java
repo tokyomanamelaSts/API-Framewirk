@@ -150,7 +150,7 @@ public class PartyVerificationRestRunner {
 	@Test(priority = 15,enabled=true)
     public void TC_018_PersonVerification_RiskRating_Low_ID_Invalid_Format() throws URISyntaxException, IOException, SAXException, ParserConfigurationException {
 		
-		TC_018_PersonVerification_RiskRating_Low_ID_Invalid_Format.PersonVerification_RiskRating_Low_ID_Invalid_Format(extent);
+		TC_018.TC_018_PersonVerification_RiskRating_Low_ID_Invalid_Format(extent);
 		ApiHelper.softAssertion.assertAll();
 		
 	} 
@@ -158,7 +158,7 @@ public class PartyVerificationRestRunner {
 	@Test(priority = 15,enabled=true)
     public void TC_019_PersonVerification_RiskRating_HighIdentityNumber_Invalid_Format() throws URISyntaxException, IOException, SAXException, ParserConfigurationException {
 		
-		TC_019_PersonVerification_RiskRating_HighIdentityNumber_Invalid_Format.PersonVerification_RiskRating_HighIdentityNumber_Invalid_Format(extent);
+		TC_019.TC_019_PersonVerification_RiskRating_HighIdentityNumber_Invalid_ID_Format(extent);
 		ApiHelper.softAssertion.assertAll();
 		
 	}
@@ -166,7 +166,7 @@ public class PartyVerificationRestRunner {
 	@Test(priority = 15,enabled=true)
     public void TC_020_PersonVerification_RiskRating_Low_Passport_Invalid_Format() throws URISyntaxException, IOException, SAXException, ParserConfigurationException {
 		
-		TC_020_PersonVerification_RiskRating_Low_Passport_Invalid_Format.PersonVerification_RiskRating_Low_Passport_Invalid_Format(extent);
+		TC_020.TC_020_PersonVerification_RiskRating_Low_Passport_Invalid_Passport_Format(extent);
 		ApiHelper.softAssertion.assertAll();
 		
 	}
@@ -175,7 +175,7 @@ public class PartyVerificationRestRunner {
 	@Test(priority = 15,enabled=true)
     public void TC_021_PersonVerification_RiskRating_High_Passport_Invalid_Format() throws URISyntaxException, IOException, SAXException, ParserConfigurationException {
 		
-		TC_021_PersonVerification_RiskRating_High_Passport_Invalid_Format.PersonVerification_RiskRating_High_Passport_Invalid_Format(extent);
+		TC_021.TC_021_PersonVerification_RiskRating_High_Passport_Invalid_Passport_Format(extent);
 		ApiHelper.softAssertion.assertAll();
 		
 	}

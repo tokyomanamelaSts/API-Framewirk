@@ -16,10 +16,10 @@ import Utilities.ApiHelper;
 import Utilities.DataProvider;
 import io.restassured.response.Response;
 
-public class TC_020_PersonVerification_RiskRating_Low_Passport_Invalid_Format extends PartyApiUatPayloads {
+public class TC_020 extends PartyApiUatPayloads {
 
 	
-	public static void PersonVerification_RiskRating_Low_Passport_Invalid_Format(ExtentReports extent) throws URISyntaxException, SAXException, IOException, ParserConfigurationException {
+	public static void TC_020_PersonVerification_RiskRating_Low_Passport_Invalid_Passport_Format(ExtentReports extent) throws URISyntaxException, SAXException, IOException, ParserConfigurationException {
 		
 		
 		 String PartyVerificationUATUrl = DataProvider.GetPropVal(DataProvider.propertyFilePath, "PartyVerificationUATUrl");
@@ -30,7 +30,7 @@ public class TC_020_PersonVerification_RiskRating_Low_Passport_Invalid_Format ex
 				
 
 		ExtentTest test;
-		test=extent.createTest("TC_012_PersonVerification_RiskRating_Low_Passport_Invalid_Passport");
+		test=extent.createTest("TC_012_PersonVerification_RiskRating_Low_Passport_Invalid_Passport_Format");
 		Response response;
 		response =  ApiHelper.sendRestPostRequest(PartyVerificationUATUrl,PartySubKey,PartySubId, PersonVerificationRRLowPassport,"/Person/A288654836/Verification");
 		response.prettyPrint();
@@ -51,7 +51,7 @@ public class TC_020_PersonVerification_RiskRating_Low_Passport_Invalid_Format ex
 		
 		
 		String msg = innerJson.get("FriendlyErrorMessage").toString();
-		ApiHelper.AssertEquals("FriendlyErrorMessage" ,"Identity Number not in the correct format | ", msg, test);
+		ApiHelper.AssertEquals("FriendlyErrorMessage" ,"Passport Number not in the correct format | ", msg, test);
 			
 		
 		
