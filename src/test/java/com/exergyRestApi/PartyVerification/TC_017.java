@@ -33,7 +33,7 @@ public static void PersonIdentificationComprehensiveWithMortalityInformation_Inv
 			
 
 	ExtentTest test;
-	test=extent.createTest("TC_017_PersonIdentificationComprehensiveWithMortalityInformation_Invalid_ID_Invalid_Format");
+	test=extent.createTest("TC_017_PersonIdentificationComprehensiveWithMortalityInformation_Invalid_ID_Format");
 	Response response;
 	response =  ApiHelper.sendRestPostRequest(PartyVerificationUATUrl,PartySubKey,PartySubId, PersonIndentificationWCMI,"/Person/018089/Identification");
 	ApiHelper.AssertEquals("Status code" ,"400", String.valueOf(response.statusCode()) , test);
