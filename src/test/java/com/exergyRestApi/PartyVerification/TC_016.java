@@ -21,7 +21,7 @@ import io.restassured.response.Response;
 
 public class TC_016 extends PartyApiUatPayloads {
 	
-public static void PersonIdentification_Enhanced_Invalid_ID_Invalid_Format(ExtentReports extent) throws URISyntaxException, SAXException, IOException, ParserConfigurationException {
+public static void PersonIdentification_Enhanced_Invalid_ID_Format(ExtentReports extent) throws URISyntaxException, SAXException, IOException, ParserConfigurationException {
 		
 		
 		
@@ -34,7 +34,7 @@ public static void PersonIdentification_Enhanced_Invalid_ID_Invalid_Format(Exten
 	
 	
 	ExtentTest test;
-	test=extent.createTest("TC_016_PersonIdentification_Enhanced_Invalid_ID_Invalid_Format");
+	test=extent.createTest("TC_016_PersonIdentification_Enhanced_Invalid_ID_Format");
 	Response response;
 	response =  ApiHelper.sendRestPostRequest(PartyVerificationUATUrl,PartySubKey, PartySubId,PersonIndentificationEnhanced, "/Person/42345018089/Identification");
 	

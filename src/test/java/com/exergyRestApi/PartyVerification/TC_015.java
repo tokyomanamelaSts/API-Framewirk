@@ -20,7 +20,7 @@ import io.restassured.response.Response;
 
 public class TC_015 extends PartyApiUatPayloads{
 	
-	public static void PersonIdentification_Basic_Invalid_ID_Invalid_Format(ExtentReports extent) throws URISyntaxException, SAXException, IOException, ParserConfigurationException {
+	public static void PersonIdentification_Basic_Invalid_ID_Format(ExtentReports extent) throws URISyntaxException, SAXException, IOException, ParserConfigurationException {
 		
 		String PartyVerificationUATUrl = DataProvider.GetPropVal(DataProvider.propertyFilePath, "PartyVerificationUATUrl");
 		
@@ -29,7 +29,7 @@ public class TC_015 extends PartyApiUatPayloads{
 		String PartySubKey = DataProvider.GetPropVal(DataProvider.propertyFilePath, "PartyVerificationSubKey");
 	
 		ExtentTest test;
-		test=extent.createTest("TC_015_PersonIdentification_Basic_Invalid_ID_Invalid_Format");
+		test=extent.createTest("TC_015_PersonIdentification_Basic_Invalid_ID_Format");
 		Response response;
 		response =  ApiHelper.sendRestPostRequest(PartyVerificationUATUrl,PartySubKey, PartySubId,PersonIndentificationBasic, "/Person/5145018089/Identification");
 		response.prettyPrint();

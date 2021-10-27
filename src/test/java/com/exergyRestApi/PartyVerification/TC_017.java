@@ -21,7 +21,7 @@ import io.restassured.response.Response;
 
 public class TC_017 extends PartyApiUatPayloads {
 	
-public static void PersonIdentificationComprehensiveWithMortalityInformation_Invalid_ID_Invalid_Format(ExtentReports extent) throws URISyntaxException, SAXException, IOException, ParserConfigurationException {
+public static void PersonIdentificationComprehensiveWithMortalityInformation_Invalid_ID_Format(ExtentReports extent) throws URISyntaxException, SAXException, IOException, ParserConfigurationException {
 		
 		
 		

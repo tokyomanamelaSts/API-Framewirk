@@ -151,7 +151,7 @@ public class PartyVerificationRestRunner {
 	@Test(priority = 15,enabled=true)
 	public void TC_015_PersonIdentification_Basic_Invalid_ID_Invalid_Format() throws URISyntaxException, IOException, SAXException, ParserConfigurationException {
 		
-		TC_015.PersonIdentification_Basic_Invalid_ID_Invalid_Format(extent);
+		TC_015.PersonIdentification_Basic_Invalid_ID_Format(extent);
 		ApiHelper.softAssertion.assertAll();
 		
 	}  
@@ -160,7 +160,7 @@ public class PartyVerificationRestRunner {
 	@Test(priority = 16,enabled=true)
 	public void TC_016_PersonIdentification_Enhanced_Invalid_ID_Invalid_Format() throws URISyntaxException, IOException, SAXException, ParserConfigurationException {
 		
-		TC_016.PersonIdentification_Enhanced_Invalid_ID_Invalid_Format(extent);
+		TC_016.PersonIdentification_Enhanced_Invalid_ID_Format(extent);
 		ApiHelper.softAssertion.assertAll();
 		
 	} 
@@ -168,7 +168,7 @@ public class PartyVerificationRestRunner {
 	@Test(priority = 17,enabled=true)
 	public void TC_017_PersonIdentificationComprehensiveWithMortalityInformation_Invalid_ID_Invalid_Format() throws URISyntaxException, IOException, SAXException, ParserConfigurationException {
 		
-		TC_017.PersonIdentificationComprehensiveWithMortalityInformation_Invalid_ID_Invalid_Format(extent);
+		TC_017.PersonIdentificationComprehensiveWithMortalityInformation_Invalid_ID_Format(extent);
 		ApiHelper.softAssertion.assertAll();
 		
 	} 
