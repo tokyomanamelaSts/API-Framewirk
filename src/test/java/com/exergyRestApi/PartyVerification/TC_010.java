@@ -35,7 +35,7 @@ public class TC_010 extends PartyApiUatPayloads {
 		ExtentTest test;
 		test=extent.createTest("TC_010_PersonVerificationRiskRatinghigh_Identitynumber_invalid_ID");
 		Response response;
-		response =  ApiHelper.sendRestPostRequest(PartyVerificationUATUrl,PartySubKey,PartySubId, PersonVerificationRRHighID,"/Person/760605795082/Verification");
+		response =  ApiHelper.sendRestPostRequest(PartyVerificationUATUrl,PartySubKey,PartySubId, PersonVerificationRRHighID,"/Person/7606057950812/Verification");
 		response.prettyPrint();
 		ApiHelper.AssertEquals("Status code" ,"400", String.valueOf(response.statusCode()) , test);
 		

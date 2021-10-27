@@ -146,6 +146,41 @@ public class PartyVerificationRestRunner {
 		ApiHelper.softAssertion.assertAll();
 		
 	} 
+	
+	@Test(priority = 15,enabled=true)
+    public void TC_018_PersonVerification_RiskRating_Low_ID_Invalid_Format() throws URISyntaxException, IOException, SAXException, ParserConfigurationException {
+		
+		TC_018.PersonVerification_RiskRating_Low_ID_Invalid_Format(extent);
+		ApiHelper.softAssertion.assertAll();
+		
+	} 
+	
+	@Test(priority = 15,enabled=true)
+    public void TC_019_PersonVerification_RiskRating_HighIdentityNumber_Invalid_Format() throws URISyntaxException, IOException, SAXException, ParserConfigurationException {
+		
+		TC_019.PersonVerification_RiskRating_HighIdentityNumber_Invalid_Format(extent);
+		ApiHelper.softAssertion.assertAll();
+		
+	}
+	
+	@Test(priority = 15,enabled=true)
+    public void TC_020_PersonVerification_RiskRating_Low_Passport_Invalid_Format() throws URISyntaxException, IOException, SAXException, ParserConfigurationException {
+		
+		TC_020.PersonVerification_RiskRating_Low_Passport_Invalid_Format(extent);
+		ApiHelper.softAssertion.assertAll();
+		
+	}
+	
+	
+	@Test(priority = 15,enabled=true)
+    public void TC_021_PersonVerification_RiskRating_High_Passport_Invalid_Format() throws URISyntaxException, IOException, SAXException, ParserConfigurationException {
+		
+		TC_021.PersonVerification_RiskRating_High_Passport_Invalid_Format(extent);
+		ApiHelper.softAssertion.assertAll();
+		
+	}
+	
+	
 	@AfterTest
 	public void EndTests() {
 		
