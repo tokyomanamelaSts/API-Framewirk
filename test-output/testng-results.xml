@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="3" ignored="0" total="17" passed="14">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="170276" started-at="2021-10-27T12:13:45 SAST" finished-at="2021-10-27T12:16:36 SAST">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="170276" started-at="2021-10-27T12:13:45 SAST" finished-at="2021-10-27T12:16:36 SAST">
+      <class name="runner.PartyVerificationRestRunner">
+        <test-method status="PASS" signature="TC_001_PersonIdentification_Basic()[pri:1, instance:runner.PartyVerificationRestRunner@932bc4a]" name="TC_001_PersonIdentification_Basic" duration-ms="86255" started-at="2021-10-27T12:13:45 SAST" finished-at="2021-10-27T12:15:12 SAST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_001_PersonIdentification_Basic -->
+        <test-method status="PASS" signature="TC_002_PersonIdentification_Basic_Invalid_ID()[pri:2, instance:runner.PartyVerificationRestRunner@932bc4a]" name="TC_002_PersonIdentification_Basic_Invalid_ID" duration-ms="10324" started-at="2021-10-27T12:15:12 SAST" finished-at="2021-10-27T12:15:22 SAST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_002_PersonIdentification_Basic_Invalid_ID -->
+        <test-method status="PASS" signature="TC_003_PersonIdentification_Enhanced()[pri:3, instance:runner.PartyVerificationRestRunner@932bc4a]" name="TC_003_PersonIdentification_Enhanced" duration-ms="10651" started-at="2021-10-27T12:15:22 SAST" finished-at="2021-10-27T12:15:33 SAST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_003_PersonIdentification_Enhanced -->
+        <test-method status="PASS" signature="TC_004_PersonIdentification_Enhanced_Invalid_ID()[pri:4, instance:runner.PartyVerificationRestRunner@932bc4a]" name="TC_004_PersonIdentification_Enhanced_Invalid_ID" duration-ms="2936" started-at="2021-10-27T12:15:33 SAST" finished-at="2021-10-27T12:15:35 SAST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_004_PersonIdentification_Enhanced_Invalid_ID -->
+        <test-method status="PASS" signature="TC_005_PersonIdentificationComprehensiveWithMortalityInformation()[pri:5, instance:runner.PartyVerificationRestRunner@932bc4a]" name="TC_005_PersonIdentificationComprehensiveWithMortalityInformation" duration-ms="6826" started-at="2021-10-27T12:15:36 SAST" finished-at="2021-10-27T12:15:42 SAST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_005_PersonIdentificationComprehensiveWithMortalityInformation -->
+        <test-method status="PASS" signature="TC_006_PersonIdentificationComprehensiveWithMortalityInformation_Invalid_ID()[pri:6, instance:runner.PartyVerificationRestRunner@932bc4a]" name="TC_006_PersonIdentificationComprehensiveWithMortalityInformation_Invalid_ID" duration-ms="4955" started-at="2021-10-27T12:15:42 SAST" finished-at="2021-10-27T12:15:47 SAST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_006_PersonIdentificationComprehensiveWithMortalityInformation_Invalid_ID -->
+        <test-method status="PASS" signature="TC_007_PersonVerification_Risk_Rating_Low_IdentityNumber()[pri:7, instance:runner.PartyVerificationRestRunner@932bc4a]" name="TC_007_PersonVerification_Risk_Rating_Low_IdentityNumber" duration-ms="7053" started-at="2021-10-27T12:15:47 SAST" finished-at="2021-10-27T12:15:54 SAST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_007_PersonVerification_Risk_Rating_Low_IdentityNumber -->
+        <test-method status="FAIL" signature="TC_008_PersonVerification_Risk_Rating_Low_IdentityNumber_Invalid_ID()[pri:8, instance:runner.PartyVerificationRestRunner@932bc4a]" name="TC_008_PersonVerification_Risk_Rating_Low_IdentityNumber_Invalid_ID" duration-ms="6834" started-at="2021-10-27T12:15:54 SAST" finished-at="2021-10-27T12:16:01 SAST">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[The following asserts failed:
+expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: The following asserts failed:
+expected [true] but found [false]
+at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:47)
+at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:31)
+at runner.PartyVerificationRestRunner.TC_008_PersonVerification_Risk_Rating_Low_IdentityNumber_Invalid_ID(PartyVerificationRestRunner.java:93)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.lang.reflect.Method.invoke(Method.java:498)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.util.ArrayList.forEach(ArrayList.java:1259)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_008_PersonVerification_Risk_Rating_Low_IdentityNumber_Invalid_ID -->
+        <test-method status="PASS" signature="TC_009_PersonVerification_Risk_Rating_High_IdentityNumber()[pri:9, instance:runner.PartyVerificationRestRunner@932bc4a]" name="TC_009_PersonVerification_Risk_Rating_High_IdentityNumber" duration-ms="3780" started-at="2021-10-27T12:16:01 SAST" finished-at="2021-10-27T12:16:05 SAST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_009_PersonVerification_Risk_Rating_High_IdentityNumber -->
+        <test-method status="FAIL" signature="TC_010_PersonVerificationRiskRatinghigh_Identitynumber_invalid_ID()[pri:10, instance:runner.PartyVerificationRestRunner@932bc4a]" name="TC_010_PersonVerificationRiskRatinghigh_Identitynumber_invalid_ID" duration-ms="4693" started-at="2021-10-27T12:16:05 SAST" finished-at="2021-10-27T12:16:10 SAST">
+          <exception class="org.json.JSONException">
+            <message>
+              <![CDATA[JSONObject["ErrorCode"] not found.]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.json.JSONException: JSONObject["ErrorCode"] not found.
+at org.json.JSONObject.get(JSONObject.java:572)
+at com.exergyRestApi.PartyVerification.TC_010.PersonVerification_RiskRating_HighIdentityNumber_Invalid_ID(TC_010.java:48)
+at runner.PartyVerificationRestRunner.TC_010_PersonVerificationRiskRatinghigh_Identitynumber_invalid_ID(PartyVerificationRestRunner.java:108)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.lang.reflect.Method.invoke(Method.java:498)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.util.ArrayList.forEach(ArrayList.java:1259)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.json.JSONException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_010_PersonVerificationRiskRatinghigh_Identitynumber_invalid_ID -->
+        <test-method status="PASS" signature="TC_011_PersonVerification_RiskRating_Low_Passport()[pri:11, instance:runner.PartyVerificationRestRunner@932bc4a]" name="TC_011_PersonVerification_RiskRating_Low_Passport" duration-ms="3892" started-at="2021-10-27T12:16:10 SAST" finished-at="2021-10-27T12:16:14 SAST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_011_PersonVerification_RiskRating_Low_Passport -->
+        <test-method status="PASS" signature="TC_012_PersonVerification_RiskRating_Low_Passport_Invalid_Passport()[pri:12, instance:runner.PartyVerificationRestRunner@932bc4a]" name="TC_012_PersonVerification_RiskRating_Low_Passport_Invalid_Passport" duration-ms="3172" started-at="2021-10-27T12:16:14 SAST" finished-at="2021-10-27T12:16:17 SAST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_012_PersonVerification_RiskRating_Low_Passport_Invalid_Passport -->
+        <test-method status="PASS" signature="TC_013_PersonVerification_RiskRating_High_Passport()[pri:13, instance:runner.PartyVerificationRestRunner@932bc4a]" name="TC_013_PersonVerification_RiskRating_High_Passport" duration-ms="6447" started-at="2021-10-27T12:16:17 SAST" finished-at="2021-10-27T12:16:23 SAST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_013_PersonVerification_RiskRating_High_Passport -->
+        <test-method status="FAIL" signature="TC_014_PersonVerification_RiskRating_High_Passport_Invalid_passport()[pri:14, instance:runner.PartyVerificationRestRunner@932bc4a]" name="TC_014_PersonVerification_RiskRating_High_Passport_Invalid_passport" duration-ms="6028" started-at="2021-10-27T12:16:23 SAST" finished-at="2021-10-27T12:16:29 SAST">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[The following asserts failed:
+expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: The following asserts failed:
+expected [true] but found [false]
+at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:47)
+at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:31)
+at runner.PartyVerificationRestRunner.TC_014_PersonVerification_RiskRating_High_Passport_Invalid_passport(PartyVerificationRestRunner.java:146)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.lang.reflect.Method.invoke(Method.java:498)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.util.ArrayList.forEach(ArrayList.java:1259)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_014_PersonVerification_RiskRating_High_Passport_Invalid_passport -->
+        <test-method status="PASS" signature="TC_015_PersonIdentification_Basic_Invalid_ID_Invalid_Format()[pri:15, instance:runner.PartyVerificationRestRunner@932bc4a]" name="TC_015_PersonIdentification_Basic_Invalid_ID_Invalid_Format" duration-ms="1954" started-at="2021-10-27T12:16:29 SAST" finished-at="2021-10-27T12:16:31 SAST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_015_PersonIdentification_Basic_Invalid_ID_Invalid_Format -->
+        <test-method status="PASS" signature="TC_016_PersonIdentification_Enhanced_Invalid_ID_Invalid_Format()[pri:16, instance:runner.PartyVerificationRestRunner@932bc4a]" name="TC_016_PersonIdentification_Enhanced_Invalid_ID_Invalid_Format" duration-ms="1946" started-at="2021-10-27T12:16:31 SAST" finished-at="2021-10-27T12:16:33 SAST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_016_PersonIdentification_Enhanced_Invalid_ID_Invalid_Format -->
+        <test-method status="PASS" signature="TC_017_PersonIdentificationComprehensiveWithMortalityInformation_Invalid_ID_Invalid_Format()[pri:17, instance:runner.PartyVerificationRestRunner@932bc4a]" name="TC_017_PersonIdentificationComprehensiveWithMortalityInformation_Invalid_ID_Invalid_Format" duration-ms="1983" started-at="2021-10-27T12:16:33 SAST" finished-at="2021-10-27T12:16:35 SAST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_017_PersonIdentificationComprehensiveWithMortalityInformation_Invalid_ID_Invalid_Format -->
+        <test-method status="PASS" signature="EndTests()[pri:0, instance:runner.PartyVerificationRestRunner@932bc4a]" name="EndTests" is-config="true" duration-ms="354" started-at="2021-10-27T12:16:35 SAST" finished-at="2021-10-27T12:16:36 SAST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- EndTests -->
+      </class> <!-- runner.PartyVerificationRestRunner -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
