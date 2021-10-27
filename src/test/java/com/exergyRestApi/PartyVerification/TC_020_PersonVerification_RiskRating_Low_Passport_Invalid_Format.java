@@ -16,7 +16,7 @@ import Utilities.ApiHelper;
 import Utilities.DataProvider;
 import io.restassured.response.Response;
 
-public class TC_020 extends PartyApiUatPayloads {
+public class TC_020_PersonVerification_RiskRating_Low_Passport_Invalid_Format extends PartyApiUatPayloads {
 
 	
 	public static void PersonVerification_RiskRating_Low_Passport_Invalid_Format(ExtentReports extent) throws URISyntaxException, SAXException, IOException, ParserConfigurationException {

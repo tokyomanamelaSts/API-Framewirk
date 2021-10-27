@@ -16,13 +16,14 @@ import Utilities.ApiHelper;
 import Utilities.DataProvider;
 import io.restassured.response.Response;
 
-public class TC_021 extends PartyApiUatPayloads {
+public class TC_019_PersonVerification_RiskRating_HighIdentityNumber_Invalid_Format extends PartyApiUatPayloads {
 
 	
-	public static void PersonVerification_RiskRating_High_Passport_Invalid_Format(ExtentReports extent) throws URISyntaxException, SAXException, IOException, ParserConfigurationException {
+	
+	public static void PersonVerification_RiskRating_HighIdentityNumber_Invalid_Format(ExtentReports extent) throws URISyntaxException, SAXException, IOException, ParserConfigurationException {
 		
 		
-		 String PartyVerificationUATUrl = DataProvider.GetPropVal(DataProvider.propertyFilePath, "PartyVerificationUATUrl");
+		String PartyVerificationUATUrl = DataProvider.GetPropVal(DataProvider.propertyFilePath, "PartyVerificationUATUrl");
 		
 		 String PartySubId = DataProvider.GetPropVal(DataProvider.propertyFilePath, "PartyVerificationSubId");
 
@@ -30,13 +31,13 @@ public class TC_021 extends PartyApiUatPayloads {
 				
 
 		ExtentTest test;
-		test=extent.createTest("TC_014_PersonVerification_RiskRating_High_Passport_Invalid_passport");
+		test=extent.createTest("TC_010_PersonVerificationRiskRatinghigh_Identitynumber_invalid_Format");
 		Response response;
-		response =  ApiHelper.sendRestPostRequest(PartyVerificationUATUrl,PartySubKey,PartySubId, PersonVerificationRRHighPassport,"/Person/A11111111/Verification");
+		response =  ApiHelper.sendRestPostRequest(PartyVerificationUATUrl,PartySubKey,PartySubId, PersonVerificationRRHighID,"/Person/760605795082/Verification");
 		response.prettyPrint();
 		ApiHelper.AssertEquals("Status code" ,"400", String.valueOf(response.statusCode()) , test);
-	
 		
+	
 		//Validations
 		
 		
@@ -54,6 +55,7 @@ public class TC_021 extends PartyApiUatPayloads {
 		ApiHelper.AssertEquals("FriendlyErrorMessage" ,"Identity Number not in the correct format | ", msg, test);
 			
 		
-	}
+		
+	}	
 	
 }
