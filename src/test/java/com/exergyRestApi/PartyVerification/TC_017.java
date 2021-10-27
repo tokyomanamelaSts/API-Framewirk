@@ -19,9 +19,9 @@ import Utilities.ApiHelper;
 import Utilities.DataProvider;
 import io.restassured.response.Response;
 
-public class TC_006 extends PartyApiUatPayloads {
+public class TC_017 extends PartyApiUatPayloads {
 	
-public static void PersonIdentificationComprehensiveWithMortalityInformation_Invalid_ID(ExtentReports extent) throws URISyntaxException, SAXException, IOException, ParserConfigurationException {
+public static void PersonIdentificationComprehensiveWithMortalityInformation_Invalid_ID_Format(ExtentReports extent) throws URISyntaxException, SAXException, IOException, ParserConfigurationException {
 		
 		
 		
@@ -33,9 +33,9 @@ public static void PersonIdentificationComprehensiveWithMortalityInformation_Inv
 			
 
 	ExtentTest test;
-	test=extent.createTest("TC_006_PersonIdentificationComprehensiveWithMortalityInformation_Invalid_ID");
+	test=extent.createTest("TC_017_PersonIdentificationComprehensiveWithMortalityInformation_Invalid_ID_Format");
 	Response response;
-	response =  ApiHelper.sendRestPostRequest(PartyVerificationUATUrl,PartySubKey,PartySubId, PersonIndentificationWCMI,"/Person/9706145018089/Identification");
+	response =  ApiHelper.sendRestPostRequest(PartyVerificationUATUrl,PartySubKey,PartySubId, PersonIndentificationWCMI,"/Person/018089/Identification");
 	ApiHelper.AssertEquals("Status code" ,"400", String.valueOf(response.statusCode()) , test);
 	
 	
@@ -45,14 +45,20 @@ public static void PersonIdentificationComprehensiveWithMortalityInformation_Inv
 	
 		JSONObject innerJson = new JSONObject(response.getBody().asString());
 		
+		String errorCode = innerJson.get("ErrorCode").toString();
+		ApiHelper.AssertEquals("Error Code" ,"101", errorCode, test);
 		
-		String Ref = innerJson.get("reference").toString();
-		ApiHelper.AssertEquals("reference" ,"Pascal12", Ref, test);
+
+		String error = innerJson.get("ErrorMessage").toString();
+		ApiHelper.AssertEquals("Error Message" ,"Identity Number not in the correct format |", error, test);
 		
-		String error = innerJson.get("errorMessage").toString();
-		ApiHelper.AssertEquals("errorMessage" ,"The person is not found using specified Identity Number", error, test);
+		String uri = innerJson.get("URI").toString();
+		ApiHelper.AssertEquals("uri" ,"https://hollard-life-partyapi-uat.azurewebsites.net/Person/018089/Identification", uri, test);
+
+		String type = innerJson.get("Type").toString();
+		ApiHelper.AssertEquals("type" ,"Client", type, test);
 		
-		test.info( "ID Number used(Invalid): 9706145018089");
+		test.info( "ID Number used(Invalid): 018089");
 		
 		test.info( "Find payload(Request) below");
 	    test.info( MarkupHelper.createCodeBlock(PersonIndentificationWCMI,CodeLanguage.JSON));

@@ -53,13 +53,23 @@ public class TC_013 extends PartyApiUatPayloads {
 		String risk = innerJson.getJSONObject("riskRatingResult").getString("riskRating");
 		ApiHelper.AssertEquals("riskRating" ,"High", risk, test);
 					
-		//String Birth = innerJson.get("reference").toString();
-		//ApiHelper.AssertEquals("reference" ,"6309", Birth, test);
+		test.info( "Requirements: ");
+		String proofOfIdentity = innerJson.getJSONArray("requirements").get(3).toString();
+		ApiHelper.AssertEquals("Proof Of Identity " ,"ProofOfIdentity", proofOfIdentity, test);
 		
-		String post_id = innerJson.getJSONArray("watchListHits").get(0).toString();
+		String proofOfAddress = innerJson.getJSONArray("requirements").get(2).toString();
+		ApiHelper.AssertEquals("Proof Of Address" ,"ProofOfAddress", proofOfAddress, test);
+		
+		String proofOfSourceOfIncome = innerJson.getJSONArray("requirements").get(1).toString();
+		ApiHelper.AssertEquals("Proof Of Address" ,"ProofOfSourceOfIncome", proofOfSourceOfIncome, test);
+	
+		String proofOfSourceOfWealth = innerJson.getJSONArray("requirements").get(0).toString();
+		ApiHelper.AssertEquals("Proof of source of wealth " ,"ProofOfSourceOfWealth", proofOfSourceOfWealth, test);
+		
+		String watchlist = innerJson.getJSONArray("watchListHits").get(0).toString();
 	
 		
-		ApiHelper.AssertEquals("WatchList " ,"PEP", post_id, test);
+		ApiHelper.AssertEquals("WatchList " ,"PEP", watchlist, test);
 					
 	    			
 				

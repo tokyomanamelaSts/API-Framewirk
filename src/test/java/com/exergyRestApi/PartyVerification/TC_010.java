@@ -35,7 +35,9 @@ public class TC_010 extends PartyApiUatPayloads {
 		ExtentTest test;
 		test=extent.createTest("TC_010_PersonVerificationRiskRatinghigh_Identitynumber_invalid_ID");
 		Response response;
-		response =  ApiHelper.sendRestPostRequest(PartyVerificationUATUrl,PartySubKey,PartySubId, PersonVerificationRRHighID,"/Person/7606057950812/Verification");
+
+		response =  ApiHelper.sendRestPostRequest(PartyVerificationUATUrl,PartySubKey,PartySubId, PersonVerificationRRHighID,"/Person/7606060791111/Verification");
+
 		response.prettyPrint();
 		ApiHelper.AssertEquals("Status code" ,"400", String.valueOf(response.statusCode()) , test);
 		
@@ -46,17 +48,19 @@ public class TC_010 extends PartyApiUatPayloads {
         JSONObject innerJson = new JSONObject(response.getBody().asString());
 		
         String errorCode = innerJson.get("ErrorCode").toString();
-		ApiHelper.AssertEquals("ErrorCode" ,"101", errorCode, test);
+		ApiHelper.AssertEquals("ErrorCode" ,"404", errorCode, test);
 		
         
-		String cType = innerJson.get("Type").toString();
-		ApiHelper.AssertEquals("Type" ,"Client", cType, test);
+
+		String Ref = innerJson.get("reference").toString();
+		ApiHelper.AssertEquals("reference" ,"Pascal12", Ref, test);
 		
-		String error = innerJson.get("ErrorMessage").toString();
-		ApiHelper.AssertEquals("ErrorMessage" ,"Identity Number not in the correct format | ", error, test);
+		String error = innerJson.get("errorMessage").toString();
+		ApiHelper.AssertEquals("errorMessage" ,"The person is not found using specified Identity Number", error, test);
 		
 		
-		test.info( "ID Number used: 760605795082");
+		
+		test.info( "ID Number used(Invalid): 7606060791111");
 		
 		test.info( "Find payload(Request) below");
 	    test.info( MarkupHelper.createCodeBlock(PersonVerificationRRHighID,CodeLanguage.JSON));

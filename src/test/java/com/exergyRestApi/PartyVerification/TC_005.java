@@ -56,7 +56,7 @@ public static void PersonIdentificationComprehensiveWithMortalityInformation(Ext
 			ApiHelper.AssertEquals("birthDate" ,"1997-06-14T00:00:00", Birth, test);
 			
 			String IDType = innerJson.getJSONObject("personIdentification").getString("identificationType");
-			ApiHelper.AssertEquals("identificationType" ,"Enhanced", IDType, test);
+			ApiHelper.AssertEquals("identificationType" ,"Comprehensive", IDType, test);
 			
 		
 			test.info( "ID Number used: 9706145018084");

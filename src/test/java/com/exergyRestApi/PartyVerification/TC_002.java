@@ -28,9 +28,6 @@ public class TC_002 extends PartyApiUatPayloads{
 
 		String PartySubKey = DataProvider.GetPropVal(DataProvider.propertyFilePath, "PartyVerificationSubKey");
 	
-	
-		
-		
 		ExtentTest test;
 		test=extent.createTest("TC_002_PersonIdentification_Basic_Invalid_ID");
 		Response response;
