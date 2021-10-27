@@ -11,6 +11,8 @@ import org.xml.sax.SAXException;
 import com.PartyVerificationRest.Payloads.PartyApiUatPayloads;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.markuputils.CodeLanguage;
+import com.aventstack.extentreports.markuputils.MarkupHelper;
 
 import Utilities.ApiHelper;
 import Utilities.DataProvider;
@@ -19,7 +21,7 @@ import io.restassured.response.Response;
 public class TC_018 extends PartyApiUatPayloads{
 
 	
-public static void  TC_018_PersonVerification_RiskRating_Low_ID_Invalid_Format(ExtentReports extent) throws URISyntaxException, SAXException, IOException, ParserConfigurationException {
+public static void  TC_018_PersonVerification_RiskRating_Low_Invalid_ID_Format(ExtentReports extent) throws URISyntaxException, SAXException, IOException, ParserConfigurationException {
 		
 		
 	
@@ -31,7 +33,7 @@ public static void  TC_018_PersonVerification_RiskRating_Low_ID_Invalid_Format(E
 		
 		
 		ExtentTest test;
-		test=extent.createTest("TC_018_PersonVerification_RiskRating_Low_IdentityNumber_Invalid_ID_Format");
+		test=extent.createTest("TC_018_PersonVerification_RiskRating_Low_Invalid_ID_Format");
 		Response response;
 		response =  ApiHelper.sendRestPostRequest(PartyVerificationUATUrl,PartySubKey, PartySubId,PersonVerificationRRLowID, "/Person/93061162190/Verification");
 		response.prettyPrint();
@@ -55,6 +57,13 @@ public static void  TC_018_PersonVerification_RiskRating_Low_ID_Invalid_Format(E
 		ApiHelper.AssertEquals("FriendlyErrorMessage" ,"Identity Number not in the correct format | ", msg, test);
 			
 		
+		
+		test.info( "Identity Number used: 93061162190");
+		
+	    test.info( "Find payload(Request) below");
+		test.info( MarkupHelper.createCodeBlock(PersonVerificationRRLowID,CodeLanguage.JSON));
+		test.info( "Find response below");
+		test.info( MarkupHelper.createCodeBlock(response.asString(),CodeLanguage.JSON));
 		
 		
 		

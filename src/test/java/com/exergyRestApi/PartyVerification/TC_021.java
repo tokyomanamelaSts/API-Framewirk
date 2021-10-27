@@ -11,6 +11,8 @@ import org.xml.sax.SAXException;
 import com.PartyVerificationRest.Payloads.PartyApiUatPayloads;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.markuputils.CodeLanguage;
+import com.aventstack.extentreports.markuputils.MarkupHelper;
 
 import Utilities.ApiHelper;
 import Utilities.DataProvider;
@@ -19,7 +21,7 @@ import io.restassured.response.Response;
 public class TC_021 extends PartyApiUatPayloads {
 
 	
-	public static void TC_021_PersonVerification_RiskRating_High_Passport_Invalid_Passport_Format(ExtentReports extent) throws URISyntaxException, SAXException, IOException, ParserConfigurationException {
+	public static void TC_021_PersonVerification_RiskRating_High_Invalid_passport_Format(ExtentReports extent) throws URISyntaxException, SAXException, IOException, ParserConfigurationException {
 		
 		
 		 String PartyVerificationUATUrl = DataProvider.GetPropVal(DataProvider.propertyFilePath, "PartyVerificationUATUrl");
@@ -30,7 +32,7 @@ public class TC_021 extends PartyApiUatPayloads {
 				
 
 		ExtentTest test;
-		test=extent.createTest("TC_014_PersonVerification_RiskRating_High_Passport_Invalid_passport_Format");
+		test=extent.createTest("TC_021_PersonVerification_RiskRating_High_Invalid_passport_Format");
 		Response response;
 		response =  ApiHelper.sendRestPostRequest(PartyVerificationUATUrl,PartySubKey,PartySubId, PersonVerificationRRHighPassport,"/Person/A11111111/Verification");
 		response.prettyPrint();
@@ -53,6 +55,13 @@ public class TC_021 extends PartyApiUatPayloads {
 		String msg = innerJson.get("FriendlyErrorMessage").toString();
 		ApiHelper.AssertEquals("FriendlyErrorMessage" ,"Passsport Number not in the correct format | ", msg, test);
 			
+		
+        test.info( "Passport Number used: A11111111");
+		
+	    test.info( "Find payload(Request) below");
+		test.info( MarkupHelper.createCodeBlock(PersonVerificationRRHighPassport,CodeLanguage.JSON));
+		test.info( "Find response below");
+		test.info( MarkupHelper.createCodeBlock(response.asString(),CodeLanguage.JSON));
 		
 	}
 	
