@@ -39,7 +39,7 @@ public class TC_020 extends PartyApiUatPayloads {
 		ApiHelper.AssertEquals("Status code" ,"400", String.valueOf(response.statusCode()) , test);
 	
 	
-		//Validations
+		if(response.statusCode() == 400 ) {
 		
 		
         JSONObject innerJson = new JSONObject(response.getBody().asString());
@@ -54,7 +54,7 @@ public class TC_020 extends PartyApiUatPayloads {
 		
 		String msg = innerJson.get("FriendlyErrorMessage").toString();
 		ApiHelper.AssertEquals("FriendlyErrorMessage" ,"Passport Number not in the correct format | ", msg, test);
-			
+		}	
 		
         test.info( "Passport Number used: A288654836");
 		

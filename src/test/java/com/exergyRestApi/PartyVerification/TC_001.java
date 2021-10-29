@@ -53,25 +53,27 @@ public class TC_001 extends PartyApiUatPayloads {
 		response.prettyPrint();
 		ApiHelper.AssertEquals("Status code" ,"200", String.valueOf(response.statusCode()) , test);
 		
-		//Validations
+		if(response.statusCode() == 200 ) {
 		
-		JSONObject innerJson = new JSONObject(response.getBody().asString());
-	
+			JSONObject innerJson = new JSONObject(response.getBody().asString());
 		
-		String firstName = innerJson.getJSONObject("personIdentification").getJSONObject("person").getString("firstNames");
-		ApiHelper.AssertEquals("firstNames" ,"LEONARDO RENALDO", firstName, test);
+			
+			String firstName = innerJson.getJSONObject("personIdentification").getJSONObject("person").getString("firstNames");
+			ApiHelper.AssertEquals("firstNames" ,"LEONARDO RENALDO", firstName, test);
+			
+			String surname = innerJson.getJSONObject("personIdentification").getJSONObject("person").getString("surname");
+			ApiHelper.AssertEquals("surname" ,"HOLLAND", surname, test);
+			
+			String gender = innerJson.getJSONObject("personIdentification").getJSONObject("person").getString("gender");
+			ApiHelper.AssertEquals("gender" ,"Male", gender, test);
+			
+			String birthDate = innerJson.getJSONObject("personIdentification").getJSONObject("person").getString("birthDate");
+			ApiHelper.AssertEquals("Birth Date" ,"1997-06-14T00:00:00", birthDate, test);
 		
-		String surname = innerJson.getJSONObject("personIdentification").getJSONObject("person").getString("surname");
-		ApiHelper.AssertEquals("surname" ,"HOLLAND", surname, test);
+			String livingStatus = innerJson.getJSONObject("personIdentification").getJSONObject("person").getString("livingStatus");
+			ApiHelper.AssertEquals("Living status" ,"Alive", livingStatus, test);
 		
-		String gender = innerJson.getJSONObject("personIdentification").getJSONObject("person").getString("gender");
-		ApiHelper.AssertEquals("gender" ,"Male", gender, test);
-		
-		String birthDate = innerJson.getJSONObject("personIdentification").getJSONObject("person").getString("birthDate");
-		ApiHelper.AssertEquals("Birth Date" ,"1997-06-14T00:00:00", birthDate, test);
-	
-		String livingStatus = innerJson.getJSONObject("personIdentification").getJSONObject("person").getString("livingStatus");
-		ApiHelper.AssertEquals("Living status" ,"Alive", livingStatus, test);
+		}
 	
 		test.info( "ID Number used: 9706145018084");
 		

@@ -41,7 +41,7 @@ public static void PersonIdentification_Enhanced_Invalid_ID(ExtentReports extent
 	ApiHelper.AssertEquals("Status code" ,"400", String.valueOf(response.statusCode()) , test);
 	
 	
-	//Validations
+	if(response.statusCode() == 400 ) {
 	
 	JSONObject innerJson = new JSONObject(response.getBody().asString());
 	
@@ -52,7 +52,7 @@ public static void PersonIdentification_Enhanced_Invalid_ID(ExtentReports extent
 	String error = innerJson.get("errorMessage").toString();
 	ApiHelper.AssertEquals("errorMessage" ,"The person is not found using specified Identity Number", error, test);
 	
-	
+	}
 	test.info( "ID Number(Invalid) used: 9705145018089");
 	
 	test.info( "Find payload(Request) below");

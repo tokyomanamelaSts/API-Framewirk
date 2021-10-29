@@ -40,7 +40,7 @@ public static void  TC_018_PersonVerification_RiskRating_Low_Invalid_ID_Format(E
 		ApiHelper.AssertEquals("Status code" ,"400", String.valueOf(response.statusCode()) , test);
 
 		
-		//Validations
+		if(response.statusCode() == 400 ) {
 		
 		
         JSONObject innerJson = new JSONObject(response.getBody().asString());
@@ -56,7 +56,7 @@ public static void  TC_018_PersonVerification_RiskRating_Low_Invalid_ID_Format(E
 		String msg = innerJson.get("FriendlyErrorMessage").toString();
 		ApiHelper.AssertEquals("FriendlyErrorMessage" ,"Identity Number not in the correct format | ", msg, test);
 			
-		
+		}
 		
 		test.info( "Identity Number used: 93061162190");
 		

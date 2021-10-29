@@ -40,7 +40,7 @@ public class TC_011 extends PartyApiUatPayloads {
 	
 		
 		
-		//Validations
+		if(response.statusCode() == 200 ) {
 		
 		
 		
@@ -55,7 +55,7 @@ public class TC_011 extends PartyApiUatPayloads {
 					
 		//String Birth = innerJson.get("reference").toString();
 		//ApiHelper.AssertEquals("reference" ,"6309", Birth, test);
-					
+		}		
 	    			
 				
 		test.info( "Passport Number used: A2886345");

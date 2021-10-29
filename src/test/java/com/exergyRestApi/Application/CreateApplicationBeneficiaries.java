@@ -39,7 +39,7 @@ public static void  createApplicationBeneficiaries(ExtentReports extent) throws 
 	
 	
 	//Validations
-	
+	if(response.statusCode() == 200 ) {
 	
 	JSONObject innerJson = new JSONObject(response.getBody().asString());
 	String applicationRef = innerJson.get("applicationReference").toString();
@@ -54,7 +54,7 @@ public static void  createApplicationBeneficiaries(ExtentReports extent) throws 
 	//String bankAccount = innerJson.getJSONObject("premiumCollection").getJSONObject("bankAccount").getString("accountNumber");
 	//ApiHelper.AssertEquals("Account Number" ,"123123123", bankAccount, test);
 	
-	
+	}
 	test.info( "Find payload(Request) below");
     test.info( MarkupHelper.createCodeBlock(CreateApplicationBeneficiariesPayLoad,CodeLanguage.JSON));
     test.info( "Find response below");

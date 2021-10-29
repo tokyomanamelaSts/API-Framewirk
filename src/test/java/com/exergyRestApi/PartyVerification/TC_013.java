@@ -42,6 +42,8 @@ public class TC_013 extends PartyApiUatPayloads {
 		
 		//Validations
 		
+		if(response.statusCode() == 200 ) {
+			
 		
 		JSONObject innerJson = new JSONObject(response.getBody().asString());
 		
@@ -71,7 +73,7 @@ public class TC_013 extends PartyApiUatPayloads {
 		
 		ApiHelper.AssertEquals("WatchList " ,"PEP", watchlist, test);
 					
-	    			
+		}			
 				
 		test.info( "Passport Number used: A08977150");
 				

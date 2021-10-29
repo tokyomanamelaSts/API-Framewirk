@@ -40,18 +40,20 @@ public static void  qualificationProduct60100000(ExtentReports extent) throws UR
 	
 	
 	
-	//Validations
+	if(response.statusCode() == 200 ) {
 	
-	JSONObject innerJson = new JSONObject(response.getBody().asString());
+		JSONObject innerJson = new JSONObject(response.getBody().asString());
+		
+		String productCode = innerJson.get("productCode").toString();
+		ApiHelper.AssertEquals("productCode" ,"60100000", productCode, test);
+			
+	    //String sourceReference = innerJson.get("qualificationReference").toString();
+		//ApiHelper.AssertEquals("qualificationReference" ,"1MBJ6XRY", sourceReference, test);
+			
+		String results = innerJson.get("qualificationResult").toString();
+		ApiHelper.AssertEquals("qualificationResult" ,"true", results, test);
 	
-	String productCode = innerJson.get("productCode").toString();
-	ApiHelper.AssertEquals("productCode" ,"60100000", productCode, test);
-		
-    //String sourceReference = innerJson.get("qualificationReference").toString();
-	//ApiHelper.AssertEquals("qualificationReference" ,"1MBJ6XRY", sourceReference, test);
-		
-	String results = innerJson.get("qualificationResult").toString();
-	ApiHelper.AssertEquals("qualificationResult" ,"true", results, test);
+	}
 		
 	test.info( "Find payload(Request) below");
     test.info( MarkupHelper.createCodeBlock(QualificationProduct60100000Payload,CodeLanguage.JSON));

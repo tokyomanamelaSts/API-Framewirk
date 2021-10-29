@@ -39,26 +39,26 @@ public static void PersonIdentificationComprehensiveWithMortalityInformation(Ext
 		
 		
 		
-		//Validations
+		if(response.statusCode() == 200 ) {
 		
 		
-		
-		JSONObject innerJson = new JSONObject(response.getBody().asString());
-		
-		
-			String Ref = innerJson.get("externalReference").toString();
-			ApiHelper.AssertEquals("externalReference" ,"Pascal12", Ref, test);
 			
-			String firstNames = innerJson.getJSONObject("personIdentification").getJSONObject("person").getString("firstNames");
-			ApiHelper.AssertEquals("firstNames" ,"LEONARDO RENALDO", firstNames, test);
+			JSONObject innerJson = new JSONObject(response.getBody().asString());
 			
-			String Birth = innerJson.getJSONObject("personIdentification").getJSONObject("person").getString("birthDate");
-			ApiHelper.AssertEquals("birthDate" ,"1997-06-14T00:00:00", Birth, test);
 			
-			String IDType = innerJson.getJSONObject("personIdentification").getString("identificationType");
-			ApiHelper.AssertEquals("identificationType" ,"Comprehensive", IDType, test);
+				String Ref = innerJson.get("externalReference").toString();
+				ApiHelper.AssertEquals("externalReference" ,"Pascal12", Ref, test);
+				
+				String firstNames = innerJson.getJSONObject("personIdentification").getJSONObject("person").getString("firstNames");
+				ApiHelper.AssertEquals("firstNames" ,"LEONARDO RENALDO", firstNames, test);
+				
+				String Birth = innerJson.getJSONObject("personIdentification").getJSONObject("person").getString("birthDate");
+				ApiHelper.AssertEquals("birthDate" ,"1997-06-14T00:00:00", Birth, test);
+				
+				String IDType = innerJson.getJSONObject("personIdentification").getString("identificationType");
+				ApiHelper.AssertEquals("identificationType" ,"Comprehensive", IDType, test);
 			
-		
+		}
 			test.info( "ID Number used: 9706145018084");
 		
 			test.info( "Find payload(Request) below");

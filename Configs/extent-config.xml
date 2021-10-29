@@ -29,8 +29,8 @@
     <documentTitle>Extent Framework</documentTitle>
 
     <!-- report name - displayed at top-nav -->
-    <reportName><![CDATA[
-        <img src= 'StsLogo.jpg'  width="400" height="38" />
+    <reportName style="background-color:white"><![CDATA[
+        <img src= 'TechnoCenterLogo.png'  width="400" height="45" style="background-color:white"/>
       ]]></reportName>
 
     <!-- timestamp format -->

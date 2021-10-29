@@ -36,7 +36,7 @@ public class TC_015 extends PartyApiUatPayloads{
 		ApiHelper.AssertEquals("Status code" ,"400", String.valueOf(response.statusCode()) , test);
 		
 		
-		//Validations
+		if(response.statusCode() == 400 ) {
 		
 		JSONObject innerJson = new JSONObject(response.getBody().asString());
 		
@@ -53,7 +53,7 @@ public class TC_015 extends PartyApiUatPayloads{
 	
 		String type = innerJson.get("Type").toString();
 		ApiHelper.AssertEquals("type" ,"Client", type, test);
-		
+		}
 		
 		test.info( MarkupHelper.createCodeBlock(PersonIndentificationBasic,CodeLanguage.JSON));
 		test.info( "ID Number(Invalid) used: 5145018089");

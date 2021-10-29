@@ -41,7 +41,7 @@ public static void PersonIdentification_Enhanced_Invalid_ID_Format(ExtentReports
 	ApiHelper.AssertEquals("Status code" ,"400", String.valueOf(response.statusCode()) , test);
 	
 	
-	//Validations
+	if(response.statusCode() == 400 ) {
 	
 	JSONObject innerJson = new JSONObject(response.getBody().asString());
 	
@@ -58,7 +58,7 @@ public static void PersonIdentification_Enhanced_Invalid_ID_Format(ExtentReports
 	String type = innerJson.get("Type").toString();
 	ApiHelper.AssertEquals("type" ,"Client", type, test);
 	
-	
+	}
 	test.info( "ID Number(Invalid) used: 42345018089");
 	
 	test.info( "Find payload(Request) below");

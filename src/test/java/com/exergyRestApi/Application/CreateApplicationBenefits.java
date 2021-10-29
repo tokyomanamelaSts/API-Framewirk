@@ -38,7 +38,8 @@ public static void  createApplicationBenefits(ExtentReports extent) throws URISy
 	
 	
 	
-	//Validations
+	if(response.statusCode() == 200 ) {
+		
 	
     JSONObject innerJson = new JSONObject(response.getBody().asString());
 		
@@ -54,7 +55,7 @@ public static void  createApplicationBenefits(ExtentReports extent) throws URISy
 	String productCode = innerJson.get("productCode").toString();
 	ApiHelper.AssertEquals("productCode" ,"60100000", productCode, test);
 	
-	
+	}
 	test.info( "Find payload(Request) below");
     test.info( MarkupHelper.createCodeBlock(CreateApplicationBenefitsPayLoad,CodeLanguage.JSON));
     test.info( "Find response below");

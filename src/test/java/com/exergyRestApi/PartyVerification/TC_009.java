@@ -54,7 +54,7 @@ public class TC_009 extends PartyApiUatPayloads {
 		ApiHelper.AssertEquals("Status code" ,"200", String.valueOf(response.statusCode()) , test);
 		
 		
-		//Validations
+		if(response.statusCode() == 200 ) {
 		
 		
 		JSONObject innerJson = new JSONObject(response.getBody().asString());
@@ -84,7 +84,7 @@ public class TC_009 extends PartyApiUatPayloads {
 	
 		String proofOfSourceOfWealth = innerJson.getJSONArray("requirements").get(3).toString();
 		ApiHelper.AssertEquals("Proof of source of wealth " ,"ProofOfSourceOfWealth", proofOfSourceOfWealth, test);
-		
+		}
 			
 		test.info( "ID Number used: 7606060795082");
 		

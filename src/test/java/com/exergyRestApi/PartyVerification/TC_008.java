@@ -54,7 +54,7 @@ public class TC_008 extends PartyApiUatPayloads {
 		ApiHelper.AssertEquals("Status code" ,"400", String.valueOf(response.statusCode()) , test);
 
 		
-		//Validations//
+		if(response.statusCode() == 400 ) {
 		
 		JSONObject innerJson = new JSONObject(response.getBody().asString());
 		
@@ -63,7 +63,7 @@ public class TC_008 extends PartyApiUatPayloads {
 	
 		String error = innerJson.get("ErrorMessage").toString();
 		ApiHelper.AssertEquals("Error Message" ,"The person is not found using specified Identity Number", error, test);
-	
+		}
 		
 		test.info( "ID Number used(Invalid): 9306116219089");
 		test.info( "Find payload(Request) below");

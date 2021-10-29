@@ -37,7 +37,7 @@ public static void  getApplication(ExtentReports extent) throws URISyntaxExcepti
 	
 	
 	
-	//Validations
+	if(response.statusCode() == 200 ) {
 	
 		JSONObject innerJson = new JSONObject(response.getBody().asString());
 		
@@ -52,10 +52,13 @@ public static void  getApplication(ExtentReports extent) throws URISyntaxExcepti
 		
 		String premium = innerJson.getJSONObject("premiumAmount").getString("total");
 		ApiHelper.AssertEquals("total" ,"256", premium, test);
+	}
 		
-		
-		
+		test.info( "Find response below");
 		test.info( MarkupHelper.createCodeBlock(response.asString(),CodeLanguage.JSON));
+		
+		   
+
 		
 	
 	

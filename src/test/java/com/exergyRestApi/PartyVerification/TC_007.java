@@ -54,7 +54,7 @@ public class TC_007 extends PartyApiUatPayloads {
 		ApiHelper.AssertEquals("Status code" ,"200", String.valueOf(response.statusCode()) , test);
 		
 		
-		//Validations
+		if(response.statusCode() == 200 ) {
 		
 		JSONObject innerJson = new JSONObject(response.getBody().asString());
 
@@ -71,6 +71,8 @@ public class TC_007 extends PartyApiUatPayloads {
 		String riskRatingReason = innerJson.getJSONObject("riskRatingResult").getString("riskRatingReason");
 		ApiHelper.AssertEquals("riskRatingReason" ,"Premium Collection Is Cash", riskRatingReason, test);
 
+		}
+		
 		test.info( "ID Number used: 9306116219082");
 		
 		test.info( "Find payload(Request) below");

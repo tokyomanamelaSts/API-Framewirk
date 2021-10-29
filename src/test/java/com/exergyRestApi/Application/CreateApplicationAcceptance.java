@@ -37,7 +37,7 @@ public static void  createApplicationAcceptance(ExtentReports extent) throws URI
 	ApiHelper.AssertEquals("Status code" ,"200", String.valueOf(response.statusCode()) , test);
 	
 	
-	response.prettyPrint();
+	
 	
 	test.info( "Find payload(Request) below");
     test.info( MarkupHelper.createCodeBlock(CreateApplicationPayLoad,CodeLanguage.JSON));

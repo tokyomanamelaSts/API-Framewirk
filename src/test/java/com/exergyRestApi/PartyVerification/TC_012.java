@@ -40,7 +40,7 @@ public class TC_012 extends PartyApiUatPayloads {
 		ApiHelper.AssertEquals("Status code" ,"400", String.valueOf(response.statusCode()) , test);
 	
 		
-		//Validations
+		if(response.statusCode() == 400 ) {
 		
 		
 		JSONObject innerJson = new JSONObject(response.getBody().asString());
@@ -54,7 +54,7 @@ public class TC_012 extends PartyApiUatPayloads {
 					
 		//String Birth = innerJson.get("reference").toString();
 		//ApiHelper.AssertEquals("reference" ,"6309", Birth, test);
-					
+		}		
 	    			
 				
 		test.info( "Passport Number used: A28849645");

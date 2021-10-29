@@ -41,7 +41,8 @@ public static void  qualificationProduct60100001NegetiveTest(ExtentReports exten
 	
 	
 	
-	//Validations
+	if(response.statusCode() == 200 ) {
+		
 	
     JSONObject innerJson = new JSONObject(response.getBody().asString());
 	
@@ -58,7 +59,7 @@ public static void  qualificationProduct60100001NegetiveTest(ExtentReports exten
 	String results = innerJson.get("qualificationResult").toString();
 	ApiHelper.AssertEquals("qualificationResult" ,"false", results, test);
 		
-	
+	}
 	
 	test.info( "Find payload(Request) below");
     test.info( MarkupHelper.createCodeBlock(QualificationProduct60100000NegPayload,CodeLanguage.JSON));
