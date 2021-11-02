@@ -1,20 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="runner.PartyVerificationRestRunner">
+      <class name="runner.ProductRunner">
         <methods>
-          <include name="TC_008_PersonVerification_Risk_Rating_Low_IdentityNumber_Invalid_ID"/>
-          <include name="TC_012_PersonVerification_RiskRating_Low_Passport_Invalid_Passport"/>
-          <include name="TC_002_PersonIdentification_Basic_Invalid_ID"/>
-          <include name="TC_021_PersonVerification_RiskRating_High_Passport_Invalid_Format"/>
+          <include name="TC_004_1960E"/>
           <include name="EndTests"/>
-          <include name="TC_010_PersonVerificationRiskRatinghigh_Identitynumber_invalid_ID"/>
-          <include name="TC_014_PersonVerification_RiskRating_High_Passport_Invalid_passport"/>
-          <include name="TC_020_PersonVerification_RiskRating_Low_Passport_Invalid_Format"/>
         </methods>
-      </class> <!-- runner.PartyVerificationRestRunner -->
+      </class> <!-- runner.ProductRunner -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

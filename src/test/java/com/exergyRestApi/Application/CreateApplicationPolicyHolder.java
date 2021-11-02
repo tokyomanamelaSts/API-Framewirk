@@ -23,9 +23,9 @@ public static void  createApplicationPolicyHolder(ExtentReports extent) throws U
 	
     String applicationSitUrl = DataProvider.GetPropVal(DataProvider.propertyFilePath, "applicationSitUrl");
 	
-	String applicationSubId = DataProvider.GetPropVal(DataProvider.propertyFilePath, "applicationSubId");
+	String applicationSubId = DataProvider.GetPropVal(DataProvider.propertyFilePath, "SubId");
 
-	String applicationSubKey = DataProvider.GetPropVal(DataProvider.propertyFilePath, "applicationSubKey");
+	String applicationSubKey = DataProvider.GetPropVal(DataProvider.propertyFilePath, "SubKey");
 	
 	
 	ExtentTest test;
