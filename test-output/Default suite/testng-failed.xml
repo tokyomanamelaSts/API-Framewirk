@@ -5,7 +5,7 @@
     <classes>
       <class name="runner.ProductRunner">
         <methods>
-          <include name="TC_001_60100000"/>
+          <include name="TC_004_1960E"/>
           <include name="EndTests"/>
         </methods>
       </class> <!-- runner.ProductRunner -->
