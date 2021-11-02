@@ -1,0 +1,40 @@
+package com.exergyRestApi.Product;
+
+import java.io.IOException;
+
+import javax.xml.parsers.ParserConfigurationException;
+
+import org.xml.sax.SAXException;
+
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
+
+import Utilities.ApiHelper;
+import Utilities.DataProvider;
+import io.restassured.response.Response;
+
+public class TC_004_1960E {
+
+	public static void Tc_004_1960E(ExtentReports extent) throws IOException, SAXException, ParserConfigurationException {
+		
+        String productSitUrl = DataProvider.GetPropVal(DataProvider.propertyFilePath, "productSitUrl");
+		
+		String productSubId = DataProvider.GetPropVal(DataProvider.propertyFilePath, "SubId");
+
+		String productSubKey = DataProvider.GetPropVal(DataProvider.propertyFilePath, "SubKey");
+		
+		
+		ExtentTest test;
+		test=extent.createTest("TC_004_1960E");
+		Response response;
+		response =  ApiHelper.sendRestGetRequest(productSitUrl,productSubKey,productSubId, "/Products?productType=FullyUnderwritten&productCode=1960E");
+		response.prettyPrint();
+		
+		ApiHelper.AssertEquals("Status code" ,"200", String.valueOf(response.statusCode()) , test);
+		
+		
+	}
+
+	
+	
+}
