@@ -23,7 +23,7 @@ public class ProductRuleRepo {
 	protected static String Child_minAge; protected static String Child_MaxAge; protected static String	parent_lifeAssuredType;
 	protected static String parent_minAllowed; protected static String parent_maxAllowed;protected static String parent_maxCoverAllowed;
 	protected static String parent_minCoverAllowed; protected static String parent_minAge; protected static String parent_MaxAge;
-	
+	protected static int  StatusCode;
 	
 	public static void loadTCsData(Recordset recordset) throws FilloException {
 	
@@ -44,6 +44,8 @@ public class ProductRuleRepo {
 		Recordset recordset =DataProvider.getDataFromExcelbyQuery("TestData/ProductRules.xlsx",Query );
 		
 		recordset.next();
+		
+		StatusCode = Integer.parseInt(recordset.getField("StatusCode"));
 		
 		TestCaseNumber2 = recordset.getField("TestCaseNumber");
 		productCode = recordset.getField("productCode");
