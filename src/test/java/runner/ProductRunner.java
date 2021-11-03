@@ -46,7 +46,7 @@ public class ProductRunner {
 	} 
 	
 	@Test(priority = 2,enabled=true)
-public void TC_ProductRules1To9() throws URISyntaxException, SAXException, IOException, ParserConfigurationException, FilloException {
+    public void TC_ProductRules1To9() throws URISyntaxException, SAXException, IOException, ParserConfigurationException, FilloException {
 		
 	ProductRuleTestCases.Tc1ToTC9(extent);
 		ApiHelper.softAssertion.assertAll();
