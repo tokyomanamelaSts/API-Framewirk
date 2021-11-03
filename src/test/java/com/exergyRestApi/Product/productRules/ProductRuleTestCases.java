@@ -62,47 +62,47 @@ public class ProductRuleTestCases extends ProductRuleRepo{
 				//Child
 				
 				String ChildLifeAssuredType = innerJson.getJSONObject(0).getJSONArray("benefits").getJSONObject(0).getJSONArray("allowedLifesAssured").getJSONObject(2).get("lifeAssuredType").toString();
-				ApiHelper.AssertEquals("ChildLifeAssuredType", "Child", ChildLifeAssuredType, test);
+				ApiHelper.AssertEquals("ChildLifeAssuredType", Child_lifeAssuredType, ChildLifeAssuredType, test);
 				
 				String ChildMinAllowed = innerJson.getJSONObject(0).getJSONArray("benefits").getJSONObject(0).getJSONArray("allowedLifesAssured").getJSONObject(2).get("minAllowed").toString();
-				ApiHelper.AssertEquals("ChildMinAllowed", "0", ChildMinAllowed, test);
+				ApiHelper.AssertEquals("ChildMinAllowed", Child_minAllowed, ChildMinAllowed, test);
 			
 				String ChildMaxAllowed = innerJson.getJSONObject(0).getJSONArray("benefits").getJSONObject(0).getJSONArray("allowedLifesAssured").getJSONObject(2).get("maxAllowed").toString();
-				ApiHelper.AssertEquals("ChildMaxAllowed", "5", ChildMaxAllowed, test);
+				ApiHelper.AssertEquals("ChildMaxAllowed", Child_maxAllowed, ChildMaxAllowed, test);
 				
 				String ChildMinCoverAllowed = innerJson.getJSONObject(0).getJSONArray("benefits").getJSONObject(0).getJSONArray("allowedLifesAssured").getJSONObject(2).get("minCoverAllowed").toString();
-				ApiHelper.AssertEquals("ChildMinCoverAllowed" ,"5000", ChildMinCoverAllowed, test);
+				ApiHelper.AssertEquals("ChildMinCoverAllowed" , Child_minCoverAllowed, ChildMinCoverAllowed, test);
 				
 				String ChildMaxCoverAllowed = innerJson.getJSONObject(0).getJSONArray("benefits").getJSONObject(0).getJSONArray("allowedLifesAssured").getJSONObject(2).get("maxCoverAllowed").toString();
-				ApiHelper.AssertEquals("ChildMaxCoverAllowed" ,"20000", ChildMaxCoverAllowed, test);
+				ApiHelper.AssertEquals("ChildMaxCoverAllowed" , Child_maxCoverAllowed, ChildMaxCoverAllowed, test);
 				
 				String ChildMinAge = innerJson.getJSONObject(0).getJSONArray("benefits").getJSONObject(0).getJSONArray("allowedLifesAssured").getJSONObject(2).get("minAge").toString();
-				ApiHelper.AssertEquals("ChildMinAge", "0", ChildMinAge, test);
+				ApiHelper.AssertEquals("ChildMinAge", Child_minAge, ChildMinAge, test);
 			
 				String ChildMaxAge = innerJson.getJSONObject(0).getJSONArray("benefits").getJSONObject(0).getJSONArray("allowedLifesAssured").getJSONObject(2).get("maxAge").toString();
-				ApiHelper.AssertEquals("ChildMaxAge", "20", ChildMaxAge, test);
+				ApiHelper.AssertEquals("ChildMaxAge", Child_MaxAge, ChildMaxAge, test);
 		
 				//Parent
 				String ParentLifeAssuredType = innerJson.getJSONObject(0).getJSONArray("benefits").getJSONObject(0).getJSONArray("allowedLifesAssured").getJSONObject(3).get("lifeAssuredType").toString();
-				ApiHelper.AssertEquals("ParentLifeAssuredType", "Parent", ParentLifeAssuredType, test);
+				ApiHelper.AssertEquals("ParentLifeAssuredType", parent_lifeAssuredType, ParentLifeAssuredType, test);
 				
 				String ParentMinAllowed = innerJson.getJSONObject(0).getJSONArray("benefits").getJSONObject(0).getJSONArray("allowedLifesAssured").getJSONObject(3).get("minAllowed").toString();
-				ApiHelper.AssertEquals("ParentMinAllowed", "0", ParentMinAllowed, test);
+				ApiHelper.AssertEquals("ParentMinAllowed", parent_minAllowed, ParentMinAllowed, test);
 			
 				String ParentMaxAllowed = innerJson.getJSONObject(0).getJSONArray("benefits").getJSONObject(0).getJSONArray("allowedLifesAssured").getJSONObject(3).get("maxAllowed").toString();
-				ApiHelper.AssertEquals("ParentMaxAllowed", "2", ParentMaxAllowed, test);
+				ApiHelper.AssertEquals("ParentMaxAllowed", parent_maxAllowed, ParentMaxAllowed, test);
 				
 				String ParentMinCoverAllowed = innerJson.getJSONObject(0).getJSONArray("benefits").getJSONObject(0).getJSONArray("allowedLifesAssured").getJSONObject(3).get("minCoverAllowed").toString();
-				ApiHelper.AssertEquals("ParentMinCoverAllowed" ,"10000", ParentMinCoverAllowed, test);
+				ApiHelper.AssertEquals("ParentMinCoverAllowed" ,parent_minCoverAllowed, ParentMinCoverAllowed, test);
 				
 				String ParentMaxCoverAllowed = innerJson.getJSONObject(0).getJSONArray("benefits").getJSONObject(0).getJSONArray("allowedLifesAssured").getJSONObject(3).get("maxCoverAllowed").toString();
-				ApiHelper.AssertEquals("ParentMaxCoverAllowed" ,"20000", ParentMaxCoverAllowed, test);
+				ApiHelper.AssertEquals("ParentMaxCoverAllowed" ,parent_maxCoverAllowed, ParentMaxCoverAllowed, test);
 				
 				String ParentMinAge = innerJson.getJSONObject(0).getJSONArray("benefits").getJSONObject(0).getJSONArray("allowedLifesAssured").getJSONObject(3).get("minAge").toString();
-				ApiHelper.AssertEquals("ParentMinAge", "18", ParentMinAge, test);
+				ApiHelper.AssertEquals("ParentMinAge", parent_minAge, ParentMinAge, test);
 			
 				String ParentMaxAge = innerJson.getJSONObject(0).getJSONArray("benefits").getJSONObject(0).getJSONArray("allowedLifesAssured").getJSONObject(3).get("maxAge").toString();
-				ApiHelper.AssertEquals("ParentMaxAge", "79", ParentMaxAge, test);
+				ApiHelper.AssertEquals("ParentMaxAge", parent_MaxAge, ParentMaxAge, test);
 		
 				
 		    	
