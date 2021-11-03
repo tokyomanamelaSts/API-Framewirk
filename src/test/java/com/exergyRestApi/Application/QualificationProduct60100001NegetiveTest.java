@@ -1,11 +1,11 @@
 package com.exergyRestApi.Application;
 
 
-import com.applicationPayloads.QualificationPayloads;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.markuputils.CodeLanguage;
 import com.aventstack.extentreports.markuputils.MarkupHelper;
+import com.payloads.application.QualificationPayloads;
 
 import Utilities.ApiHelper;
 import Utilities.DataProvider;

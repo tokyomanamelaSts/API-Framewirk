@@ -1,4 +1,4 @@
-package com.collectionpayload;
+package com.payloads.collection;
 
 public class CancelCollectionPayLoad {
 

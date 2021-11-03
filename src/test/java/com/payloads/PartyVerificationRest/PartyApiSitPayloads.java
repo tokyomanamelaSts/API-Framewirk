@@ -1,4 +1,4 @@
-package com.PartyVerificationRest.Payloads;
+package com.payloads.PartyVerificationRest;
 
 public class PartyApiSitPayloads {
 	

@@ -1,11 +1,10 @@
-package com.exergyRestApi.Product;
+package com.exergyRestApi.Product.productRules;
 
 import java.io.IOException;
 
 import javax.xml.parsers.ParserConfigurationException;
 
 import org.json.JSONArray;
-import org.json.JSONObject;
 import org.xml.sax.SAXException;
 
 import com.aventstack.extentreports.ExtentReports;
@@ -17,17 +16,10 @@ import Utilities.ApiHelper;
 import Utilities.DataProvider;
 import io.restassured.response.Response;
 
+public class TC_002_60200000 {
 
-/**
- * @author Richmond
- * @email  richmondr@stsafrica.com
- * 
- */
-public class TC_001_60100000 {
-
-	
-
-	public static void Tc_001_60100000(ExtentReports extent) throws IOException, SAXException, ParserConfigurationException {
+	public static void Tc_002_60200000(ExtentReports extent) throws IOException, SAXException, ParserConfigurationException {
+		
 		
 		
         String productSitUrl = DataProvider.GetPropVal(DataProvider.propertyFilePath, "productSitUrl");
@@ -38,23 +30,23 @@ public class TC_001_60100000 {
 		
 		
 		ExtentTest test;
-		test=extent.createTest("TC_001_60100000");
+		test=extent.createTest("TC_002_60200000");
 		Response response;
-		response =  ApiHelper.sendRestGetRequest(productSitUrl,productSubKey,productSubId, "/Products?productType=NonUnderwritten&productCode=60100000");
-		
+		response =  ApiHelper.sendRestGetRequest(productSitUrl,productSubKey,productSubId, "/Products?productType=NonUnderwritten&productCode=60200000");
+		response.prettyPrint();
 		
 		ApiHelper.AssertEquals("Status code" ,"200", String.valueOf(response.statusCode()) , test);
 		
 		
-		if(response.statusCode() == 200 ) {
+		
+        if(response.statusCode() == 200 ) {
 			
 			JSONArray innerJson = new JSONArray(response.getBody().asString());
 		
 			
 			test.info("productCode");
 			String productCode = innerJson.getJSONObject(0).get("productCode").toString();
-			ApiHelper.AssertEquals("productCode" ,"60100000", productCode, test);
-			
+			ApiHelper.AssertEquals("productCode" ,"60200000", productCode, test);
 			test.info("productName");
 			String productName = innerJson.getJSONObject(0).get("productName").toString();
 			ApiHelper.AssertEquals("productName" ,"Tyme Bank Funeral", productName, test);
@@ -62,9 +54,6 @@ public class TC_001_60100000 {
 			test.info("productRules");
 			String debit = innerJson.getJSONObject(0).getJSONObject("productRules").getJSONArray("premiumCollectionMethodsAllowed").get(0).toString();
 			ApiHelper.AssertEquals("premium Collection Method Debit Order" ,"DebitOrder", debit, test);
-			
-			String cash = innerJson.getJSONObject(0).getJSONObject("productRules").getJSONArray("premiumCollectionMethodsAllowed").get(1).toString();
-			ApiHelper.AssertEquals("premium Collection Method cash Allowed" ,"Cash", cash, test);
 			
 			
 			String beneficiary = innerJson.getJSONObject(0).getJSONObject("productRules").getJSONArray("allowedRolePlayers").get(0).toString();
@@ -133,7 +122,7 @@ public class TC_001_60100000 {
 			
 			String benefitName = innerJson.getJSONObject(0).getJSONArray("benefits").getJSONObject(0).get("benefitName").toString();
 			ApiHelper.AssertEquals("benefit Name" ,"Funeral Benefit", benefitName, test);
-			test.info("benefitName");
+			
 			String MinCoverAllowed = innerJson.getJSONObject(0).getJSONArray("benefits").getJSONObject(0).getJSONArray("allowedLifesAssured").getJSONObject(0).get("minCoverAllowed").toString();
 			ApiHelper.AssertEquals("minimum Cover Allowed" ,"10000", MinCoverAllowed, test);
 			
@@ -186,55 +175,33 @@ public class TC_001_60100000 {
 			ApiHelper.AssertEquals("maximum benefits Allowed" ,"1", MaxBenAllowed3, test);
 			
 			
-			
-            test.info("Moneyback Benefit");
-			
-			String benefitName4 = innerJson.getJSONObject(0).getJSONArray("benefits").getJSONObject(3).get("benefitName").toString();
-			ApiHelper.AssertEquals("benefit Name" ,"Moneyback Benefit", benefitName4, test);
-			
-			String MinCoverAllowed4 = innerJson.getJSONObject(0).getJSONArray("benefits").getJSONObject(3).getJSONArray("allowedLifesAssured").getJSONObject(0).get("minCoverAllowed").toString();
-			ApiHelper.AssertEquals("minimum Cover Allowed" ,"0", MinCoverAllowed4, test);
-			
-			String MaxCoverAllowed4 = innerJson.getJSONObject(0).getJSONArray("benefits").getJSONObject(3).getJSONArray("allowedLifesAssured").getJSONObject(0).get("maxCoverAllowed").toString();
-			ApiHelper.AssertEquals("maximum Cover Allowed" ,"0", MaxCoverAllowed4, test);
-			
-			String MinBenAllowed4 = innerJson.getJSONObject(0).getJSONArray("benefits").getJSONObject(3).getJSONArray("allowedLifesAssured").getJSONObject(0).get("minAllowed").toString();
-			ApiHelper.AssertEquals("minimum benefits Allowed" ,"1", MinBenAllowed4, test);
-			
-			
-			String MaxBenAllowed4 = innerJson.getJSONObject(0).getJSONArray("benefits").getJSONObject(3).getJSONArray("allowedLifesAssured").getJSONObject(0).get("maxAllowed").toString();
-			ApiHelper.AssertEquals("maximum benefits Allowed" ,"1", MaxBenAllowed4, test);
-			
-			
             test.info("Airtime Benefit");
 			
-			String benefitName5 = innerJson.getJSONObject(0).getJSONArray("benefits").getJSONObject(4).get("benefitName").toString();
+			String benefitName5 = innerJson.getJSONObject(0).getJSONArray("benefits").getJSONObject(3).get("benefitName").toString();
 			ApiHelper.AssertEquals("benefit Name" ,"Airtime Benefit", benefitName5, test);
 			
-			String MinCoverAllowed5 = innerJson.getJSONObject(0).getJSONArray("benefits").getJSONObject(4).getJSONArray("allowedLifesAssured").getJSONObject(0).get("minCoverAllowed").toString();
+			String MinCoverAllowed5 = innerJson.getJSONObject(0).getJSONArray("benefits").getJSONObject(3).getJSONArray("allowedLifesAssured").getJSONObject(0).get("minCoverAllowed").toString();
 			ApiHelper.AssertEquals("minimum Cover Allowed" ,"0", MinCoverAllowed5, test);
 			
-			String MaxCoverAllowed5 = innerJson.getJSONObject(0).getJSONArray("benefits").getJSONObject(4).getJSONArray("allowedLifesAssured").getJSONObject(0).get("maxCoverAllowed").toString();
+			String MaxCoverAllowed5 = innerJson.getJSONObject(0).getJSONArray("benefits").getJSONObject(3).getJSONArray("allowedLifesAssured").getJSONObject(0).get("maxCoverAllowed").toString();
 			ApiHelper.AssertEquals("maximum Cover Allowed" ,"0", MaxCoverAllowed5, test);
 			
-			String MinBenAllowed5 = innerJson.getJSONObject(0).getJSONArray("benefits").getJSONObject(4).getJSONArray("allowedLifesAssured").getJSONObject(0).get("minAllowed").toString();
+			String MinBenAllowed5 = innerJson.getJSONObject(0).getJSONArray("benefits").getJSONObject(3).getJSONArray("allowedLifesAssured").getJSONObject(0).get("minAllowed").toString();
 			ApiHelper.AssertEquals("minimum benefits Allowed" ,"1", MinBenAllowed5, test);
 			
 			
-			String MaxBenAllowed5 = innerJson.getJSONObject(0).getJSONArray("benefits").getJSONObject(4).getJSONArray("allowedLifesAssured").getJSONObject(0).get("maxAllowed").toString();
+			String MaxBenAllowed5 = innerJson.getJSONObject(0).getJSONArray("benefits").getJSONObject(3).getJSONArray("allowedLifesAssured").getJSONObject(0).get("maxAllowed").toString();
 			ApiHelper.AssertEquals("maximum benefits Allowed" ,"1", MaxBenAllowed5, test);
-			
-			
-			
-		}
-		
-		
-		
-        test.info( "Product code used: 60100000");
-		
-		test.info( "Find response below");
-		test.info( MarkupHelper.createCodeBlock(response.asString(),CodeLanguage.JSON));
 			
 		
 	}
+        
+        test.info( "Product code used: 60200000");
+		
+		test.info( "Find response below");
+		test.info( MarkupHelper.createCodeBlock(response.asString(),CodeLanguage.JSON));
+		
+
+}
+	
 }

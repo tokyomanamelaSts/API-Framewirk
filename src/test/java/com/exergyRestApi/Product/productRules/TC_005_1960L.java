@@ -1,11 +1,12 @@
-package com.exergyRestApi.Product;
+package com.exergyRestApi.Product.productRules;
 
 import java.io.IOException;
-import com.applicationPayloads.CreateApplicationPayloads;
+
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.markuputils.CodeLanguage;
 import com.aventstack.extentreports.markuputils.MarkupHelper;
+import com.payloads.application.CreateApplicationPayloads;
 
 import Utilities.ApiHelper;
 import Utilities.DataProvider;

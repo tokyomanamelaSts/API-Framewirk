@@ -1,4 +1,4 @@
-package com.BankServicePayloads;
+package com.payloads.BankService;
 
 public class BankServicePayloads {
 

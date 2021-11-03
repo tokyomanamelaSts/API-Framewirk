@@ -9,12 +9,12 @@ import org.json.JSONArray;
 import org.json.JSONObject;
 import org.xml.sax.SAXException;
 
-import com.PartyVerificationRest.Payloads.PartyApiSitPayloads;
-import com.PartyVerificationRest.Payloads.PartyApiUatPayloads;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.markuputils.CodeLanguage;
 import com.aventstack.extentreports.markuputils.MarkupHelper;
+import com.payloads.PartyVerificationRest.PartyApiSitPayloads;
+import com.payloads.PartyVerificationRest.PartyApiUatPayloads;
 
 import Utilities.ApiHelper;
 import Utilities.DataProvider;

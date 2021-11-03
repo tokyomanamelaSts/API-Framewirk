@@ -1,4 +1,4 @@
-package com.exergyRestApi.Product;
+package com.exergyRestApi.Product.productRules;
 
 import java.io.IOException;
 

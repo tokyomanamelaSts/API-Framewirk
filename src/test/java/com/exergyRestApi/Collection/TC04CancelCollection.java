@@ -7,8 +7,9 @@ import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.markuputils.CodeLanguage;
 import com.aventstack.extentreports.markuputils.MarkupHelper;
-import com.collectionpayload.CancelCollectionPayLoad;
-import com.collectionpayload.CollectionPayLoad;
+import com.payloads.collection.CancelCollectionPayLoad;
+import com.payloads.collection.CollectionPayLoad;
+
 import Utilities.ApiHelper;
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;

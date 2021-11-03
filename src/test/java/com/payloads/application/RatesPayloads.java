@@ -1,4 +1,4 @@
-package com.applicationPayloads;
+package com.payloads.application;
 
 public class RatesPayloads {
 

@@ -13,9 +13,10 @@ import org.testng.annotations.Test;
 import org.xml.sax.SAXException;
 
 import com.aventstack.extentreports.ExtentReports;
-
+import com.codoid.products.exception.FilloException;
 import com.exergyRestApi.PartyVerification.TC_001;
-import com.exergyRestApi.Product.*;
+import com.exergyRestApi.Product.Rates.RatesTestCases;
+import com.exergyRestApi.Product.productRules.*;
 
 import Utilities.ApiHelper;
 import Utilities.ExtentManager;
@@ -30,82 +31,33 @@ public class ProductRunner {
 	String TesterName = System.getProperty("user.name");
 	ExtentReports extent;
 	
-	
 	public ProductRunner() throws IOException {
-		
 
 		 extent=new ExtentManager().extentTest(reportname, pageTile, TesterName);
 		 
 		}
-
-	@Test(priority = 5,enabled=true)
-	public void TC_005_1960L() throws URISyntaxException, SAXException, IOException, ParserConfigurationException {
-		
-		TC_005_1960L.Tc_005_1960L(extent);
-		ApiHelper.softAssertion.assertAll();
-		
-	}   
 	
-
-	@Test(priority = 6,enabled=true)
-	public void TC_006_1977() throws URISyntaxException, SAXException, IOException, ParserConfigurationException {
+	@Test(priority = 1,enabled=true)
+	public void TC_Rates1To3() throws URISyntaxException, SAXException, IOException, ParserConfigurationException, FilloException {
 		
-		TC_006_1977.Tc_006_1977(extent);
+		RatesTestCases.Tc1ToTC3(extent);
 		ApiHelper.softAssertion.assertAll();
 		
 	} 
 	
-	@Test(priority = 7,enabled=true)
-	public void TC_007_1924() throws URISyntaxException, SAXException, IOException, ParserConfigurationException {
+	@Test(priority = 2,enabled=true)
+public void TC_ProductRules1To9() throws URISyntaxException, SAXException, IOException, ParserConfigurationException, FilloException {
 		
-		TC_007_1924.Tc_007_1924(extent); 
+	ProductRuleTestCases.Tc1ToTC9(extent);
 		ApiHelper.softAssertion.assertAll();
 		
-	} 
+	}
 	
-
 	@AfterTest
 	public void EndTests() {
 		
-		
 		extent.flush();
 
-	}
-
-
-		extent=new ExtentManager().extentTest(reportname, pageTile, TesterName);
-		
-	}
-	
-	
-	@Test (priority = 1,enabled = true)
-	public void TC_001_60100000() throws IOException, SAXException, ParserConfigurationException {
-		
-		com.exergyRestApi.Product.TC_001_60100000.Tc_001_60100000(extent);
-		ApiHelper.softAssertion.assertAll();
-	}
-	
-	@Test(priority = 2, enabled = true)
-	public void TC_002_60200000() throws IOException, SAXException, ParserConfigurationException {
-		
-		com.exergyRestApi.Product.TC_002_60200000.Tc_002_60200000(extent);
-		ApiHelper.softAssertion.assertAll();
-	}
-	
-	@Test(priority = 3, enabled = true)
-	public void TC_003_1975() throws IOException, SAXException, ParserConfigurationException {
-		
-		com.exergyRestApi.Product.TC_003_1975.TC_003_1975(extent);
-		ApiHelper.softAssertion.assertAll();
-		
-	}
-	
-	@Test(priority = 4, enabled = true)
-	public void TC_004_1960E() throws IOException, SAXException, ParserConfigurationException {
-		
-		com.exergyRestApi.Product.TC_004_1960E.Tc_004_1960E(extent);
-		ApiHelper.softAssertion.assertAll();
-		
 	}
 	
 

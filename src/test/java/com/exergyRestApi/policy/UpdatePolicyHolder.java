@@ -1,10 +1,10 @@
 package com.exergyRestApi.policy;
 
-import com.applicationPayloads.CreateApplicationPayloads;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.markuputils.CodeLanguage;
 import com.aventstack.extentreports.markuputils.MarkupHelper;
+import com.payloads.application.CreateApplicationPayloads;
 import com.policyPayloads.policyPayloads;
 
 import Utilities.ApiHelper;
