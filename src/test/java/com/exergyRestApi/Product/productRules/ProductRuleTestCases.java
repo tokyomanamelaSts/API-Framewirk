@@ -43,10 +43,14 @@ public class ProductRuleTestCases extends ProductRuleRepo{
 			
 			loadTCsData(ReqRecordset);
 		    test=extent.createTest(TestCaseNumber);
+		    
+		    
 		    response =  ApiHelper.sendRestGetRequest(productSitUrl, productSubKey, productSubId, "/Products?productType=NonUnderwritten&productCode="+ProductCode);
 		    test.info( MarkupHelper.createCodeBlock(Description));
 		    
 		    loadTCExpectedResponse(TestCaseNumber);
+		    
+		    System.out.println("TESTCASE: "+TestCaseNumber+"\n");
 		    
 		    ApiHelper.AssertEquals("Status code" , String.valueOf(StatusCode), String.valueOf(response.statusCode()) , test);
 		    
@@ -57,6 +61,7 @@ public class ProductRuleTestCases extends ProductRuleRepo{
 		    	JSONArray innerJson = new JSONArray(response.getBody().asString());
 			    
 			    String ResproductCode = innerJson.getJSONObject(0).get("productCode").toString();
+
 				ApiHelper.AssertEquals("productCode" ,productCode, ResproductCode, test);
 				
 				//Child
@@ -105,7 +110,77 @@ public class ProductRuleTestCases extends ProductRuleRepo{
 				ApiHelper.AssertEquals("ParentMaxAge", parent_MaxAge, ParentMaxAge, test);
 		
 				
+
+				
 		    	
+				String ResproductVersion = innerJson.getJSONObject(0).get("version").toString();
+				ApiHelper.AssertEquals("version" ,version, ResproductVersion, test);
+		    	
+				String ResproductName = innerJson.getJSONObject(0).get("productName").toString();
+				ApiHelper.AssertEquals("product Name" ,productName, ResproductName, test);
+
+		    	
+				String maxBen = innerJson.getJSONObject(0).getJSONObject("productRules").get("maxBeneficiaries").toString();
+				ApiHelper.AssertEquals("maximum Beneficiaries" ,maxBeneficiaries, maxBen, test);
+				
+				//MainLife Assured
+				String AssuredType = innerJson.getJSONObject(0).getJSONArray("benefits").getJSONObject(0).getJSONArray("allowedLifesAssured").getJSONObject(0).get("lifeAssuredType").toString();
+				ApiHelper.AssertEquals("MainLife life Assured Type" ,MainLife_lifeAssuredType, AssuredType, test);
+				
+				
+				String MaxCoverAllowed = innerJson.getJSONObject(0).getJSONArray("benefits").getJSONObject(0).getJSONArray("allowedLifesAssured").getJSONObject(0).get("maxCoverAllowed").toString();
+				ApiHelper.AssertEquals(" MainLife maximum Cover Allowed" ,Mainlife_minCoverAllowed, MaxCoverAllowed, test);
+				
+				
+				String MinCoverAllowed = innerJson.getJSONObject(0).getJSONArray("benefits").getJSONObject(0).getJSONArray("allowedLifesAssured").getJSONObject(0).get("minCoverAllowed").toString();
+				ApiHelper.AssertEquals("MainLife minimum Cover Allowed" ,Mainlife_maxCoverAllowed, MinCoverAllowed, test);
+				
+				
+				String MinBenAllowed = innerJson.getJSONObject(0).getJSONArray("benefits").getJSONObject(0).getJSONArray("allowedLifesAssured").getJSONObject(0).get("minAllowed").toString();
+				ApiHelper.AssertEquals("MainLife minimum benefits Allowed" ,Mainlife_minAllowed, MinBenAllowed, test);
+						
+				
+				String MaxBenAllowed = innerJson.getJSONObject(0).getJSONArray("benefits").getJSONObject(0).getJSONArray("allowedLifesAssured").getJSONObject(0).get("maxAllowed").toString();
+				ApiHelper.AssertEquals("MainLife maximum benefits Allowed" ,Mainlife_maxAllowed, MaxBenAllowed, test);
+				
+				String MinAge = innerJson.getJSONObject(0).getJSONArray("benefits").getJSONObject(0).getJSONArray("allowedLifesAssured").getJSONObject(0).get("minAge").toString();
+				ApiHelper.AssertEquals(" MainLife minimum age" ,Mainlife_minAge, MinAge, test);
+				
+				
+				String MaxAge = innerJson.getJSONObject(0).getJSONArray("benefits").getJSONObject(0).getJSONArray("allowedLifesAssured").getJSONObject(0).get("maxAge").toString();
+				ApiHelper.AssertEquals("MainLife maximum age" ,Mainlife_maxAge, MaxAge, test);
+				
+				
+				//Partner LifeAssured
+				
+				String AssuredType2 = innerJson.getJSONObject(0).getJSONArray("benefits").getJSONObject(0).getJSONArray("allowedLifesAssured").getJSONObject(1).get("lifeAssuredType").toString();
+				ApiHelper.AssertEquals("Partner life Assured Type" ,Partner_lifeAssuredType, AssuredType2, test);
+				
+				
+				String MaxCoverAllowed2 = innerJson.getJSONObject(0).getJSONArray("benefits").getJSONObject(0).getJSONArray("allowedLifesAssured").getJSONObject(1).get("maxCoverAllowed").toString();
+				ApiHelper.AssertEquals(" Partner maximum Cover Allowed" ,Partner_maxCoverAllowed, MaxCoverAllowed2, test);
+				
+				
+				String MinCoverAllowed2 = innerJson.getJSONObject(0).getJSONArray("benefits").getJSONObject(0).getJSONArray("allowedLifesAssured").getJSONObject(1).get("minCoverAllowed").toString();
+				ApiHelper.AssertEquals("Partner minimum Cover Allowed" ,Partner_minCoverAllowed, MinCoverAllowed2, test);
+				
+				
+				String MinBenAllowed2 = innerJson.getJSONObject(0).getJSONArray("benefits").getJSONObject(0).getJSONArray("allowedLifesAssured").getJSONObject(1).get("minAllowed").toString();
+				ApiHelper.AssertEquals("Partner minimum benefits Allowed" ,Partner_minAllowed, MinBenAllowed2, test);
+						
+				
+				String MaxBenAllowed2 = innerJson.getJSONObject(0).getJSONArray("benefits").getJSONObject(0).getJSONArray("allowedLifesAssured").getJSONObject(1).get("maxAllowed").toString();
+				ApiHelper.AssertEquals("Partner maximum benefits Allowed" ,Partner_maxAllowed, MaxBenAllowed2, test);
+				
+				String MinAge2 = innerJson.getJSONObject(0).getJSONArray("benefits").getJSONObject(0).getJSONArray("allowedLifesAssured").getJSONObject(1).get("minAge").toString();
+				ApiHelper.AssertEquals(" Partner minimum age" ,Partner_minAge, MinAge2, test);
+				
+				
+				String MaxAge2 = innerJson.getJSONObject(0).getJSONArray("benefits").getJSONObject(0).getJSONArray("allowedLifesAssured").getJSONObject(1).get("maxAge").toString();
+				ApiHelper.AssertEquals("Partner maximum age" ,Partner_maxAge, MaxAge2, test);
+				
+				
+				
 		    }
 		    
 			test.info( "Find response below");
