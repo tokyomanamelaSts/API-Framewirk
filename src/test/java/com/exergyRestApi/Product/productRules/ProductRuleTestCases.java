@@ -43,10 +43,14 @@ public class ProductRuleTestCases extends ProductRuleRepo{
 			
 			loadTCsData(ReqRecordset);
 		    test=extent.createTest(TestCaseNumber);
+		    
+		    
 		    response =  ApiHelper.sendRestGetRequest(productSitUrl, productSubKey, productSubId, "/Products?productType=NonUnderwritten&productCode="+ProductCode);
 		    test.info( MarkupHelper.createCodeBlock(Description));
 		    
 		    loadTCExpectedResponse(TestCaseNumber);
+		    
+		    System.out.println("TESTCASE: "+TestCaseNumber+"\n");
 		    
 		    ApiHelper.AssertEquals("Status code" , String.valueOf(StatusCode), String.valueOf(response.statusCode()) , test);
 		    
