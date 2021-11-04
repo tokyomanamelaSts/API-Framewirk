@@ -24,6 +24,9 @@ public class ProductRuleRepo {
 	protected static String parent_minAllowed; protected static String parent_maxAllowed;protected static String parent_maxCoverAllowed;
 	protected static String parent_minCoverAllowed; protected static String parent_minAge; protected static String parent_MaxAge;
 	protected static int  StatusCode;
+	protected static int childBenIndex = 0; protected static int parentBenIndex =0 ;protected static int partnerBenIndex =0 ;protected static int mainBenIndex =0 ;
+	protected static int childCoverIndex = 0; protected static int parentCoverIndex =0 ;protected static int partnerCoverIndex =0 ;protected static int mainCoverIndex =0 ;
+	
 	
 	public static void loadTCsData(Recordset recordset) throws FilloException {
 	
@@ -34,7 +37,24 @@ public class ProductRuleRepo {
 		
 		
 	}
-	
+	public static void loadProductIndex() throws FilloException {
+		
+		if(productCode.equals("60100000")|| productCode.equals("60100000")) {
+			
+			  childBenIndex = 0;parentBenIndex =0 ;partnerBenIndex =0 ;mainBenIndex =0 ;
+			  childCoverIndex = 2;parentCoverIndex =3 ;partnerCoverIndex =1 ;mainCoverIndex =0 ;
+			
+			
+		}else
+			if(productCode.equals("1960E")||productCode.equals("1960C")||productCode.equals("1960L")||productCode.equals("1977")||productCode.equals("1924") ) {
+				
+				childBenIndex = 3;parentBenIndex =6;partnerBenIndex =1 ;mainBenIndex =0 ;
+				childCoverIndex = 0;parentCoverIndex =0 ;partnerCoverIndex =0 ;mainCoverIndex =0 ;
+			
+			}
+		
+		
+	}
 	
 	public static void loadTCExpectedResponse(String testCase) throws FilloException {
 		
