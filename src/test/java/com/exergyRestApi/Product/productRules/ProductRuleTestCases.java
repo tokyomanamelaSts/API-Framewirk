@@ -129,11 +129,11 @@ public class ProductRuleTestCases extends ProductRuleRepo{
 				
 				
 				String MaxCoverAllowed = innerJson.getJSONObject(0).getJSONArray("benefits").getJSONObject(0).getJSONArray("allowedLifesAssured").getJSONObject(0).get("maxCoverAllowed").toString();
-				ApiHelper.AssertEquals(" MainLife maximum Cover Allowed" ,Mainlife_minCoverAllowed, MaxCoverAllowed, test);
+				ApiHelper.AssertEquals(" MainLife maximum Cover Allowed" ,Mainlife_maxCoverAllowed, MaxCoverAllowed, test);
 				
 				
 				String MinCoverAllowed = innerJson.getJSONObject(0).getJSONArray("benefits").getJSONObject(0).getJSONArray("allowedLifesAssured").getJSONObject(0).get("minCoverAllowed").toString();
-				ApiHelper.AssertEquals("MainLife minimum Cover Allowed" ,Mainlife_maxCoverAllowed, MinCoverAllowed, test);
+				ApiHelper.AssertEquals("MainLife minimum Cover Allowed" ,Mainlife_minCoverAllowed, MinCoverAllowed, test);
 				
 				
 				String MinBenAllowed = innerJson.getJSONObject(0).getJSONArray("benefits").getJSONObject(0).getJSONArray("allowedLifesAssured").getJSONObject(0).get("minAllowed").toString();
