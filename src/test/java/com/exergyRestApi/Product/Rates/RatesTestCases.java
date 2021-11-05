@@ -54,6 +54,9 @@ public class RatesTestCases extends ProductsRateRepo{
 		
 		
 		
+		
+		
+		
 	}
 	
 	
