@@ -14,7 +14,7 @@ public class ProductsRateRepo {
 	protected static String lifeAssured;protected static String  MainpremiumAmount10K; protected static String MainpremiumAmount15K; protected static String MainpremiumAmount20K;
 	protected static String MainpremiumAmount35K;protected static String MainpremiumAmount50K;protected static String NonePayeable; protected static String partnerPremiumAmount10K;
 	protected static String partnerPremiumAmount15K; protected static String partnerPremiumAmount20K;protected static String partnerPremiumAmount35K; protected static String partnerPremiumAmount50K;
-	protected static String ChildPremiumAmount5K; protected static String ChildPremiumAmount7_5K; protected static String ChildPremiumAmount10K;protected static String ChildPremiumAmount17_5K;protected static String ChildPremiumAmount20K;
+	protected static String ChildPremiumAmount5K; protected static String ChildPremiumAmount7_5K; protected static String ChildPremiumAmount10K;protected static String ChildPremiumAmount15K;protected static String ChildPremiumAmount20K;
 	protected static String  ParentPremiumAmount10K; protected static String ParentPremiumAmount20K;
 	
 	
@@ -46,7 +46,7 @@ public class ProductsRateRepo {
 		
         String Query = "Select * from Response where TestCaseNumber = '"+testCase+"'";
 		
-		Recordset recordset =DataProvider.getDataFromExcelbyQuery("TestData/ProductRules.xlsx",Query );
+		Recordset recordset =DataProvider.getDataFromExcelbyQuery("TestData/rates.xlsx",Query );
 		
 		recordset.next();
 		lifeAssured = recordset.getField("lifeAssured");
@@ -64,7 +64,7 @@ public class ProductsRateRepo {
 		ChildPremiumAmount5K = recordset.getField("ChildPremiumAmount5K");
 		ChildPremiumAmount7_5K = recordset.getField("ChildPremiumAmount7_5K");
 		ChildPremiumAmount10K = recordset.getField("ChildPremiumAmount10K");
-		ChildPremiumAmount17_5K = recordset.getField("ChildPremiumAmount17_5K");
+		ChildPremiumAmount15K = recordset.getField("ChildPremiumAmount15K");
 		ChildPremiumAmount20K = recordset.getField("ChildPremiumAmount20K");
 		ParentPremiumAmount10K = recordset.getField("ParentPremiumAmount10K");
 		ParentPremiumAmount20K = recordset.getField("ParentPremiumAmount20K");	
