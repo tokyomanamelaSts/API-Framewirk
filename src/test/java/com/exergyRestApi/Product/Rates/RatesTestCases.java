@@ -33,12 +33,12 @@ public class RatesTestCases extends ProductsRateRepo{
         String productSitUrl = DataProvider.GetPropVal(DataProvider.propertyFilePath, "productSitUrl");
 		String productSubId = DataProvider.GetPropVal(DataProvider.propertyFilePath, "SubId");
 		String productSubKey = DataProvider.GetPropVal(DataProvider.propertyFilePath, "SubKey");
-		ExtentTest test;
-		Response response;
+		ExtentTest test = null;
+		Response response = null;
 		
 		String Query = "Select * from Requests where RunMe = 'Yes'";
 		
-		Recordset recordset =DataProvider.getDataFromExcelbyQuery("/Users/thaboramalitse/git/APIAutomation/TestData/rates.xlsx",Query );
+		Recordset recordset =DataProvider.getDataFromExcelbyQuery("TestData/rates.xlsx",Query );
 		
 		while(recordset.next()){
 			
@@ -48,10 +48,9 @@ public class RatesTestCases extends ProductsRateRepo{
 		    loadTCExpectedResponse(TestCaseNumber) ;
 		    response =  ApiHelper.sendRestPostRequest(productSitUrl, productSubKey, productSubId, reqBody,"/Products/"+ProductCode+"/Rates?campaignCode="+ ProductCode);
 		    test.info( MarkupHelper.createCodeBlock(description));
-		    response.prettyPrint();
+		  
 		    ApiHelper.AssertEquals("Status code" ,"200", String.valueOf(response.statusCode()) , test);
-			test.info( "Find response below");
-			test.info( MarkupHelper.createCodeBlock(response.asString(),CodeLanguage.JSON));
+			
 			
 			
 			
@@ -75,6 +74,9 @@ public class RatesTestCases extends ProductsRateRepo{
 			ApiHelper.AssertEquals("Main premium amount on R50 000 ", MainpremiumAmount50K, premiumAmount50K, test);
 			
 			
+			
+			
+			
 			//Partner premiums
 			
 			String partnerAmount10K = innerJson.getJSONArray("lifesAssured").getJSONObject(1).getJSONArray("benefits").getJSONObject(0).getJSONArray("premiums").getJSONObject(0).get("premiumAmount").toString();
@@ -91,6 +93,9 @@ public class RatesTestCases extends ProductsRateRepo{
 			
 			String partnerAmount50K = innerJson.getJSONArray("lifesAssured").getJSONObject(1).getJSONArray("benefits").getJSONObject(0).getJSONArray("premiums").getJSONObject(4).get("premiumAmount").toString();
 			ApiHelper.AssertEquals("partner premium amount on R50 000 ", partnerPremiumAmount50K, partnerAmount50K, test);
+			
+			
+			
 			
 			
 			//Child premiums
@@ -112,11 +117,20 @@ public class RatesTestCases extends ProductsRateRepo{
 			String ParentAmount10K = innerJson.getJSONArray("lifesAssured").getJSONObject(3).getJSONArray("benefits").getJSONObject(0).getJSONArray("premiums").getJSONObject(0).get("premiumAmount").toString();
 			ApiHelper.AssertEquals("Parent premium amount on R5 000 ", ParentPremiumAmount10K, ParentAmount10K, test);
 			
-			String ParentAmount20K = innerJson.getJSONArray("lifesAssured").getJSONObject(3).getJSONArray("benefits").getJSONObject(0).getJSONArray("premiums").getJSONObject(1).get("premiumAmount").toString();
+			String ParentAmount15K = innerJson.getJSONArray("lifesAssured").getJSONObject(3).getJSONArray("benefits").getJSONObject(0).getJSONArray("premiums").getJSONObject(1).get("premiumAmount").toString();
+			ApiHelper.AssertEquals("Parent premium amount on R10 000 ", ParentPremiumAmount15K, ParentAmount15K, test);
+			
+			
+			String ParentAmount20K = innerJson.getJSONArray("lifesAssured").getJSONObject(3).getJSONArray("benefits").getJSONObject(0).getJSONArray("premiums").getJSONObject(2).get("premiumAmount").toString();
 			ApiHelper.AssertEquals("Parent premium amount on R10 000 ", ParentPremiumAmount20K, ParentAmount20K, test);
 			
 			
+			
+			
 			}
+		test.info( "Find response below");
+		test.info( MarkupHelper.createCodeBlock(response.asString(),CodeLanguage.JSON));
+		
 		
 		
 		
