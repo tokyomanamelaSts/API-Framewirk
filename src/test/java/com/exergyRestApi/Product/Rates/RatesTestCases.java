@@ -49,7 +49,7 @@ public class RatesTestCases extends ProductsRateRepo{
 		    response =  ApiHelper.sendRestPostRequest(productSitUrl, productSubKey, productSubId, reqBody,"/Products/"+ProductCode+"/Rates?campaignCode="+ ProductCode);
 		    test.info( MarkupHelper.createCodeBlock(description));
 		  
-		    ApiHelper.AssertEquals("Status code" ,"200", String.valueOf(response.statusCode()) , test);
+		    ApiHelper.AssertEquals("Status code" ,statusCode, String.valueOf(response.statusCode()) , test);
 			
 			
 			
@@ -128,6 +128,7 @@ public class RatesTestCases extends ProductsRateRepo{
 			
 			
 			}
+		
 		test.info( "Find response below");
 		test.info( MarkupHelper.createCodeBlock(response.asString(),CodeLanguage.JSON));		
 	}

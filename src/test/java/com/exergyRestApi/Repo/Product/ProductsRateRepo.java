@@ -15,7 +15,7 @@ public class ProductsRateRepo {
 	protected static String MainpremiumAmount35K;protected static String MainpremiumAmount50K;protected static String NonePayeable; protected static String partnerPremiumAmount10K;
 	protected static String partnerPremiumAmount15K; protected static String partnerPremiumAmount20K;protected static String partnerPremiumAmount35K; protected static String partnerPremiumAmount50K;
 	protected static String ChildPremiumAmount5K; protected static String ChildPremiumAmount7_5K; protected static String ChildPremiumAmount10K;protected static String ChildPremiumAmount15K;protected static String ChildPremiumAmount20K;
-	protected static String  ParentPremiumAmount10K; protected static String ParentPremiumAmount20K;  protected static String ParentPremiumAmount15K;
+	protected static String  ParentPremiumAmount10K; protected static String ParentPremiumAmount20K;  protected static String ParentPremiumAmount15K; protected static String  statusCode;
 	
 	
 	public static void loadRequestData(Recordset recordset) throws FilloException {
@@ -70,6 +70,7 @@ public class ProductsRateRepo {
 		ParentPremiumAmount20K = recordset.getField("ParentPremiumAmount20K");	
 		
 		ParentPremiumAmount15K = recordset.getField("ParentPremiumAmount15K");	
+		statusCode = recordset.getField("statusCode");	
 		
 	}
 	
