@@ -129,17 +129,7 @@ public class RatesTestCases extends ProductsRateRepo{
 			
 			}
 		test.info( "Find response below");
-		test.info( MarkupHelper.createCodeBlock(response.asString(),CodeLanguage.JSON));
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
+		test.info( MarkupHelper.createCodeBlock(response.asString(),CodeLanguage.JSON));		
 	}
 	
 	
