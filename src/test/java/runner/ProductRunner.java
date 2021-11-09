@@ -37,18 +37,18 @@ public class ProductRunner {
 		 
 		}
 	
-	@Test(priority = 1,enabled=true)
-	public void TC_Rates1To3() throws URISyntaxException, SAXException, IOException, ParserConfigurationException, FilloException {
+	@Test(priority = 2,enabled=true)
+	public void Product_productrates() throws URISyntaxException, SAXException, IOException, ParserConfigurationException, FilloException {
 		
-		RatesTestCases.Tc1ToTC3(extent);
+		RatesTestCases.Product_60200000(extent);
 		ApiHelper.softAssertion.assertAll();
 		
 	} 
 	
-	@Test(priority = 2,enabled=true)
-    public void TC_ProductRules1To9() throws URISyntaxException, SAXException, IOException, ParserConfigurationException, FilloException {
+	@Test(priority = 1,enabled=true)
+    public void TC_ProductRules() throws URISyntaxException, SAXException, IOException, ParserConfigurationException, FilloException {
 		
-	ProductRuleTestCases.Tc1ToTC9(extent);
+	ProductRuleTestCases.ProductRules(extent);
 		ApiHelper.softAssertion.assertAll();
 		
 	}

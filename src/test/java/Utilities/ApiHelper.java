@@ -229,8 +229,8 @@ Response response =
 		 
 		
 		 
-		 test.pass("validation for "+tagname+" has passed");
-		 System.out.println("validation for "+tagname+" has passed");
+		 test.pass("validation for "+tagname+" has passed, Expected "+expected+" And got "+ Actual);
+		 System.out.println("validation for "+tagname+" has passed, Expected "+expected+" And got "+ Actual);
 		 softAssertion.assertTrue(true);
 			
 		

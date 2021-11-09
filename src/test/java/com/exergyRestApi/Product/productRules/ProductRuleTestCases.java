@@ -24,7 +24,7 @@ import io.restassured.response.Response;
 public class ProductRuleTestCases extends ProductRuleRepo{
 
 	
-	public static void  Tc1ToTC9(ExtentReports extent) throws URISyntaxException, SAXException, IOException, ParserConfigurationException, FilloException {
+	public static void ProductRules(ExtentReports extent) throws URISyntaxException, SAXException, IOException, ParserConfigurationException, FilloException {
 		
 		
 

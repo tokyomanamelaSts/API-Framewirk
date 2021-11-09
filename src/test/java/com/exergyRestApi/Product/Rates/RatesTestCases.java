@@ -26,7 +26,7 @@ import io.restassured.response.Response;
 public class RatesTestCases extends ProductsRateRepo{
 
 	
-	public static void  Tc1ToTC3(ExtentReports extent) throws URISyntaxException, SAXException, IOException, ParserConfigurationException, FilloException {
+	public static void  Product_60200000(ExtentReports extent) throws URISyntaxException, SAXException, IOException, ParserConfigurationException, FilloException {
 		
 		
 
@@ -38,7 +38,7 @@ public class RatesTestCases extends ProductsRateRepo{
 		
 		String Query = "Select * from Requests where RunMe = 'Yes'";
 		
-		Recordset recordset =DataProvider.getDataFromExcelbyQuery("TestData/rates.xlsx",Query );
+		Recordset recordset =DataProvider.getDataFromExcelbyQuery("TestData/60200000.xlsx",Query );
 		
 		while(recordset.next()){
 			
@@ -46,6 +46,9 @@ public class RatesTestCases extends ProductsRateRepo{
 			String reqBody= ratesPayloads.getProductsRates( lifeAssuredType1,Age1,lifeAssuredType2,Age2,lifeAssuredType3,Age3,lifeAssuredType4,Age4);	
 		    test=extent.createTest(TestCaseNumber);
 		    loadTCExpectedResponse(TestCaseNumber) ;
+		    
+		    System.out.println("\nStarting Testcase " + TestCaseNumber+" !!!!!!!!!!! \n");
+		   
 		    response =  ApiHelper.sendRestPostRequest(productSitUrl, productSubKey, productSubId, reqBody,"/Products/"+ProductCode+"/Rates?campaignCode="+ ProductCode);
 		    test.info( MarkupHelper.createCodeBlock(description));
 		  
@@ -53,6 +56,9 @@ public class RatesTestCases extends ProductsRateRepo{
 			
 			
 			
+			if(statusCode.equals(String.valueOf(response.statusCode()))) {
+				
+				
 			
 			//Validations
 			JSONObject innerJson = new JSONObject(response.getBody().asString());
@@ -119,18 +125,20 @@ public class RatesTestCases extends ProductsRateRepo{
 			
 			String ParentAmount15K = innerJson.getJSONArray("lifesAssured").getJSONObject(3).getJSONArray("benefits").getJSONObject(0).getJSONArray("premiums").getJSONObject(1).get("premiumAmount").toString();
 			ApiHelper.AssertEquals("Parent premium amount on R10 000 ", ParentPremiumAmount15K, ParentAmount15K, test);
-			
-			
+		
 			String ParentAmount20K = innerJson.getJSONArray("lifesAssured").getJSONObject(3).getJSONArray("benefits").getJSONObject(0).getJSONArray("premiums").getJSONObject(2).get("premiumAmount").toString();
 			ApiHelper.AssertEquals("Parent premium amount on R10 000 ", ParentPremiumAmount20K, ParentAmount20K, test);
 			
+			}
 			
 			
-			
+			test.info( "Find request body(Payload) below");
+			test.info( MarkupHelper.createCodeBlock(reqBody,CodeLanguage.JSON));	
+			test.info( "Find response below");
+			test.info( MarkupHelper.createCodeBlock(response.asString(),CodeLanguage.JSON));	
 			}
 		
-		test.info( "Find response below");
-		test.info( MarkupHelper.createCodeBlock(response.asString(),CodeLanguage.JSON));		
+			
 	}
 	
 	

@@ -46,7 +46,7 @@ public class ProductsRateRepo {
 		
         String Query = "Select * from Response where TestCaseNumber = '"+testCase+"'";
 		
-		Recordset recordset =DataProvider.getDataFromExcelbyQuery("TestData/rates.xlsx",Query );
+		Recordset recordset =DataProvider.getDataFromExcelbyQuery("TestData/60200000.xlsx",Query );
 		
 		recordset.next();
 		lifeAssured = recordset.getField("lifeAssured");
