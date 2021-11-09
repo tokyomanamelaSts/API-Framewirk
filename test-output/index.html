@@ -130,12 +130,11 @@
                   <a name="Product_productrates">
                   </a> <!-- Product_productrates -->
                   <span class="method-name">Product_productrates</span>
-                  <div class="stack-trace">com.codoid.products.exception.FilloException: Workbook is not found - TestData/rates.xlsx
-	at com.codoid.products.fillo.Fillo.getConnection(Fillo.java:45)
-	at Utilities.DataProvider.getDataFromExcelbyQuery(DataProvider.java:34)
-	at com.exergyRestApi.Repo.Product.ProductsRateRepo.loadTCExpectedResponse(ProductsRateRepo.java:49)
-	at com.exergyRestApi.Product.Rates.RatesTestCases.Product_60200000(RatesTestCases.java:48)
-	at runner.ProductRunner.Product_productrates(ProductRunner.java:43)
+                  <div class="stack-trace">java.lang.AssertionError: The following asserts failed:
+	expected [true] but found [false]
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:47)
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:31)
+	at runner.ProductRunner.Product_productrates(ProductRunner.java:44)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -173,7 +172,7 @@
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">/private/var/folders/10/nx41rvp50wq94v07drs_5f7w0000gn/T/testng-eclipse-729009353/testng-customsuite.xml</span>
+            <span class="header-content">/private/var/folders/10/nx41rvp50wq94v07drs_5f7w0000gn/T/testng-eclipse-1947790117/testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -230,12 +229,12 @@ data.addRows(1);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'Product_productrates')
 data.setCell(0, 2, 'runner.ProductRunner')
-data.setCell(0, 3, 879);
+data.setCell(0, 3, 102734);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 879 ms</span>
+              <span class="suite-total-time">Total running time: 1 minutes</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -277,7 +276,7 @@ return data;
               </div> <!-- test-method -->
               <div class="configuration-test after">
                 <span class="method-name">EndTests</span>
-                <span class="method-start">891 ms</span>
+                <span class="method-start">102807 ms</span>
               </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

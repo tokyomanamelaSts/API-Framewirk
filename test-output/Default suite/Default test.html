@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Tue Nov 09 11:13:31 SAST 2021</td>
+<td>Started on:</td><td>Tue Nov 09 20:28:09 SAST 2021</td>
 </tr>
-<tr><td>Total time:</td><td>1 seconds (1372 ms)</td>
+<tr><td>Total time:</td><td>103 seconds (103388 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -76,12 +76,11 @@ function toggleAllBoxes() {
 </tr>
 <tr>
 <td title='runner.ProductRunner.Product_productrates()'><b>Product_productrates</b><br>Test class: runner.ProductRunner</td>
-<td><div><pre>com.codoid.products.exception.FilloException: Workbook is not found - TestData/rates.xlsx
-	at com.codoid.products.fillo.Fillo.getConnection(Fillo.java:45)
-	at Utilities.DataProvider.getDataFromExcelbyQuery(DataProvider.java:34)
-	at com.exergyRestApi.Repo.Product.ProductsRateRepo.loadTCExpectedResponse(ProductsRateRepo.java:49)
-	at com.exergyRestApi.Product.Rates.RatesTestCases.Product_60200000(RatesTestCases.java:48)
-	at runner.ProductRunner.Product_productrates(ProductRunner.java:43)
+<td><div><pre>java.lang.AssertionError: The following asserts failed:
+	expected [true] but found [false]
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:47)
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:31)
+	at runner.ProductRunner.Product_productrates(ProductRunner.java:44)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -110,13 +109,12 @@ function toggleAllBoxes() {
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1091107430", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1091107430'><pre>com.codoid.products.exception.FilloException: Workbook is not found - TestData/rates.xlsx
-	at com.codoid.products.fillo.Fillo.getConnection(Fillo.java:45)
-	at Utilities.DataProvider.getDataFromExcelbyQuery(DataProvider.java:34)
-	at com.exergyRestApi.Repo.Product.ProductsRateRepo.loadTCExpectedResponse(ProductsRateRepo.java:49)
-	at com.exergyRestApi.Product.Rates.RatesTestCases.Product_60200000(RatesTestCases.java:48)
-	at runner.ProductRunner.Product_productrates(ProductRunner.java:43)
+</pre></div><a href='#' onClick='toggleBox("stack-trace958267004", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace958267004'><pre>java.lang.AssertionError: The following asserts failed:
+	expected [true] but found [false]
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:47)
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:31)
+	at runner.ProductRunner.Product_productrates(ProductRunner.java:44)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -146,7 +144,7 @@ function toggleAllBoxes() {
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </pre></div></td>
-<td>0</td>
+<td>102</td>
 <td>runner.ProductRunner@44a59da3</td></tr>
 </table><p>
 </body>

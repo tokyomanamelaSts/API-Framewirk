@@ -34,7 +34,7 @@ public static void  policybyPolicyReference(ExtentReports extent) throws URISynt
 	ExtentTest test;
 	test=extent.createTest("Policy by Policy Reference");
 	Response response;
-	response =  ApiHelper.sendRestGetRequest(policySitUrl,policySubKey,policySubId,"/Policy/13402150?referenceType=Policy&lineOfBusinessSystem=Mip");
+	response =  ApiHelper.sendRestGetRequest(policySitUrl,policySubKey,policySubId,"/Policy/13402150?identityNumber=8910280512080&referenceType=Policy&lineOfBusinessSystem=Mip");
 	response.prettyPrint();
 	ApiHelper.AssertEquals("Status code" ,"200", String.valueOf(response.statusCode()) , test);
 	
