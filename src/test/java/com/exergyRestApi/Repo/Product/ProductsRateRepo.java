@@ -42,11 +42,11 @@ public class ProductsRateRepo {
 	
 	}
 	
-	public static void loadTCExpectedResponse(String testCase) throws FilloException {
+	public static void loadTCExpectedResponse(String filename, String testCase) throws FilloException {
 		
         String Query = "Select * from Response where TestCaseNumber = '"+testCase+"'";
 		
-		Recordset recordset =DataProvider.getDataFromExcelbyQuery("TestData/60200000.xlsx",Query );
+		Recordset recordset =DataProvider.getDataFromExcelbyQuery("TestData/"+filename+".xlsx",Query );
 		
 		recordset.next();
 		lifeAssured = recordset.getField("lifeAssured");

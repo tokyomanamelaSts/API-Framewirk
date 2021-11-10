@@ -23,10 +23,10 @@ import Utilities.DataProvider;
 import io.restassured.response.Response;
 
 
-public class RatesTestCases extends ProductsRateRepo{
+public class Product_60200000_TestCases extends ProductsRateRepo{
 
 	
-	public static void  Product_60200000(ExtentReports extent) throws URISyntaxException, SAXException, IOException, ParserConfigurationException, FilloException {
+	public static void  Product_60200000(ExtentReports extent, String filename) throws URISyntaxException, SAXException, IOException, ParserConfigurationException, FilloException {
 		
 		
 
@@ -38,14 +38,14 @@ public class RatesTestCases extends ProductsRateRepo{
 		
 		String Query = "Select * from Requests where RunMe = 'Yes'";
 		
-		Recordset recordset =DataProvider.getDataFromExcelbyQuery("TestData/60200000.xlsx",Query );
+		Recordset recordset =DataProvider.getDataFromExcelbyQuery("TestData/"+filename+".xlsx",Query );
 		
 		while(recordset.next()){
 			
 			loadRequestData(recordset);
 			String reqBody= ratesPayloads.getProductsRates( lifeAssuredType1,Age1,lifeAssuredType2,Age2,lifeAssuredType3,Age3,lifeAssuredType4,Age4);	
 		    test=extent.createTest(TestCaseNumber);
-		    loadTCExpectedResponse(TestCaseNumber) ;
+		    loadTCExpectedResponse(TestCaseNumber, filename) ;
 		    
 		    System.out.println("\nStarting Testcase " + TestCaseNumber+" !!!!!!!!!!! \n");
 		   
