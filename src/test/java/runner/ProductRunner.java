@@ -15,6 +15,7 @@ import org.xml.sax.SAXException;
 import com.aventstack.extentreports.ExtentReports;
 import com.codoid.products.exception.FilloException;
 import com.exergyRestApi.PartyVerification.TC_001;
+import com.exergyRestApi.Product.Rates.Product_1960E_TestCases;
 import com.exergyRestApi.Product.Rates.Product_60100000_TestCases;
 import com.exergyRestApi.Product.Rates.Product_60200000_TestCases;
 import com.exergyRestApi.Product.productRules.*;
@@ -38,7 +39,7 @@ public class ProductRunner {
 		 
 		}
 	
-	@Test(priority = 2,enabled=true)
+	@Test(priority = 2,enabled=false)
 	public void Product_60100000_Rates() throws URISyntaxException, SAXException, IOException, ParserConfigurationException, FilloException {
 		
 		Product_60100000_TestCases.Product_60100000(extent, "60100000");
@@ -46,7 +47,7 @@ public class ProductRunner {
 		
 	} 
 	
-	@Test(priority = 2,enabled=true)
+	@Test(priority = 2,enabled=false)
 	public void Product_60200000_Rates() throws URISyntaxException, SAXException, IOException, ParserConfigurationException, FilloException {
 		
 		Product_60200000_TestCases.Product_60200000(extent, "60200000");
@@ -54,13 +55,30 @@ public class ProductRunner {
 		
 	} 
 	
-	@Test(priority = 1,enabled=true)
+	
+	@Test(priority = 2,enabled=true)
+	public void Product_1960E_Rates() throws URISyntaxException, SAXException, IOException, ParserConfigurationException, FilloException {
+		
+		Product_1960E_TestCases.Product_1960E(extent, "1960E");
+		ApiHelper.softAssertion.assertAll();
+		
+	} 
+	
+	@Test(priority = 2,enabled=true)
+	public void Product_1960C_Rates() throws URISyntaxException, SAXException, IOException, ParserConfigurationException, FilloException {
+		
+		Product_1960E_TestCases.Product_1960E(extent, "1960C");
+		ApiHelper.softAssertion.assertAll();
+		
+	} 
+	
+	@Test(priority = 1,enabled=false)
     public void TC_ProductRules() throws URISyntaxException, SAXException, IOException, ParserConfigurationException, FilloException {
 		
 	ProductRuleTestCases.ProductRules(extent);
 		ApiHelper.softAssertion.assertAll();
-		
-	}
+		 
+	} 
 	
 	@AfterTest
 	public void EndTests() {

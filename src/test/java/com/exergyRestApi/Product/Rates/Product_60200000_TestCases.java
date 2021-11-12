@@ -42,10 +42,11 @@ public class Product_60200000_TestCases extends ProductsRateRepo{
 		
 		while(recordset.next()){
 			
-			loadRequestData(recordset);
+			loadRequestData(recordset,"60200000");
+			
 			String reqBody= ratesPayloads.getProductsRates( lifeAssuredType1,Age1,lifeAssuredType2,Age2,lifeAssuredType3,Age3,lifeAssuredType4,Age4);	
 		    test=extent.createTest(TestCaseNumber);
-		    loadTCExpectedResponse(TestCaseNumber, filename) ;
+		    loadTCExpectedResponse(filename, TestCaseNumber) ;
 		    
 		    System.out.println("\nStarting Testcase " + TestCaseNumber+" !!!!!!!!!!! \n");
 		   

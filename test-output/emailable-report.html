@@ -9,15 +9,15 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="8">Default suite</th></tr>
-<tr><td><a href="#t0">Default test</a></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">103 388</td><td></td><td></td></tr>
+<tr><td><a href="#t0">Default test</a></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">1 625</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">runner.ProductRunner</td><td><a href="#m0">Product_productrates</a></td><td rowspan="1">1636482489599</td><td rowspan="1">102734</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">runner.ProductRunner</td><td><a href="#m0">Product_1960C_Rates</a></td><td rowspan="1">1636686442024</td><td rowspan="1">1156</td></tr></tbody>
 </table>
-<h2>Default test</h2><h3 id="m0">runner.ProductRunner#Product_productrates</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: The following asserts failed:
-	expected [true] but found [false]
-	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:47)
-	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:31)
-	at runner.ProductRunner.Product_productrates(ProductRunner.java:44)
+<h2>Default test</h2><h3 id="m0">runner.ProductRunner#Product_1960C_Rates</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">com.codoid.products.exception.FilloException: partnerPremiumAmount25K field is not found
+	at com.codoid.products.fillo.Recordset.getField(Recordset.java:163)
+	at com.exergyRestApi.Repo.Product.ProductsRateRepo.loadTCExpectedResponseFor1960(ProductsRateRepo.java:130)
+	at com.exergyRestApi.Product.Rates.Product_1960E_TestCases.Product_1960E(Product_1960E_TestCases.java:48)
+	at runner.ProductRunner.Product_1960C_Rates(ProductRunner.java:70)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)

@@ -1,24 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="1" total="2" passed="0" failed="1" skipped="0">
+<testng-results ignored="4" total="5" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2021-11-09T20:28:09 SAST" name="Default suite" finished-at="2021-11-09T20:29:52 SAST" duration-ms="103388">
+  <suite started-at="2021-11-12T05:07:21 SAST" name="Default suite" finished-at="2021-11-12T05:07:23 SAST" duration-ms="1625">
     <groups>
     </groups>
-    <test started-at="2021-11-09T20:28:09 SAST" name="Default test" finished-at="2021-11-09T20:29:52 SAST" duration-ms="103388">
+    <test started-at="2021-11-12T05:07:21 SAST" name="Default test" finished-at="2021-11-12T05:07:23 SAST" duration-ms="1625">
       <class name="runner.ProductRunner">
-        <test-method signature="Product_productrates()[pri:2, instance:runner.ProductRunner@44a59da3]" started-at="2021-11-09T20:28:09 SAST" name="Product_productrates" finished-at="2021-11-09T20:29:52 SAST" duration-ms="102734" status="FAIL">
-          <exception class="java.lang.AssertionError">
+        <test-method signature="Product_1960C_Rates()[pri:2, instance:runner.ProductRunner@27508c5d]" started-at="2021-11-12T05:07:22 SAST" name="Product_1960C_Rates" finished-at="2021-11-12T05:07:23 SAST" duration-ms="1156" status="FAIL">
+          <exception class="com.codoid.products.exception.FilloException">
             <message>
-              <![CDATA[The following asserts failed:
-expected [true] but found [false]]]>
+              <![CDATA[partnerPremiumAmount25K field is not found]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: The following asserts failed:
-expected [true] but found [false]
-at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:47)
-at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:31)
-at runner.ProductRunner.Product_productrates(ProductRunner.java:44)
+              <![CDATA[com.codoid.products.exception.FilloException: partnerPremiumAmount25K field is not found
+at com.codoid.products.fillo.Recordset.getField(Recordset.java:163)
+at com.exergyRestApi.Repo.Product.ProductsRateRepo.loadTCExpectedResponseFor1960(ProductsRateRepo.java:130)
+at com.exergyRestApi.Product.Rates.Product_1960E_TestCases.Product_1960E(Product_1960E_TestCases.java:48)
+at runner.ProductRunner.Product_1960C_Rates(ProductRunner.java:70)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -49,11 +48,11 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+          </exception> <!-- com.codoid.products.exception.FilloException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Product_productrates -->
-        <test-method is-config="true" signature="EndTests()[pri:0, instance:runner.ProductRunner@44a59da3]" started-at="2021-11-09T20:29:52 SAST" name="EndTests" finished-at="2021-11-09T20:29:52 SAST" duration-ms="495" status="PASS">
+        </test-method> <!-- Product_1960C_Rates -->
+        <test-method is-config="true" signature="EndTests()[pri:0, instance:runner.ProductRunner@27508c5d]" started-at="2021-11-12T05:07:23 SAST" name="EndTests" finished-at="2021-11-12T05:07:23 SAST" duration-ms="416" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- EndTests -->
