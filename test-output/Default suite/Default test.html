@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Fri Nov 12 05:07:21 SAST 2021</td>
+<td>Started on:</td><td>Sun Nov 14 19:05:31 SAST 2021</td>
 </tr>
-<tr><td>Total time:</td><td>1 seconds (1625 ms)</td>
+<tr><td>Total time:</td><td>82 seconds (82746 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,12 +75,12 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='runner.ProductRunner.Product_1960C_Rates()'><b>Product_1960C_Rates</b><br>Test class: runner.ProductRunner</td>
-<td><div><pre>com.codoid.products.exception.FilloException: partnerPremiumAmount25K field is not found
-	at com.codoid.products.fillo.Recordset.getField(Recordset.java:163)
-	at com.exergyRestApi.Repo.Product.ProductsRateRepo.loadTCExpectedResponseFor1960(ProductsRateRepo.java:130)
-	at com.exergyRestApi.Product.Rates.Product_1960E_TestCases.Product_1960E(Product_1960E_TestCases.java:48)
-	at runner.ProductRunner.Product_1960C_Rates(ProductRunner.java:70)
+<td title='runner.ProductRunner.Product_1960E_Rates()'><b>Product_1960E_Rates</b><br>Test class: runner.ProductRunner</td>
+<td><div><pre>java.lang.AssertionError: The following asserts failed:
+	expected [true] but found [false]
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:47)
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:31)
+	at runner.ProductRunner.Product_1960E_Rates(ProductRunner.java:61)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -109,12 +109,12 @@ function toggleAllBoxes() {
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1251219927", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1251219927'><pre>com.codoid.products.exception.FilloException: partnerPremiumAmount25K field is not found
-	at com.codoid.products.fillo.Recordset.getField(Recordset.java:163)
-	at com.exergyRestApi.Repo.Product.ProductsRateRepo.loadTCExpectedResponseFor1960(ProductsRateRepo.java:130)
-	at com.exergyRestApi.Product.Rates.Product_1960E_TestCases.Product_1960E(Product_1960E_TestCases.java:48)
-	at runner.ProductRunner.Product_1960C_Rates(ProductRunner.java:70)
+</pre></div><a href='#' onClick='toggleBox("stack-trace979620424", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace979620424'><pre>java.lang.AssertionError: The following asserts failed:
+	expected [true] but found [false]
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:47)
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:31)
+	at runner.ProductRunner.Product_1960E_Rates(ProductRunner.java:61)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -144,8 +144,8 @@ function toggleAllBoxes() {
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </pre></div></td>
-<td>1</td>
-<td>runner.ProductRunner@27508c5d</td></tr>
+<td>82</td>
+<td>runner.ProductRunner@2d9caaeb</td></tr>
 </table><p>
 </body>
 </html>

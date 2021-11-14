@@ -19,15 +19,20 @@ public class ProductsRateRepo {
 	protected static String  statusCode;
 	
 	protected static String MainpremiumAmount25K; protected static String MainpremiumAmount30K;	protected static String MainpremiumAmount40K; protected static String MainpremiumAmount45K;protected static String MainpremiumAmount55K;
-	protected static String MainpremiumAmount60K; protected static String MainpremiumAmount65K; protected static String MainpremiumAmount70K; protected static String partnerPremiumAmount25K;protected static String  partnerPremiumAmount30K;	
+	protected static String MainpremiumAmount60K; protected static String MainpremiumAmount65K; protected static String MainpremiumAmount70K; protected static String MainpremiumAmount75K ;protected static String partnerPremiumAmount25K;protected static String  partnerPremiumAmount30K;	
 	protected static String partnerPremiumAmount40K	; protected static String partnerPremiumAmount45K; protected static String 	partnerPremiumAmount55K;protected static String partnerPremiumAmount60K;protected static String partnerPremiumAmount65K; 
 	protected static String partnerPremiumAmount70K; protected static String ChildPremiumAmount25K; protected static String ChildPremiumAmount30K; protected static String  ChildPremiumAmount35K;protected static String 	ChildPremiumAmount40K;
 	protected static String ChildPremiumAmount45K;protected static String ChildPremiumAmount50K; protected static String ParentPremiumAmount25K; protected static String ParentPremiumAmount30K;protected static String  ParentPremiumAmount35K;
 	protected static String ParentPremiumAmount40K; protected static String ParentPremiumAmount45K; protected static String ParentPremiumAmount50K; protected static String ExtendedChildPremium5K; protected static String ExtendedChildPremium10K;
 	protected static String ExtendedChildPremium15K; protected static String ExtendedChildPremium20K; protected static String 	ExtendedChildPremium25K; protected static String ExtendedChildPremium30K;protected static String ExtendedAdultPremium5K;
 	protected static String ExtendedAdultPremium10K; protected static String ExtendedAdultPremium15K; protected static String ExtendedAdultPremium20K; protected static String 	ExtendedAdultPremium25K;protected static String ExtendedAdultPremium30K;
-	
-	
+	protected static String MainMemorialBenefit5K; protected static String	MainMemorialBenefit10K;protected static String MainMonthlyAssistance0_5K;protected static String MainMonthlyAssistance1K;protected static String MainMonthlyAssistance1_5K	;
+	protected static String MainMonthlyAssistance2K; protected static String VehicleAccessBenefitS6;protected static String	VehicleAccessBenefitL6;
+	protected static String  partnerPremiumAmount75K;
+	protected static String partnerRetirementPaidUp10K; protected static String partnerRetirementPaidUp15K; protected static String	partnerRetirementPaidUp20K; protected static String	partnerRetirementPaidUp25K; protected static String	partnerRetirementPaidUp30K;
+	protected static String partnerRetirementPaidUp35K; protected static String	partnerRetirementPaidUp40K; protected static String	partnerRetirementPaidUp45K; protected static String	partnerRetirementPaidUp50K; protected static String	partnerRetirementPaidUp55K;
+	protected static String partnerRetirementPaidUp60K; protected static String	partnerRetirementPaidUp65K; protected static String	partnerRetirementPaidUp70K; protected static String partnerRetirementPaidUp75K; protected static String	partnerMemorialBenefit5K;
+	protected static String partnerMemorialBenefit10K; protected static String partnerMonthlyBenefit5K;protected static String	partnerMonthlyBenefit1K;
 	public static void loadRequestData(Recordset recordset, String productCode ) throws FilloException {
 		
 		
@@ -121,7 +126,9 @@ public static void loadTCExpectedResponseFor1960(String filename, String testCas
 		MainpremiumAmount55K= recordset.getField("MainpremiumAmount55K");	
 		MainpremiumAmount60K= recordset.getField("MainpremiumAmount60K");	
 		MainpremiumAmount65K= recordset.getField("MainpremiumAmount65K");	
-		MainpremiumAmount70K= recordset.getField("MainpremiumAmount70K");	
+		MainpremiumAmount70K= recordset.getField("MainpremiumAmount70K");
+		
+		MainpremiumAmount75K= recordset.getField("MainpremiumAmount75K");
 		
 		NonePayeable	= recordset.getField("NonePayeable");
 		partnerPremiumAmount10K	= recordset.getField("partnerPremiumAmount10K");
@@ -137,6 +144,8 @@ public static void loadTCExpectedResponseFor1960(String filename, String testCas
 		partnerPremiumAmount60K	= recordset.getField("partnerPremiumAmount60K");
 		partnerPremiumAmount65K	= recordset.getField("partnerPremiumAmount65K");
 		partnerPremiumAmount70K	= recordset.getField("partnerPremiumAmount70K");
+		partnerPremiumAmount75K	= recordset.getField("partnerPremiumAmount75K");
+		
 		
 		ChildPremiumAmount10K	= recordset.getField("ChildPremiumAmount10K");
 		ChildPremiumAmount15K	= recordset.getField("ChildPremiumAmount15K");
@@ -172,8 +181,37 @@ public static void loadTCExpectedResponseFor1960(String filename, String testCas
 		ExtendedAdultPremium25K	= recordset.getField("ExtendedAdultPremium25K");
 		ExtendedAdultPremium30K= recordset.getField("ExtendedAdultPremium30K");
 		
-		statusCode = recordset.getField("statusCode");	
+		MainMemorialBenefit5K= recordset.getField("MainMemorialBenefit5K");
+		MainMemorialBenefit10K= recordset.getField("MainMemorialBenefit10K");
+	    MainMonthlyAssistance0_5K= recordset.getField("MainMonthlyAssistance0_5K");
+	    MainMonthlyAssistance1K= recordset.getField("MainMonthlyAssistance1K");
+	    MainMonthlyAssistance1_5K= recordset.getField("MainMonthlyAssistance1_5K");
+	    MainMonthlyAssistance2K= recordset.getField("MainMonthlyAssistance2K");
+	    VehicleAccessBenefitS6= recordset.getField("VehicleAccessBenefitS6");
+	    VehicleAccessBenefitL6= recordset.getField("VehicleAccessBenefitL6");
+	    
+	    partnerRetirementPaidUp10K= recordset.getField("partnerRetirementPaidUp10K");
+	    partnerRetirementPaidUp15K= recordset.getField("partnerRetirementPaidUp15K");
+	    partnerRetirementPaidUp20K= recordset.getField("partnerRetirementPaidUp20K");
+	    partnerRetirementPaidUp25K= recordset.getField("partnerRetirementPaidUp25K");
+	    partnerRetirementPaidUp30K= recordset.getField("partnerRetirementPaidUp30K");
+	    partnerRetirementPaidUp35K= recordset.getField("partnerRetirementPaidUp35K");
+	    partnerRetirementPaidUp40K= recordset.getField("partnerRetirementPaidUp40K");
+	    partnerRetirementPaidUp45K= recordset.getField("partnerRetirementPaidUp45K");
+	    partnerRetirementPaidUp50K= recordset.getField("partnerRetirementPaidUp50K");
+	    partnerRetirementPaidUp55K= recordset.getField("partnerRetirementPaidUp55K");
+	    partnerRetirementPaidUp60K= recordset.getField("partnerRetirementPaidUp60K");
+	    partnerRetirementPaidUp65K= recordset.getField("partnerRetirementPaidUp65K");
+	    partnerRetirementPaidUp70K= recordset.getField("partnerRetirementPaidUp70K");
+	    partnerRetirementPaidUp75K= recordset.getField("partnerRetirementPaidUp75K");
+	    
+	    partnerMemorialBenefit5K= recordset.getField("partnerMemorialBenefit5K");
+	    partnerMemorialBenefit10K= recordset.getField("partnerMemorialBenefit10K");
+	    partnerMonthlyBenefit5K= recordset.getField("partnerMonthlyBenefit5K");
+	    partnerMonthlyBenefit1K= recordset.getField("partnerMonthlyBenefit10K");
+		statusCode = recordset.getField("statusCode");		
 		
+		NonePayeable = recordset.getField("NonePayeable");
 	}
 	
 	

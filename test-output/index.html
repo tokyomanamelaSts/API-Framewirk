@@ -104,7 +104,7 @@
                     <div class="method-list-content failed suite-Default_suite">
                       <span>
                         <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="runner.ProductRunner" class="method navigator-link" hash-for-method="Product_1960C_Rates">Product_1960C_Rates</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="runner.ProductRunner" class="method navigator-link" hash-for-method="Product_1960E_Rates">Product_1960E_Rates</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-Default_suite -->
@@ -127,14 +127,14 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="Product_1960C_Rates">
-                  </a> <!-- Product_1960C_Rates -->
-                  <span class="method-name">Product_1960C_Rates</span>
-                  <div class="stack-trace">com.codoid.products.exception.FilloException: partnerPremiumAmount25K field is not found
-	at com.codoid.products.fillo.Recordset.getField(Recordset.java:163)
-	at com.exergyRestApi.Repo.Product.ProductsRateRepo.loadTCExpectedResponseFor1960(ProductsRateRepo.java:130)
-	at com.exergyRestApi.Product.Rates.Product_1960E_TestCases.Product_1960E(Product_1960E_TestCases.java:48)
-	at runner.ProductRunner.Product_1960C_Rates(ProductRunner.java:70)
+                  <a name="Product_1960E_Rates">
+                  </a> <!-- Product_1960E_Rates -->
+                  <span class="method-name">Product_1960E_Rates</span>
+                  <div class="stack-trace">java.lang.AssertionError: The following asserts failed:
+	expected [true] but found [false]
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:47)
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:31)
+	at runner.ProductRunner.Product_1960E_Rates(ProductRunner.java:61)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -172,7 +172,7 @@
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">/private/var/folders/10/nx41rvp50wq94v07drs_5f7w0000gn/T/testng-eclipse--2112310180/testng-customsuite.xml</span>
+            <span class="header-content">/private/var/folders/10/nx41rvp50wq94v07drs_5f7w0000gn/T/testng-eclipse--414526729/testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -181,11 +181,7 @@
 &lt;suite name=&quot;Default suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Default test&quot; verbose=&quot;2&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;runner.ProductRunner&quot;&gt;
-        &lt;methods&gt;
-          &lt;include name=&quot;Product_1960C_Rates&quot;/&gt;
-        &lt;/methods&gt;
-      &lt;/class&gt; &lt;!-- runner.ProductRunner --&gt;
+      &lt;class name=&quot;runner.ProductRunner&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Default test --&gt;
 &lt;/suite&gt; &lt;!-- Default suite --&gt;
@@ -227,14 +223,14 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'Product_1960C_Rates')
+data.setCell(0, 1, 'Product_1960E_Rates')
 data.setCell(0, 2, 'runner.ProductRunner')
-data.setCell(0, 3, 1156);
+data.setCell(0, 3, 82012);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 1 seconds</span>
+              <span class="suite-total-time">Total running time: 1 minutes</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -257,7 +253,7 @@ return data;
               <div class="ignored-methods-div">
                 <span class="ignored-method-name">TC_ProductRules</span>
                 <br/>
-                <span class="ignored-method-name">Product_1960E_Rates</span>
+                <span class="ignored-method-name">Product_1960C_Rates</span>
                 <br/>
                 <span class="ignored-method-name">Product_60200000_Rates</span>
                 <br/>
@@ -277,12 +273,12 @@ return data;
               <div class="test-method">
                 <img src="failed.png">
                 </img>
-                <span class="method-name">Product_1960C_Rates</span>
+                <span class="method-name">Product_1960E_Rates</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-test after">
                 <span class="method-name">EndTests</span>
-                <span class="method-start">1178 ms</span>
+                <span class="method-start">82066 ms</span>
               </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

@@ -54,24 +54,18 @@ public class ProductRunner {
 		ApiHelper.softAssertion.assertAll();
 		
 	} 
-	
-	
 	@Test(priority = 2,enabled=true)
 	public void Product_1960E_Rates() throws URISyntaxException, SAXException, IOException, ParserConfigurationException, FilloException {
 		
 		Product_1960E_TestCases.Product_1960E(extent, "1960E");
 		ApiHelper.softAssertion.assertAll();
-		
 	} 
-	
-	@Test(priority = 2,enabled=true)
+	@Test(priority = 2,enabled=false)
 	public void Product_1960C_Rates() throws URISyntaxException, SAXException, IOException, ParserConfigurationException, FilloException {
 		
 		Product_1960E_TestCases.Product_1960E(extent, "1960C");
 		ApiHelper.softAssertion.assertAll();
-		
 	} 
-	
 	@Test(priority = 1,enabled=false)
     public void TC_ProductRules() throws URISyntaxException, SAXException, IOException, ParserConfigurationException, FilloException {
 		

@@ -58,8 +58,6 @@ public class Product_60200000_TestCases extends ProductsRateRepo{
 			
 			
 			if(statusCode.equals(String.valueOf(response.statusCode()))) {
-				
-				
 			
 			//Validations
 			JSONObject innerJson = new JSONObject(response.getBody().asString());
