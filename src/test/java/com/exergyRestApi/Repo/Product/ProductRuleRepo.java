@@ -46,18 +46,31 @@ public class ProductRuleRepo {
 			
 			
 		}else
-			if(productCode.equals("1960E")||productCode.equals("1977")||productCode.equals("1924") ) {
+			if(productCode.equals("1960E")) {
 				
 				childBenIndex = 3;parentBenIndex =6;partnerBenIndex =1 ;mainBenIndex =0 ;
 				childCoverIndex = 0;parentCoverIndex =0 ;partnerCoverIndex =0 ;mainCoverIndex =0 ;
-			
+			 
 			}else
 				if(productCode.equals("1960C")||productCode.equals("1960L")) {
 					
 					childBenIndex = 2;parentBenIndex =5;partnerBenIndex =1 ;mainBenIndex =0 ;
 					childCoverIndex = 0;parentCoverIndex =0 ;partnerCoverIndex =0 ;mainCoverIndex =0 ;
 					
+			}else
+				if(productCode.equals("1975")||productCode.equals("1977")||productCode.equals("1924")  ) {
+					
+					
+					if(productCode.equals("1924")) {parentBenIndex =7;}
+					else {parentBenIndex =11;}
+					
+					childBenIndex = 1;partnerBenIndex =1 ;mainBenIndex =0 ;
+					childCoverIndex = 1;parentCoverIndex =0 ;partnerCoverIndex =0 ;mainCoverIndex =0 ;
+					
+					
+					
 			}
+		
 		
 		
 		

@@ -96,8 +96,10 @@ public class TC03ConfirmCollection {
 		     .extract()
 		     .response();
 		jsonBody = response2.getBody().asString();
+		jsonPathEvaluator = response2.jsonPath();
 		
-		
+		String status = jsonPathEvaluator.get("status");
+		ApiHelper.AssertEquals("Status " ,"Confirmed", status, test);
 		
 		
 		test.info( "Find payload(Request) below");

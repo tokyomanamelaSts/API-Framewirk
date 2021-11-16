@@ -36,7 +36,7 @@ public class ProductsRateRepo {
 	public static void loadRequestData(Recordset recordset, String productCode ) throws FilloException {
 		
 		
-		
+		 
 		lifeAssuredType1 = recordset.getField("lifeAssuredType1");
 		lifeAssuredType2 = recordset.getField("lifeAssuredType2");
 		lifeAssuredType3 = recordset.getField("lifeAssuredType3");
@@ -105,7 +105,7 @@ public class ProductsRateRepo {
 		
 	}
 	
-public static void loadTCExpectedResponseFor1960(String filename, String testCase) throws FilloException {
+public static void loadTCExpectedResponseFor1960(String filename, String testCase, String ProductCode) throws FilloException {
 		
         String Query = "Select * from Response where TestCaseNumber = '"+testCase+"'";
 		
@@ -131,6 +131,7 @@ public static void loadTCExpectedResponseFor1960(String filename, String testCas
 		MainpremiumAmount75K= recordset.getField("MainpremiumAmount75K");
 		
 		NonePayeable	= recordset.getField("NonePayeable");
+		
 		partnerPremiumAmount10K	= recordset.getField("partnerPremiumAmount10K");
 		partnerPremiumAmount15K	= recordset.getField("partnerPremiumAmount15K");
 		partnerPremiumAmount20K	= recordset.getField("partnerPremiumAmount20K");
@@ -146,16 +147,19 @@ public static void loadTCExpectedResponseFor1960(String filename, String testCas
 		partnerPremiumAmount70K	= recordset.getField("partnerPremiumAmount70K");
 		partnerPremiumAmount75K	= recordset.getField("partnerPremiumAmount75K");
 		
+		if(!ProductCode.equals("1960L")) {
+			
+			ChildPremiumAmount10K	= recordset.getField("ChildPremiumAmount10K");
+			ChildPremiumAmount15K	= recordset.getField("ChildPremiumAmount15K");
+			ChildPremiumAmount20K	= recordset.getField("ChildPremiumAmount20K");
+			ChildPremiumAmount25K	= recordset.getField("ChildPremiumAmount25K");
+			ChildPremiumAmount30K	= recordset.getField("ChildPremiumAmount30K");
+			ChildPremiumAmount35K	= recordset.getField("ChildPremiumAmount35K");
+			ChildPremiumAmount40K	= recordset.getField("ChildPremiumAmount40K");
+			ChildPremiumAmount45K	= recordset.getField("ChildPremiumAmount45K");
+			ChildPremiumAmount50K	= recordset.getField("ChildPremiumAmount50K");
+		}
 		
-		ChildPremiumAmount10K	= recordset.getField("ChildPremiumAmount10K");
-		ChildPremiumAmount15K	= recordset.getField("ChildPremiumAmount15K");
-		ChildPremiumAmount20K	= recordset.getField("ChildPremiumAmount20K");
-		ChildPremiumAmount25K	= recordset.getField("ChildPremiumAmount25K");
-		ChildPremiumAmount30K	= recordset.getField("ChildPremiumAmount30K");
-		ChildPremiumAmount35K	= recordset.getField("ChildPremiumAmount35K");
-		ChildPremiumAmount40K	= recordset.getField("ChildPremiumAmount40K");
-		ChildPremiumAmount45K	= recordset.getField("ChildPremiumAmount45K");
-		ChildPremiumAmount50K	= recordset.getField("ChildPremiumAmount50K");
 		
 		ParentPremiumAmount10K	= recordset.getField("ParentPremiumAmount10K");
 		ParentPremiumAmount15K	= recordset.getField("ParentPremiumAmount15K");
@@ -187,30 +191,32 @@ public static void loadTCExpectedResponseFor1960(String filename, String testCas
 	    MainMonthlyAssistance1K= recordset.getField("MainMonthlyAssistance1K");
 	    MainMonthlyAssistance1_5K= recordset.getField("MainMonthlyAssistance1_5K");
 	    MainMonthlyAssistance2K= recordset.getField("MainMonthlyAssistance2K");
-	    VehicleAccessBenefitS6= recordset.getField("VehicleAccessBenefitS6");
-	    VehicleAccessBenefitL6= recordset.getField("VehicleAccessBenefitL6");
+	  
 	    
-	    partnerRetirementPaidUp10K= recordset.getField("partnerRetirementPaidUp10K");
-	    partnerRetirementPaidUp15K= recordset.getField("partnerRetirementPaidUp15K");
-	    partnerRetirementPaidUp20K= recordset.getField("partnerRetirementPaidUp20K");
-	    partnerRetirementPaidUp25K= recordset.getField("partnerRetirementPaidUp25K");
-	    partnerRetirementPaidUp30K= recordset.getField("partnerRetirementPaidUp30K");
-	    partnerRetirementPaidUp35K= recordset.getField("partnerRetirementPaidUp35K");
-	    partnerRetirementPaidUp40K= recordset.getField("partnerRetirementPaidUp40K");
-	    partnerRetirementPaidUp45K= recordset.getField("partnerRetirementPaidUp45K");
-	    partnerRetirementPaidUp50K= recordset.getField("partnerRetirementPaidUp50K");
-	    partnerRetirementPaidUp55K= recordset.getField("partnerRetirementPaidUp55K");
-	    partnerRetirementPaidUp60K= recordset.getField("partnerRetirementPaidUp60K");
-	    partnerRetirementPaidUp65K= recordset.getField("partnerRetirementPaidUp65K");
-	    partnerRetirementPaidUp70K= recordset.getField("partnerRetirementPaidUp70K");
-	    partnerRetirementPaidUp75K= recordset.getField("partnerRetirementPaidUp75K");
-	    
+	    if(ProductCode.equals("1960E")) {
+	    	
+	    	VehicleAccessBenefitS6= recordset.getField("VehicleAccessBenefitS6");
+	  	    VehicleAccessBenefitL6= recordset.getField("VehicleAccessBenefitL6");
+		    partnerRetirementPaidUp10K= recordset.getField("partnerRetirementPaidUp10K");
+		    partnerRetirementPaidUp15K= recordset.getField("partnerRetirementPaidUp15K");
+		    partnerRetirementPaidUp20K= recordset.getField("partnerRetirementPaidUp20K");
+		    partnerRetirementPaidUp25K= recordset.getField("partnerRetirementPaidUp25K");
+		    partnerRetirementPaidUp30K= recordset.getField("partnerRetirementPaidUp30K");
+		    partnerRetirementPaidUp35K= recordset.getField("partnerRetirementPaidUp35K");
+		    partnerRetirementPaidUp40K= recordset.getField("partnerRetirementPaidUp40K");
+		    partnerRetirementPaidUp45K= recordset.getField("partnerRetirementPaidUp45K");
+		    partnerRetirementPaidUp50K= recordset.getField("partnerRetirementPaidUp50K");
+		    partnerRetirementPaidUp55K= recordset.getField("partnerRetirementPaidUp55K");
+		    partnerRetirementPaidUp60K= recordset.getField("partnerRetirementPaidUp60K");
+		    partnerRetirementPaidUp65K= recordset.getField("partnerRetirementPaidUp65K");
+		    partnerRetirementPaidUp70K= recordset.getField("partnerRetirementPaidUp70K");
+		    partnerRetirementPaidUp75K= recordset.getField("partnerRetirementPaidUp75K");
+	    }
 	    partnerMemorialBenefit5K= recordset.getField("partnerMemorialBenefit5K");
 	    partnerMemorialBenefit10K= recordset.getField("partnerMemorialBenefit10K");
 	    partnerMonthlyBenefit5K= recordset.getField("partnerMonthlyBenefit5K");
 	    partnerMonthlyBenefit1K= recordset.getField("partnerMonthlyBenefit10K");
 		statusCode = recordset.getField("statusCode");		
-		
 		NonePayeable = recordset.getField("NonePayeable");
 	}
 	

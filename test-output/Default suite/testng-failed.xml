@@ -5,7 +5,7 @@
     <classes>
       <class name="runner.ProductRunner">
         <methods>
-          <include name="Product_1960E_Rates"/>
+          <include name="Product_1960C_Rates"/>
           <include name="EndTests"/>
         </methods>
       </class> <!-- runner.ProductRunner -->

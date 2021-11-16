@@ -41,7 +41,7 @@ public class ProductRuleTestCases extends ProductRuleRepo{
 		Recordset ReqRecordset =DataProvider.getDataFromExcelbyQuery("TestData/ProductRules.xlsx",Query );
 		
 		while(ReqRecordset.next()){
-			
+			 
 			loadTCsData(ReqRecordset);
 		    test=extent.createTest(TestCaseNumber);
 		    

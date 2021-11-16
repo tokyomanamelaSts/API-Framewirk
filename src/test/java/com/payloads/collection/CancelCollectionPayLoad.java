@@ -4,26 +4,26 @@ public class CancelCollectionPayLoad {
 
 	public static String cancelCollectionPayLoad() {
 
-		return "{\r\n" + 
-				"  \"policyNumber\": \"50000043\",\r\n" + 
-				"  \"collectionReference\": \"ref123\",\r\n" + 
-				"  \"channel\": {\r\n" + 
-				"    \"tillNumber\": \"till\",\r\n" + 
-				"    \"serialNumber\": \"serial\",\r\n" + 
-				"    \"transactionIdentity\": \"transid\",\r\n" + 
-				"    \"messageIdentity\": \"id\",\r\n" + 
-				"    \"networkTransactionIdentity\": \"network\",\r\n" + 
-				"    \"vendorType\": {\r\n" + 
-				"      \"paymentSources\": \"PayAt\"\r\n" + 
-				"    },\r\n" + 
-				"    \"channelType\": \"TillPoint\",\r\n" + 
-				"    \"channelLocation\": \"location\",\r\n" + 
-				"    \"channelReference\": \"reference\"\r\n" + 
-				"  },\r\n" + 
-				"  \"amount\": 319,\r\n" + 
-				"  \"status\": \"None\",\r\n" + 
-				"  \"message\": \"message\"\r\n" + 
-				"}";
+		return "{\n"
+				+ "  \"policyNumber\": \"50000043\",\n"
+				+ "  \"collectionReference\": \"ref123\",\n"
+				+ "  \"channel\": {\n"
+				+ "    \"tillNumber\": \"till\",\n"
+				+ "    \"serialNumber\": \"serial\",\n"
+				+ "    \"transactionIdentity\": \"transid\",\n"
+				+ "    \"messageIdentity\": \"id\",\n"
+				+ "    \"networkTransactionIdentity\": \"network\",\n"
+				+ "    \"vendorType\": {\n"
+				+ "      \"paymentSources\": \"PayAt\"\n"
+				+ "    },\n"
+				+ "    \"channelType\": \"TillPoint\",\n"
+				+ "    \"channelLocation\": \"location\",\n"
+				+ "    \"channelReference\": \"reference\"\n"
+				+ "  },\n"
+				+ "  \"amount\": 319,\n"
+				+ "  \"status\": \"None\",\n"
+				+ "  \"message\": \"message\"\n"
+				+ "}";
 
 }
 }

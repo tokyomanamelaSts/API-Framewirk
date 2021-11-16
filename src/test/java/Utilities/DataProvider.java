@@ -28,6 +28,7 @@ public class DataProvider {
 		 }
 		 return val;  
 		 }
+	
 	public static Recordset getDataFromExcelbyQuery(String FilePath,String query) throws FilloException {
 		
 		Fillo fillo=new Fillo();
@@ -36,7 +37,7 @@ public class DataProvider {
 		Recordset recordset=connection.executeQuery(query);
 		return recordset; 
 	}
-	
+	 
 	
 	
 	

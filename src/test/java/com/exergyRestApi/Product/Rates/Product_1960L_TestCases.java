@@ -18,10 +18,10 @@ import Utilities.DataProvider;
 import io.restassured.response.Response;
 
 
-public class Product_1960E_TestCases extends ProductsRateRepo{
+public class Product_1960L_TestCases extends ProductsRateRepo{
 
 	
-	public static void  Product_1960E(ExtentReports extent, String filename) throws URISyntaxException, SAXException, IOException, ParserConfigurationException, FilloException {
+	public static void  Product_1960L(ExtentReports extent, String filename) throws URISyntaxException, SAXException, IOException, ParserConfigurationException, FilloException {
 		
 		
 
@@ -37,16 +37,16 @@ public class Product_1960E_TestCases extends ProductsRateRepo{
 		
 		while(recordset.next()){
 			
-			loadRequestData(recordset, "1960E");
+			loadRequestData(recordset, "1960L");
 			String reqBody= ratesPayloads.getProductsRates1960( lifeAssuredType1,Age1,lifeAssuredType2,Age2,lifeAssuredType3,Age3,lifeAssuredType4,Age4,lifeAssuredType5,Age5,lifeAssuredType6,Age6);	
 		    test=extent.createTest(TestCaseNumber);
-		    loadTCExpectedResponseFor1960(filename,TestCaseNumber, "1960E") ;
+		    loadTCExpectedResponseFor1960(filename,TestCaseNumber, "1960L") ;
 		    
 		    System.out.println("\nStarting Testcase " + TestCaseNumber+" !!!!!!!!!!! \n");
 		   
 		    response =  ApiHelper.sendRestPostRequest(productSitUrl, productSubKey, productSubId, reqBody,"/Products/"+ProductCode+"/Rates?campaignCode="+ ProductCode);
 		    test.info( MarkupHelper.createCodeBlock(description));
-		   //response.prettyPrint();
+		  
 		    ApiHelper.AssertEquals("Status code" ,statusCode, String.valueOf(response.statusCode()) , test);
 			
 			
@@ -58,186 +58,143 @@ public class Product_1960E_TestCases extends ProductsRateRepo{
 				JSONObject innerJson = new JSONObject(response.getBody().asString());
 				
 				//Main premiums
-				String premiumAmount10K = innerJson.getJSONArray("lifesAssured").getJSONObject(0).getJSONArray("benefits").getJSONObject(4).getJSONArray("premiums").getJSONObject(0).get("premiumAmount").toString();
+				String premiumAmount10K = innerJson.getJSONArray("lifesAssured").getJSONObject(0).getJSONArray("benefits").getJSONObject(0).getJSONArray("premiums").getJSONObject(0).get("premiumAmount").toString();
 				ApiHelper.AssertEquals("FuneralBenefit MainLife premium amount on R10 000 ", MainpremiumAmount10K, premiumAmount10K, test);
 				
-				String premiumAmount15K = innerJson.getJSONArray("lifesAssured").getJSONObject(0).getJSONArray("benefits").getJSONObject(4).getJSONArray("premiums").getJSONObject(1).get("premiumAmount").toString();
+				String premiumAmount15K = innerJson.getJSONArray("lifesAssured").getJSONObject(0).getJSONArray("benefits").getJSONObject(0).getJSONArray("premiums").getJSONObject(1).get("premiumAmount").toString();
 				ApiHelper.AssertEquals("FuneralBenefit MainLife premium amount on R15 000", MainpremiumAmount15K, premiumAmount15K, test);
 				
-				String premiumAmount20K = innerJson.getJSONArray("lifesAssured").getJSONObject(0).getJSONArray("benefits").getJSONObject(4).getJSONArray("premiums").getJSONObject(2).get("premiumAmount").toString();
+				String premiumAmount20K = innerJson.getJSONArray("lifesAssured").getJSONObject(0).getJSONArray("benefits").getJSONObject(0).getJSONArray("premiums").getJSONObject(2).get("premiumAmount").toString();
 				ApiHelper.AssertEquals("FuneralBenefit MainLife premium amount on R20 000", MainpremiumAmount20K, premiumAmount20K, test);
 				
-				String premiumAmount25K = innerJson.getJSONArray("lifesAssured").getJSONObject(0).getJSONArray("benefits").getJSONObject(4).getJSONArray("premiums").getJSONObject(3).get("premiumAmount").toString();
+				String premiumAmount25K = innerJson.getJSONArray("lifesAssured").getJSONObject(0).getJSONArray("benefits").getJSONObject(0).getJSONArray("premiums").getJSONObject(3).get("premiumAmount").toString();
 				ApiHelper.AssertEquals("FuneralBenefit MainLife premium amount on R25 000", MainpremiumAmount25K, premiumAmount25K, test);
 				
-				String premiumAmount30K = innerJson.getJSONArray("lifesAssured").getJSONObject(0).getJSONArray("benefits").getJSONObject(4).getJSONArray("premiums").getJSONObject(4).get("premiumAmount").toString();
+				String premiumAmount30K = innerJson.getJSONArray("lifesAssured").getJSONObject(0).getJSONArray("benefits").getJSONObject(0).getJSONArray("premiums").getJSONObject(4).get("premiumAmount").toString();
 				ApiHelper.AssertEquals("FuneralBenefit MainLife premium amount on R30 000", MainpremiumAmount30K, premiumAmount30K, test);
 				
-				String premiumAmount35K = innerJson.getJSONArray("lifesAssured").getJSONObject(0).getJSONArray("benefits").getJSONObject(4).getJSONArray("premiums").getJSONObject(5).get("premiumAmount").toString();
+				String premiumAmount35K = innerJson.getJSONArray("lifesAssured").getJSONObject(0).getJSONArray("benefits").getJSONObject(0).getJSONArray("premiums").getJSONObject(5).get("premiumAmount").toString();
 				ApiHelper.AssertEquals("FuneralBenefit MainLife premium amount on R35 000", MainpremiumAmount35K, premiumAmount35K, test);
 				
-				String premiumAmount40K = innerJson.getJSONArray("lifesAssured").getJSONObject(0).getJSONArray("benefits").getJSONObject(4).getJSONArray("premiums").getJSONObject(6).get("premiumAmount").toString();
+				String premiumAmount40K = innerJson.getJSONArray("lifesAssured").getJSONObject(0).getJSONArray("benefits").getJSONObject(0).getJSONArray("premiums").getJSONObject(6).get("premiumAmount").toString();
 				ApiHelper.AssertEquals("FuneralBenefit MainLife premium amount on R40 000", MainpremiumAmount40K, premiumAmount40K, test);
 				
-				String premiumAmount45K = innerJson.getJSONArray("lifesAssured").getJSONObject(0).getJSONArray("benefits").getJSONObject(4).getJSONArray("premiums").getJSONObject(7).get("premiumAmount").toString();
+				String premiumAmount45K = innerJson.getJSONArray("lifesAssured").getJSONObject(0).getJSONArray("benefits").getJSONObject(0).getJSONArray("premiums").getJSONObject(7).get("premiumAmount").toString();
 				ApiHelper.AssertEquals("FuneralBenefit MainLife premium amount on R45 000", MainpremiumAmount45K, premiumAmount45K, test);
 				
-				String premiumAmount50K = innerJson.getJSONArray("lifesAssured").getJSONObject(0).getJSONArray("benefits").getJSONObject(4).getJSONArray("premiums").getJSONObject(8).get("premiumAmount").toString();
+				String premiumAmount50K = innerJson.getJSONArray("lifesAssured").getJSONObject(0).getJSONArray("benefits").getJSONObject(0).getJSONArray("premiums").getJSONObject(8).get("premiumAmount").toString();
 				ApiHelper.AssertEquals("FuneralBenefit MainLife premium amount on R50 000", MainpremiumAmount50K, premiumAmount50K, test);
 				
-				String premiumAmount55K = innerJson.getJSONArray("lifesAssured").getJSONObject(0).getJSONArray("benefits").getJSONObject(4).getJSONArray("premiums").getJSONObject(9).get("premiumAmount").toString();
+				String premiumAmount55K = innerJson.getJSONArray("lifesAssured").getJSONObject(0).getJSONArray("benefits").getJSONObject(0).getJSONArray("premiums").getJSONObject(9).get("premiumAmount").toString();
 				ApiHelper.AssertEquals("FuneralBenefit MainLife premium amount on R55 000", MainpremiumAmount55K, premiumAmount55K, test);
 				
 				
-				String premiumAmount60K = innerJson.getJSONArray("lifesAssured").getJSONObject(0).getJSONArray("benefits").getJSONObject(4).getJSONArray("premiums").getJSONObject(10).get("premiumAmount").toString();
+				String premiumAmount60K = innerJson.getJSONArray("lifesAssured").getJSONObject(0).getJSONArray("benefits").getJSONObject(0).getJSONArray("premiums").getJSONObject(10).get("premiumAmount").toString();
 				ApiHelper.AssertEquals("FuneralBenefit MainLife premium amount on R60 000", MainpremiumAmount60K, premiumAmount60K, test);
 				
-				String premiumAmount65K = innerJson.getJSONArray("lifesAssured").getJSONObject(0).getJSONArray("benefits").getJSONObject(4).getJSONArray("premiums").getJSONObject(11).get("premiumAmount").toString();
+				String premiumAmount65K = innerJson.getJSONArray("lifesAssured").getJSONObject(0).getJSONArray("benefits").getJSONObject(0).getJSONArray("premiums").getJSONObject(11).get("premiumAmount").toString();
 				ApiHelper.AssertEquals("FuneralBenefit MainLife premium amount on R65 000", MainpremiumAmount65K, premiumAmount65K, test);
 				
-				String premiumAmount70K = innerJson.getJSONArray("lifesAssured").getJSONObject(0).getJSONArray("benefits").getJSONObject(4).getJSONArray("premiums").getJSONObject(12).get("premiumAmount").toString();
+				String premiumAmount70K = innerJson.getJSONArray("lifesAssured").getJSONObject(0).getJSONArray("benefits").getJSONObject(0).getJSONArray("premiums").getJSONObject(12).get("premiumAmount").toString();
 				ApiHelper.AssertEquals("FuneralBenefit MainLife premium amount on R70 000", MainpremiumAmount70K, premiumAmount70K, test);
 				
-				String premiumAmount75K = innerJson.getJSONArray("lifesAssured").getJSONObject(0).getJSONArray("benefits").getJSONObject(4).getJSONArray("premiums").getJSONObject(13).get("premiumAmount").toString();
+				String premiumAmount75K = innerJson.getJSONArray("lifesAssured").getJSONObject(0).getJSONArray("benefits").getJSONObject(0).getJSONArray("premiums").getJSONObject(13).get("premiumAmount").toString();
 				ApiHelper.AssertEquals("FuneralBenefit MainLife premium amount on R75 000", MainpremiumAmount75K, premiumAmount75K, test);
 				
 				// Memorial benefit
-				String MainMemBenefit5K = innerJson.getJSONArray("lifesAssured").getJSONObject(0).getJSONArray("benefits").getJSONObject(0).getJSONArray("premiums").getJSONObject(0).get("premiumAmount").toString();
+				String MainMemBenefit5K = innerJson.getJSONArray("lifesAssured").getJSONObject(0).getJSONArray("benefits").getJSONObject(1).getJSONArray("premiums").getJSONObject(0).get("premiumAmount").toString();
 				ApiHelper.AssertEquals("Memorial Benefit for MainLife premium amount on R5 000", MainMemorialBenefit5K, MainMemBenefit5K, test);
 				
-				String MainMemBenefit10K = innerJson.getJSONArray("lifesAssured").getJSONObject(0).getJSONArray("benefits").getJSONObject(0).getJSONArray("premiums").getJSONObject(1).get("premiumAmount").toString();
+				String MainMemBenefit10K = innerJson.getJSONArray("lifesAssured").getJSONObject(0).getJSONArray("benefits").getJSONObject(1).getJSONArray("premiums").getJSONObject(1).get("premiumAmount").toString();
 				ApiHelper.AssertEquals("Memorial Benefit for MainLife premium amount on R10 000", MainMemorialBenefit10K, MainMemBenefit10K, test);
 				
 				//monthly assistance
 				
-				String MainMonthlyAssist0_5K = innerJson.getJSONArray("lifesAssured").getJSONObject(0).getJSONArray("benefits").getJSONObject(1).getJSONArray("premiums").getJSONObject(0).get("premiumAmount").toString();
+				String MainMonthlyAssist0_5K = innerJson.getJSONArray("lifesAssured").getJSONObject(0).getJSONArray("benefits").getJSONObject(2).getJSONArray("premiums").getJSONObject(0).get("premiumAmount").toString();
 				ApiHelper.AssertEquals("Monthly Assistance  for MainLife premium amount on R5 00", MainMonthlyAssistance0_5K, MainMonthlyAssist0_5K, test);
 				
-				String MainMonthlyAssist1K = innerJson.getJSONArray("lifesAssured").getJSONObject(0).getJSONArray("benefits").getJSONObject(1).getJSONArray("premiums").getJSONObject(1).get("premiumAmount").toString();
+				String MainMonthlyAssist1K = innerJson.getJSONArray("lifesAssured").getJSONObject(0).getJSONArray("benefits").getJSONObject(2).getJSONArray("premiums").getJSONObject(1).get("premiumAmount").toString();
 				ApiHelper.AssertEquals("Monthly Assistance  for MainLife premium amount on R1 000", MainMonthlyAssistance1K, MainMonthlyAssist1K, test);
 				
-				String MainMonthlyAssist1_5K = innerJson.getJSONArray("lifesAssured").getJSONObject(0).getJSONArray("benefits").getJSONObject(1).getJSONArray("premiums").getJSONObject(2).get("premiumAmount").toString();
+				String MainMonthlyAssist1_5K = innerJson.getJSONArray("lifesAssured").getJSONObject(0).getJSONArray("benefits").getJSONObject(2).getJSONArray("premiums").getJSONObject(2).get("premiumAmount").toString();
 				ApiHelper.AssertEquals("Monthly Assistance  for MainLife premium amount on R1 500", MainMonthlyAssistance1_5K, MainMonthlyAssist1_5K, test);
 				
 				// Airtime benefit
 				
-				String MainLifeAirtimeBenefit = innerJson.getJSONArray("lifesAssured").getJSONObject(0).getJSONArray("benefits").getJSONObject(2).getJSONArray("premiums").getJSONObject(0).get("premiumAmount").toString();
+				String MainLifeAirtimeBenefit = innerJson.getJSONArray("lifesAssured").getJSONObject(0).getJSONArray("benefits").getJSONObject(3).getJSONArray("premiums").getJSONObject(0).get("premiumAmount").toString();
 				ApiHelper.AssertEquals("Airtime Bemefits for MainLife premium amount on R250", NonePayeable, MainLifeAirtimeBenefit, test);
 				
 				//  Vehicle Access
-				String MainLifeVehicleBenS6 = innerJson.getJSONArray("lifesAssured").getJSONObject(0).getJSONArray("benefits").getJSONObject(3).getJSONArray("premiums").getJSONObject(0).get("premiumAmount").toString();
+				String MainLifeVehicleBenS6 = innerJson.getJSONArray("lifesAssured").getJSONObject(0).getJSONArray("benefits").getJSONObject(4).getJSONArray("premiums").getJSONObject(0).get("premiumAmount").toString();
 				ApiHelper.AssertEquals("Vehicle Access Benefit for MainLife premium amount on S6-R26", VehicleAccessBenefitS6, MainLifeVehicleBenS6, test);
 				
-				String MainLifeVehicleBenL6 = innerJson.getJSONArray("lifesAssured").getJSONObject(0).getJSONArray("benefits").getJSONObject(3).getJSONArray("premiums").getJSONObject(1).get("premiumAmount").toString();
+				String MainLifeVehicleBenL6 = innerJson.getJSONArray("lifesAssured").getJSONObject(0).getJSONArray("benefits").getJSONObject(4).getJSONArray("premiums").getJSONObject(1).get("premiumAmount").toString();
 				ApiHelper.AssertEquals("Vehicle Access Benefit for MainLife premium amount on L6-R46", VehicleAccessBenefitL6, MainLifeVehicleBenL6, test);
 				
 				
-				// Funeral Benefit for partner
+				// Funeral Benefit for parent
 				
 
 				String partnerPremAmount10K = innerJson.getJSONArray("lifesAssured").getJSONObject(1).getJSONArray("benefits").getJSONObject(0).getJSONArray("premiums").getJSONObject(0).get("premiumAmount").toString();
-				ApiHelper.AssertEquals("Funeral Benefit for Partner premium amount on R10 000", partnerPremiumAmount10K, partnerPremAmount10K, test);
+				ApiHelper.AssertEquals("Funeral Benefit for parent premium amount on R10 000", partnerPremiumAmount10K, partnerPremAmount10K, test);
 				
 				String partnerPremAmount15K = innerJson.getJSONArray("lifesAssured").getJSONObject(1).getJSONArray("benefits").getJSONObject(0).getJSONArray("premiums").getJSONObject(1).get("premiumAmount").toString();
-				ApiHelper.AssertEquals("Funeral Benefit for Partner premium amount on R15 000", partnerPremiumAmount15K, partnerPremAmount15K, test);
+				ApiHelper.AssertEquals("Funeral Benefit for parent premium amount on R15 000", partnerPremiumAmount15K, partnerPremAmount15K, test);
 				
 				String partnerPremAmount20K = innerJson.getJSONArray("lifesAssured").getJSONObject(1).getJSONArray("benefits").getJSONObject(0).getJSONArray("premiums").getJSONObject(2).get("premiumAmount").toString();
-				ApiHelper.AssertEquals("Funeral Benefit for Partner premium amount on R20 000", partnerPremiumAmount20K, partnerPremAmount20K, test);
+				ApiHelper.AssertEquals("Funeral Benefit for parent premium amount on R20 000", partnerPremiumAmount20K, partnerPremAmount20K, test);
 				
 				String partnerPremAmount25K = innerJson.getJSONArray("lifesAssured").getJSONObject(1).getJSONArray("benefits").getJSONObject(0).getJSONArray("premiums").getJSONObject(3).get("premiumAmount").toString();
-				ApiHelper.AssertEquals("Funeral Benefit for Partner premium amount on R25 000", partnerPremiumAmount25K, partnerPremAmount25K, test);
+				ApiHelper.AssertEquals("Funeral Benefit for parent premium amount on R25 000", partnerPremiumAmount25K, partnerPremAmount25K, test);
 				
 				String partnerPremAmount30K = innerJson.getJSONArray("lifesAssured").getJSONObject(1).getJSONArray("benefits").getJSONObject(0).getJSONArray("premiums").getJSONObject(4).get("premiumAmount").toString();
-				ApiHelper.AssertEquals("Funeral Benefit for Partner premium amount on R30 000", partnerPremiumAmount30K, partnerPremAmount30K, test);
+				ApiHelper.AssertEquals("Funeral Benefit for parent premium amount on R30 000", partnerPremiumAmount30K, partnerPremAmount30K, test);
 				
 				String partnerPremAmount35K = innerJson.getJSONArray("lifesAssured").getJSONObject(1).getJSONArray("benefits").getJSONObject(0).getJSONArray("premiums").getJSONObject(5).get("premiumAmount").toString();
-				ApiHelper.AssertEquals("Funeral Benefit for Partner premium amount on R35 000", partnerPremiumAmount35K, partnerPremAmount35K, test);
+				ApiHelper.AssertEquals("Funeral Benefit for parent premium amount on R35 000", partnerPremiumAmount35K, partnerPremAmount35K, test);
 				
 				String partnerPremAmount40K = innerJson.getJSONArray("lifesAssured").getJSONObject(1).getJSONArray("benefits").getJSONObject(0).getJSONArray("premiums").getJSONObject(6).get("premiumAmount").toString();
-				ApiHelper.AssertEquals("Funeral Benefit for Partner premium amount on R40 000", partnerPremiumAmount40K, partnerPremAmount40K, test);
+				ApiHelper.AssertEquals("Funeral Benefit for parent premium amount on R40 000", partnerPremiumAmount40K, partnerPremAmount40K, test);
 				
 				String partnerPremAmount45K = innerJson.getJSONArray("lifesAssured").getJSONObject(1).getJSONArray("benefits").getJSONObject(0).getJSONArray("premiums").getJSONObject(7).get("premiumAmount").toString();
-				ApiHelper.AssertEquals("Funeral Benefit for Partner premium amount on R45 000", partnerPremiumAmount45K, partnerPremAmount45K, test);
+				ApiHelper.AssertEquals("Funeral Benefit for parent premium amount on R45 000", partnerPremiumAmount45K, partnerPremAmount45K, test);
 				
 				String partnerPremAmount50K = innerJson.getJSONArray("lifesAssured").getJSONObject(1).getJSONArray("benefits").getJSONObject(0).getJSONArray("premiums").getJSONObject(8).get("premiumAmount").toString();
-				ApiHelper.AssertEquals("Funeral Benefit for Partner premium amount on R50 000", partnerPremiumAmount50K, partnerPremAmount50K, test);
+				ApiHelper.AssertEquals("Funeral Benefit for parent premium amount on R50 000", partnerPremiumAmount50K, partnerPremAmount50K, test);
 		
 				String partnerPremAmount55K = innerJson.getJSONArray("lifesAssured").getJSONObject(1).getJSONArray("benefits").getJSONObject(0).getJSONArray("premiums").getJSONObject(9).get("premiumAmount").toString();
-				ApiHelper.AssertEquals("Funeral Benefit for Partner premium amount on R55 000", partnerPremiumAmount55K, partnerPremAmount55K, test);
+				ApiHelper.AssertEquals("Funeral Benefit for parent premium amount on R55 000", partnerPremiumAmount55K, partnerPremAmount55K, test);
 		
 				String partnerPremAmount60K = innerJson.getJSONArray("lifesAssured").getJSONObject(1).getJSONArray("benefits").getJSONObject(0).getJSONArray("premiums").getJSONObject(10).get("premiumAmount").toString();
-				ApiHelper.AssertEquals("Funeral Benefit for Partner premium amount on R60 000", partnerPremiumAmount60K, partnerPremAmount60K, test);
+				ApiHelper.AssertEquals("Funeral Benefit for parent premium amount on R60 000", partnerPremiumAmount60K, partnerPremAmount60K, test);
 		
 				String partnerPremAmount65K = innerJson.getJSONArray("lifesAssured").getJSONObject(1).getJSONArray("benefits").getJSONObject(0).getJSONArray("premiums").getJSONObject(11).get("premiumAmount").toString();
-				ApiHelper.AssertEquals("Funeral Benefit for Partner premium amount on R65 000", partnerPremiumAmount65K, partnerPremAmount65K, test);
+				ApiHelper.AssertEquals("Funeral Benefit for parent premium amount on R65 000", partnerPremiumAmount65K, partnerPremAmount65K, test);
 		
 				String partnerPremAmount70K = innerJson.getJSONArray("lifesAssured").getJSONObject(1).getJSONArray("benefits").getJSONObject(0).getJSONArray("premiums").getJSONObject(12).get("premiumAmount").toString();
-				ApiHelper.AssertEquals("Funeral Benefit for Partner premium amount on R70 000", partnerPremiumAmount70K, partnerPremAmount70K, test);
+				ApiHelper.AssertEquals("Funeral Benefit for parent premium amount on R70 000", partnerPremiumAmount70K, partnerPremAmount70K, test);
 		
 				String partnerPremAmount75K = innerJson.getJSONArray("lifesAssured").getJSONObject(1).getJSONArray("benefits").getJSONObject(0).getJSONArray("premiums").getJSONObject(13).get("premiumAmount").toString();
-				ApiHelper.AssertEquals("Funeral Benefit for Partner premium amount on R75 000", partnerPremiumAmount75K, partnerPremAmount75K, test);
+				ApiHelper.AssertEquals("Funeral Benefit for parent premium amount on R75 000", partnerPremiumAmount75K, partnerPremAmount75K, test);
 		
 				
-				//Funeral Benefit with Retirement Paid Up	for Partner			
+				//Funeral Benefit with Retirement Paid Up	for parent			
 
-				String partnerPremAmount_Retirement10K = innerJson.getJSONArray("lifesAssured").getJSONObject(1).getJSONArray("benefits").getJSONObject(3).getJSONArray("premiums").getJSONObject(0).get("premiumAmount").toString();
-				ApiHelper.AssertEquals("Funeral Benefit with Retirement Paid Up	 for partner premium amount on R10 000", partnerRetirementPaidUp10K, partnerPremAmount_Retirement10K, test);
-				
-				String partnerPremAmount_Retirement15K = innerJson.getJSONArray("lifesAssured").getJSONObject(1).getJSONArray("benefits").getJSONObject(3).getJSONArray("premiums").getJSONObject(1).get("premiumAmount").toString();
-				ApiHelper.AssertEquals("Funeral Benefit with Retirement Paid Up	 for partner premium amount on R15 000", partnerRetirementPaidUp15K, partnerPremAmount_Retirement15K, test);
-				
-				String partnerPremAmount_Retirement20K = innerJson.getJSONArray("lifesAssured").getJSONObject(1).getJSONArray("benefits").getJSONObject(3).getJSONArray("premiums").getJSONObject(2).get("premiumAmount").toString();
-				ApiHelper.AssertEquals("Funeral Benefit with Retirement Paid Up	 for partner premium amount on R20 000", partnerRetirementPaidUp20K, partnerPremAmount_Retirement20K, test);
-				
-				String partnerPremAmount_Retirement25K = innerJson.getJSONArray("lifesAssured").getJSONObject(1).getJSONArray("benefits").getJSONObject(3).getJSONArray("premiums").getJSONObject(3).get("premiumAmount").toString();
-				ApiHelper.AssertEquals("Funeral Benefit with Retirement Paid Up	 for partner premium amount on R25 000", partnerRetirementPaidUp25K, partnerPremAmount_Retirement25K, test);
-				
-				String partnerPremAmount_Retirement30K = innerJson.getJSONArray("lifesAssured").getJSONObject(1).getJSONArray("benefits").getJSONObject(3).getJSONArray("premiums").getJSONObject(4).get("premiumAmount").toString();
-				ApiHelper.AssertEquals("Funeral Benefit with Retirement Paid Up	 for partner premium amount on R30 000", partnerRetirementPaidUp30K, partnerPremAmount_Retirement30K, test);
-				
-				String partnerPremAmount_Retirement35K = innerJson.getJSONArray("lifesAssured").getJSONObject(1).getJSONArray("benefits").getJSONObject(3).getJSONArray("premiums").getJSONObject(5).get("premiumAmount").toString();
-				ApiHelper.AssertEquals("Funeral Benefit with Retirement Paid Up	 for partner premium amount on R35 000", partnerRetirementPaidUp35K, partnerPremAmount_Retirement35K, test);
-				
-				String partnerPremAmount_Retirement40K = innerJson.getJSONArray("lifesAssured").getJSONObject(1).getJSONArray("benefits").getJSONObject(3).getJSONArray("premiums").getJSONObject(6).get("premiumAmount").toString();
-				ApiHelper.AssertEquals("Funeral Benefit with Retirement Paid Up	 for partner premium amount on R40 000", partnerRetirementPaidUp40K, partnerPremAmount_Retirement40K, test);
-				
-				String partnerPremAmount_Retirement45K = innerJson.getJSONArray("lifesAssured").getJSONObject(1).getJSONArray("benefits").getJSONObject(3).getJSONArray("premiums").getJSONObject(7).get("premiumAmount").toString();
-				ApiHelper.AssertEquals("Funeral Benefit with Retirement Paid Up	 for partner premium amount on R45 000", partnerRetirementPaidUp45K, partnerPremAmount_Retirement45K, test);
-				
-				String partnerPremAmount_Retirement50K = innerJson.getJSONArray("lifesAssured").getJSONObject(1).getJSONArray("benefits").getJSONObject(3).getJSONArray("premiums").getJSONObject(8).get("premiumAmount").toString();
-				ApiHelper.AssertEquals("Funeral Benefit with Retirement Paid Up	 for partner premium amount on R50 000", partnerRetirementPaidUp50K, partnerPremAmount_Retirement50K, test);
-		
-				String partnerPremAmount_Retirement55K = innerJson.getJSONArray("lifesAssured").getJSONObject(1).getJSONArray("benefits").getJSONObject(3).getJSONArray("premiums").getJSONObject(9).get("premiumAmount").toString();
-				ApiHelper.AssertEquals("Funeral Benefit with Retirement Paid Up	 for partner premium amount on R55 000", partnerRetirementPaidUp55K, partnerPremAmount_Retirement55K, test);
-		
-				String partnerPremAmount_Retirement60K = innerJson.getJSONArray("lifesAssured").getJSONObject(1).getJSONArray("benefits").getJSONObject(3).getJSONArray("premiums").getJSONObject(10).get("premiumAmount").toString();
-				ApiHelper.AssertEquals("Funeral Benefit with Retirement Paid Up	 for partner premium amount on R60 000", partnerRetirementPaidUp60K, partnerPremAmount_Retirement60K, test);
-		
-				String partnerPremAmount_Retirement65K = innerJson.getJSONArray("lifesAssured").getJSONObject(1).getJSONArray("benefits").getJSONObject(3).getJSONArray("premiums").getJSONObject(11).get("premiumAmount").toString();
-				ApiHelper.AssertEquals("Funeral Benefit with Retirement Paid Up	 for partner premium amount on R65 000", partnerRetirementPaidUp65K, partnerPremAmount_Retirement65K, test);
-		
-				String partnerPremAmount_Retirement70K = innerJson.getJSONArray("lifesAssured").getJSONObject(1).getJSONArray("benefits").getJSONObject(3).getJSONArray("premiums").getJSONObject(12).get("premiumAmount").toString();
-				ApiHelper.AssertEquals("Funeral Benefit with Retirement Paid Up	 for partner premium amount on R70 000", partnerRetirementPaidUp70K, partnerPremAmount_Retirement70K, test);
-		
-				String partnerPremAmount_Retirement75K = innerJson.getJSONArray("lifesAssured").getJSONObject(1).getJSONArray("benefits").getJSONObject(3).getJSONArray("premiums").getJSONObject(13).get("premiumAmount").toString();
-				ApiHelper.AssertEquals("Funeral Benefit with Retirement Paid Up	 for partner premium amount on R75 000", partnerRetirementPaidUp75K, partnerPremAmount_Retirement75K, test);
-		
-				
 				
 				// Memorial benefit for Partner
-				String PartnerMemBenefit5K = innerJson.getJSONArray("lifesAssured").getJSONObject(1).getJSONArray("benefits").getJSONObject(1).getJSONArray("premiums").getJSONObject(0).get("premiumAmount").toString();
+				String PartnerMemBenefit5K = innerJson.getJSONArray("lifesAssured").getJSONObject(1).getJSONArray("benefits").getJSONObject(2).getJSONArray("premiums").getJSONObject(0).get("premiumAmount").toString();
 				ApiHelper.AssertEquals("Memorial benefit for Partner premium amount on R5 000", partnerMemorialBenefit5K, PartnerMemBenefit5K, test);
 				
-				String PartnerMemBenefit10K = innerJson.getJSONArray("lifesAssured").getJSONObject(1).getJSONArray("benefits").getJSONObject(1).getJSONArray("premiums").getJSONObject(1).get("premiumAmount").toString();
+				String PartnerMemBenefit10K = innerJson.getJSONArray("lifesAssured").getJSONObject(1).getJSONArray("benefits").getJSONObject(2).getJSONArray("premiums").getJSONObject(1).get("premiumAmount").toString();
 				ApiHelper.AssertEquals("Memorial benefit for Partner premium amount on R10 000", partnerMemorialBenefit10K, PartnerMemBenefit10K, test);
 				
 				//monthly assistance Partner
 				
 				
-				String PartnerMonthlyAssist5K = innerJson.getJSONArray("lifesAssured").getJSONObject(1).getJSONArray("benefits").getJSONObject(2).getJSONArray("premiums").getJSONObject(0).get("premiumAmount").toString();
+				String PartnerMonthlyAssist5K = innerJson.getJSONArray("lifesAssured").getJSONObject(1).getJSONArray("benefits").getJSONObject(3).getJSONArray("premiums").getJSONObject(0).get("premiumAmount").toString();
 				ApiHelper.AssertEquals("Monthly Assistance Benefit for Partner premium amount on R5 000", partnerMonthlyBenefit5K, PartnerMonthlyAssist5K, test);
 				
-				String PartnerMonthlyAssist10K = innerJson.getJSONArray("lifesAssured").getJSONObject(1).getJSONArray("benefits").getJSONObject(2).getJSONArray("premiums").getJSONObject(1).get("premiumAmount").toString();
+				String PartnerMonthlyAssist10K = innerJson.getJSONArray("lifesAssured").getJSONObject(1).getJSONArray("benefits").getJSONObject(3).getJSONArray("premiums").getJSONObject(1).get("premiumAmount").toString();
 				ApiHelper.AssertEquals("Monthly Assistance Benefit for Partner premium amount on R10 000", partnerMonthlyBenefit1K, PartnerMonthlyAssist10K, test);
 				
 				/*//  Vehicle Access Partner 

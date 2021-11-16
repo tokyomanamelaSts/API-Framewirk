@@ -63,7 +63,7 @@ public class CollectionRunner {
 		ApiHelper.softAssertion.assertAll();
 		
 	}
-	
+	 
 	@AfterTest
    	public void EndTests() {
    		extent.flush();

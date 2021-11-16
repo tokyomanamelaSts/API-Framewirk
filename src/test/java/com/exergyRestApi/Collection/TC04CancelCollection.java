@@ -80,10 +80,13 @@ public static void tc0004(ExtentReports extent) throws SAXException, IOException
 		String tenderType = jsonPathEvaluator.get("tenderType");
 		ApiHelper.AssertEquals("tenderType" ,"Cash", tenderType, test);
 		
+		JsonPath jsonPathEvaluator2 = response2.jsonPath();
+		String status = jsonPathEvaluator2.get("status");
+		ApiHelper.AssertEquals("Status " ,"Cancelled", status, test);
 		
 		test.info( "Find payload(Request) below");
 	    test.info( MarkupHelper.createCodeBlock(CancelCollectionPayLoad.cancelCollectionPayLoad(),CodeLanguage.JSON));
-	   
+	    
 		
 	    test.info( "Find response below");
 	    test.info( MarkupHelper.createCodeBlock(response.asString(),CodeLanguage.JSON));

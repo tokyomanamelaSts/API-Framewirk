@@ -4,6 +4,7 @@ import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.equalTo;
 
 import java.io.IOException;
+import java.text.SimpleDateFormat;
 
 import javax.xml.parsers.ParserConfigurationException;
 
@@ -68,9 +69,20 @@ public class TC02CreateCollectionPost {
 	String tenderType = jsonPathEvaluator.get("tenderType");
 	ApiHelper.AssertEquals("tenderType" ,"Cash", tenderType, test);
 	
-	test.info( "Find payload(Request) below");
+	String restDate = jsonPathEvaluator.get("collectionDate");
+	
+	String timeStamp  = new SimpleDateFormat("yyyy-MM-dd").format(new java.util.Date());
+	
+	restDate = restDate.substring(0, 10);
+	
+	
+	
+	ApiHelper.AssertEquals("Collection data" ,timeStamp, restDate, test);
+    
+    
+
+    test.info( "Find payload below");
     test.info( MarkupHelper.createCodeBlock(CollectionPayLoad.addCollectionPayLoad(),CodeLanguage.JSON));
-   
 	
     test.info( "Find response below");
     test.info( MarkupHelper.createCodeBlock(response.asString(),CodeLanguage.JSON));
