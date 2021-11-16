@@ -130,11 +130,11 @@
                   <a name="Product_1960C_Rates">
                   </a> <!-- Product_1960C_Rates -->
                   <span class="method-name">Product_1960C_Rates</span>
-                  <div class="stack-trace">java.lang.AssertionError: The following asserts failed:
-	expected [true] but found [false]
-	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:47)
-	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:31)
-	at runner.ProductRunner.Product_1960C_Rates(ProductRunner.java:82)
+                  <div class="stack-trace">org.json.JSONException: JSONArray[0] not found.
+	at org.json.JSONArray.get(JSONArray.java:264)
+	at org.json.JSONArray.getJSONObject(JSONArray.java:477)
+	at com.exergyRestApi.Product.Rates.Product_1960C_TestCases.Product_1960C(Product_1960C_TestCases.java:215)
+	at runner.ProductRunner.Product_1960C_Rates(ProductRunner.java:79)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -172,7 +172,7 @@
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">/private/var/folders/10/nx41rvp50wq94v07drs_5f7w0000gn/T/testng-eclipse--721935555/testng-customsuite.xml</span>
+            <span class="header-content">/private/var/folders/10/nx41rvp50wq94v07drs_5f7w0000gn/T/testng-eclipse--142654859/testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -229,12 +229,12 @@ data.addRows(1);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'Product_1960C_Rates')
 data.setCell(0, 2, 'runner.ProductRunner')
-data.setCell(0, 3, 72167);
+data.setCell(0, 3, 6391);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 1 minutes</span>
+              <span class="suite-total-time">Total running time: 6 seconds</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -284,7 +284,7 @@ return data;
               </div> <!-- test-method -->
               <div class="configuration-test after">
                 <span class="method-name">EndTests</span>
-                <span class="method-start">72219 ms</span>
+                <span class="method-start">6401 ms</span>
               </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

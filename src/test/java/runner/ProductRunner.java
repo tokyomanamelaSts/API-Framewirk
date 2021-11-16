@@ -73,8 +73,6 @@ public class ProductRunner {
 		
 	} 
 	
-	
-	
 	@Test(priority = 6,enabled=true)
 	public void Product_1960C_Rates() throws URISyntaxException, SAXException, IOException, ParserConfigurationException, FilloException {
 	
@@ -83,7 +81,7 @@ public class ProductRunner {
 	} 
 	
 	
-	@Test(priority = 7,enabled=false)
+	@Test(priority = 7,enabled=true)
 	public void Product_1960L_Rates() throws URISyntaxException, SAXException, IOException, ParserConfigurationException, FilloException {
 		
 		Product_1960L_TestCases.Product_1960L(extent, "1960L");

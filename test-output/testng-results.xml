@@ -2,23 +2,22 @@
 <testng-results ignored="5" total="6" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2021-11-16T08:32:27 SAST" name="Default suite" finished-at="2021-11-16T08:33:40 SAST" duration-ms="72757">
+  <suite started-at="2021-11-16T10:43:48 SAST" name="Default suite" finished-at="2021-11-16T10:43:54 SAST" duration-ms="6838">
     <groups>
     </groups>
-    <test started-at="2021-11-16T08:32:27 SAST" name="Default test" finished-at="2021-11-16T08:33:40 SAST" duration-ms="72757">
+    <test started-at="2021-11-16T10:43:48 SAST" name="Default test" finished-at="2021-11-16T10:43:54 SAST" duration-ms="6838">
       <class name="runner.ProductRunner">
-        <test-method signature="Product_1960C_Rates()[pri:6, instance:runner.ProductRunner@4f704591]" started-at="2021-11-16T08:32:27 SAST" name="Product_1960C_Rates" finished-at="2021-11-16T08:33:39 SAST" duration-ms="72167" status="FAIL">
-          <exception class="java.lang.AssertionError">
+        <test-method signature="Product_1960C_Rates()[pri:6, instance:runner.ProductRunner@4f704591]" started-at="2021-11-16T10:43:48 SAST" name="Product_1960C_Rates" finished-at="2021-11-16T10:43:54 SAST" duration-ms="6391" status="FAIL">
+          <exception class="org.json.JSONException">
             <message>
-              <![CDATA[The following asserts failed:
-expected [true] but found [false]]]>
+              <![CDATA[JSONArray[0] not found.]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: The following asserts failed:
-expected [true] but found [false]
-at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:47)
-at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:31)
-at runner.ProductRunner.Product_1960C_Rates(ProductRunner.java:82)
+              <![CDATA[org.json.JSONException: JSONArray[0] not found.
+at org.json.JSONArray.get(JSONArray.java:264)
+at org.json.JSONArray.getJSONObject(JSONArray.java:477)
+at com.exergyRestApi.Product.Rates.Product_1960C_TestCases.Product_1960C(Product_1960C_TestCases.java:215)
+at runner.ProductRunner.Product_1960C_Rates(ProductRunner.java:79)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -49,11 +48,11 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+          </exception> <!-- org.json.JSONException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Product_1960C_Rates -->
-        <test-method is-config="true" signature="EndTests()[pri:0, instance:runner.ProductRunner@4f704591]" started-at="2021-11-16T08:33:39 SAST" name="EndTests" finished-at="2021-11-16T08:33:40 SAST" duration-ms="508" status="PASS">
+        <test-method is-config="true" signature="EndTests()[pri:0, instance:runner.ProductRunner@4f704591]" started-at="2021-11-16T10:43:54 SAST" name="EndTests" finished-at="2021-11-16T10:43:54 SAST" duration-ms="403" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- EndTests -->

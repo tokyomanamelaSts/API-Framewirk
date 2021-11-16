@@ -193,10 +193,13 @@ public static void loadTCExpectedResponseFor1960(String filename, String testCas
 	    MainMonthlyAssistance2K= recordset.getField("MainMonthlyAssistance2K");
 	  
 	    
-	    if(ProductCode.equals("1960E")) {
+	    if(ProductCode.equals("1960E")||ProductCode.equals("1960C") ) {
+	    	
 	    	
 	    	VehicleAccessBenefitS6= recordset.getField("VehicleAccessBenefitS6");
 	  	    VehicleAccessBenefitL6= recordset.getField("VehicleAccessBenefitL6");
+	  	    
+	  	  if(ProductCode.equals("1960E") ) {
 		    partnerRetirementPaidUp10K= recordset.getField("partnerRetirementPaidUp10K");
 		    partnerRetirementPaidUp15K= recordset.getField("partnerRetirementPaidUp15K");
 		    partnerRetirementPaidUp20K= recordset.getField("partnerRetirementPaidUp20K");
@@ -212,6 +215,7 @@ public static void loadTCExpectedResponseFor1960(String filename, String testCas
 		    partnerRetirementPaidUp70K= recordset.getField("partnerRetirementPaidUp70K");
 		    partnerRetirementPaidUp75K= recordset.getField("partnerRetirementPaidUp75K");
 	    }
+	  	  }
 	    partnerMemorialBenefit5K= recordset.getField("partnerMemorialBenefit5K");
 	    partnerMemorialBenefit10K= recordset.getField("partnerMemorialBenefit10K");
 	    partnerMonthlyBenefit5K= recordset.getField("partnerMonthlyBenefit5K");
