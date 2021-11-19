@@ -1,9 +1,12 @@
 package com.exergyRestApi.Repo.Product;
 
+import org.json.JSONObject;
+
 import com.codoid.products.exception.FilloException;
 import com.codoid.products.fillo.Recordset;
 
 import Utilities.DataProvider;
+import io.restassured.response.Response;
 
 public class ProductsRateRepo {
 
@@ -33,6 +36,11 @@ public class ProductsRateRepo {
 	protected static String partnerRetirementPaidUp35K; protected static String	partnerRetirementPaidUp40K; protected static String	partnerRetirementPaidUp45K; protected static String	partnerRetirementPaidUp50K; protected static String	partnerRetirementPaidUp55K;
 	protected static String partnerRetirementPaidUp60K; protected static String	partnerRetirementPaidUp65K; protected static String	partnerRetirementPaidUp70K; protected static String partnerRetirementPaidUp75K; protected static String	partnerMemorialBenefit5K;
 	protected static String partnerMemorialBenefit10K; protected static String partnerMonthlyBenefit5K;protected static String	partnerMonthlyBenefit1K;
+	
+
+	protected static int mainLifeIndex = 0;protected static int PartnerIndex = 0; protected static int ParentIndex = 0;protected static int ChildIndex = 0;protected static int extendChildIndex = 0;protected static int extendAdultIndex = 0;
+	protected static int FunBenIndex = 0;protected static int MemBenIndex = 0;protected static int MonAssIndex = 0;protected static int AirBenIndex = 0;protected static int VehAccIndex = 0;protected static int GrocBen = 0;
+	
 	public static void loadRequestData(Recordset recordset, String productCode ) throws FilloException {
 		
 		
@@ -66,7 +74,78 @@ public class ProductsRateRepo {
 	
 	}
 	
-	public static void loadTCExpectedResponse(String filename, String testCase) throws FilloException {
+	public static void setindexes(Response response, String lifeAssured) {
+		
+		
+		JSONObject innerJson = new JSONObject(response.getBody().asString());
+		
+		int count = innerJson.getJSONArray("lifesAssured").length();
+		
+		for(int x = 0 ; x< count ; x++) {
+			
+			
+			String currentLifeAssured = innerJson.getJSONArray("lifesAssured").getJSONObject(x).get("lifeAssured").toString();
+			
+			if(currentLifeAssured.equalsIgnoreCase(lifeAssured)) {
+				
+				mainLifeIndex = x;PartnerIndex = x;ParentIndex = x;
+				ChildIndex = x;extendChildIndex =x;extendAdultIndex = x; 
+				
+				int innercount = innerJson.getJSONArray("lifesAssured").getJSONObject(x).getJSONArray("benefits").length();
+				
+				for(int y = 0 ; y< innercount; y++) {
+					
+					String benefitCategory = innerJson.getJSONArray("lifesAssured").getJSONObject(x).getJSONArray("benefits").getJSONObject(y).get("benefitCategory").toString();
+					
+					if(benefitCategory.equalsIgnoreCase("FuneralBenefit")) {
+						
+						FunBenIndex = y;
+						
+					}
+					else
+						if(benefitCategory.equalsIgnoreCase("MemorialBenefit")) {
+							
+							MemBenIndex = y;
+							
+						}
+					else
+						if(benefitCategory.equalsIgnoreCase("MonthlyAssistanceBenefit")) {
+								
+							MonAssIndex = y;
+							
+					  
+								
+						}
+					else
+						if(benefitCategory.equalsIgnoreCase("AirtimeBenefit")) {
+								
+							AirBenIndex = y;
+								
+						}
+				    else
+						if(benefitCategory.equalsIgnoreCase("VehicleAccessBenefit")) {
+									
+							VehAccIndex = y;
+									
+						}
+					else
+						if(benefitCategory.equalsIgnoreCase("GroceryBenefit")) {
+										
+							GrocBen = y;
+										
+						}
+						
+					
+				}
+				
+			}
+
+		}
+		
+		
+		
+	}
+	public static void loadTCExpectedResponse(String filename, String testCase, String ProductCode) throws FilloException {
 		
         String Query = "Select * from Response where TestCaseNumber = '"+testCase+"'";
 		
@@ -75,32 +154,53 @@ public class ProductsRateRepo {
 		recordset.next();
 		lifeAssured = recordset.getField("lifeAssured");
 		 
+		if(ProductCode.equalsIgnoreCase("60200000")) {
+			
+			
+			MainpremiumAmount35K = recordset.getField("MainpremiumAmount35K");
+			partnerPremiumAmount15K = recordset.getField("partnerPremiumAmount15K");
+			partnerPremiumAmount35K = recordset.getField("partnerPremiumAmount35K");
+			ChildPremiumAmount7_5K = recordset.getField("ChildPremiumAmount7_5K");
+			ParentPremiumAmount15K = recordset.getField("ParentPremiumAmount15K");	
+			
+		}
 		
+		
+		if(ProductCode.equalsIgnoreCase("60100000")) {
+			
+			MainpremiumAmount30K = recordset.getField("MainpremiumAmount30K");
+			MainpremiumAmount40K = recordset.getField("MainpremiumAmount40K");
+			partnerPremiumAmount40K = recordset.getField("partnerPremiumAmount40K");
+			partnerPremiumAmount30K = recordset.getField("partnerPremiumAmount30K");
+			
+			
+		} 
 		
 		
 		MainpremiumAmount10K = recordset.getField("MainpremiumAmount10K");
-		MainpremiumAmount15K = recordset.getField("MainpremiumAmount15K");
+		
+		
 		MainpremiumAmount20K = recordset.getField("MainpremiumAmount20K");
-		MainpremiumAmount35K = recordset.getField("MainpremiumAmount35K");
+		
 		MainpremiumAmount50K = recordset.getField("MainpremiumAmount50K");
 		
 		NonePayeable = recordset.getField("NonePayeable");
 		
 		partnerPremiumAmount10K = recordset.getField("partnerPremiumAmount10K");
-		partnerPremiumAmount15K = recordset.getField("partnerPremiumAmount15K");
+		
 		partnerPremiumAmount20K = recordset.getField("partnerPremiumAmount20K");
-		partnerPremiumAmount35K = recordset.getField("partnerPremiumAmount35K");
+	
 		partnerPremiumAmount50K = recordset.getField("partnerPremiumAmount50K");
 		
 		ChildPremiumAmount5K = recordset.getField("ChildPremiumAmount5K");
-		ChildPremiumAmount7_5K = recordset.getField("ChildPremiumAmount7_5K");
+		
 		ChildPremiumAmount10K = recordset.getField("ChildPremiumAmount10K");
 		ChildPremiumAmount15K = recordset.getField("ChildPremiumAmount15K");
 		ChildPremiumAmount20K = recordset.getField("ChildPremiumAmount20K");
 		
 		ParentPremiumAmount10K = recordset.getField("ParentPremiumAmount10K");
 		ParentPremiumAmount20K = recordset.getField("ParentPremiumAmount20K");	
-		ParentPremiumAmount15K = recordset.getField("ParentPremiumAmount15K");	
+		
 		statusCode = recordset.getField("statusCode");	
 		
 	}

@@ -65,7 +65,7 @@ public class ProductRunner {
 		ApiHelper.softAssertion.assertAll();
 	} 
 	
-	@Test(priority = 5,enabled=false)
+	@Test(priority = 5,enabled=true)
 	public void Product_60100000_Rates() throws URISyntaxException, SAXException, IOException, ParserConfigurationException, FilloException {
 		
 		Product_60100000_TestCases.Product_60100000(extent, "60100000");
