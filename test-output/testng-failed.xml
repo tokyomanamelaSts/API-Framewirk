@@ -5,8 +5,12 @@
     <classes>
       <class name="runner.ProductRunner">
         <methods>
+          <include name="Product_1960E_Rates"/>
+          <include name="Product_1960C_Rates"/>
           <include name="EndTests"/>
+          <include name="Product_1960L_Rates"/>
           <include name="Product_60100000_Rates"/>
+          <include name="Product_60200000_Rates"/>
         </methods>
       </class> <!-- runner.ProductRunner -->
     </classes>

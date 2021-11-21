@@ -59,7 +59,7 @@ public class ProductsRateRepo {
 		
 		runMe = recordset.getField("runMe");
 		
-		if(productCode.equals("1960C") || productCode.equals("1960E")) {
+		if(productCode.equals("1960C") || productCode.equals("1960E")||productCode.equals("1960L")) {
 			
 			lifeAssuredType5= recordset.getField("lifeAssuredType5");
 			Age5 = recordset.getField("Age5");
@@ -162,6 +162,7 @@ public class ProductsRateRepo {
 			partnerPremiumAmount35K = recordset.getField("partnerPremiumAmount35K");
 			ChildPremiumAmount7_5K = recordset.getField("ChildPremiumAmount7_5K");
 			ParentPremiumAmount15K = recordset.getField("ParentPremiumAmount15K");	
+			MainpremiumAmount15K = recordset.getField("MainpremiumAmount15K");
 			
 		}
 		

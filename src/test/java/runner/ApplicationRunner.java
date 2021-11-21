@@ -19,16 +19,16 @@ import com.PartyVerification.Soap.Request.PersonVeryHigh;
 import com.PartyVerification.Soap.Request.ScreenAndVerifyPartyOrganisation;
 import com.PartyVerification.Soap.Request.ScreenAndVerifyPartyPerson;
 import com.aventstack.extentreports.ExtentReports;
-import com.exergyRestApi.Application.CreateAplication;
-import com.exergyRestApi.Application.CreateApplicationBeneficiaries;
-import com.exergyRestApi.Application.CreateApplicationBenefits;
-import com.exergyRestApi.Application.CreateApplicationStatus;
-import com.exergyRestApi.Application.GetApplication;
-import com.exergyRestApi.Application.QualificationProduct1960;
-import com.exergyRestApi.Collection.TC01PolicyByReferenceNumber;
-import com.exergyRestApi.Collection.TC02CreateCollectionPost;
-import com.exergyRestApi.Collection.TC03ConfirmCollection;
-import com.exergyRestApi.Collection.TC04CancelCollection;
+import com.exergyRestApi.TestCases.Application.CreateAplication;
+import com.exergyRestApi.TestCases.Application.CreateApplicationBeneficiaries;
+import com.exergyRestApi.TestCases.Application.CreateApplicationBenefits;
+import com.exergyRestApi.TestCases.Application.CreateApplicationStatus;
+import com.exergyRestApi.TestCases.Application.GetApplication;
+import com.exergyRestApi.TestCases.Application.QualificationProduct1960;
+import com.exergyRestApi.TestCases.Collection.TC01PolicyByReferenceNumber;
+import com.exergyRestApi.TestCases.Collection.TC02CreateCollectionPost;
+import com.exergyRestApi.TestCases.Collection.TC03ConfirmCollection;
+import com.exergyRestApi.TestCases.Collection.TC04CancelCollection;
 
 import Utilities.ApiHelper;
 import Utilities.ExtentManager;
@@ -61,7 +61,7 @@ public ApplicationRunner() throws IOException {
 	 @Test(priority =3,enabled=true)
 	    public void CreateApplicationPolicyHolder() throws URISyntaxException, IOException, SAXException, ParserConfigurationException {
 	 		
-	    	com.exergyRestApi.Application.CreateApplicationPolicyHolder.createApplicationPolicyHolder(extent);
+	    	com.exergyRestApi.TestCases.Application.CreateApplicationPolicyHolder.createApplicationPolicyHolder(extent);
 	    	ApiHelper.softAssertion.assertAll();
 		     
 		}
@@ -69,7 +69,7 @@ public ApplicationRunner() throws IOException {
 	 @Test(priority = 4,enabled=true)
 	    public void CreateApplicationPremiumCollection() throws URISyntaxException, IOException, SAXException, ParserConfigurationException {
 	 		
-			com.exergyRestApi.Application.CreateApplicationPremiumCollection.createApplicationPremiumCollection(extent);
+			com.exergyRestApi.TestCases.Application.CreateApplicationPremiumCollection.createApplicationPremiumCollection(extent);
 			ApiHelper.softAssertion.assertAll();
 		     
 		}
@@ -91,7 +91,7 @@ public ApplicationRunner() throws IOException {
 	@Test(priority = 6,enabled=true)
     public void CreateApplicationAcceptance() throws URISyntaxException, IOException, SAXException, ParserConfigurationException {
  		
-    	com.exergyRestApi.Application.CreateApplicationAcceptance.createApplicationAcceptance(extent);
+    	com.exergyRestApi.TestCases.Application.CreateApplicationAcceptance.createApplicationAcceptance(extent);
     	ApiHelper.softAssertion.assertAll();
 	}
 	
@@ -115,7 +115,7 @@ public ApplicationRunner() throws IOException {
 	
 	@Test(priority = 9,enabled=true)
 	public void QualificationProduct60200000() throws URISyntaxException, IOException, SAXException, ParserConfigurationException {
-		com.exergyRestApi.Application.QualificationProduct60200000.qualificationProduct60200000(extent);
+		com.exergyRestApi.TestCases.Application.QualificationProduct60200000.qualificationProduct60200000(extent);
 		ApiHelper.softAssertion.assertAll();
 	}
 
@@ -123,14 +123,14 @@ public ApplicationRunner() throws IOException {
     public void QualificationProduct60100000() throws URISyntaxException, IOException, SAXException, ParserConfigurationException {
  		
 	     
-    	com.exergyRestApi.Application.QualificationProduct60100000.qualificationProduct60100000(extent);
+    	com.exergyRestApi.TestCases.Application.QualificationProduct60100000.qualificationProduct60100000(extent);
     	ApiHelper.softAssertion.assertAll();
 	}
 	
 	@Test(priority = 11,enabled=true)
 	public void QualificationProduct60200001NegetiveTest() throws URISyntaxException, IOException, SAXException, ParserConfigurationException {
 		
-		com.exergyRestApi.Application.QualificationProduct60200001NegetiveTest.qualificationProduct60200001NegetiveTest(extent);
+		com.exergyRestApi.TestCases.Application.QualificationProduct60200001NegetiveTest.qualificationProduct60200001NegetiveTest(extent);
 		ApiHelper.softAssertion.assertAll();
 	}
 	
@@ -141,7 +141,7 @@ public ApplicationRunner() throws IOException {
     public void QualificationProduct60100001NegetiveTest() throws URISyntaxException, IOException, SAXException, ParserConfigurationException {
  		
 	     
-    	com.exergyRestApi.Application.QualificationProduct60100001NegetiveTest.qualificationProduct60100001NegetiveTest(extent);
+    	com.exergyRestApi.TestCases.Application.QualificationProduct60100001NegetiveTest.qualificationProduct60100001NegetiveTest(extent);
     	ApiHelper.softAssertion.assertAll();
     }
     
@@ -149,7 +149,7 @@ public ApplicationRunner() throws IOException {
     public void Rates() throws URISyntaxException, IOException, SAXException, ParserConfigurationException {
  		
 	     
-		com.exergyRestApi.Application.Rates.rates(extent);
+		com.exergyRestApi.TestCases.Application.Rates.rates(extent);
 		ApiHelper.softAssertion.assertAll();
 	}
     

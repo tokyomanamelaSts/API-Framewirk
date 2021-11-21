@@ -11,8 +11,8 @@ import org.testng.annotations.Test;
 import org.xml.sax.SAXException;
 
 import com.aventstack.extentreports.ExtentReports;
-import com.exergyRestApi.Collection.TC01PolicyByReferenceNumber;
-import com.exergyRestApi.PartyVerification.*;
+import com.exergyRestApi.TestCases.Collection.TC01PolicyByReferenceNumber;
+import com.exergyRestApi.TestCases.PartyVerification.*;
 
 import Utilities.ApiHelper;
 import Utilities.ExtentManager;

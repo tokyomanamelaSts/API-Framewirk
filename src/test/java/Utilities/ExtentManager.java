@@ -14,9 +14,7 @@ public class ExtentManager {
 	
 	public ExtentReports extentTest(String reportname, String pageTile, String TesterName) throws IOException {
 		ExtentReports extent=new ExtentReports();
-		
-		
-		
+	
 		ExtentSparkReporter spark=new ExtentSparkReporter(reportname);
 		
 		

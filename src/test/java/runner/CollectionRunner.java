@@ -11,8 +11,8 @@ import org.testng.annotations.Test;
 import org.xml.sax.SAXException;
 
 import com.aventstack.extentreports.ExtentReports;
-import com.exergyRestApi.Collection.TC01PolicyByReferenceNumber;
-import com.exergyRestApi.Collection.TC02CreateCollectionPost;
+import com.exergyRestApi.TestCases.Collection.TC01PolicyByReferenceNumber;
+import com.exergyRestApi.TestCases.Collection.TC02CreateCollectionPost;
 
 import Utilities.ApiHelper;
 import Utilities.ExtentManager;
@@ -51,7 +51,7 @@ public class CollectionRunner {
 	@Test(priority = 3,enabled=true)
 	public void TC03ConfirmCollection() throws URISyntaxException, IOException, SAXException, ParserConfigurationException {
 		
-		com.exergyRestApi.Collection.TC03ConfirmCollection.tc0003(extent);
+		com.exergyRestApi.TestCases.Collection.TC03ConfirmCollection.tc0003(extent);
 		ApiHelper.softAssertion.assertAll();
 		
 	}
@@ -59,7 +59,7 @@ public class CollectionRunner {
 	@Test(priority = 4,enabled=true)
 	public void TC04CancelCollection() throws URISyntaxException, IOException, SAXException, ParserConfigurationException {
 		
-		com.exergyRestApi.Collection.TC04CancelCollection.tc0004(extent);
+		com.exergyRestApi.TestCases.Collection.TC04CancelCollection.tc0004(extent);
 		ApiHelper.softAssertion.assertAll();
 		
 	}

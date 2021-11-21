@@ -14,13 +14,13 @@ import org.xml.sax.SAXException;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.codoid.products.exception.FilloException;
-import com.exergyRestApi.PartyVerification.TC_001;
-import com.exergyRestApi.Product.Rates.Product_1960C_TestCases;
-import com.exergyRestApi.Product.Rates.Product_1960E_TestCases;
-import com.exergyRestApi.Product.Rates.Product_1960L_TestCases;
-import com.exergyRestApi.Product.Rates.Product_60100000_TestCases;
-import com.exergyRestApi.Product.Rates.Product_60200000_TestCases;
-import com.exergyRestApi.Product.productRules.*;
+import com.exergyRestApi.TestCases.PartyVerification.TC_001;
+import com.exergyRestApi.TestCases.productRules.*;
+import com.exergyRestApiTestCases.ProductRates.Product_1960C_TestCases;
+import com.exergyRestApiTestCases.ProductRates.Product_1960E_TestCases;
+import com.exergyRestApiTestCases.ProductRates.Product_1960L_TestCases;
+import com.exergyRestApiTestCases.ProductRates.Product_60100000_TestCases;
+import com.exergyRestApiTestCases.ProductRates.Product_60200000_TestCases;
 
 import Utilities.ApiHelper;
 import Utilities.ExtentManager;
@@ -41,7 +41,7 @@ public class ProductRunner {
 		 
 		}
 	
-	@Test(priority = 1,enabled=true)
+	@Test(priority = 1,enabled=false)
     public void TC_ProductRules() throws URISyntaxException, SAXException, IOException, ParserConfigurationException, FilloException {
 		
 	ProductRuleTestCases.ProductRules(extent);
@@ -87,11 +87,7 @@ public class ProductRunner {
 		Product_1960L_TestCases.Product_1960L(extent, "1960L");
 		ApiHelper.softAssertion.assertAll();
 	} 
-	 
-	
-	
-	
-	
+
 	
 	@AfterTest
 	public void EndTests() {
