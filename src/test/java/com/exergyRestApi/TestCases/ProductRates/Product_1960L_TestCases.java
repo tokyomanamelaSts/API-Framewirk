@@ -1,4 +1,4 @@
-package com.exergyRest.ApiTestCases.ProductRates;
+package com.exergyRestApi.TestCases.ProductRates;
 
 import java.io.IOException;
 import java.net.URISyntaxException;
