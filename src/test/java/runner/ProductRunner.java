@@ -14,13 +14,13 @@ import org.xml.sax.SAXException;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.codoid.products.exception.FilloException;
+import com.exergy.RestApiTestCases.ProductRates.Product_1960C_TestCases;
+import com.exergy.RestApiTestCases.ProductRates.Product_1960E_TestCases;
+import com.exergy.RestApiTestCases.ProductRates.Product_1960L_TestCases;
+import com.exergy.RestApiTestCases.ProductRates.Product_60100000_TestCases;
+import com.exergy.RestApiTestCases.ProductRates.Product_60200000_TestCases;
 import com.exergyRestApi.TestCases.PartyVerification.TC_001;
 import com.exergyRestApi.TestCases.productRules.*;
-import com.exergyRestApiTestCases.ProductRates.Product_1960C_TestCases;
-import com.exergyRestApiTestCases.ProductRates.Product_1960E_TestCases;
-import com.exergyRestApiTestCases.ProductRates.Product_1960L_TestCases;
-import com.exergyRestApiTestCases.ProductRates.Product_60100000_TestCases;
-import com.exergyRestApiTestCases.ProductRates.Product_60200000_TestCases;
 
 import Utilities.ApiHelper;
 import Utilities.ExtentManager;

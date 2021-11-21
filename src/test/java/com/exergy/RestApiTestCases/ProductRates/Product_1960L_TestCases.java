@@ -1,4 +1,4 @@
-package com.exergyRestApiTestCases.ProductRates;
+package com.exergy.RestApiTestCases.ProductRates;
 
 import java.io.IOException;
 import java.net.URISyntaxException;
@@ -18,10 +18,10 @@ import Utilities.DataProvider;
 import io.restassured.response.Response;
 
 
-public class Product_1960E_TestCases extends ProductsRateRepo{
+public class Product_1960L_TestCases extends ProductsRateRepo{
 
 	
-	public static void  Product_1960E(ExtentReports extent, String filename) throws URISyntaxException, SAXException, IOException, ParserConfigurationException, FilloException {
+	public static void  Product_1960L(ExtentReports extent, String filename) throws URISyntaxException, SAXException, IOException, ParserConfigurationException, FilloException {
 		
 		
 
@@ -37,10 +37,10 @@ public class Product_1960E_TestCases extends ProductsRateRepo{
 		
 		while(recordset.next()){
 			
-			loadRequestData(recordset, "1960E");
+			loadRequestData(recordset, filename);
 			String reqBody= ratesPayloads.getProductsRates1960( lifeAssuredType1,Age1,lifeAssuredType2,Age2,lifeAssuredType3,Age3,lifeAssuredType4,Age4,lifeAssuredType5,Age5,lifeAssuredType6,Age6);	
 		    test=extent.createTest(TestCaseNumber);
-		    loadTCExpectedResponseFor1960(filename,TestCaseNumber, "1960E") ;
+		    loadTCExpectedResponseFor1960(filename,TestCaseNumber, filename) ;
 		    
 		    System.out.println("\nStarting Testcase " + TestCaseNumber+" !!!!!!!!!!! \n");
 		   
@@ -102,35 +102,32 @@ public class Product_1960E_TestCases extends ProductsRateRepo{
 				String premiumAmount75K = innerJson.getJSONArray("lifesAssured").getJSONObject(mainLifeIndex).getJSONArray("benefits").getJSONObject(FunBenIndex).getJSONArray("premiums").getJSONObject(13).get("premiumAmount").toString();
 				ApiHelper.AssertEquals("FuneralBenefit MainLife premium amount on R75 000", MainpremiumAmount75K, premiumAmount75K, test);
 				
+				
+				if(Integer.parseInt(Age1)<66) {
+					
 				// Memorial benefit
-				String MainMemBenefit5K = innerJson.getJSONArray("lifesAssured").getJSONObject(mainLifeIndex).getJSONArray("benefits").getJSONObject(MemBenIndex).getJSONArray("premiums").getJSONObject(0).get("premiumAmount").toString();
-				ApiHelper.AssertEquals("Memorial Benefit for MainLife premium amount on R5 000", MainMemorialBenefit5K, MainMemBenefit5K, test);
+					String MainMemBenefit5K = innerJson.getJSONArray("lifesAssured").getJSONObject(mainLifeIndex).getJSONArray("benefits").getJSONObject(MemBenIndex).getJSONArray("premiums").getJSONObject(0).get("premiumAmount").toString();
+					ApiHelper.AssertEquals("Memorial Benefit for MainLife premium amount on R5 000", MainMemorialBenefit5K, MainMemBenefit5K, test);
+					
+					String MainMemBenefit10K = innerJson.getJSONArray("lifesAssured").getJSONObject(mainLifeIndex).getJSONArray("benefits").getJSONObject(MemBenIndex).getJSONArray("premiums").getJSONObject(1).get("premiumAmount").toString();
+					ApiHelper.AssertEquals("Memorial Benefit for MainLife premium amount on R10 000", MainMemorialBenefit10K, MainMemBenefit10K, test);
+					
+					//monthly assistance
+					
+					String MainMonthlyAssist0_5K = innerJson.getJSONArray("lifesAssured").getJSONObject(mainLifeIndex).getJSONArray("benefits").getJSONObject(MonAssIndex).getJSONArray("premiums").getJSONObject(0).get("premiumAmount").toString();
+					ApiHelper.AssertEquals("Monthly Assistance  for MainLife premium amount on R5 00", MainMonthlyAssistance0_5K, MainMonthlyAssist0_5K, test);
+					
+					String MainMonthlyAssist1K = innerJson.getJSONArray("lifesAssured").getJSONObject(mainLifeIndex).getJSONArray("benefits").getJSONObject(MonAssIndex).getJSONArray("premiums").getJSONObject(1).get("premiumAmount").toString();
+					ApiHelper.AssertEquals("Monthly Assistance  for MainLife premium amount on R1 000", MainMonthlyAssistance1K, MainMonthlyAssist1K, test);
+					
+					String MainMonthlyAssist1_5K = innerJson.getJSONArray("lifesAssured").getJSONObject(mainLifeIndex).getJSONArray("benefits").getJSONObject(MonAssIndex).getJSONArray("premiums").getJSONObject(2).get("premiumAmount").toString();
+					ApiHelper.AssertEquals("Monthly Assistance  for MainLife premium amount on R1 500", MainMonthlyAssistance1_5K, MainMonthlyAssist1_5K, test);
 				
-				String MainMemBenefit10K = innerJson.getJSONArray("lifesAssured").getJSONObject(mainLifeIndex).getJSONArray("benefits").getJSONObject(MemBenIndex).getJSONArray("premiums").getJSONObject(1).get("premiumAmount").toString();
-				ApiHelper.AssertEquals("Memorial Benefit for MainLife premium amount on R10 000", MainMemorialBenefit10K, MainMemBenefit10K, test);
-				
-				//monthly assistance
-				
-				String MainMonthlyAssist0_5K = innerJson.getJSONArray("lifesAssured").getJSONObject(mainLifeIndex).getJSONArray("benefits").getJSONObject(MonAssIndex).getJSONArray("premiums").getJSONObject(0).get("premiumAmount").toString();
-				ApiHelper.AssertEquals("Monthly Assistance  for MainLife premium amount on R5 00", MainMonthlyAssistance0_5K, MainMonthlyAssist0_5K, test);
-				
-				String MainMonthlyAssist1K = innerJson.getJSONArray("lifesAssured").getJSONObject(mainLifeIndex).getJSONArray("benefits").getJSONObject(MonAssIndex).getJSONArray("premiums").getJSONObject(1).get("premiumAmount").toString();
-				ApiHelper.AssertEquals("Monthly Assistance  for MainLife premium amount on R1 000", MainMonthlyAssistance1K, MainMonthlyAssist1K, test);
-				
-				String MainMonthlyAssist1_5K = innerJson.getJSONArray("lifesAssured").getJSONObject(mainLifeIndex).getJSONArray("benefits").getJSONObject(MonAssIndex).getJSONArray("premiums").getJSONObject(2).get("premiumAmount").toString();
-				ApiHelper.AssertEquals("Monthly Assistance  for MainLife premium amount on R1 500", MainMonthlyAssistance1_5K, MainMonthlyAssist1_5K, test);
-				
+				}
 				// Airtime benefit
 				
 				String MainLifeAirtimeBenefit = innerJson.getJSONArray("lifesAssured").getJSONObject(mainLifeIndex).getJSONArray("benefits").getJSONObject(AirBenIndex).getJSONArray("premiums").getJSONObject(0).get("premiumAmount").toString();
 				ApiHelper.AssertEquals("Airtime Bemefits for MainLife premium amount on R250", NonePayeable, MainLifeAirtimeBenefit, test);
-				
-				//  Vehicle Access
-				String MainLifeVehicleBenS6 = innerJson.getJSONArray("lifesAssured").getJSONObject(mainLifeIndex).getJSONArray("benefits").getJSONObject(VehAccIndex).getJSONArray("premiums").getJSONObject(0).get("premiumAmount").toString();
-				ApiHelper.AssertEquals("Vehicle Access Benefit for MainLife premium amount on S6-R26", VehicleAccessBenefitS6, MainLifeVehicleBenS6, test);
-				
-				String MainLifeVehicleBenL6 = innerJson.getJSONArray("lifesAssured").getJSONObject(mainLifeIndex).getJSONArray("benefits").getJSONObject(VehAccIndex).getJSONArray("premiums").getJSONObject(1).get("premiumAmount").toString();
-				ApiHelper.AssertEquals("Vehicle Access Benefit for MainLife premium amount on L6-R46", VehicleAccessBenefitL6, MainLifeVehicleBenL6, test);
 				
 				
 				// Funeral Benefit for partner
@@ -223,7 +220,7 @@ public class Product_1960E_TestCases extends ProductsRateRepo{
 //				String partnerPremAmount_Retirement75K = innerJson.getJSONArray("lifesAssured").getJSONObject(PartnerIndex).getJSONArray("benefits").getJSONObject(3).getJSONArray("premiums").getJSONObject(13).get("premiumAmount").toString();
 //				ApiHelper.AssertEquals("Funeral Benefit with Retirement Paid Up	 for partner premium amount on R75 000", partnerRetirementPaidUp75K, partnerPremAmount_Retirement75K, test);
 //		
-				
+				if(Integer.parseInt(Age2)<66) {
 				
 				// Memorial benefit for Partner
 				String PartnerMemBenefit5K = innerJson.getJSONArray("lifesAssured").getJSONObject(PartnerIndex).getJSONArray("benefits").getJSONObject(MemBenIndex).getJSONArray("premiums").getJSONObject(0).get("premiumAmount").toString();
@@ -240,9 +237,9 @@ public class Product_1960E_TestCases extends ProductsRateRepo{
 				
 				String PartnerMonthlyAssist10K = innerJson.getJSONArray("lifesAssured").getJSONObject(PartnerIndex).getJSONArray("benefits").getJSONObject(MonAssIndex).getJSONArray("premiums").getJSONObject(1).get("premiumAmount").toString();
 				ApiHelper.AssertEquals("Monthly Assistance Benefit for Partner premium amount on R10 000", partnerMonthlyBenefit1K, PartnerMonthlyAssist10K, test);
+				}
 				
-				
-				
+				/*
 				// Child
 				setindexes(response, "Child"); 
 				String ChildpremiumAmount10K = innerJson.getJSONArray("lifesAssured").getJSONObject(ChildIndex).getJSONArray("benefits").getJSONObject(FunBenIndex).getJSONArray("premiums").getJSONObject(0).get("premiumAmount").toString();
@@ -271,7 +268,7 @@ public class Product_1960E_TestCases extends ProductsRateRepo{
 				
 				String ChildpremiumAmount50K = innerJson.getJSONArray("lifesAssured").getJSONObject(ChildIndex).getJSONArray("benefits").getJSONObject(FunBenIndex).getJSONArray("premiums").getJSONObject(8).get("premiumAmount").toString();
 				ApiHelper.AssertEquals("FuneralBenefit Child premium amount on R50 000", ChildPremiumAmount50K, ChildpremiumAmount50K, test);
-				
+				*/
 				
 	// Parent
 				setindexes(response, "Parent"); 
@@ -359,6 +356,7 @@ public class Product_1960E_TestCases extends ProductsRateRepo{
 			test.info( MarkupHelper.createCodeBlock(response.asString(),CodeLanguage.JSON));
 			
 	}
+	
 	
 	
 }
