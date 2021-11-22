@@ -18,6 +18,7 @@ import com.exergyRestApi.TestCases.PartyVerification.TC_001;
 import com.exergyRestApi.TestCases.ProductRates.Product_1960C_TestCases;
 import com.exergyRestApi.TestCases.ProductRates.Product_1960E_TestCases;
 import com.exergyRestApi.TestCases.ProductRates.Product_1960L_TestCases;
+import com.exergyRestApi.TestCases.ProductRates.Product_1977_TestCases;
 import com.exergyRestApi.TestCases.ProductRates.Product_60100000_TestCases;
 import com.exergyRestApi.TestCases.ProductRates.Product_60200000_TestCases;
 import com.exergyRestApi.TestCases.productRules.*;
@@ -85,6 +86,12 @@ public class ProductRunner {
 	public void Product_1960L_Rates() throws URISyntaxException, SAXException, IOException, ParserConfigurationException, FilloException {
 		
 		Product_1960L_TestCases.Product_1960L(extent, "1960L");
+		ApiHelper.softAssertion.assertAll();
+	} 
+	@Test(priority = 7,enabled=true)
+    public void Product_1977_Rates() throws URISyntaxException, SAXException, IOException, ParserConfigurationException, FilloException {
+		
+		Product_1977_TestCases.Product_1977(extent, "1977");
 		ApiHelper.softAssertion.assertAll();
 	} 
 
