@@ -31,34 +31,24 @@ import java.io.*;
 
 public class ApiHelper { 
 	
-	
-	
-	
-	
-	public static String bakingSitUrl = "https://hollardpoc.azure-api.net/uat/bank";
-    public static String bakingSubId = "melhollard";
-    public static String bakingSubKey = "8b0c22b05b8c45c2b3d57edafbd78018";
-	
-	
-	public static String applicationSitUrl = "https://apim-hl-life-test-za.azure-api.net/Application/uat";
-	public static String applicationSubId = "Life-Integration-Team";
-	public static String applicationSubKey = "d05d946b0e9b480ea9c2d751549bd5ef";
-	
-	
-	public static String policySitUrl = "https://apim-hl-life-test-za.azure-api.net/Policy/uat";
-	public static String policySubId = "Automation-Test-Team";
-	public static String policySubKey = "fc5e1ef728f44652a03e16c9525f2d49";
-	
 	public static SoftAssert softAssertion;
 	
 	
-	
+	public static void assertAll() {
+		
+		try {
+		softAssertion.assertAll();
+		
+		}catch(AssertionError e){
+			
+			 System.out.println("There is a fail in the validation Please refer to the extent report");
+		}
+		
+	}
 	
 	public String converFileToString(InputStream inputStream) throws IOException {
-	      //Creating an InputStream object
-	      //creating an InputStreamReader object
+	      
 	      InputStreamReader isReader = new InputStreamReader(inputStream);
-	      //Creating a BufferedReader object
 	      BufferedReader reader = new BufferedReader(isReader);
 	      StringBuffer sb = new StringBuffer();
 	      String str;
@@ -82,7 +72,6 @@ public static String getJsonField(JSONObject Json, String key) {
 			while(keys.hasNext()){
 				
 				nextkeys = (String)keys.next();
-				System.out.println(nextkeys+"========================================");
 				
 				try {
 					
@@ -128,14 +117,13 @@ public static String getJsonField(JSONObject Json, String key) {
 		
 	}
 	
-public static Response  sendRestPostRequest(String baseUrl, String subKey, String subId, String body  , String endpoint) throws SAXException, IOException, ParserConfigurationException {
+public static Response  sendRestPostRequest(String baseUrl,String body  , String endpoint) throws SAXException, IOException, ParserConfigurationException {
 	
 	RestAssured.baseURI =baseUrl ;
 	
 	Response response = 
 	given()
-		.header("x-subscription-id", subId)
-	    .header("Ocp-Apim-Subscription-Key", subKey).contentType("application/json")
+	    .contentType("application/json")
 	    .body( body)
 	.when()
 	   .post(endpoint)	
@@ -146,7 +134,7 @@ public static Response  sendRestPostRequest(String baseUrl, String subKey, Strin
 	return response;	
 	}
 		
-public static Response  sendRestGetRequest(String baseUrl, String subKey, String subId, String endpoint) throws SAXException, IOException, ParserConfigurationException {
+public static Response  sendRestGetRequest(String baseUrl, String endpoint) throws SAXException, IOException, ParserConfigurationException {
 	
 	
 
@@ -154,8 +142,6 @@ public static Response  sendRestGetRequest(String baseUrl, String subKey, String
 
 	Response response = 
 			given()
-					.header("x-subscription-id",subId)
-					.header("Ocp-Apim-Subscription-Key",subKey)
 					.accept(ContentType.JSON)
 			.when().get(endpoint)
 					
@@ -165,15 +151,13 @@ public static Response  sendRestGetRequest(String baseUrl, String subKey, String
 	return response;	
 	}
 
-public static Response  sendRestPutRequest(String baseUrl,  String subKey, String subId,String body, String  endpoint) throws SAXException, IOException, ParserConfigurationException {
+public static Response  sendRestPutRequest(String baseUrl,String body, String  endpoint) throws SAXException, IOException, ParserConfigurationException {
 	
 	
 		RestAssured.baseURI = baseUrl;
 	
 	Response response = 
 			given()
-				.header("x-subscription-id", subId)
-			    .header("Ocp-Apim-Subscription-Key",subKey ).contentType("application/json")
 			    .body(body)
 			.when()
 			   .put(endpoint)	
@@ -182,15 +166,13 @@ public static Response  sendRestPutRequest(String baseUrl,  String subKey, Strin
 				.response();
 			return response;	
 	}
-public static Response  sendRestPatchRequest(String baseUrl, String subKey, String subId, String body, String endpoint) throws SAXException, IOException, ParserConfigurationException {
+public static Response  sendRestPatchRequest(String baseUrl, String body, String endpoint) throws SAXException, IOException, ParserConfigurationException {
 	
 	
 	RestAssured.baseURI = baseUrl;
 
 Response response = 
 		given()
-			.header("x-subscription-id", subId)
-		    .header("Ocp-Apim-Subscription-Key", subKey).contentType("application/json")
 		    .body(body)
 		.when()
 		   .patch(endpoint)	
@@ -226,15 +208,11 @@ Response response =
 	 softAssertion = new SoftAssert();
 	 
 	 if(expected.trim().toLowerCase().equals(Actual.trim().toLowerCase())) {
-		 
-		
-		 
+	
 		 test.pass("validation for "+tagname+" has passed, Expected "+expected+" And got "+ Actual);
 		 System.out.println("validation for "+tagname+" has passed, Expected "+expected+" And got "+ Actual);
 		 softAssertion.assertTrue(true);
-			
-		
-		 
+	
 	 }
 	 
 	 else 
@@ -243,9 +221,7 @@ Response response =
 		 System.out.println("validation for "+tagname+" has failed. expected "+expected+"  but got "+Actual);
 		 
 		 softAssertion.assertTrue(false);
-			
-		 
-		
+	
 	 }
 	 
  }
