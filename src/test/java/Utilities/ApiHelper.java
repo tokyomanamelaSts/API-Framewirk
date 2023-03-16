@@ -117,13 +117,13 @@ public static String getJsonField(JSONObject Json, String key) {
 		
 	}
 	
-public static Response  sendRestPostRequest(String baseUrl,String body  , String endpoint) throws SAXException, IOException, ParserConfigurationException {
+public static Response  sendRestPostRequest(String baseUrl,String body  , String endpoint, String ContentType) throws SAXException, IOException, ParserConfigurationException {
 	
 	RestAssured.baseURI =baseUrl ;
 	
 	Response response = 
 	given()
-	    .contentType("application/json")
+	    .contentType(ContentType)
 	    .body( body)
 	.when()
 	   .post(endpoint)	
@@ -191,7 +191,7 @@ Response response =
 		document.getDocumentElement().normalize();
 		
 		Element rootElement = document.getDocumentElement();
-	    NodeList nList = document.getElementsByTagName("s:Envelope");
+	    NodeList nList = document.getElementsByTagName("soap:Envelope");
 	    Node node = nList.item(0);
 	    
 	     if (node.getNodeType() == Node.ELEMENT_NODE)

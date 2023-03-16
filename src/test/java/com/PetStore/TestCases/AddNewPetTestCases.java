@@ -1,4 +1,4 @@
-package com.PetStore.Repo;
+package com.PetStore.TestCases;
 
 import java.io.IOException;
 import java.net.URISyntaxException;
@@ -8,7 +8,7 @@ import javax.xml.parsers.ParserConfigurationException;
 import org.json.JSONObject;
 import org.xml.sax.SAXException;
 
-import com.PetStore.TestCases.Repo;
+import com.PetStore.Repo.Repo;
 import com.PetStore.payloads.AddNewDogPayloads;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
@@ -26,7 +26,7 @@ import io.restassured.response.Response;
 public class AddNewPetTestCases extends Repo{
 
 
-	public static void ProductRules  (ExtentReports extent, String fileName) throws URISyntaxException, SAXException, IOException, ParserConfigurationException, FilloException {
+	public static void addPetTestcase  (ExtentReports extent, String fileName) throws URISyntaxException, SAXException, IOException, ParserConfigurationException, FilloException {
 
 
 
@@ -49,7 +49,7 @@ public class AddNewPetTestCases extends Repo{
 
 			String reqBody=  AddNewDogPayloads.addNewPet(PetId, categoryId, CategoryName, name, photoUrls, tagId, TagName, status);
 
-			response =  ApiHelper.sendRestPostRequest(baseUrl, reqBody , endpoint);
+			response =  ApiHelper.sendRestPostRequest(baseUrl, reqBody , endpoint, "application/json");
 
 			ApiHelper.AssertEquals("Status code" ,statusCode, String.valueOf(response.statusCode()) , test);
 

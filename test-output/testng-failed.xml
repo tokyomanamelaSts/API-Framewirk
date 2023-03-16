@@ -6,7 +6,7 @@
       <class name="runner.Runner">
         <methods>
           <include name="EndTests"/>
-          <include name="CreateApplication"/>
+          <include name="SopaCalculator"/>
         </methods>
       </class> <!-- runner.Runner -->
     </classes>
